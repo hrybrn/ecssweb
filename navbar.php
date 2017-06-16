@@ -8,7 +8,7 @@ function getNavBar() {
     $links = json_decode($raw, true);
 
     foreach ($links as $name => $address) {
-        $nav .= '<li><a href="' . $address . '">' . $name . '</a></li>';
+        $nav .= '<li><a href="' . $relPath . $address . '">' . $name . '</a></li>';
     }
     return $nav . "</ul>";
 }
