@@ -1,6 +1,6 @@
 {
     "Home":"index.php",
     "About":"about.php",
-    "Committee":"committee.php",
+    "Committee":"committee/committee.php",
     "Events":"events.php"
 }

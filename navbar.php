@@ -1,8 +1,10 @@
 <?php
 
 function getNavBar() {
-    $nav = '<link rel="stylesheet" href="navbar.css"><ul>';
-    $raw = file_get_contents("data/links.json");
+    global $relPath;
+    
+    $nav = '<link rel="stylesheet" href="' . $relPath . 'navbar.css"><ul>';
+    $raw = file_get_contents($relPath . "data/links.json");
     $links = json_decode($raw, true);
 
     foreach ($links as $name => $address) {
