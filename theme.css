@@ -1,0 +1,16 @@
+h1 {
+    font-size: 30px;
+    font-family: Helvetica;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: Helvetica;
+}
+
+.logo {
+    padding: 40px;
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+}
