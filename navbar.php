@@ -10,15 +10,6 @@ function getNavBar() {
     
     $nav .= '<div class="navbar">';
     
-    $nav .= 
-     '<div class="dropdown">
-  <a class="dropbtn">Dropdown</a>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div> ';
     
     //$nav .= '<ul class="mainNav">';
     
@@ -30,7 +21,7 @@ function getNavBar() {
                 '
                  <div class="dropdown">
                  <form action="' . $relPath . $address . '">
-                 <button class="navButton">' . $name . '</button>
+                 <button id="navButton">' . $name . '</button>
                 </form> 
                 <div class="dropdown-content">';
              
@@ -42,7 +33,7 @@ function getNavBar() {
         else {
             $nav .= 
                 '<form action="'. $relPath . $address . '">
-                 <button class="navButton">' . $name . '</button>
+                 <button id="navButton">' . $name . '</button>
                  </form>'; 
         }
         
