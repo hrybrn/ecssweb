@@ -41,3 +41,12 @@ a:hover {
     float: left;
     box-sizing: border-box;
 }
+
+button {
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.buttonGroup{
+    padding: 5px;
+}
