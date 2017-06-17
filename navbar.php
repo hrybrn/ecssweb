@@ -10,7 +10,7 @@ function getNavBar() {
     
     $nav .= '<ul class="mainNav">';
     
-    $child = '<div id="child"><ul class="childNav">';
+    $child = '<div id="child" hidden="true"><ul class="childNav">';
     
     foreach ($links as $name => $address) {
         if(is_array($address)){
