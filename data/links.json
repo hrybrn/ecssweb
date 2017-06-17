@@ -1,6 +1,9 @@
 {
     "Home":"index.php",
-    "About":"about.php",
+    "About": {
+        "About":"about/about.php",
+        "Test":"index.php"
+    },
     "Committee":"committee/committee.php",
     "Societies":"societies/societies.php",
     "Events":"events.php"
