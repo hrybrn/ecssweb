@@ -6,7 +6,7 @@
     background-color: black;
 }
 /* Dropdown Button */
-button {
+button .navButton {
     background-color: black;
     color: white;
     padding: 16px;

@@ -29,8 +29,10 @@ function getNavBar() {
              $nav .= 
                 '
                  <div class="dropdown">
-                 <button class="dropbtn">Dropdown</button>
-                 <div class="dropdown-content">';
+                 <form action="' . $relPath . $address . '">
+                 <button class="navButton">' . $name . '</button>
+                </form> 
+                <div class="dropdown-content">';
              
             foreach($address as $page => $link){
                 $nav .= '<a href="' . $relPath . $link . '">' . $page . '</a>';
@@ -38,7 +40,10 @@ function getNavBar() {
             $nav .= '</div></div>';
         } 
         else {
-            $nav .= '<button>Button</button>'; 
+            $nav .= 
+                '<form action="'. $relPath . $address . '">
+                 <button class="navButton">' . $name . '</button>
+                 </form>'; 
         }
         
         /*if(is_array($address)){
