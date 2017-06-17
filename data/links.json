@@ -2,5 +2,6 @@
     "Home":"index.php",
     "About":"about.php",
     "Committee":"committee/committee.php",
+    "Societies":"societies/societies.php",
     "Events":"events.php"
 }

@@ -13,21 +13,13 @@ function showMember(id){
             
             //table data
             var html = "";
+
+            delete member.Image;
             
-            html+= html += '<tr>\n\
-                            <td>' + member.RoleDisplayName + '</td>\n\
-                            <td>' + member.RoleDescription + '</td>\n\
-                         </tr>';
-           
-           delete member.RoleDescription;
-           delete member.RoleDisplayName;
-           delete member.Image;
-           
             $.each(member, function(key,value){
                 if(value.substring(0,4) == "http"){
                     value = '<a href="' + value + '">' + value + '</a>';
                 }
-                
                     html += '\
                             <tr>\n\
                                 <td>' + key + '</td>\n\
@@ -35,7 +27,7 @@ function showMember(id){
                             </tr>';
             });
             
-            $('#memberTable').html(html);
+            $('#societyTable').html(html);
         }   
     });
 }
