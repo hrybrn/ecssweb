@@ -7,7 +7,7 @@ include_once($relPath . "navbar.php");
 echo getNavBar();
 
 ?>
-
+<link rel="stylesheet" href="' . $relPath . 'navbar.css">
 <body>
     <h3>About ECSS</h3>
     
