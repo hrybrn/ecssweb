@@ -20,6 +20,7 @@ foreach($committee as $member => $data){
 <script src="committee.js"></script>
 <link rel="stylesheet" href="../theme.css">
 <body>
+    <br>
     <img id="memberImage" width="200"/>
     <table id="memberTable"></table>
 </body>
