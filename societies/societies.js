@@ -16,17 +16,24 @@ function showMember(id){
 
             delete member.Image;
             
+            var links= "<tr>";
+            
             $.each(member, function(key,value){
                 if(value.substring(0,4) == "http"){
-                    value = '<a href="' + value + '">' + value + '</a>';
+                    links += '<td><a href="' + value + '">' + key + '</a></td>';
                 }
+                else {
                     html += '\
                             <tr>\n\
                                 <td>' + key + '</td>\n\
                                 <td>' + value + '</td>\n\
                             </tr>';
+                }
             });
             
+            links += "</tr>";
+            
+            html += links;
             $('#societyTable').html(html);
         }   
     });
