@@ -8,6 +8,7 @@ echo getNavBar();
 
 ?>
 <link rel="stylesheet" href="' . $relPath . 'navbar.css">
+<link rel="stylesheet" href="../theme.css">
 <body>
     <h3>About ECSS</h3>
     
