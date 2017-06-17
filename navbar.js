@@ -1,3 +1,5 @@
 function showDropdown() {
-    document.getElementById("myDropdown").classList.toggle("show");
+    var state = $('#child').prop('hidden');
+    
+    $('#child').prop('hidden',!state);
 }
