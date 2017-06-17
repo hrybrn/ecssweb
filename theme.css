@@ -9,12 +9,12 @@ h2 {
 }
 
 a {
-  color: red;
+  color: darkred;
   text-decoration: none;
 }
 
 a:hover {
-  color: blue;
+  color: red;
 }
 
 .logo {
