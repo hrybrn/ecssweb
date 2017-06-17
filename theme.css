@@ -1,6 +1,14 @@
+th, td {
+    font-family: Helvetica;
+    vertical-align: top;
+    padding: 15px;
+    text-align: left;
+}
+
 h1 {
     font-size: 30px;
     font-family: Helvetica;
+
 }
 
 h2 {
