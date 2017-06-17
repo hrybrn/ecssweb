@@ -15,18 +15,25 @@ function getNavBar() {
     
     //$child = '<div id="child" hidden="true"><ul class="childNav">';
     
+    /*
+     * Every entry in $links contains an element of the navbar (link & address).
+     * For elements with a dropdown, the address is an array of elements for the dropdown.
+     * Navbar elements are buttons, dropdown elements are <a>s
+     */
     foreach ($links as $name => $address) {
         if(is_array($address)){
              $nav .= 
                 '
                  <div class="dropdown">
-                 <form action="' . $relPath . $address . '">
+                 <form action="' . $relPath . $address['default'] . '">
                  <button id="navButton">' . $name . '</button>
                 </form> 
                 <div class="dropdown-content">';
              
             foreach($address as $page => $link){
+                if($page != 'default') {
                 $nav .= '<a href="' . $relPath . $link . '">' . $page . '</a>';
+                }
             }
             $nav .= '</div></div>';
         } 

@@ -1,6 +1,8 @@
+
 {
     "Home":"index.php",
     "About": {
+        "default":"about/about.php",
 	"name":"About",
         "About":"about/about.php",
         "Test":"index.php"
