@@ -4,6 +4,7 @@
 
 #memberImage {
     float: left;
+    padding: 15px;
 }
 
 #memberTable {
