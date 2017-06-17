@@ -8,6 +8,10 @@ function showMember(id){
         data: 'name=' + name,
         dataType: 'json',
         success: function(member){
+            //image setup
+            $('#memberImage').prop('src',relPath + member.Image);
+            
+            //table data
             var html = "";
             
             html+= html += '<tr>\n\
@@ -15,11 +19,16 @@ function showMember(id){
                             <td>' + member.RoleDescription + '</td>\n\
                          </tr>';
            
+           delete member.RoleDescription;
+           delete member.RoleDisplayName;
+           delete member.Image;
+           
             $.each(member, function(key,value){
-                html += '<tr>\n\
-                            <td>' + key + '</td>\n\
-                            <td>' + value + '</td>\n\
-                         </tr>';
+                    html += '\
+                            <tr>\n\
+                                <td>' + key + '</td>\n\
+                                <td>' + value + '</td>\n\
+                            </tr>';
             });
             
             $('#memberTable').html(html);

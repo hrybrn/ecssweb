@@ -15,10 +15,11 @@ foreach($committee as $member => $data){
 }
 
 ?>
-
+<script> var relPath = "<?= $relPath ?>"; </script>
 <script src='<?= $relPath ?>jquery.js'></script>
 <script src="committee.js"></script>
 
 <body>
+    <img id="memberImage" width="200"/>
     <table id="memberTable"></table>
 </body>
