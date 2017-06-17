@@ -1,11 +1,20 @@
 function showMember(id){
-    var xhttp = new XMLHttpRequest();
     
-    xhttp.onreadystatechange = function(){
-        if(this.status == 200){
-            var member = JSON.parse(this.responseText);
-            
+    var name = $('#button' + id).text();
+    
+    $.ajax({
+        url: 'getMember.php',
+        type: 'get',
+        data: 'name=' + name,
+        dataType: 'json',
+        success: function(member){
             var html = "";
+            
+            html+= html += '<tr>\n\
+                            <td>' + member.RoleDisplayName + '</td>\n\
+                            <td>' + member.RoleDescription + '</td>\n\
+                         </tr>';
+           
             $.each(member, function(key,value){
                 html += '<tr>\n\
                             <td>' + key + '</td>\n\
@@ -14,9 +23,6 @@ function showMember(id){
             });
             
             $('#memberTable').html(html);
-        } 
-    };
-    
-    xhttp.open('GET','getMember.php?name=' + id,true);
-    xhttp.send();
+        }   
+    });
 }
