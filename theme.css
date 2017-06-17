@@ -11,6 +11,16 @@
     float: right;
 }
 
+#facebookEmbed {
+    float: left;
+    padding: 15px;
+}
+
+#twitterEmbed {
+    float: right;
+    padding: 15px;
+}
+
 th, td {
     vertical-align: top;
     padding: 15px;
