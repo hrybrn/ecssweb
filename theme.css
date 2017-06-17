@@ -8,6 +8,15 @@ h2 {
     font-family: Helvetica;
 }
 
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+}
+
 .logo {
     padding: 40px;
     display: inline-block;
