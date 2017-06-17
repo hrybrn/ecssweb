@@ -13,7 +13,16 @@ function showMember(id) {
 
             //table data
             var html = "";
+            
+            html += 
+                    '<h3>' + member.RoleDisplayName + '</h3>\n\
+                    <h1>' + member.Name + '</h1>\n\
+                    <p>' + member.Manifesto + '</p>\n\
+                    <a href="' + member.Facebook + '">Facebook</a><br>\n\
+                    <a href="mailto:' + member.Email + '">Email</a><br>\n\
+                    <i>' + member.RoleDescription + '</i>'
 
+            /*        
             html += html += '<tr>\n\
                             <td>' + member.RoleDisplayName + '</td>\n\
                             <td>' + member.RoleDescription + '</td>\n\
@@ -41,10 +50,12 @@ function showMember(id) {
                     }
                 }
             });
+            
 
             links += "</tr>";
 
             html += links;
+            */
             $('#memberTable').html(html);
         }
     });

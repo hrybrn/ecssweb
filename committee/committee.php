@@ -21,6 +21,6 @@ foreach($committee as $member => $data){
 <link rel="stylesheet" href="../theme.css">
 <body>
     <br>
-    <img id="memberImage" width="200"/>
+    <img id="memberImage" width="300"/>
     <table id="memberTable"></table>
 </body>
