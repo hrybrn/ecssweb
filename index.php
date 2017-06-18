@@ -12,6 +12,7 @@ include_once($relPath . "navbar/navbar.php");
         <?=
         getNavBar();
         ?>
+
     <div class="logo">
         <!-- <div> -->
             <img src="images/ecss-logo.png" width="200"/>
@@ -30,13 +31,7 @@ include_once($relPath . "navbar/navbar.php");
     </div>
     
     <table>
-        <tr>
-            <td>
-    <div id="facebookEmbed">
-    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fecss.soton%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="500" height="400" padding="15px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-    </div>
-            </td>
-    
+        <tr>    
             <td width="370">
     <div id="twitterEmbed">
         <a class="twitter-timeline" data-width="340" data-height="400" data-dnt="true" data-theme="light" data-link-color="#E81C4F" href="https://twitter.com/ecs_society">Tweets by ecs_society</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -44,8 +39,13 @@ include_once($relPath . "navbar/navbar.php");
             </td>
             
             <td>
-                <iframe src="https://calendar.google.com/calendar/embed?title=ECSS%20Events%202017-2018&amp;mode=AGENDA&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=0s8rbd2g07uf6uqil2fir8decg%40group.calendar.google.com&amp;color=%235229A3&amp;src=gvo3td8eik1aclq6hvj554c848%40group.calendar.google.com&amp;color=%2329527A&amp;src=7oblk0qa2213h9trodr69jikmk%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=Europe%2FLondon" style="border:solid 1px #777" width="500" height="400" frameborder="0" scrolling="no"></iframe>
+    <div id="facebookEmbed">
+    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fecss.soton%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="500" height="400" padding="15px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    </div>
             </td>
-        </tr>
+            <td>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fecss.soton%2F&tabs=events&width=340&height=244&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1002687123208525" width="500" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </td>
+    </tr>
     </table>
 </head>
