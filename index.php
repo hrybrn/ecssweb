@@ -1,7 +1,8 @@
 <?php
-include_once("navbar.php");
 
 $relPath = "";
+
+include_once($relPath . "navbar/navbar.php");
 ?>
     <link rel="stylesheet" href="theme.css">
 

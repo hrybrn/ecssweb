@@ -2,7 +2,7 @@
 
 $relPath = "../";
 
-include_once($relPath . "navbar.php");
+include_once($relPath . "navbar/navbar.php");
 
 echo getNavBar();
 
