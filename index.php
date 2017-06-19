@@ -4,6 +4,8 @@
     <head>
         <?php
         $relPath = "";
+        include_once($relPath . "navbar/navbar.php");
+        echo getNavBar();
         ?>
         <meta charset="UTF-8">
         <title>ECSS</title>
@@ -12,10 +14,6 @@
     </head>
 
     <body>
-        <?=
-        include_once($relPath . "navbar/navbar.php");
-        getNavBar();
-        ?>
 
 
         <div class="logo">
