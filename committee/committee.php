@@ -18,7 +18,7 @@ foreach($committee as $member => $data){
 <script> var relPath = "<?= $relPath ?>"; </script>
 <script src='<?= $relPath ?>jquery.js'></script>
 <script src="committee.js"></script>
-<link rel="stylesheet" href="../theme.css">
+<link rel="stylesheet" href="<?= $relPath ?>theme.css">
 <body>
     <br>
     <img id="memberImage" width="300"/>
