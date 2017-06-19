@@ -27,7 +27,7 @@ function getNavBar() {
              
             foreach($address as $page => $link){
                 if($page != 'default') {
-                $nav .= '<a href="' . $relPath . $link . '">' . $page . '</a>';
+                $nav .= '<a href="' . $relPath . $link . '" target="_self">' . $page . '</a>';
                 }
             }
             $nav .= '</div></div>';
