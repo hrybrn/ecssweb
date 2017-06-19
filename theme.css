@@ -70,6 +70,10 @@ button:hover {
     background-color: #D82129;
 }
 
+button:active {
+    background-color: #ff5555;
+}
+
 .buttonGroup{
     padding: 5px;
     text-align: center;
