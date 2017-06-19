@@ -39,6 +39,7 @@ h2 {
 a {
   color: darkred;
   text-decoration: none;
+  transition: color 0.1s linear;
 }
 
 a:hover {
