@@ -8,7 +8,7 @@
         echo getNavBar();
         ?>
         <meta charset="UTF-8">
-        <title>ECSS</title>
+        <title>Home | ECSS</title>
         <base target="_blank">
         <link rel="stylesheet" href="theme.css">
     </head>
