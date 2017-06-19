@@ -79,9 +79,6 @@ button:active {
     background-color: #ff5555;
 }
 
-button:focus {
-    background-color: #ff5555;
-}
 
 .buttonGroup{
     padding: 5px;
