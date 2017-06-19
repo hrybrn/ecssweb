@@ -25,7 +25,7 @@ function getNavBar() {
              $nav .= 
                 '
                  <div class="dropdown">
-                 <form action="' . $relPath . $address['default'] . '">
+                 <form action="' . $relPath . $address['default'] . '" target="_self">
                  <button id="navButton">' . $name . '</button>
                 </form> 
                 <div class="dropdown-content">';
@@ -39,28 +39,13 @@ function getNavBar() {
         } 
         else {
             $nav .= 
-                '<form action="'. $relPath . $address . '">
+                '<form action="'. $relPath . $address . '" target="_self">
                  <button id="navButton">' . $name . '</button>
                  </form>'; 
         }
         
-        /*if(is_array($address)){
-            $nav .= '<li><a onclick="showDropdown()">' . $address['name'] . '</a></li>';
-            $nav .= '<div id="myDropdown" class="dropdown-content">';
-            
-            unset($address['name']);
-            
-            foreach($address as $page => $link){
-                $child .= '<li><a href="' . $relPath . $link . '">' . $page . '</a></li>';
-            }
-            $child .='</ul></div>';
-            $nav .= '</div></div>';
-        }
-        else {
-            $nav .= '<li><a href="' . $relPath . $address . '">' . $name . '</a></li>';
-        }
-        */
     }
     //return $nav . "</ul>" . $child;
     return $nav . "</div><br>";
 }
+?>
