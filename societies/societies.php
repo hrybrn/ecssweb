@@ -25,4 +25,10 @@ echo '</div>';
     <br>
     <img id="societyImage" width="200"/>
     <table id="societyTable"></table>
+    
+    <script>
+        $(document).ready( function(){
+            showMember("0");
+        });
+    </script>
 </body>

@@ -23,4 +23,10 @@ foreach($committee as $member => $data){
     <br>
     <img id="memberImage" width="300"/>
     <table id="memberTable"></table>
+    
+    <script>
+        $(document).ready( function(){
+            showMember("0");
+        });
+    </script>
 </body>
