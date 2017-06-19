@@ -54,18 +54,14 @@ form {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 
 #navButton:hover {
-    background-color: darkred;
+    background-color: #D82129;
 }
 
 
 
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 5px 5px;
-    overflow: hidden;
-    background-color: #333;
+    background: #333;
 }
 
 li {
