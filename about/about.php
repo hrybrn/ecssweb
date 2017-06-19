@@ -4,11 +4,11 @@
     <head>
         <?php
         $relPath = "../";
-         include_once($relPath . "navbar/navbar.php");
+        include_once($relPath . "navbar/navbar.php");
         echo getNavBar();
         ?>
         <meta charset="UTF-8">
-        <title>About</title>
+        <title>About | ECSS</title>
         <link rel="stylesheet" href="<?= $relPath ?>navbar/navbar.css">
         <link rel="stylesheet" href="<?= $relPath ?>theme.css">
         <base target="_blank">

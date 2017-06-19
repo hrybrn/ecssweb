@@ -10,11 +10,6 @@ function getNavBar() {
     
     $nav .= '<div class="navbar">';
     
-    
-    //$nav .= '<ul class="mainNav">';
-    
-    //$child = '<div id="child" hidden="true"><ul class="childNav">';
-    
     /*
      * Every entry in $links contains an element of the navbar (link & address).
      * For elements with a dropdown, the address is an array of elements for the dropdown.
@@ -45,7 +40,6 @@ function getNavBar() {
         }
         
     }
-    //return $nav . "</ul>" . $child;
     return $nav . "</div><br>";
 }
 ?>
