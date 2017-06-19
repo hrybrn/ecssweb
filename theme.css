@@ -54,11 +54,16 @@ a:hover {
 
 button {
     border-radius: 4px;
+    border: solid #ffffff;
     padding: 5px;
+    background-color: darkred;
+    color: #ffffff;
+    margin: 5px;
 }
 
 .buttonGroup{
     padding: 5px;
+    text-align: center;
 }
 
 .mainNav{

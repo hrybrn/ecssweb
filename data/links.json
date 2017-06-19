@@ -1,12 +1,11 @@
 
 {
     "Home":"index.php",
+    "Committee":"committee/committee.php",
+    "Societies":"societies/societies.php",
     "About": {
         "default":"about/about.php",
         "About":"about/about.php",
-        "Test":"index.php"
-    },
-    "Committee":"committee/committee.php",
-    "Societies":"societies/societies.php",
-    "Events":"events.php"
+        "Contact Us":"about/contact.php"
+    }
 }
