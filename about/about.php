@@ -15,9 +15,9 @@
     </head>
 
     <body>
+        <img id="committeeFam" src="<?= $relPath ?>images/everyone.jpg" height="350">
 
-
-        <h3>About ECSS</h3>
+        <h1>About ECSS</h1>
 
         <p>
             ECSS is a student run society within the School of Electronics and Computer Science at the University of Southampton. We are a society for the students.

@@ -12,7 +12,7 @@ form {
 /* Dropdown Button */
 #navButton {
     display: inline-block;
-        vertical-align: middle  ;
+    vertical-align: middle;
     background-color: black;
     border-radius: 4px;
     color: white;
@@ -43,6 +43,7 @@ table #navbarTable {
 .dropdown {
     position: relative;
     display: inline-block;
+    
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -57,6 +58,7 @@ table #navbarTable {
     min-width: 160px;
     box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    
     
 }
 

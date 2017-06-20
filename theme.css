@@ -63,7 +63,7 @@ button {
     border-radius: 5px;
     border: solid #ffffff;
     padding-top: 3px;
-    padding-bottom:6px;
+    padding-bottom:5px;
     padding-left: 15px; 
     padding-right: 15px;
     background-color: darkred;
@@ -114,3 +114,7 @@ li {
     font-family:Arial;
 }
 
+#committeeFam {
+    float: left;
+    padding-right: 30px;
+}
