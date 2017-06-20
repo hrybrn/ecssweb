@@ -9,6 +9,7 @@ function getNavBar() {
     $links = json_decode($raw, true);
     
     $nav .= '<div class="navbar">';
+    $nav .= '<img id="navbarLogo" src="' . $relPath . 'images/ecss-white-logo-square.png" height="65">';
     
     /*
      * Every entry in $links contains an element of the navbar (link & address).
