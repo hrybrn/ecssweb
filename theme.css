@@ -34,11 +34,12 @@ th, td {
 
 h1 {
     font-size: 30px;
-
+    padding: 0px;
 }
 
 h2 {
     font-size: 20px;
+    padding: 0px;
 }
 
 a {
@@ -59,9 +60,10 @@ a:hover {
 }
 
 button {
-    border-radius: 10px;
+    border-radius: 5px;
     border: solid #ffffff;
-    padding: 6px;
+    padding-top: 3px;
+    padding-bottom:6px;
     padding-left: 15px; 
     padding-right: 15px;
     background-color: darkred;
