@@ -21,6 +21,11 @@
     padding: 15px;
 }
 
+.committeeMember {
+    opacity: 0;
+    transition: opacity 2.0s ease-in;
+}
+
 th, td {
     vertical-align: top;
     padding: 15px;
