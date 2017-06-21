@@ -88,8 +88,9 @@ button:active {
 
 
 .buttonGroup{
-    padding: 5px;
+    padding: 0px;
     text-align: center;
+    margin: 0px;
 }
 
 .mainNav{

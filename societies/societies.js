@@ -9,7 +9,7 @@ function showMember(id){
         dataType: 'json',
         success: function(member){
             //image setup
-            $('#memberImage').prop('src',relPath + member.Image);
+            $('#societyImage').prop('src',relPath + member.Image);
             
             //table data
             var html = "";
@@ -19,7 +19,7 @@ function showMember(id){
             var links= "<tr>";
             
             $.each(member, function(key,value){
-                if(value.substring(0,4) == "http"){
+                if(value.substring(0,4) == "http" || value.substring(0,6) == "mailto"){
                     links += '<td><a href="' + value + '">' + key + '</a></td>';
                 }
                 else {
