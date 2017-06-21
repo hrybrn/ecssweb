@@ -11,6 +11,19 @@
     float: right;
 }
 
+#societyImage {
+    float: left;
+    padding: 15px;
+}
+
+#societyTable {
+    padding: 0px;
+}
+
+table {
+     padding: 0px;
+}
+
 #facebookEmbed {
     float: left;
     padding: 15px;

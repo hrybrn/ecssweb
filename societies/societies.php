@@ -30,7 +30,7 @@
     </head>
     <body>
         <br>
-        <img id="societyImage" width="200"/>
+        <img id="societyImage" width="300"/>
         <table id="societyTable"></table>
 
         <script>

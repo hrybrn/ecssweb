@@ -19,8 +19,14 @@ function showMember(id){
             var links= "<tr>";
             
             $.each(member, function(key,value){
-                if(value.substring(0,4) == "http" || value.substring(0,6) == "mailto"){
-                    links += '<td><a href="' + value + '">' + key + '</a></td>';
+                if(key == "Name"){
+                    html += '<tr><td>\n\
+                                <h1>' + value + '</h1>\n\
+                             </td></tr>'
+                }
+                
+                else if(value.substring(0,4) == "http" || value.substring(0,6) == "mailto"){
+                    links += '<tr><td><a href="' + value + '">' + key + '</a></td></tr>';
                 }
                 else {
                     html += '\
