@@ -16,12 +16,9 @@
     padding: 15px;
 }
 
-#societyTable {
-    padding: 0px;
-}
-
-table {
-     padding: 0px;
+#societyLink {
+    margin: 15px;
+    margin-left: 0px;
 }
 
 #facebookEmbed {

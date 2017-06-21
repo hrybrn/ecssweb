@@ -12,21 +12,26 @@ function showMember(id){
             $('#societyImage').prop('src',relPath + member.Image);
             
             //table data
-            var html = "";
+            var html = "<table>";
 
             delete member.Image;
             
-            var links= "<tr>";
+            var links= '<tr><td>Links</td><td><div>';
             
             $.each(member, function(key,value){
                 if(key == "Name"){
-                    html += '<tr><td>\n\
+                    html += '<tr><td colspan="2">\n\
                                 <h1>' + value + '</h1>\n\
                              </td></tr>'
                 }
-                
-                else if(value.substring(0,4) == "http" || value.substring(0,6) == "mailto"){
-                    links += '<tr><td><a href="' + value + '">' + key + '</a></td></tr>';
+                else if(value.substring(0,4) == "http"){
+                    links += '<a id="societyLink" href="' + value + '">' + key + '</a>';
+                }
+                else if(value.substring(0,6) == "mailto"){
+                    html += '<td>Email</td>\n\
+                             <td>\n\
+                                <a id="societyLink" href="' + value + '">' + value.substring(7,50) + '</a>\n\
+                             </td>';
                 }
                 else {
                     html += '\
@@ -37,8 +42,8 @@ function showMember(id){
                 }
             });
             
-            links += "</tr>";
-            
+            links += "</div></td></tr>";
+           // html += "</table>";
             html += links;
             $('#societyTable').html(html);
         }   
