@@ -39,6 +39,7 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
 </table>
 
 <table id="sponsorTable"></table>
+<div id="links"></div>
 
 <script>
     $(document).ready(function () {

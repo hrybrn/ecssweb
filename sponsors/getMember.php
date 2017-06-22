@@ -10,8 +10,9 @@ $sponsors = json_decode($raw, true);
 
 
 foreach($sponsors as $type => $sponsor) {
-    if($sponsor['Name'] == $name) {
-        echo json_encode ($sponsor);
+    foreach($sponsor as $title => $data)
+    if($title == $name) {
+        echo json_encode($sponsor);
         return;
     }
 }

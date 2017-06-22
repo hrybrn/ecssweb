@@ -7,23 +7,36 @@ function showMember(id) {
         data: 'name=' + name,
         dataType: 'json',
         success: function (sponsor) {
-            $('#sponsorImage').prop('src', relPath + sponsor.Image);
+            //$('#sponsorImage').prop('src', relPath + sponsor.Image);
 
             //table data
             var html = "";
-            
-            html += '<tr><td colspan="2">\n\
-                                <h1>' + sponsor.Name + '</h1>\n\
-                             </td></tr>';
-            
-            delete sponsor.Name;
+            var links = "";
+
             delete sponsor.Image;
-            
-            $.each(sponsor, function(key,val){
-                html += '<tr><td>' + key + '</td><td>' + val + '</td></tr>';
+
+            $.each(sponsor, function (title, array) {
+                $.each(array, function (key, value) {
+                    if (key == "Name") {
+                        html += '<tr><td colspan="2">\n\
+                                <h1>' + value + '</h1>\n\
+                             </td></tr>';
+                    } else {
+                        if (value.includes("http")) {
+                            links += '<a href="' + value + '">' + key + '</a>';
+                        } else {
+                            if (value.includes("@")) {
+                                links += '<a href="mailto:' + value + '">' + key + '</a>';
+                            } else {
+                                html += '<tr><td>' + key + '</td><td>' + value + '</td></tr>';
+                            }
+                        }
+                    }
+                });
             });
-            
+
             $('#sponsorTable').html(html);
+            $('#links').html(links);
         }
     });
 }
