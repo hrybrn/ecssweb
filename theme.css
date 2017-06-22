@@ -129,3 +129,15 @@ li {
     float: left;
     padding-right: 30px;
 }
+
+.gold {
+    background-color: gold;
+}
+
+.silver {
+    background-color: silver;
+}
+
+.bronze {
+    background-color: brown;
+}
