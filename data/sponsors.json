@@ -1,19 +1,58 @@
 {
     "Gold" : {
         "J. P. Morgan" : {
-            "Name" : "J. P. Morgan"
+            "Name" : "J. P. Morgan",
+            "Website" : "http://www.jpmorgan.com/",
+            "Image" : "images/sponsors/jpmorgan.jpg",
+            "Info" : "JP Morgan is one of the world’s largest and oldest banking institutions. It was founded in 1871 and has its headquarters in New York City, US. It has a team of over 26,000 happy employees. It provides a wide range of services, which include banking, financial and software solutions. It has been one of ECSS’s oldest sponsors and currently holds a Gold sponsor status. It offers a wide range of opportunities to ECS students."
+        },
+        "Imagination Technologies" : {
+            "Name" : "Imagination Technologies",
+            "Website" : "http://imgtec.com/",
+            "Image" : "images/sponsors/imagination.jpg",
+            "Info" : "Imagination Technologies are British-based technology giant. They deal in intellectual property licensing and other technology sectors such as chip design. They were founded in 1985 and have their headquarters in Kings Langley, UK. They have a strong force of about 1700 employees and counting. They are one of the fastest growing British Technology companies. They are one of the two gold sponsors of ECSS and have had an excellent working relationship with the society."
         }
     },
 
     "Silver": {
-        "My Nan" : {
-            "Name" : "Pauline"
-            }
+        "ARM" : {
+            "Name" : "ARM",
+            "Website" : "http://www.arm.com/",
+            "Image" : "images/sponsors/arm.jpg",
+            "Info" : "ARM is a British semiconductor and software company.  It was founded in 1990 and has its headquarters in Cambridge, UK. Some of its clients include Apple and Samsung."
+        },
+        "FactSet" : {
+            "Name" : "FactSet",
+            "Website" : "http://factset.com/",
+            "Image" : "images/sponsors/factset.jpg",
+            "Info" : "FactSet is a company that specializes in financial data and software. It was founded in 1978 and has its headquarters in Norwalk, US. FactSet has a reputation for creating an excellent working environment for it’s employees all over the world and have been listed in the Forbes '200 best small companies'."
+        },
+        "BAE Systems" : {
+            "Name" : "BAE Systems",
+            "Website" : "http://www.baesystems.com/",
+            "Image" : "images/sponsors/bae.jpg",
+            "Info" : "BAE Systems are one of the largest defense, security and aerospace companies on the planet. They were founded in 1999 and have their headquarters in London. They are one of the biggest suppliers to the British and US Defense Forces among others."
+        }
     },
 
     "Bronze": {
-        "My Uncle" : {
-            "Name" : "David"
+        "Ultra Electronics" : {
+            "Name" : "Ultra Electronics",
+            "Website" : "http://www.ultra-electronics.com/",
+            "Image" : "images/sponsors/ultra.jpg",
+            "Info" : "Ultra Electronics is a technology company based in London, UK, manufacturing a wide array of technolgies from underwater defence to industrial control."
+        },
+        "Schroders" : {
+            "Name" : "Schroders",
+            "Website" : "http://www.schroders.com/",
+            "Image" : "images/sponsors/schroders.png",
+            "Info" : "Schroders is an independent, dedicated asset manager with a strong heritage and culture based on over 200 years experience of investment markets."
+        },
+        "Leonardo" : {
+            "Name" : "Leonardo",
+            "Website" : "https://www.leonardocompany.com/",
+            "Image" : "images/sponsors/leonardo.png",
+            "Info" : "Leonardo-Finmeccanica is a global high-tech player in Aerospace, Defence and Security. With headquarters in Italy and over 47,000 employees, Leonardo-Finmeccanica has a consolidated industrial presence in four main markets (Italy, the UK, the U.S. and Poland), and an important network of strategic partnerships in the main high potential markets worldwide. In January 2016 the activities of AgustaWestland, Alenia Aermacchi, Selex ES, OTO Melara and WASS were absorbed into One Company and on 28 April 2016, Finmeccanica became Leonardo."
         }
     }
 }

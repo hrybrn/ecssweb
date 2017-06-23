@@ -12,7 +12,7 @@ $sponsors = json_decode($raw, true);
 foreach($sponsors as $type => $sponsor) {
     foreach($sponsor as $title => $data)
     if($title == $name) {
-        echo json_encode($sponsor);
+        echo json_encode($data);
         return;
     }
 }

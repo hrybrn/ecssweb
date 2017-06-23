@@ -38,6 +38,8 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
     <?= $bronze ?>
 </table>
 
+
+<img id="sponsorImage" width="300"/>
 <table id="sponsorTable"></table>
 <div id="links"></div>
 

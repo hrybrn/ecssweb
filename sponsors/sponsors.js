@@ -7,7 +7,7 @@ function showMember(id) {
         data: 'name=' + name,
         dataType: 'json',
         success: function (sponsor) {
-            //$('#sponsorImage').prop('src', relPath + sponsor.Image);
+            $('#sponsorImage').prop('src', relPath + sponsor.Image);
 
             //table data
             var html = "";
@@ -15,24 +15,22 @@ function showMember(id) {
 
             delete sponsor.Image;
 
-            $.each(sponsor, function (title, array) {
-                $.each(array, function (key, value) {
-                    if (key == "Name") {
-                        html += '<tr><td colspan="2">\n\
+            $.each(sponsor, function (key, value) {
+                if (key == "Name") {
+                    html += '<tr><td colspan="2">\n\
                                 <h1>' + value + '</h1>\n\
                              </td></tr>';
+                } else {
+                    if (value.includes("http")) {
+                        links += '<a href="' + value + '">' + key + '</a>';
                     } else {
-                        if (value.includes("http")) {
-                            links += '<a href="' + value + '">' + key + '</a>';
+                        if (value.includes("@")) {
+                            links += '<a href="mailto:' + value + '">' + key + '</a>';
                         } else {
-                            if (value.includes("@")) {
-                                links += '<a href="mailto:' + value + '">' + key + '</a>';
-                            } else {
-                                html += '<tr><td>' + key + '</td><td>' + value + '</td></tr>';
-                            }
+                            html += '<tr><td>' + key + '</td><td>' + value + '</td></tr>';
                         }
                     }
-                });
+                }
             });
 
             $('#sponsorTable').html(html);

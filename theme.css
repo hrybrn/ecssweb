@@ -11,6 +11,20 @@
     float: right;
 }
 
+#sponsorImage {
+    float: left;
+    padding: 15px;
+}
+
+#sponsorTable {
+    float: right;
+}
+
+#sponsorLink {
+    margin: 15px;
+    margin-left: 0px;
+}
+
 #societyImage {
     float: left;
     padding: 15px;
