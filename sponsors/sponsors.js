@@ -2,7 +2,7 @@ function showMember(id) {
     var name = $('#button' + id).text();
 
     $.ajax({
-        url: 'sponsors/getMember.php',
+        url: 'getMember.php',
         type: 'get',
         data: 'name=' + name,
         dataType: 'json',
