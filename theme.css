@@ -13,6 +13,7 @@
 
 #sponsorImage {
     float: left;
+    width: 350px;
     padding: 15px;
 }
 
@@ -52,18 +53,20 @@
 
 th, td {
     vertical-align: top;
-    padding: 15px;
+    padding: 10px;
     text-align: left;
 }
 
 h1 {
     font-size: 30px;
     padding: 0px;
+    margin: 0px;
 }
 
 h2 {
     font-size: 20px;
     padding: 0px;
+    margin: 0px;
 }
 
 a {
@@ -144,14 +147,30 @@ li {
     padding-right: 30px;
 }
 
-.gold {
-    background-color: gold;
+.gold, .gold:active {
+    background-color: #f9c700;
 }
 
-.silver {
+.gold:hover {
+    background-color: #cca300;
+}
+
+.silver, .silver:active{
     background-color: silver;
 }
 
-.bronze {
-    background-color: brown;
+.silver:hover {
+    background-color: #999999;
+}
+
+.bronze, .bronze:active{
+    background-color: #cd7f32;
+}
+
+.bronze:active {
+    background-color: red;
+}
+
+.bronze:hover {
+    background-color: #905923;
 }
