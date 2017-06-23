@@ -6,6 +6,7 @@
     "About": {
         "default":"about/index.php",
         "About":"about/index.php",
-        "Contact Us":"about/contact.php"
+        "Contact Us":"about/contact.php",
+        "Credits":"about/credits.php"
     }
 }
