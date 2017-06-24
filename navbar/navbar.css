@@ -11,6 +11,12 @@ form {
     vertical-align: middle;
     float: right;
     padding: 20px;
+    transition: height 0.1s linear, padding 0.1s linear;
+}
+
+#langIcon:hover {
+    height: 29px;
+    padding: 18px;
 }
 
 .navbar {

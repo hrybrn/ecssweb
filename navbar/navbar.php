@@ -43,7 +43,7 @@ function getNavBar() {
         
     }
     
-    $nav .= '<img id="langIcon" src="' . $relPath . '/images/flag-icons/uk.png" height="20">';
+    $nav .= '<a href=""><img id="langIcon" src="' . $relPath . '/images/flag-icons/uk.png" height="20"></a>';
     
     return $nav . "</div><br>";
 }
