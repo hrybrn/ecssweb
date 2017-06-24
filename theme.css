@@ -15,7 +15,11 @@ body { margin: 0; padding: 0; }
 }
 
 #linkIcon {
-    width: 25px;
+    width: 28px;
+    padding-left: 2px;
+    margin-bottom: 3px;
+    vertical-align: middle;
+    opacity: 0.9;
     transition: opacity 0.1s linear;
 }
 
@@ -71,8 +75,8 @@ th, td {
 
 h1 {
     font-size: 30px;
-    padding: 0px;
-    margin: 0px;
+    /*padding: 0px;*/
+    /*margin: 0px;*/
 }
 
 h2 {
@@ -82,13 +86,13 @@ h2 {
 }
 
 a {
-  color: darkred;
-  text-decoration: none;
-  transition: color 0.1s linear;
+    color: darkred;
+    text-decoration: none;
+    transition: color 0.1s linear;
 }
 
 a:hover {
-  color: red;
+    color: red;
 }
 
 .logo {
@@ -110,7 +114,7 @@ button {
     size: 14px;
     margin: 5px;
     transition: background-color 0.1s linear;
-     
+
 }
 
 button:focus {
