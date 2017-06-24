@@ -26,8 +26,6 @@ function showMember(id) {
                         html += '<tr><td colspan="2">' + value + '</td></tr>';
                     } else if (value.includes("@")) {
                         links += '<a href="mailto:' + value + '">' + key + '</a>';
-                    } else {
-                        html += '<tr><td>' + key + '</td><td>' + value + '</td></tr>';
                     }
                 });
                 links += "</td></tr>";
