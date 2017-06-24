@@ -2,6 +2,8 @@
     font-family: Helvetica;
 }
 
+body { margin: 0; padding: 0; }
+
 #memberImage {
     float: left;
     padding: 15px;
