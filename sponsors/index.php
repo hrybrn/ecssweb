@@ -35,11 +35,12 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
 <script> var relPath = "<?= $relPath ?>";</script>
 <script src="<?=$relPath ?>sponsors/sponsors.js"></script>
 
-<table>
+
+<div class="buttonGroup">
     <?= $gold ?>
     <?= $silver ?>
     <?= $bronze ?>
-</table>
+</div>
 
 
 <img id="sponsorImage" width="300"/>
