@@ -42,6 +42,9 @@ function getNavBar() {
         }
         
     }
+    
+    $nav .= '<img id="langIcon" src="' . $relPath . '/images/flag-icons/uk.png" height="20">';
+    
     return $nav . "</div><br>";
 }
 ?>

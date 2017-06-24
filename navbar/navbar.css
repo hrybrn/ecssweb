@@ -6,6 +6,13 @@ form {
     display: inline;
 }
 
+#langIcon {
+    height: 25px;
+    vertical-align: middle;
+    float: right;
+    padding: 20px;
+}
+
 .navbar {
     background-color: black;
 }
