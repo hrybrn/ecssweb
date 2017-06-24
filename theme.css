@@ -176,3 +176,10 @@ li {
 .bronze:hover {
     background-color: #905923;
 }
+
+.creditImage {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align: center;
+}
