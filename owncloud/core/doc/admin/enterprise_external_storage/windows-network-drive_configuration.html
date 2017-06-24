@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installing and Configuring the Windows Network Drive App &mdash; ownCloud 8.2 Server Administration Manual 8.2 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/main.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '8.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="ownCloud 8.2 Server Administration Manual 8.2 documentation" href="../contents.html" />
+    <link rel="up" title="External Storage (Enterprise only)" href="index.html" />
+    <link rel="next" title="User Management (Enterprise only)" href="../enterprise_user_management/index.html" />
+    <link rel="prev" title="Configuring SharePoint Integration" href="sharepoint-integration_configuration.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1d2d44">
+
+  </head>
+  <body role="document">
+
+
+<div class="wrap container not-front">
+  <div class="content row">
+  <main class="main">
+    <div class="row page-content-header">
+      <div class="col-md-5 col-md-offset-7">
+      
+        <form class="headersearch" style="margin-bottom:-3px;" action="../search.html" method="get">
+        <input type="text" value="" name="q" id="q" class="form-control" /> 
+        <button  class="btn btn-default" type="submit" id="searchsubmit">Search</button>
+        </form>
+      
+      </div>
+    </div>
+    
+			<div class="row">
+				<div class="col-md-3">
+					<div class="sidebar">
+							<div class="menu-support-container">
+								<ul id="menu-support" class="menu">
+									<ul>
+										
+<li><a href="../contents.html">Table of Contents</a></li>
+									</ul>
+                  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">ownCloud 8.2 Server Administration Manual Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes.html">ownCloud 8.2 Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new_admin.html">What&#8217;s New for Admins in ownCloud 8.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration_server/index.html">ownCloud Server Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration_user/index.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration_files/index.html">File Sharing and Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration_database/index.html">Database Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration_mimetypes/index.html">Mimetypes Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maintenance/index.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../issues/index.html">Issues and Troubleshooting</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_installation/index.html">Enterprise Edition Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_clients/index.html">Creating Branded ownCloud Clients (Enterprise only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_server_branding/index.html">Enterprise Server Branding (Enterprise only)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">External Storage (Enterprise only)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="jive_configuration.html">Jive Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ldap_home_connector_configuration.html">LDAP Home Connector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="s3_swift_as_primary_object_store_configuration.html">Configuring S3 and OpenStack Swift Objects as Primary Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharepoint-integration_configuration.html">Configuring SharePoint Integration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Installing and Configuring the Windows Network Drive App</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-installation-steps">Additional Installation Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-new-share">Creating a New Share</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#personal-smb-mounts">Personal SMB Mounts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_user_management/index.html">User Management (Enterprise only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_files_drop/index.html">Enabling Anonymous Uploads with Files Drop (Enterprise Only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_logging/index.html">Enterprise Logging Apps (Enterprise only)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise_troubleshooting.html">Enterprise Troubleshooting</a></li>
+</ul>
+
+								</ul>
+							</div>
+					</div>
+				</div>
+        
+
+				<div class="col-md-9">
+					<div class="page-content">
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="sharepoint-integration_configuration.html" title="Previous Chapter: Configuring SharePoint Integration"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Configuring S...</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="../enterprise_user_management/index.html" title="Next Chapter: User Management (Enterprise only)"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">User Manageme... &raquo;</span>
+    </a>
+  </li>
+</ul>
+						
+  <div class="section" id="installing-and-configuring-the-windows-network-drive-app">
+<h1>Installing and Configuring the Windows Network Drive App<a class="headerlink" href="#installing-and-configuring-the-windows-network-drive-app" title="Permalink to this headline">¶</a></h1>
+<p>The Windows Network Drive app creates a control panel on your Admin page for
+seamless mounting of SMB/CIFS file shares on ownCloud servers.</p>
+<p>Any Windows file share, and Samba servers on Linux and other Unix-type operating
+systems use the SMB/CIFS file-sharing protocol. The files and directories on the
+SMB/CIFS server will be visible on your Files page just like your other ownCloud
+files and folders. They are labeled with a little four-pane Windows-style icon,
+and the left pane of your Files page includes a Windows Network Drive filter.
+Figure 1 shows a new Windows Network Drive share marked with red warnings.
+This indicates that ownCloud cannot connect to the share because it is not
+available, or there is an error in the configuration.</p>
+<div class="figure" id="id1">
+<img alt="Windows Network Drive share on your Files page." src="../_images/wnd-1.png" />
+<p class="caption"><span class="caption-text"><em>Figure 1: Windows Network Drive share on your Files page.</em></span></p>
+</div>
+<p>Files are synchronized bi-directionally, and you can create, upload, and delete
+files and folders. ownCloud server admins can create Windows Network Drive
+mounts, and optionally allow users to create their own personal Windows Network
+Drive mounts. The password for each mount is encrypted and stored in the
+ownCloud database, using a long random secret key stored in <code class="docutils literal"><span class="pre">config.php</span></code>. This
+allows ownCloud to access the shares when the users who own the mounts are not
+logged in.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Enable the Windows Network Drive app on your ownCloud Apps page. Then there are
+a few dependencies to install.</p>
+<p>You must install the ownCloud <code class="docutils literal"><span class="pre">php5-libsmbclient</span></code> binary; please refer to the README in
+your <a class="reference external" href="https://customer.owncloud.com/">customer.owncloud.com</a> account for instructions
+on obtaining it.</p>
+<p>You also need the Samba client installed on your Linux system. This is included in
+all Linux distributions; on Debian, Ubuntu, and other Debian derivatives this
+is <code class="docutils literal"><span class="pre">smbclient</span></code>. On SUSE, Red Hat, CentOS, and other Red Hat derivatives it is
+<code class="docutils literal"><span class="pre">samba-client</span></code>.</p>
+</div>
+<div class="section" id="additional-installation-steps">
+<h2>Additional Installation Steps<a class="headerlink" href="#additional-installation-steps" title="Permalink to this headline">¶</a></h2>
+<p>If your Linux distribution ships with <code class="docutils literal"><span class="pre">libsmbclient</span> <span class="pre">3.x</span></code>, which is included in the Samba
+client, you may need to set up the HOME variable in Apache to prevent a segmentation
+fault. If you have <code class="docutils literal"><span class="pre">libsmbclient</span> <span class="pre">4.1.6</span></code> and higher it doesn&#8217;t seem to be an issue, so
+you won&#8217;t have to change your HOME variable.</p>
+<p>To set up the HOME variable on Ubuntu, modify the <code class="docutils literal"><span class="pre">/etc/apache2/envvars</span></code>
+file:</p>
+<div class="highlight-python"><div class="highlight"><pre>unset HOME
+export HOME=/var/www
+</pre></div>
+</div>
+<p>In Red Hat/CentOS, modify the <code class="docutils literal"><span class="pre">/etc/sysconfig/httpd</span></code> file and add the
+following line to set the HOME variable in Apache:</p>
+<div class="highlight-python"><div class="highlight"><pre>export HOME=/usr/share/httpd
+</pre></div>
+</div>
+<p>By default CentOS has activated SELinux, and the <code class="docutils literal"><span class="pre">httpd</span></code> process can not make
+outgoing network connections. This will cause problems with the <code class="docutils literal"><span class="pre">curl</span></code>, <code class="docutils literal"><span class="pre">ldap</span></code>
+and <code class="docutils literal"><span class="pre">samba</span></code> libraries. You&#8217;ll need to get around this in order to make
+this work. First check the status:</p>
+<div class="highlight-python"><div class="highlight"><pre>getsebool -a | grep httpd
+httpd_can_network_connect --&gt; off
+</pre></div>
+</div>
+<p>Then enable support for network connections:</p>
+<div class="highlight-python"><div class="highlight"><pre>setsebool -P httpd_can_network_connect 1
+</pre></div>
+</div>
+<p>In openSUSE, modify the <code class="docutils literal"><span class="pre">/usr/sbin/start_apache2</span></code> file:</p>
+<div class="highlight-python"><div class="highlight"><pre>export HOME=/var/lib/apache2
+</pre></div>
+</div>
+<p>Restart Apache, open your ownCloud Admin page and start creating SMB/CIFS mounts.</p>
+</div>
+<div class="section" id="creating-a-new-share">
+<h2>Creating a New Share<a class="headerlink" href="#creating-a-new-share" title="Permalink to this headline">¶</a></h2>
+<p>When you create a new SMB share you need the login credentials for the share,
+the server address, the share name, and the folder you want to connect to.</p>
+<ol class="arabic simple">
+<li>First enter the ownCloud mountpoint for your new SMB share. This must not be
+an existing folder.</li>
+<li>Then enter which ownCloud users or groups get access to the share. The
+default is all users.</li>
+<li>Next, enter the address of the server that contains the SMB share.</li>
+<li>Then the Windows share name.</li>
+<li>Then the root folder of the share. This is the folder name, or the
+<code class="docutils literal"><span class="pre">$user</span></code> variable for user&#8217;s home directories. Note that the LDAP
+<code class="docutils literal"><span class="pre">Internal</span> <span class="pre">Username</span> <span class="pre">Attribute</span></code> must be set to the <code class="docutils literal"><span class="pre">samaccountname</span></code> for
+either the share or the root to work, and the user&#8217;s home directory needs
+to match the <code class="docutils literal"><span class="pre">samaccountname</span></code>. (See
+<a class="reference internal" href="../configuration_user/user_auth_ldap.html"><em>User Authentication with LDAP</em></a>.)</li>
+<li>Then your login credentials.</li>
+</ol>
+<div class="figure" id="id2">
+<img alt="$user variable in the folder field." src="../_images/wnd-3.png" />
+<p class="caption"><span class="caption-text"><em>Figure 2: $user variable to automatically set user&#8217;s home directories.</em></span></p>
+</div>
+<p>You have four options for login credentials:</p>
+<ul class="simple">
+<li><strong>User credentials</strong>.</li>
+<li><strong>Global credentials</strong>, which uses the credentials  set in the Global
+credentials fields</li>
+<li><strong>Login credentials</strong> is for users to connect to the mountpoint using their
+DOMAIN/logincredentials; enter the domain in the <strong>Domain</strong> field.</li>
+<li><strong>Custom Credentials</strong></li>
+</ul>
+<div class="figure" id="id3">
+<a class="reference internal image-reference" href="../_images/wnd-2.png"><img alt="Windows Network Drive configuration panel." src="../_images/wnd-2.png" style="width: 726.75px; height: 161.55px;" /></a>
+<p class="caption"><span class="caption-text"><em>Figure 3: Windows Network Drive configuration panel. (Click to enlarge.)</em></span></p>
+</div>
+<p>When you&#8217;re finished click the <strong>Save</strong> button.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When you create a new mountpoint using Login credentials you must log out of ownCloud,
+and then log back in so you can access the share. You only have to do this the first time.</p>
+</div>
+</div>
+<div class="section" id="personal-smb-mounts">
+<h2>Personal SMB Mounts<a class="headerlink" href="#personal-smb-mounts" title="Permalink to this headline">¶</a></h2>
+<p>Users create their own personal SMB mounts on their Personal pages. These are
+created the same way as Admin-created shares. Users have only two options for
+login credentials:</p>
+<ul class="simple">
+<li><strong>Personal Credentials</strong>.</li>
+<li><strong>Custom Credentials</strong></li>
+</ul>
+</div>
+</div>
+
+
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="sharepoint-integration_configuration.html" title="Previous Chapter: Configuring SharePoint Integration"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Configuring S...</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="../enterprise_user_management/index.html" title="Next Chapter: User Management (Enterprise only)"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">User Manageme... &raquo;</span>
+    </a>
+  </li>
+</ul>
+					</div>
+				</div>
+			</div>
+  </main>  
+  </div>
+</div>
+  </body>
+</html>

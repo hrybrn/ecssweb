@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<info>
+	<id>tasks</id>
+	<name>Tasks</name>
+	<version>0.8.1</version>
+	<namespace>Tasks</namespace>
+	<category>productivity</category>
+	<licence>AGPL</licence>
+	<author>Raimund Schlüßler</author>
+	<requiremin>8.1</requiremin>
+	<description>Task App for Calender TODOs</description>
+	<ocsid>164356</ocsid>
+    <dependencies>
+        <owncloud min-version="8.1" max-version="9.0"/>
+    </dependencies>
+</info>
