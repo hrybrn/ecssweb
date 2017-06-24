@@ -23,6 +23,10 @@ echo '</div>';
 <script src='<?= $relPath ?>jquery.js'></script>
 <script src="committee.js"></script>
 <link rel="stylesheet" href="<?= $relPath ?>theme.css">
+
+<meta charset="UTF-8">
+<title>Committee | ECSS</title>
+        
 <body>
     <br>
     <table>

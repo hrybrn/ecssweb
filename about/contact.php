@@ -19,6 +19,10 @@ foreach($ecss as $key => $val){
 ?>
 <link rel="stylesheet" href="<?= $relPath ?>theme.css">
 
+<meta charset="UTF-8">
+<title>Contact Us | ECSS</title>
+        
+<div style="padding: 15px">
 <h3>Contact Us</h3>
 <p>
     ECSS welcomes all communications from its society members!<br><br>
@@ -30,3 +34,4 @@ foreach($ecss as $key => $val){
         <?= $links ?>
     </tr>
 </table>
+</div>

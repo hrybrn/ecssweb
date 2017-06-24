@@ -6,6 +6,9 @@ echo getNavBar();
 ?>
 <html>
     <link rel="stylesheet" href="../theme.css">
+    
+    <meta charset="UTF-8">
+    <title>Credits | ECSS</title>
 
     <table align="center">
         <tr><td colspan="3"><h3 align="center">Production Credits</h3></td></tr>

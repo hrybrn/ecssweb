@@ -29,6 +29,9 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
 
 <link rel="stylesheet" href="<?= $relPath ?>theme.css">
 
+<meta charset="UTF-8">
+<title>Sponsors | ECSS</title>
+
 <script> var relPath = "<?= $relPath ?>";</script>
 <script src="<?=$relPath ?>sponsors/sponsors.js"></script>
 
