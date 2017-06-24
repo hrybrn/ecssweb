@@ -7,6 +7,7 @@ body { margin: 0; padding: 0; }
 #memberImage {
     float: left;
     padding: 15px;
+    margin-top: 30px;
     width: 300px;
 }
 
