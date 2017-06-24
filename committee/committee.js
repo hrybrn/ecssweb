@@ -15,11 +15,11 @@ function showMember(id) {
             var html = "";
             
             html += 
-                    '<h3>' + member.RoleDisplayName + '</h3>\n\
-                    <i>' + member.RoleDescription + '</i>\n\
-                    <h1>' + member.Name + '\n\
+                    '<h1>' + member.Name + '\n\
                     <a href="' + member.Facebook + '"><img id="linkIcon" src="' + relPath + 'images/icons/facebook-circle.png"></a>\n\
                     <a href="mailto:' + member.Email + '"><img id="linkIcon" src="' + relPath + 'images/icons/email-circle.png"></a></h1>\n\
+                    <h3>' + member.RoleDisplayName + '</h3>\n\
+                    <i>' + member.RoleDescription + '</i>\n\
                     <p>' + member.Manifesto + '</p>';
 
             $('#memberTable').html(html);

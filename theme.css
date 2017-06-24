@@ -89,7 +89,12 @@ h2 {
 a {
     color: darkred;
     text-decoration: none;
+    
     transition: color 0.1s linear;
+}
+
+a:after {
+    /*content: '\2197';*/
 }
 
 a:hover {
