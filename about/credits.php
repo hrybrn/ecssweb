@@ -2,10 +2,11 @@
 $relPath = "../";
 
 include_once($relPath . "navbar/navbar.php");
-
 echo getNavBar();
 ?>
 <html>
+    <link rel="stylesheet" href="../theme.css">
+
     <table align="center">
         <tr><td colspan="2"><h3 align="center">Production Credits</h3></td></tr>
         <tr>
