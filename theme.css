@@ -7,10 +7,20 @@ body { margin: 0; padding: 0; }
 #memberImage {
     float: left;
     padding: 15px;
+    width: 300px;
 }
 
 #memberTable {
     /*float: right;*/
+}
+
+#linkIcon {
+    width: 25px;
+    transition: opacity 0.1s linear;
+}
+
+#linkIcon:hover {
+    opacity: 0.4;
 }
 
 #sponsorImage {
