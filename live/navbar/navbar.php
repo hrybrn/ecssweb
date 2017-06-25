@@ -6,7 +6,7 @@ function getNavBar() {
     $nav = "";
     $nav .= '<script src="' . $relPath . 'jquery.js"></script>';
     $nav .= '<link rel="stylesheet" href="' . $relPath . 'navbar/navbar.css">';
-    $raw = file_get_contents($relPath . "data/links.json");
+    $raw = file_get_contents($relPath . "../data/links.json");
     $links = json_decode($raw, true);
     
     $nav .= '<div class="navbar">';

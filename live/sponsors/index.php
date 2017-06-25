@@ -5,7 +5,7 @@ include_once($relPath . 'navbar/navbar.php');
 echo getNavBar();
 
 
-$raw = file_get_contents($relPath . "data/sponsors.json");
+$raw = file_get_contents($relPath . "../data/sponsors.json");
 $sponsors = json_decode($raw, true);
 
 $gold = "";

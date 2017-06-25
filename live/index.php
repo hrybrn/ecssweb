@@ -5,7 +5,7 @@
         $relPath = "";
 
         include_once($relPath . "navbar/navbar.php");
-        echo getNavBar($lang);
+        echo getNavBar();
         
         ?>
         <meta charset="UTF-8">

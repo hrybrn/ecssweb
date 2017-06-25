@@ -6,7 +6,7 @@ include_once($relPath . "navbar/navbar.php");
 
 echo getNavBar();
 
-$raw = file_get_contents($relPath . "data/committee.json");
+$raw = file_get_contents($relPath . "../data/committee.json");
 $committee = json_decode($raw, true);
 
 echo '<div class="buttonGroup">';

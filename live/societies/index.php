@@ -7,7 +7,7 @@
 
         echo getNavBar();
 
-        $raw = file_get_contents($relPath . "data/societies.json");
+        $raw = file_get_contents($relPath . "../data/societies.json");
         $societies = json_decode($raw, true);
 
         echo '<div class="buttonGroup">';
