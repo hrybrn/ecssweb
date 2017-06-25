@@ -18,7 +18,7 @@ function showMember(id) {
                 $.each(sponsor, function (key, value) {
                     if (key === "Name") {
                         html += '<tr><td colspan="2">\n\
-                                <h1>' + value + '<img id="linkIcon" src="' + relPath + 'images/icons/medal-' + sponsor.Type + '.png"></h1>\n\
+                                <h1>' + value + '</h1><img id="medalIcon" src="' + relPath + 'images/icons/medal-' + sponsor.Type + '.png"><div id="medaltext">' + sponsor.Type + ' sponsor</div>\n\
                              </td></tr>';
                     } else if (value.includes("http")) {
                         links += '<a href="' + value + '">' + key + '</a>';
