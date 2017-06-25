@@ -1,0 +1,205 @@
+* {
+    font-family: Helvetica;
+}
+
+body { margin: 0; padding: 0; }
+
+#memberImage {
+    float: left;
+    padding: 15px;
+    margin-top: 23px;
+    width: 300px;
+}
+
+#memberTable {
+    /*float: right;*/
+}
+
+#linkIcon {
+    width: 28px;
+    padding-left: 2px;
+    margin-bottom: 4px;
+    vertical-align: middle;
+    opacity: 0.9;
+    transition: opacity 0.1s linear;
+}
+
+#linkIcon:hover {
+    opacity: 0.4;
+}
+
+#sponsorImage {
+    float: left;
+    width: 350px;
+    padding: 15px;
+}
+
+#sponsorTable {
+    /*float: right;*/
+}
+
+#sponsorLink {
+    margin: 15px;
+    margin-left: 0px;
+}
+
+#societyImage {
+    float: left;
+    padding: 15px;
+}
+
+#societyLink {
+    margin: 15px;
+    margin-left: 0px;
+}
+
+#facebookEmbed {
+    float: left;
+    padding: 15px;
+}
+
+#twitterEmbed {
+    float: right;
+    padding: 15px;
+}
+
+.committeeMember {
+    opacity: 0;
+    transition: opacity 2.0s ease-in;
+}
+
+th, td {
+    vertical-align: top;
+    padding: 10px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 30px;
+    /*padding: 0px;*/
+    /*margin: 0px;*/
+}
+
+h2 {
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    color: darkred;
+    text-decoration: none;
+    
+    transition: color 0.1s linear;
+}
+
+a:after {
+    /*content: '\2197';*/
+}
+
+a:hover {
+    color: red;
+}
+
+.logo {
+    padding: 40px;
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+}
+
+button {
+    border-radius: 5px;
+    border: solid #ffffff;
+    padding-top: 3px;
+    padding-bottom:5px;
+    padding-left: 15px; 
+    padding-right: 15px;
+    background-color: darkred;
+    color: #ffffff;
+    size: 14px;
+    margin: 5px;
+    transition: background-color 0.1s linear;
+
+}
+
+button:focus {
+    outline:0;
+}
+
+button:hover {
+    background-color: #D82129;
+}
+
+button:active {
+    background-color: #ff5555;
+}
+
+
+.buttonGroup{
+    padding: 0px;
+    text-align: center;
+    margin: 0px;
+}
+
+.mainNav{
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.childNav{
+    float:left;
+}
+
+li {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family:Arial;
+}
+
+#committeeFam {
+    float: left;
+    padding-right: 30px;
+}
+
+.gold, .gold:active {
+    background-color: #f9c700;
+}
+
+.gold:hover {
+    background-color: #cca300;
+}
+
+.silver, .silver:active{
+    background-color: silver;
+}
+
+.silver:hover {
+    background-color: #999999;
+}
+
+.bronze, .bronze:active{
+    background-color: #cd7f32;
+}
+
+.bronze:active {
+    background-color: red;
+}
+
+.bronze:hover {
+    background-color: #905923;
+}
+
+.creditImage {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align: center;
+}
