@@ -30,9 +30,19 @@
     </head>
     <body>
         <br>
-        <img id="societyImage" width="300"/>
-        <table><tr><td></td><td><?= $buttons ?></td></tr></table>
-        <table id="societyTable"></table>
+        <table>
+        <tr>
+            <td></td>
+            <td><?= $buttons ?></td>
+        </tr>
+        <tr>
+            <td>
+                <img id="societyImage" class="pageImage"/>
+            </td>
+            <td>
+                <table id="societyTable" class="pageTable"></table>
+            </td>
+    </table>
 
         <script>
             $(document).ready(function () {

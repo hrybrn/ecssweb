@@ -39,7 +39,7 @@ $buttons .= '</div>';
                 <img id="memberImage" class="pageImage"/>
             </td>
             <td>
-                <table id="memberTable"></table>
+                <table id="memberTable" class="pageTable"></table>
             </td>
     </table>
     <script>

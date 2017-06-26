@@ -36,16 +36,20 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
 <script src="<?=$relPath ?>sponsors/sponsors.js"></script>
 
 
-<div class="buttonGroup">
-    <?= $gold ?>
-    <?= $silver ?>
-    <?= $bronze ?>
-</div>
-
-
-<img id="sponsorImage" width="300"/>
-<table id="sponsorTable"></table>
-<div id="links"></div>
+<br>
+        <table>
+        <tr>
+            <td></td>
+            <td><?= $gold; $silver; $bronze ?></td>
+        </tr>
+        <tr>
+            <td>
+                <img id="sponsorImage" class="pageImage"/>
+            </td>
+            <td>
+                <table id="sponsorTable" class="pageTable"></table>
+            </td>
+    </table>
 
 <script>
     $(document).ready(function () {
