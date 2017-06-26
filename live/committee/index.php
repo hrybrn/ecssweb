@@ -43,6 +43,7 @@ $buttons .= '</div>';
             </td>
     </table>
     <script>
+        $('#button0').prop("hidden",true);
         $(document).ready( function(){
             showMember("0");
         });

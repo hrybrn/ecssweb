@@ -1,4 +1,11 @@
 {
+	"Your Committee":{
+		"Name":"ECCS Committee",
+		"Image":"images/ecss-logo-square.png",
+		"RoleDisplayName":"2017-2018",
+		"RoleDescription":"",
+		"Manifesto":"The ECSS Committee work tirelessly on your behalf to ensure access to the best social events and sponsored activities. Click any of the buttons below to see who currently holds the role, and their pledges."
+	},
 	"President":{
 		"Name":"Ricki Tura",
 		"Manifesto":"Hi, I'm Ricki and I'm the ECSS president for 2017/18. Having spent the previous year as secretary for the society, it has been great to see ECSS grow on all fronts.<br>This year I plan to build upon the achievements accomplished so far, by boosting participation at the various socials and events hosted by the society through improved marketing and thorough planning. By taking into account member feedback, especially from our postgraduate students, I plan to host a wider range of socials so that everyone feels included. I also plan to host more events from our sponsoring companies, so that our members get greater exposure to the companies and industries that find ECS graduates so valuable.<br>In my spare time I play for the ECSS football team, participate in Parkruns, and make projects at Robosoc. If you have any questions, feel free to get in touch!",
@@ -11,7 +18,7 @@
 
 	"Vice President":{
 		"Name":"Ayush Katariya",
-		"Manifesto":"Hi, I’m Ayush and I’m the ECSS Vice-President for the year 2017/2018. Having served the society as Academic Officer last year, it feels good to step up my role in order to help the society grow.<br>My main objectives this year are to improve the visibility of ECSS among our members and to have a wider variety of events and socials than we have had before. In my role as Vice President, I work alongside the President to ensure the smooth functioning of the society on all fronts.<br>I am an active member of the Wrestling Society and enjoy all forms of martial arts and performance sports. You can usually find me in Level 3 Labs annoying people who are trying to work, watching football at the Stags, or, at the Rockstone [Best Burgers in Town! (Unpaid Advertisement)]. In my spare time I like to play FIFA and try and do things as far away from my degree as possible. Feel free to get in touch!",
+		"Manifesto":"Hi, I’m Ayush and I’m the ECSS Vice-President for the year 2017/2018. Having served the society as Academic Secretary last year, it feels good to step up my role in order to help the society grow.<br>My main objectives this year are to improve the visibility of ECSS among our members and to have a wider variety of events and socials than we have had before. In my role as Vice President, I work alongside the President to ensure the smooth functioning of the society on all fronts.<br>I am an active member of the Wrestling Society and enjoy all forms of martial arts and performance sports. You can usually find me in Level 3 Labs annoying people who are trying to work, watching football at the Stags, or, at the Rockstone [Best Burgers in Town! (Unpaid Advertisement)]. In my spare time I like to play FIFA and try and do things as far away from my degree as possible. Feel free to get in touch!",
 		"Facebook":"https://www.facebook.com/ayushkatariya",
 		"Email":"ak10n13@ecs.soton.ac.uk",
 		"Image":"images/committee/vicepresident.jpg",
@@ -29,11 +36,11 @@
         },
 	"Academic":{
 		"Name":"Denisa Prisiceanu",
-		"Manifesto":"As Academic Officer I would not just continue upon the great work done by the previous officers but build upon the strong foundations left by them.<br>I would want professionals who have ECS backgrounds but work in roles other than technology to tell students how they went about their professional lives. I would want to give ECS students an opportunity to explore careers (like consultancy, investment banking, finance etc.) outside of technology, adding on to the traditional talks and roles that ECS students look forward to.<br>I would make sure that all companies, recruiters and generally all people know that they deal with the very best when they come to Southampton and aim to make ECS graduates exclusive and wanted by the companies rather than the other way round. Cheers!",
+		"Manifesto":"As Academic Secretary I would not just continue upon the great work done by the previous officers but build upon the strong foundations left by them.<br>I would want professionals who have ECS backgrounds but work in roles other than technology to tell students how they went about their professional lives. I would want to give ECS students an opportunity to explore careers (like consultancy, investment banking, finance etc.) outside of technology, adding on to the traditional talks and roles that ECS students look forward to.<br>I would make sure that all companies, recruiters and generally all people know that they deal with the very best when they come to Southampton and aim to make ECS graduates exclusive and wanted by the companies rather than the other way round. Cheers!",
 		"Facebook":"https://www.facebook.com/denisa.prisiceanu",
 		"Email":"dcp1n13@ecs.soton.ac.uk",
 		"Image":"images/committee/academic.jpg",
-		"RoleDisplayName":"Academic Officer",
+		"RoleDisplayName":"Academic Secretary",
 		"RoleDescription":"The academic secretary has the job of organising ECSS talks and academic events, raising sponsorship funds for the society, managing all interaction with all ECSS sponsors as well as looking out for new ones."
 	},
 	"Social":{

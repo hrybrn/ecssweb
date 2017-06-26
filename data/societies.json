@@ -107,6 +107,7 @@
         "Name":"Code Dojo",
         "Image":"images/societies/code-dojo.png",
         "Meetings":"Monthly",
-        "Website":"https://southamptoncodedojo.com/"
+        "Website":"https://southamptoncodedojo.com/",
+	"Email":"admin@southamptoncodedojo.com"
     }
 }
