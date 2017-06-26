@@ -36,7 +36,7 @@ $buttons .= '</div>';
         </tr>
         <tr>
             <td>
-                <img id="memberImage" width="400" style="padding: 5px;"/>
+                <img id="memberImage" class="pageImage"/>
             </td>
             <td>
                 <table id="memberTable"></table>

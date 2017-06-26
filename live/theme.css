@@ -4,15 +4,16 @@
 
 body { margin: 0; padding: 0; }
 
-#memberImage {
+.pageImage {
     float: left;
-    padding: 15px;
-    margin-top: 0px;
-    width: 300px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 0px;
+    width: 350px;
 }
 
 #memberTable {
-    /*float: right;*/
+    padding: 20px;
 }
 
 #linkIcon {
@@ -29,9 +30,7 @@ body { margin: 0; padding: 0; }
 }
 
 #sponsorImage {
-    float: left;
-    width: 350px;
-    padding: 15px;
+    width: 400px;    
 }
 
 #sponsorTable {
