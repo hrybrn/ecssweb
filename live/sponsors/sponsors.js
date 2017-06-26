@@ -10,7 +10,7 @@ function showMember(id) {
                 $('#sponsorImage').prop('src', relPath + sponsor.Image);
 
                 //table data
-                var html = "<table>";
+                var html = "";
                 var links = "<tr><td>";
 
                 delete sponsor.Image;
@@ -30,7 +30,6 @@ function showMember(id) {
                 });
                 links += "</td></tr>";
                 html += links;
-                html += "</table>";
                 $('#sponsorTable').html(html);
                 //$('#links').html(links);
                 }

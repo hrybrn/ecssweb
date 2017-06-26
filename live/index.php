@@ -34,21 +34,21 @@
             <!-- </div> -->
         </div>
 
-        <table>
+        <table width="100%">
             <tr>    
-                <td width="370">
+                <td width="30%" align="left">
                     <div id="twitterEmbed">
                         <a class="twitter-timeline" data-width="340" data-height="400" data-dnt="true" data-theme="light" data-link-color="#E81C4F" href="https://twitter.com/ecs_society">Tweets by ecs_society</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </td>
 
-                <td>
+                <td width="40%" align="center">
                     <div id="facebookEmbed">
-                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fecss.soton%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="500" height="400" padding="15px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fecss.soton%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" height="400" width="175%"padding="15px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                     </div>
                 </td>
-                <td>
-                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fecss.soton%2F&tabs=events&width=340&height=244&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1002687123208525" width="500" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                <td width="30%" align="right">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fecss.soton%2F&tabs=events&width=340&height=244&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1002687123208525" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                 </td>
             </tr>
         </table>
