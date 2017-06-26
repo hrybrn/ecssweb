@@ -30,7 +30,9 @@ body { margin: 0; padding: 0; }
 }
 
 #sponsorImage {
-    width: 400px;    
+    float: left;
+    width: 400px;
+    padding: 30px;
 }
 
 #sponsorTable {
@@ -76,7 +78,7 @@ th, td {
 h1 {
     font-size: 30px;
     /*padding: 0px;*/
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 h2 {
