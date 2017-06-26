@@ -10,12 +10,12 @@
         $raw = file_get_contents($relPath . "../data/societies.json");
         $societies = json_decode($raw, true);
 
-        echo '<div class="buttonGroup">';
+        $buttons = '<div class="buttonGroup">';
         $i = 0;
         foreach ($societies as $society => $data) {
-            echo '<button onclick="showMember(' . $i . ')" id="button' . $i++ . '">' . $society . '</button>';
+            $buttons .= '<button onclick="showMember(' . $i . ')" id="button' . $i++ . '">' . $society . '</button>';
         }
-        echo '</div>';
+        $buttons .= '</div>';
         ?>
 
         <script> var relPath = "<?= $relPath ?>";</script>
@@ -31,6 +31,7 @@
     <body>
         <br>
         <img id="societyImage" width="300"/>
+        <table><tr><td></td><td><?= $buttons ?></td></tr></table>
         <table id="societyTable"></table>
 
         <script>

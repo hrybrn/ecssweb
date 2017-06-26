@@ -3,28 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/hb/website/about/index.php</file>
-            <file>file:/home/hb/website/theme.css</file>
-            <file>file:/home/hb/website/sponsors/index.php</file>
-            <file>file:/home/hb/website/committee/committee.js</file>
-            <file>file:/home/hb/website/societies/societies.js</file>
-            <file>file:/home/hb/website/societies/index.php</file>
-            <file>file:/home/hb/website/navbar/navbar.css</file>
-            <file>file:/home/hb/website/committee/index.php</file>
-            <file>file:/home/hb/website/phpinfo.php</file>
-            <file>file:/home/hb/website/about/contact.php</file>
-            <file>file:/home/hb/website/about/credits.php</file>
-            <file>file:/home/hb/website/sponsors/getMember.php</file>
-            <file>file:/home/hb/website/README.md</file>
-            <file>file:/home/hb/website/navbar/navbar.js</file>
-            <file>file:/home/hb/website/index.php</file>
-            <file>file:/home/hb/website/data/committee.json</file>
-            <file>file:/home/hb/website/sponsors/sponsors.js</file>
-            <file>file:/home/hb/website/data/sponsors.json</file>
-            <file>file:/home/hb/website/data/links.json</file>
-            <file>file:/home/hb/website/navbar/navbar.php</file>
-            <file>file:/home/hb/website/db/dbConnect.php</file>
-            <file>file:/home/hb/website/societies/getMember.php</file>
+            <file>file:/home/hb/ecssweb/live/committee/index.php</file>
+            <file>file:/home/hb/ecssweb/live/about/credits.php</file>
+            <file>file:/home/hb/ecssweb/live/shop/index.php</file>
+            <file>file:/home/hb/ecssweb/live/about/index.php</file>
+            <file>file:/home/hb/ecssweb/live/sponsors/getMember.php</file>
+            <file>file:/home/hb/ecssweb/live/committee/committee.js</file>
+            <file>file:/home/hb/ecssweb/live/db/dbConnect.php</file>
+            <file>file:/home/hb/ecssweb/live/navbar/navbar.php</file>
+            <file>file:/home/hb/ecssweb/live/committee/getMember.php</file>
+            <file>file:/home/hb/ecssweb/live/about/contact.php</file>
+            <file>file:/home/hb/ecssweb/live/sponsors/index.php</file>
+            <file>file:/home/hb/ecssweb/live/index.php</file>
+            <file>file:/home/hb/ecssweb/live/societies/index.php</file>
+            <file>file:/home/hb/ecssweb/live/societies/getMember.php</file>
         </group>
     </open-files>
 </project-private>
