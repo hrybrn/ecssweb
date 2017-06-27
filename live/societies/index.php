@@ -32,13 +32,12 @@
         <br>
         <table>
         <tr>
-            <td></td>
+            <td rowspan="2">
+                <img id="societyImage" class="pageImage"/>
+            </td>
             <td><?= $buttons ?></td>
         </tr>
         <tr>
-            <td>
-                <img id="societyImage" class="pageImage"/>
-            </td>
             <td>
                 <table id="societyTable" class="pageTable"></table>
             </td>
