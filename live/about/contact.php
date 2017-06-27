@@ -23,7 +23,7 @@ foreach($ecss as $key => $val){
 <title>Contact Us | ECSS</title>
         
 <div style="padding: 15px">
-<h3>Contact Us</h3>
+<h1>Contact Us</h1>
 <p>
     ECSS welcomes all communications from its society members!<br><br>
     Please feel free to contact us at any of the links below and we will get back to you as soon as possible.

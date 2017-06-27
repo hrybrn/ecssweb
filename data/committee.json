@@ -10,7 +10,7 @@
 	},
 	"President":{
 		"Name":"Ricki Tura",
-		"Manifesto":"Hi, I'm Ricki and I'm the ECSS president for 2017/18. Having spent the previous year as secretary for the society, it has been great to see ECSS grow on all fronts.<br>This year I plan to build upon the achievements accomplished so far, by boosting participation at the various socials and events hosted by the society through improved marketing and thorough planning. By taking into account member feedback, especially from our postgraduate students, I plan to host a wider range of socials so that everyone feels included. I also plan to host more events from our sponsoring companies, so that our members get greater exposure to the companies and industries that find ECS graduates so valuable.<br>In my spare time I play for the ECSS football team, participate in Parkruns, and make projects at Robosoc. If you have any questions, feel free to get in touch!",
+		"Manifesto":"Hi, I'm Ricki and I'm the ECSS president for 2017/18. Having spent the previous year as secretary for the society, it has been great to see ECSS grow on all fronts.<br><br>This year I plan to build upon the achievements accomplished so far, by boosting participation at the various socials and events hosted by the society through improved marketing and thorough planning. By taking into account member feedback, especially from our postgraduate students, I plan to host a wider range of socials so that everyone feels included. I also plan to host more events from our sponsoring companies, so that our members get greater exposure to the companies and industries that find ECS graduates so valuable.<br><br>In my spare time I play for the ECSS football team, participate in Parkruns, and make projects at Robosoc. If you have any questions, feel free to get in touch!",
 		"Facebook":"https://www.facebook.com/ricki.tura",
 		"Email":"rst1g15@soton.ac.uk",
 		"Image":"images/committee/president.jpg",
@@ -20,7 +20,7 @@
 
 	"Vice President":{
 		"Name":"Ayush Katariya",
-		"Manifesto":"Hi, I’m Ayush and I’m the ECSS Vice-President for the year 2017/2018. Having served the society as Academic Secretary last year, it feels good to step up my role in order to help the society grow.<br>My main objectives this year are to improve the visibility of ECSS among our members and to have a wider variety of events and socials than we have had before. In my role as Vice President, I work alongside the President to ensure the smooth functioning of the society on all fronts.<br>I am an active member of the Wrestling Society and enjoy all forms of martial arts and performance sports. You can usually find me in Level 3 Labs annoying people who are trying to work, watching football at the Stags, or, at the Rockstone [Best Burgers in Town! (Unpaid Advertisement)]. In my spare time I like to play FIFA and try and do things as far away from my degree as possible. Feel free to get in touch!",
+		"Manifesto":"Hi, I’m Ayush and I’m the ECSS Vice-President for the year 2017/2018. Having served the society as Academic Secretary last year, it feels good to step up my role in order to help the society grow.<br><br>My main objectives this year are to improve the visibility of ECSS among our members and to have a wider variety of events and socials than we have had before. In my role as Vice President, I work alongside the President to ensure the smooth functioning of the society on all fronts.<br><br>I am an active member of the Wrestling Society and enjoy all forms of martial arts and performance sports. You can usually find me in Level 3 Labs annoying people who are trying to work, watching football at the Stags, or, at the Rockstone [Best Burgers in Town! (Unpaid Advertisement)]. In my spare time I like to play FIFA and try and do things as far away from my degree as possible. Feel free to get in touch!",
 		"Facebook":"https://www.facebook.com/ayushkatariya",
 		"Email":"ak10n13@ecs.soton.ac.uk",
 		"Image":"images/committee/vicepresident.jpg",
@@ -38,7 +38,7 @@
         },
 	"Academic":{
 		"Name":"Denisa Prisiceanu",
-		"Manifesto":"As Academic Secretary I would not just continue upon the great work done by the previous officers but build upon the strong foundations left by them.<br>I would want professionals who have ECS backgrounds but work in roles other than technology to tell students how they went about their professional lives. I would want to give ECS students an opportunity to explore careers (like consultancy, investment banking, finance etc.) outside of technology, adding on to the traditional talks and roles that ECS students look forward to.<br>I would make sure that all companies, recruiters and generally all people know that they deal with the very best when they come to Southampton and aim to make ECS graduates exclusive and wanted by the companies rather than the other way round. Cheers!",
+		"Manifesto":"As Academic Secretary I would not just continue upon the great work done by the previous officers but build upon the strong foundations left by them.<br><br>I would want professionals who have ECS backgrounds but work in roles other than technology to tell students how they went about their professional lives. I would want to give ECS students an opportunity to explore careers (like consultancy, investment banking, finance etc.) outside of technology, adding on to the traditional talks and roles that ECS students look forward to.<br><br>I would make sure that all companies, recruiters and generally all people know that they deal with the very best when they come to Southampton and aim to make ECS graduates exclusive and wanted by the companies rather than the other way round. Cheers!",
 		"Facebook":"https://www.facebook.com/denisa.prisiceanu",
 		"Email":"dcp1n13@ecs.soton.ac.uk",
 		"Image":"images/committee/academic.jpg",
@@ -47,7 +47,7 @@
 	},
 	"Social":{
 		"Name":"Luke Woolley",
-		"Manifesto":"Hi, my name is Luke, you may know me as the short guy with blue hair who drinks a lot. I&rsquo;m a first-year Electronics and Electrical Engineering student and I am your social sec. ECSS is a wonderful society that made me feel incredibly welcome when I first arrived and I want to give back. As social sec I would continue the great work that is currently going on, but I also have many new things to bring to the table. For one I want to improve the first social, including a bad weather contingency. I also want to introduce more socials that split people into smaller groups, such as internal leagues for board and card games, and a nerdy pub quiz as many people feel overwhelmed by the big events and pub crawls. I also want to have more ECSS themed pub crawls, such as more visits to the Alexandria Beer Emporium and themed pub crawls (ie sci fi). <br>And remember, at least I&rsquo;m better than events with no free pizza.",
+		"Manifesto":"Hi, my name is Luke, you may know me as the short guy with blue hair who drinks a lot. I&rsquo;m a first-year Electronics and Electrical Engineering student and I am your social sec. ECSS is a wonderful society that made me feel incredibly welcome when I first arrived and I want to give back. As social sec I would continue the great work that is currently going on, but I also have many new things to bring to the table. For one I want to improve the first social, including a bad weather contingency. I also want to introduce more socials that split people into smaller groups, such as internal leagues for board and card games, and a nerdy pub quiz as many people feel overwhelmed by the big events and pub crawls. I also want to have more ECSS themed pub crawls, such as more visits to the Alexandria Beer Emporium and themed pub crawls (ie sci fi). <br><br>And remember, at least I&rsquo;m better than events with no free pizza.",
 		"Facebook":"https://www.facebook.com/lukegwoolley",
 		"Email":"sw1n15@ecs.soton.ac.uk",
 		"Image":"images/committee/social.jpg",
@@ -56,7 +56,7 @@
 	},
 	"Web":{
 		"Name":"Harry Brown",
-		"Manifesto":"I love the web. I was born with &lt;head&gt; on my forehead.<br>On a more serious note I&#039;m my name is Harry and I am looking to maintain the great work already going on, whilst also building on the website when needed. I'm that guy that makes this website look so cool",
+		"Manifesto":"I love the web. I was born with &lt;head&gt; on my forehead.<br><br>On a more serious note I&#039;m my name is Harry and I am looking to maintain the great work already going on, whilst also building on the website when needed. I'm that guy that makes this website look so cool",
 		"Facebook":"https://www.facebook.com/hrybrn",
 		"Email":"hb15g16@ecs.soton.ac.uk",
 		"Image":"images/committee/awesomewebmaster.jpg",
@@ -83,7 +83,7 @@
 	},
 	"Marketing":{
 		"Name":"George Elliott-Hunter",
-		"Manifesto":"First I was Academic Sec. Then I was Social Sec. Now, in my quest for ever less important roles I am going into MARKETING!<br>All of the FB event headers, merchandise graphics and so on are made by me. Even the Christmas party snowflake logo and the main society logo itself were designed by me!<br>But marketing should be more than just a graphic design role. It should be about presenting a consistent image across everything we do.<br><br>In short:<br>- Good at the Photoshops<br>- Owns a nice camera",
+		"Manifesto":"First I was Academic Sec. Then I was Social Sec. Now, in my quest for ever less important roles I am going into MARKETING!<br><br>All of the FB event headers, merchandise graphics and so on are made by me. Even the Christmas party snowflake logo and the main society logo itself were designed by me!<br><br>But marketing should be more than just a graphic design role. It should be about presenting a consistent image across everything we do.<br><br>In short:<br>- Good at the Photoshops<br>- Owns a nice camera",
 		"Facebook":"https://www.facebook.com/gelliotthunter",
 		"Email":"gpeh1g14@ecs.soton.ac.uk",
 		"Image":"images/committee/marketing.jpg",
@@ -92,7 +92,7 @@
 	},
 	"Sports":{
 		"Name":"Bradley Elvy",
-		"Manifesto":"Sports in ECSS is very limited and I would like to change that. In the past year I have seen the football team grow from struggling to get enough players for a game to having so many players turn up that it&#039;s hard to get everyone on the pitch. It would be great to see this happen for another sport in ECSS, even if it&#039;s just for the social aspect of the team. <br>I propose:<br>-Tournaments for games such as table tennis, badminton, snooker, pool, chess etc...<br>-Casual Leagues set up for sports within ECSS<br>-More intramural sports<br>-Focus on getting everyone involved, no matter what skill level (it&#039;s good for us to not be staring at a screen all day)",
+		"Manifesto":"Sports in ECSS is very limited and I would like to change that. In the past year I have seen the football team grow from struggling to get enough players for a game to having so many players turn up that it&#039;s hard to get everyone on the pitch. It would be great to see this happen for another sport in ECSS, even if it&#039;s just for the social aspect of the team. <br><br>I propose:<br>-Tournaments for games such as table tennis, badminton, snooker, pool, chess etc...<br>-Casual Leagues set up for sports within ECSS<br>-More intramural sports<br>-Focus on getting everyone involved, no matter what skill level (it&#039;s good for us to not be staring at a screen all day)",
 		"Facebook":"https://www.facebook.com/brad.elvy.1",
 		"Email":"be5g16@ecs.soton.ac.uk",
 		"Image":"images/committee/sports.jpg",
