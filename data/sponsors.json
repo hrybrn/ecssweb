@@ -15,11 +15,11 @@
     },
 
     "Silver": {
-        "ARM" : {
-            "Name" : "ARM",
-            "Website" : "http://www.arm.com/",
-            "Image" : "images/sponsors/arm.jpg",
-            "Info" : "ARM is a British semiconductor and software company.  It was founded in 1990 and has its headquarters in Cambridge, UK. Some of its clients include Apple and Samsung."
+	"Ultra Electronics" : {
+            "Name" : "Ultra Electronics",
+            "Website" : "http://www.ultra-electronics.com/",
+            "Image" : "images/sponsors/ultra.jpg",
+            "Info" : "Ultra Electronics is a technology company based in London, UK, manufacturing a wide array of technolgies from underwater defence to industrial control."
         },
         "FactSet" : {
             "Name" : "FactSet",
@@ -36,11 +36,11 @@
     },
 
     "Bronze": {
-        "Ultra Electronics" : {
-            "Name" : "Ultra Electronics",
-            "Website" : "http://www.ultra-electronics.com/",
-            "Image" : "images/sponsors/ultra.jpg",
-            "Info" : "Ultra Electronics is a technology company based in London, UK, manufacturing a wide array of technolgies from underwater defence to industrial control."
+        "ARM" : {
+            "Name" : "ARM",
+            "Website" : "http://www.arm.com/",
+            "Image" : "images/sponsors/arm.jpg",
+            "Info" : "ARM is a British semiconductor and software company.  It was founded in 1990 and has its headquarters in Cambridge, UK. Some of its clients include Apple and Samsung."
         },
         "Schroders" : {
             "Name" : "Schroders",
