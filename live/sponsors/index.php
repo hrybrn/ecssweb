@@ -39,13 +39,10 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
 <br>
         <table>
         <tr>
-            <td></td>
+            <td rowspan="2"><img id="sponsorImage" class="pageImage"/></td>
             <td><?= $gold; $silver; $bronze ?></td>
         </tr>
         <tr>
-            <td>
-                <img id="sponsorImage" class="pageImage"/>
-            </td>
             <td>
                 <table id="sponsorTable" class="pageTable"></table>
             </td>

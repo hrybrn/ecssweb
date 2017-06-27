@@ -29,15 +29,12 @@ $buttons .= '</div>';
         
 <body>
     <br>
-    <table>
+    <table class="wholeTable">
         <tr>
-            <td></td>
+            <td rowspan="2"><img id="memberImage" class="pageImage"/></td>
             <td><?= $buttons ?></td>
         </tr>
         <tr>
-            <td>
-                <img id="memberImage" class="pageImage"/>
-            </td>
             <td>
                 <table id="memberTable" class="pageTable"></table>
             </td>
