@@ -15,7 +15,7 @@
     </head>
 
     <body>
-        <img style="padding : 15px;" id="committeeFam" src="<?= $relPath ?>images/everyone.png" height="350">
+        <img style="padding : 15px;" id="committeeFam" src="<?= $relPath ?>images/people.jpg" height="350">
 
         <h1>About ECSS</h1>
 

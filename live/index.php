@@ -28,7 +28,7 @@
             <p>Welcome to the Electronics and Computer Science (ECS) Society website. </p>
             <p>We are a student-run society for ECS at the University of Southampton. </p>
             <p>On this website you will find information about the society such as who we are, what we aim to do, as well as what events we are currently organising! </p>
-            <p>Still reading? You can even find out more about us.</p>
+            <p>Still reading? You can even find out more <a href="about/" target="_self">about us.</a></p>
             <p>To keep up with the latest events, join the <a href="https://www.facebook.com/groups/ecss.soton/">ECSS Facebook group</a> and follow us on Twitter, <a href="http://twitter.com/ecs_society">@ECS_Society.</a></p>
             <!-- </h2> -->
             <!-- </div> -->
