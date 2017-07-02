@@ -30,7 +30,7 @@
     </head>
     <body>
         <br>
-        <table>
+        <table class="wholeTable">
         <tr>
             <td rowspan="2">
                 <img id="societyImage" class="pageImage"/>

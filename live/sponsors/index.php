@@ -37,7 +37,7 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
 
 
 <br>
-        <table>
+        <table class="wholeTable">
         <tr>
             <td rowspan="2"><img id="sponsorImage" class="pageImage"/></td>
             <td><?= $gold; $silver; $bronze ?></td>
