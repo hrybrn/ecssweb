@@ -14,12 +14,12 @@ body { margin: 0; padding: 0; }
 
 
 #memberTable {
-    padding: 20px;
+    padding-left: 20px;
 }
 
-/*#societyTable {
+#societyTable {
     padding-left: 20px;
-}*/
+}
 #linkIcon {
     width: 28px;
     padding-left: 2px;
@@ -142,9 +142,9 @@ button:active {
 
 
 .buttonGroup{
-    /*padding-left: 20px;*/
-    padding: 0px;
-    text-align: center;
+    padding-left: 15px;
+
+    /*text-align: center;*/
     margin: 0px;
 }
 
