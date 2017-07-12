@@ -12,10 +12,14 @@ body { margin: 0; padding: 0; }
     width: 350px;
 }
 
+
 #memberTable {
     padding: 20px;
 }
 
+#societyTable {
+    padding: 20px;
+}
 #linkIcon {
     width: 28px;
     padding-left: 2px;
@@ -138,8 +142,8 @@ button:active {
 
 
 .buttonGroup{
-    padding: 0px;
-    text-align: center;
+    padding: 20px;
+    /*text-align: center;*/
     margin: 0px;
 }
 
