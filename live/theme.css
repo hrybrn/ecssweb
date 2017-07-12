@@ -144,7 +144,7 @@ button:active {
 .buttonGroup{
     /*padding-left: 20px;*/
     padding: 0px;
-    /*text-align: center;*/
+    text-align: center;
     margin: 0px;
 }
 
