@@ -35,6 +35,7 @@
             <td rowspan="2">
                 <img id="societyImage" class="pageImage"/>
             </td>
+
             <td><?= $buttons ?></td>
         </tr>
         <tr>
