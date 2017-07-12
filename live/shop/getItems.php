@@ -3,7 +3,7 @@ $relPath = "../";
 
 $maxItems = 20;
 
-include_once($relPath . "db/dbConnect.php");
+include_once($relPath . "../db/dbConnect.php");
 
 if(!(isset($_GET['search']))){
     return false;

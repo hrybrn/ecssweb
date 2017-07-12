@@ -1,7 +1,7 @@
 <?php
 $relPath = "../";
 
-include_once($relPath . "db/dbConnect.php");
+include_once($relPath . "../db/dbConnect.php");
 include_once("getItem.php");
 include_once($relPath . "navbar/navbar.php");
 echo getNavBar();
