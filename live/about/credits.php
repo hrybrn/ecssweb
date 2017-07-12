@@ -20,7 +20,7 @@ echo getNavBar();
         <tr>
             <td>Harry wrote the pages and made other people format them.</td>
             <td>Rayna wrote most of the CSS and made this website pretty af.</td>
-            <td>Chris has yet to make a commit, he will one day once he learns PHP.</td>
+            <td>Chris has been making small fixes, as requested.</td>
         </tr>
     </table>
 </html>
