@@ -28,13 +28,8 @@ foreach($ecss as $key => $val){
     ECSS welcomes all communications from its society members!<br><br>
     Please feel free to contact us at any of the links below and we will get back to you as soon as possible.
 </p>
-<p><a href="https://www.facebook.com/ecss.soton/"><img id="linkIcon" src="../images/icons/facebook-circle.png">Facebook Page</a></p>
-<p><a href=""><img id="linkIcon" src="../images/icons/facebook-circle.png">Facebook Group</a></p>
-<p><a href=""><img id="linkIcon" src="../images/icons/email-circle.png">Email (insert email here so that it's visible</a></p>
+<p><a href="https://www.facebook.com/ecss.soton/"><img id="linkIcon" src="../images/icons/facebook-circle.png">ECSS Facebook Page</a></p>
+<p><a href="https://www.facebook.com/groups/ecss.soton/"><img id="linkIcon" src="../images/icons/facebook-circle.png">ECSS Facebook Group</a></p>
+<p><a href="mailto:society@ecs.soton.ac.uk"><img id="linkIcon" src="../images/icons/email-circle.png">Email: society@ecs.soton.ac.uk</a></p>
 
-<table>
-    <tr>
-        <?= $links ?>
-    </tr>
-</table>
 </div>
