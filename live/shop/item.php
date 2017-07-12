@@ -1,12 +1,13 @@
 <?php
-
-//
 $relPath = "../";
 
 include_once($relPath . "db/dbConnect.php");
+include_once("getItem.php");
+include_once($relPath . "navbar/navbar.php");
+echo getNavBar();
 
 if(!is_numeric($_GET['itemID'])){
-    return false;
+    echo "Yeah dude you forgot the item ID";
     exit;
 }
 
@@ -18,4 +19,8 @@ $sql = "
         WHERE i.itemID = $id;
        ";
 
-return safe($sql);
+$item = safe($sql);
+
+?>
+
+<script src="item.js"></script>

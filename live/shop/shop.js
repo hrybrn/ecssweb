@@ -15,15 +15,3 @@ function getItems(search){
         }
     });
 }
-
-function getItem(id){
-    $.ajax({
-       url: 'getItem.php',
-       type: 'get',
-       data: 'itemID=' + id,
-       dataType: 'json',
-       success: function(item){
-           //do stuff
-       }
-    });
-}
