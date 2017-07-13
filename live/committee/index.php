@@ -46,9 +46,11 @@ $buttons .= '</div>';
             </td>
     </table>
     -->
+    <div>
     <img id="memberImage" class="pageImage"/>
     <?= $buttons ?>
     <table id="memberTable" class="pageTable"></table>
+    </div>
 
     <script>
         $('#button0').prop("hidden",true);

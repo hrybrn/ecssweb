@@ -21,15 +21,15 @@ body { margin: 0; padding: 0; }
     width: 350px;
 }
 
-#memberTable, #societyTable {
+#memberTable, #societyTable, #sponsorTable {
     display: block;
     float: left;
-    padding-right: 10px;
 }
 
 #memberTable {
     padding-left: 20px;
-    max-width: calc(100% - 410px);
+    padding-right: 20px;
+    max-width: calc(100% - 420px);
 }
 
 #memberImage {
@@ -38,7 +38,8 @@ body { margin: 0; padding: 0; }
 
 #societyTable {
     padding-left: 10px;
-    max-width: calc(100% - 405px);
+    padding-right: 10px;
+    max-width: calc(100% - 400px);
 }
 
 #linkIcon {
@@ -54,14 +55,29 @@ body { margin: 0; padding: 0; }
     opacity: 0.4;
 }
 
+#sponsorImageContainer {
+    width: 460px;
+    height: 460px;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #sponsorImage {
     float: left;
     width: 400px;
     padding: 30px;
 }
 
+#sponsorButtonGroup {
+    float: left;
+    max-width: calc(100% - 460px);
+}
+
 #sponsorTable {
     /*float: right;*/
+    max-width: calc(100% - 480px);
 }
 
 #sponsorLink {
@@ -274,10 +290,28 @@ li {
     }
 
     #memberImage {
-        max-width: 100%;
+        max-width: calc(100% - 10px);
         margin: 0 auto;
         padding-left: 5px;
         padding-right: 5px;
     }
+}
 
+@media (max-width: 700px) {
+    #sponsorImageContainer, #sponsorImage, #sponsorButtonGroup, #sponsorTable {
+        float: none;
+    }
+
+    #sponsorImageContainer {
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #sponsorImage {
+        max-width: calc(100% - 60px);
+    }
+
+    #sponsorImageContainer, #sponsorButtonGroup, #sponsorTable {
+        max-width: 100%;
+    }
 }

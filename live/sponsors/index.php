@@ -1,3 +1,6 @@
+<!doctype html>
+<html>
+<head>
 <?php
 $relPath = "../";
 
@@ -30,12 +33,14 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
 <link rel="stylesheet" href="<?= $relPath ?>theme.css">
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sponsors | ECSS</title>
 
 <script> var relPath = "<?= $relPath ?>";</script>
 <script src="<?=$relPath ?>sponsors/sponsors.js"></script>
-
-
+</head>
+<body>
+<!--
 <br>
         <table class="wholeTable">
         <tr>
@@ -47,9 +52,17 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
                 <table id="sponsorTable" class="pageTable"></table>
             </td>
     </table>
+-->
+<div>
+    <div id="sponsorImageContainer"><img id="sponsorImage" class="pageImage"/></div>
+    <div id="sponsorButtonGroup"><?= $gold; $silver; $bronze ?></div>
+    <table id="sponsorTable" class="pageTable"></table>
+</div>
 
 <script>
     $(document).ready(function () {
         showMember("0");
     });
 </script>
+</body>
+</html>
