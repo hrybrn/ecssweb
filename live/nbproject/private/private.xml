@@ -3,17 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Christopher/Desktop/ecss%20local/ecssweb/live/about/contact.php</file>
-            <file>file:/C:/Users/Christopher/Desktop/ecss%20local/ecssweb/live/theme.css</file>
-            <file>file:/C:/Users/Christopher/Desktop/ecss%20local/ecssweb/live/committee/index.php</file>
-            <file>file:/C:/Users/Christopher/Desktop/ecss%20local/ecssweb/live/societies/index.php</file>
-=======
             <file>file:/home/hb/ecssweb/live/societies/societies.js</file>
-            <file>file:/home/hb/ecssweb/live/shop/getItem.php</file>
+            <file>file:/home/hb/ecssweb/live/shop/index.php</file>
+            <file>file:/home/hb/ecssweb/live/shop/item.php</file>
+            <file>file:/home/hb/ecssweb/live/shop/item.js</file>
             <file>file:/home/hb/ecssweb/live/shop/shop.js</file>
             <file>file:/home/hb/ecssweb/live/shop/getItems.php</file>
->>>>>>> origin/master
+            <file>file:/home/hb/ecssweb/live/societies/index.php</file>
+            <file>file:/home/hb/ecssweb/live/navbar/navbar.php</file>
         </group>
     </open-files>
 </project-private>
