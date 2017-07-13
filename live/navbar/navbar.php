@@ -46,7 +46,7 @@ function getNavBar() {
     $nav .= '<a href=""><img id="langIcon" src="' . $relPath . '/images/flag-icons/uk.png" height="20"></a>';
     $nav .= '
         <div id="shopButtonDiv">
-        <form action="' . relPath . '/shop/">
+        <form action="">
         <button id="navButton" class="shopButton">Shop</button>
         </form>
         </div>';
