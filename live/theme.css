@@ -4,6 +4,15 @@
 
 body { margin: 0; padding: 0; }
 
+#societyImageContainer {
+    width: 380px;
+    height: 380px;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .pageImage {
     float: left;
     padding: 10px;
@@ -12,14 +21,26 @@ body { margin: 0; padding: 0; }
     width: 350px;
 }
 
+#memberTable, #societyTable {
+    display: block;
+    float: left;
+    padding-right: 10px;
+}
 
 #memberTable {
     padding-left: 20px;
+    max-width: calc(100% - 410px);
+}
+
+#memberImage {
+    display: block;
 }
 
 #societyTable {
     padding-left: 10px;
+    max-width: calc(100% - 405px);
 }
+
 #linkIcon {
     width: 28px;
     padding-left: 2px;
@@ -146,6 +167,8 @@ button:active {
 
     /*text-align: center;*/
     margin: 0px;
+    float: left;
+    max-width: calc(100% - 395px);
 }
 
 .mainNav{
@@ -229,4 +252,32 @@ li {
 
 #medalIcon:hover #medaltext {
     opacity: 1;
+}
+
+@media (max-width: 600px) {
+    #societyImageContainer, #societyImage, .buttonGroup, #societyTable, #memberImage, #memberTable {
+        float: none;
+    }
+
+    #societyImageContainer {
+        width: 230px;
+        height: 230px;
+        margin: 0 auto;
+    }
+
+    #societyImage {
+        width: 200px;
+    }
+
+    .buttonGroup, #societyTable, #memberTable {
+        max-width: 100%;
+    }
+
+    #memberImage {
+        max-width: 100%;
+        margin: 0 auto;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
 }

@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
     <head>
         <?php
@@ -23,12 +24,14 @@
         <script src="societies.js"></script>
 
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Societies | ECSS</title>
         <base target="_blank">
 
         <link rel="stylesheet" href="../theme.css">
     </head>
     <body>
+    <!--
         <br>
         <table class="wholeTable">
         <tr>
@@ -43,6 +46,12 @@
                 <table id="societyTable" class="pageTable"></table>
             </td>
     </table>
+    -->
+    <div>
+        <div id="societyImageContainer"><img id="societyImage" class="pageImage"/></div>
+        <?= $buttons ?>
+        <table id="societyTable" class="pageTable"></table>
+    </div>
 
         <script>
             $(document).ready(function () {

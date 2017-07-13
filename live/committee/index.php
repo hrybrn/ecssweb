@@ -1,3 +1,6 @@
+<!doctype html>
+<html>
+<head>
 <?php
 
 $relPath = "../";
@@ -25,9 +28,12 @@ $buttons .= '</div>';
 <link rel="stylesheet" href="<?= $relPath ?>theme.css">
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Committee | ECSS</title>
+</head>
         
 <body>
+    <!--
     <br>
     <table class="wholeTable">
         <tr>
@@ -39,6 +45,11 @@ $buttons .= '</div>';
                 <table id="memberTable" class="pageTable"></table>
             </td>
     </table>
+    -->
+    <img id="memberImage" class="pageImage"/>
+    <?= $buttons ?>
+    <table id="memberTable" class="pageTable"></table>
+
     <script>
         $('#button0').prop("hidden",true);
         $(document).ready( function(){
@@ -46,3 +57,4 @@ $buttons .= '</div>';
         });
     </script>
 </body>
+</html>
