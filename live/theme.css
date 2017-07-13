@@ -1,5 +1,8 @@
 * {
     font-family: Helvetica;
+    /*outline-color: red;
+    outline-width: 1px;
+    outline-style: dotted;*/
 }
 
 body { margin: 0; padding: 0; }

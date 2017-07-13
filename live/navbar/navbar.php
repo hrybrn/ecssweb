@@ -44,7 +44,13 @@ function getNavBar() {
     }
     
     $nav .= '<a href=""><img id="langIcon" src="' . $relPath . '/images/flag-icons/uk.png" height="20"></a>';
-    
+    $nav .= '
+        <div id="shopButtonDiv">
+        <form action="' . relPath . '/shop/">
+        <button id="navButton" class="shopButton">Shop</button>
+        </form>
+        </div>';
+    //$nav .= '<img src ="' . $relPath . '/images/fire.gif" height="30px">';
     return $nav . "</div><br>";
 }
 ?>

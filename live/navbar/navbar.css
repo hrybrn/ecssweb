@@ -6,6 +6,24 @@ form {
     display: inline;
 }
 
+.shopButton {
+    transition: background 0.3s linear;
+}
+
+#shopButtonDiv {
+    display: inline-block;
+    background-color: black;
+}
+
+#shopButtonDiv:hover {
+      background: url("../images/fire.gif") no-repeat scroll 0 0 transparent;
+      background-size: cover;
+}
+
+#shopButtonDiv:hover .shopButton {
+    background-color: transparent;
+}
+
 #langIcon {
     height: 25px;
     vertical-align: middle;
