@@ -295,6 +295,23 @@ li {
         padding-left: 5px;
         padding-right: 5px;
     }
+
+    #societiesPageContainer, #committeePageContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buttonGroup {
+        order: 1;
+    }
+
+    #societyImageContainer, #memberImage {
+        order: 2;
+    }
+
+    #societyTable, #memberTable {
+        order: 3;
+    }
 }
 
 @media (max-width: 700px) {
@@ -314,4 +331,27 @@ li {
     #sponsorImageContainer, #sponsorButtonGroup, #sponsorTable {
         max-width: 100%;
     }
+
+    #sponsorsPageContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sponsorsPageContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buttonGroup {
+        order: 1;
+    }
+
+    #sponsorImageContainer {
+        order: 2;
+    }
+
+    #sponsorTable {
+        order: 3;
+    }
+
 }

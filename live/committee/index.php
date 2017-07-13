@@ -46,7 +46,7 @@ $buttons .= '</div>';
             </td>
     </table>
     -->
-    <div>
+    <div id="committeePageContainer">
     <img id="memberImage" class="pageImage"/>
     <?= $buttons ?>
     <table id="memberTable" class="pageTable"></table>

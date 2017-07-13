@@ -47,7 +47,7 @@
             </td>
     </table>
     -->
-    <div>
+    <div id="societiesPageContainer">
         <div id="societyImageContainer"><img id="societyImage" class="pageImage"/></div>
         <?= $buttons ?>
         <table id="societyTable" class="pageTable"></table>
