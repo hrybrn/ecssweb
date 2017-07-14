@@ -33,23 +33,10 @@ $buttons .= '</div>';
 </head>
         
 <body>
-    <!--
-    <br>
-    <table class="wholeTable">
-        <tr>
-            <td rowspan="2"><img id="memberImage" class="pageImage"/></td>
-            <td><?= $buttons ?></td>
-        </tr>
-        <tr>
-            <td>
-                <table id="memberTable" class="pageTable"></table>
-            </td>
-    </table>
-    -->
     <div id="committeePageContainer">
-    <img id="memberImage" class="pageImage"/>
-    <?= $buttons ?>
-    <table id="memberTable" class="pageTable"></table>
+        <img id="memberImage" class="pageImage"/>
+        <?= $buttons ?>
+        <div id="memberTable"></div>
     </div>
 
     <script>

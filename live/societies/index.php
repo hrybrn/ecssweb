@@ -30,23 +30,7 @@
 
         <link rel="stylesheet" href="../theme.css">
     </head>
-    <body>
-    <!--
-        <br>
-        <table class="wholeTable">
-        <tr>
-            <td rowspan="2">
-                <img id="societyImage" class="pageImage"/>
-            </td>
-
-            <td><?= $buttons ?></td>
-        </tr>
-        <tr>
-            <td>
-                <table id="societyTable" class="pageTable"></table>
-            </td>
-    </table>
-    -->
+<body>
     <div id="societiesPageContainer">
         <div id="societyImageContainer"><img id="societyImage" class="pageImage"/></div>
         <?= $buttons ?>
@@ -58,5 +42,5 @@
                 showMember("0");
             });
         </script>
-    </body>
+</body>
 </html>

@@ -40,19 +40,6 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
 <script src="<?=$relPath ?>sponsors/sponsors.js"></script>
 </head>
 <body>
-<!--
-<br>
-        <table class="wholeTable">
-        <tr>
-            <td rowspan="2"><img id="sponsorImage" class="pageImage"/></td>
-            <td><?= $gold; $silver; $bronze ?></td>
-        </tr>
-        <tr>
-            <td>
-                <table id="sponsorTable" class="pageTable"></table>
-            </td>
-    </table>
--->
 <div id="sponsorsPageContainer">
     <div id="sponsorImageContainer"><img id="sponsorImage" class="pageImage"/></div>
     <div id="sponsorButtonGroup"><?= $gold; $silver; $bronze ?></div>
