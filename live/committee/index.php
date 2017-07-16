@@ -4,12 +4,12 @@
 <?php
 
 $relPath = "../";
-
+$lang = $_GET["lang"];
 include_once($relPath . "navbar/navbar.php");
 
 echo getNavBar();
 
-$raw = file_get_contents($relPath . "../data/committee.json");
+$raw = file_get_contents($relPath . "../data/" . $lang . "/committee.json");
 $committee = json_decode($raw, true);
 
 $buttons = '<div class="buttonGroup">';

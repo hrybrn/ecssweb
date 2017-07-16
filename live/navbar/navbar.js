@@ -29,10 +29,10 @@ function changeLanguage(link,lang){
     var currentLink = link.split("?");
                 
     $(currentLink).each(function(){
-        if(this.substr(0,4) == "lang"){
+        if(this.substr(0,4) === "lang"){
             this = "lang=" + lang;
         }
-        if(this != currentLink[0]){
+        if(this !== currentLink[0]){
             this = "?" + this;
         }
     });
