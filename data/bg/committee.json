@@ -45,7 +45,7 @@
 		"RoleDisplayName":"Академичен секретар",
 		"RoleDescription":"Академичният секретар има за работа да организира лекции и академични събития за ECSS, да набира средства от спонсори за Обществото, да управлява всички комуникации със спонсорите на ECSS, както и да се оглежда за нови."
 	},
-	"Социален секретар":{
+	"Социален":{
 		"Name":"Люк Уули",
 		"Manifesto":"Здравейте, казвам се Люк, сигурно ме знаете като ниския със синята коса дето пие много. Уча Електроника и електрическо инженерство първа година и саъм вашият социален секретар. ECSS е прекрасно общество, което ме накара да се чувствам изключително добре дошъл когато дойдох за първи път, и искам да върна услугата. Като социален секретар бих искал да продължа страхотната работа, правена до момента, но също така има много нови неща, които мога да донеса на Обществото. Като начало бих подобрил първото социално събитие, включително резервен план при лошо време. Също така бих искал да въведа повече събития, където хората са разделени на по-малки групи, като например вътрешни турнири по настолни игри и игри с карти, както и nerdy pub quiz, тъй като много хора не се чувстват добре в претоварената обстановка на големите събития и pub crawls. Също така искам да организирам повече ECSS pub crawls, като например повече ходения до Alexandria Beer Emporium или тематични pub crawls (например sci fi).<br><br>И помнете, поне съм по-добре от събития без безплатна пица.",
 		"Facebook":"https://www.facebook.com/lukegwoolley",
@@ -54,76 +54,76 @@
 		"RoleDisplayName":"Социален секретар",
 		"RoleDescription":"The social sec's job is, surprisingly enough, to organise and run the various socials that ECSS has!<br><br>We have a social about once a week, so there's plenty to be organised. As social sec you have to put together a calendar of events, invite people to them (usually FB and maybe e-mail) and make sure all the relevant stuff is sorted ahead of time such as room bookings or checkingthat pubs will be available for large groups.<br><br> After that is running the social, which is the fun bit! Make sure people are enjoying themselves and go around chatting. You might also have to delegate some pizza-buyers for the more chilled out socials.<br><br> All in all, it's good fun! There's a good bit of organisation but mostly the role involves getting to know lots of people and helping them have awesome events with their mates :D"
 	},
-	"Web":{
-		"Name":"Harry Brown",
-		"Manifesto":"I love the web. I was born with &lt;head&gt; on my forehead.<br><br>On a more serious note I&#039;m my name is Harry and I am looking to maintain the great work already going on, whilst also building on the website when needed. I'm that guy that makes this website look so cool",
+	"Уебмастър":{
+		"Name":"Хари Браун",
+		"Manifesto":"Обичам мрежата. Роден съм с <head> на челото си.<br><br>",
 		"Facebook":"https://www.facebook.com/hrybrn",
 		"Email":"hb15g16@ecs.soton.ac.uk",
 		"Image":"images/committee/awesomewebmaster.jpg",
 		"RoleDisplayName":"Web Officer",
-		"RoleDescription":"The webmaster is in charge of maintaining the society website and services, allowing the rest of the committee to get the latest information direct to you!"
+		"RoleDescription":"Уебмастърът е отговорен за поддръжката на уебсайта и останалите уеб платформи на Обществото, за да могат останалите от Комитета да Ви предоставят директно най-новата информация!"
 	},
-	"Games":{
-		"Name":"Christian Clarke",
-		"Manifesto":"Hi I&#039;m Chris, a first year electronics student and your games officer. As a regular attendee of ECSS games events I know how important these events are for new students, and how much older students enjoy them. As games officer I am looking into greater integration with the social sec(and looking for repeats of things like the nerdy pub crawl) as well as trying to expand the range of activities, with a DnD night or an internal magic league. I am also very interested in running beginner nights for those who are interested in various games but have never played before. The most important thing however is to continue the open and friendly atmosphere of the games nights and ensure all who attend enjoy themselves.",
+	"Игри":{
+		"Name":"Крѝстиян Кларк",
+		"Manifesto":"Здравейте, аз съм Крис, студент по електроника първа година и Вашия отговорник за игрите. Като редовен посетител на събитията с игри на ECSS, знам колко са важни тези събития за новите студенти и колко много се харесват на по-отдавнашните студенти. Като отговорник по игрите целя по-близко сътрудничество със социалния секретар (вкючително повторения на неща като nerdy pub crawl), както и разширяване на спектъра от занимания с DnD вечер или вътрешна лига по Magic. Също така съм много заинтересован в организирането на вечери за начинаещи, за тези които проявяват интерес към най-различни игри, но никога не са ги играли. Най-важното нещо, обаче, е да се продължи отворената и приятелска атмосфера на вечерите с игри и да е сигурно, че всички които присъстват, са доволни и се забавляват.",
 		"Facebook":"https://www.facebook.com/christian.clarke.3114",
 		"Email":"cc11g16@ecs.soton.ac.uk",
 		"Image":"images/committee/games.jpg",
-		"RoleDisplayName":"Games Officer",
-		"RoleDescription":"The games master is in charge of organising gaming events across the year, which mostly are social events where anyone can turn up and play any games with friends."
+		"RoleDisplayName":"Отговорник за игрите",
+		"RoleDescription":"Отговорникът за игрите има за задача организирането на събития с игри през годината, които са основно социални вечери, където всеки може да дойде и да играе игри с приятели."
 		},
-	"Treasurer":{
-		"Name":"Angus Brown",
-		"Manifesto":"Hi, I’m Angus and I’m the treasurer for 2017/18. I look after the bank account and make sure that the money is available and paid out to people to fund the socials and other activities within the society. In my spare time, I like to play and make music as well as turning up to random sports societies from time and time and doing park runs. Also, occasionally found having a boogie on the Jesters or Oceana dance floor.",
+	"Касиер":{
+		"Name":"Ангъс Браун",
+		"Manifesto":"Здравейте, аз съм Ангъс и съм касиер за 2017-та/2018-та година. Грижа се за банковата сметка и правя нужното, за да могат парите да са на разположение и да се разплащат на съответните хора за организирането на събития и други дейности в Обществото. В свободното си време обичам да свиря и да правя музика, както и да се появявам сред произволни спортни общества от време на време и да ходя да тичам в парка на Parkruns. Също така, понякога можете да ме намерите танцуващ буги на дансинга Jesters или Oceana.",
 		"Facebook":"https://www.facebook.com/angus.brown.948",
 		"Email":"ab27g15@ecs.soton.ac.uk",
 		"Image":"images/committee/treasurer.jpg",
-		"RoleDisplayName":"Treasurer",
-		"RoleDescription":"The treasurer is responsible for keeping all finances in order as they are responsible for the society's funds. They are also required to present the accounts at the AGM and any other time if required."
+		"RoleDisplayName":"Касиер",
+		"RoleDescription":"Касиерът е отговорен за държането на всички финанси в ред, тъй като е отговорен за средствата на Обществото. Също така е отговорен за представянето на финансовата дейност на Годишното събрание и в който и да е друг момент, ако се наложи."
 	},
-	"Marketing":{
-		"Name":"George Elliott-Hunter",
-		"Manifesto":"First I was Academic Sec. Then I was Social Sec. Now, in my quest for ever less important roles I am going into MARKETING!<br><br>All of the FB event headers, merchandise graphics and so on are made by me. Even the Christmas party snowflake logo and the main society logo itself were designed by me!<br><br>But marketing should be more than just a graphic design role. It should be about presenting a consistent image across everything we do.<br><br>In short:<br>- Good at the Photoshops<br>- Owns a nice camera",
+	"Маркетинг":{
+		"Name":"Джордж Елиът-Хънтър",
+		"Manifesto":"Първо бях академичен секретар. След това социален секретар. Сега, в преследването на все по-маловажни роли, навлизам в МАРКЕТИНГА!<br><br>Всички изображения на събитията ни във Фейсбук, картинките на тениските и т.н. са направени от мен. Дори логото ъс снежинката от коледното парти и основното лого на Обществото са мое дело!<br><br>Но маркетингът трябва да е повече от просто графично-дизайнерска роля. Трябва да е за представянето на единен имидж във всичко, което правим.<br><br>Накратко:<rb>- Добър на фотошопа<br>- Има хубав фотоапарат",
 		"Facebook":"https://www.facebook.com/gelliotthunter",
 		"Email":"gpeh1g14@ecs.soton.ac.uk",
 		"Image":"images/committee/marketing.jpg",
-		"RoleDisplayName":"Marketing Officer",
-		"RoleDescription":"The marketing officers produce advertising media for the society. These includes emails, posters and any other required material."
+		"RoleDisplayName":"Отговорник маркетинг",
+		"RoleDescription":"Маркетинговият отговорник създава рекламна медия за Обществото. Това включва имейли, плакати и какъвто и да е друг необходим материал."
 	},
-	"Sports":{
-		"Name":"Bradley Elvy",
-		"Manifesto":"Sports in ECSS is very limited and I would like to change that. In the past year I have seen the football team grow from struggling to get enough players for a game to having so many players turn up that it&#039;s hard to get everyone on the pitch. It would be great to see this happen for another sport in ECSS, even if it&#039;s just for the social aspect of the team. <br><br>I propose:<br>-Tournaments for games such as table tennis, badminton, snooker, pool, chess etc...<br>-Casual Leagues set up for sports within ECSS<br>-More intramural sports<br>-Focus on getting everyone involved, no matter what skill level (it&#039;s good for us to not be staring at a screen all day)",
+	"Спорт":{
+		"Name":"Брадли Елви",
+		"Manifesto":"Спортът в ECSS е много ограничен и бих искал да променя това. В последната година видях развитието на футболния отбор от това да се мъчи да събере достатъчно играчи за мач до това да има толкова много дошли, че да е трудно да се поберат всички на полето. Би било страхотно да видим това да се случи за някой друг спорт в ECSS, дори и да е само за социалния аспект на отбора.<br><br>Предлагам:<br>- Повече вътрешни спортни занимания<br>- Съсредоточаване към включването на всички, независимо от нивото им на напредналост (добре е за нас да не зяпаме в екран по цял ден)",
 		"Facebook":"https://www.facebook.com/brad.elvy.1",
 		"Email":"be5g16@ecs.soton.ac.uk",
 		"Image":"images/committee/sports.jpg",
-		"RoleDisplayName":"Sports Officer",
-		"RoleDescription":"The sports officer is in charge of managing the ECSS football team, and organising ECSS presence at football tournaments throughout the year."
+		"RoleDisplayName":"Отговорник за спорта",
+		"RoleDescription":"Отговорникът за спорта има за задача да управлява футболния отбор на ECSS, както и да организира участието на ECSS на футболни събития през годината."
 	},
-	"Welfare":{
-		"Name":"Hope Shaw",
-		"Manifesto":"Hello, my name&#039;s Hope. I&#039;m a first year electronics student and I&#039;m a new runner for the committee.  I am currently a course rep and have loved being able to have positive impact to the department and the people within it. I believe that the ECSS is a brilliantly inclusive and supportive environment, thanks to Eliza and the other committee members, and I&#039;d love to continue the good work. I&#039;m passionate about mental health awareness and peer-peer support as well as (and don&#039;t kill me) encouraging women in stem subjects.",
+	"Благосъстояние":{
+		"Name":"Хоуп Шоу",
+		"Manifesto":"Здравейте, казвам се Хоуп. Аз съм студентка първа година по електроника и съм нова в комитета. В момента съм студентски представител за моя курс и страшно много ми харесва възможността да влияя положително на нашата част от университета и на хората в нея. Вярвам, че ECSS е изключително приобщаваща и насърчаваща среда благодарение на Елайза и на останалите членове на комитета, и бих се радвала да продължа добрата работа. Имам страст към информирането за психичното здраве, към подкрепата между връстници, както и към (и не ме убивайте) окуражаването на жените в технологичните и инженерните специалности.",
 		"Facebook":"https://www.facebook.com/HopeOctaviaAnnShaw",
 		"Email":"hos1n15@ecs.soton.ac.uk",
 		"Image":"images/committee/welfare.jpg",
-		"RoleDisplayName":"Welfare Officer",
-		"RoleDescription":"The welfare officer caters for students in a personal manner by ensuring everyone is included in the society's activities. They also take of the needs of students and their view of certain aspects like the push for releasing timetables earlier."
+		"RoleDisplayName":"Отговорник за благосъстоянието на членовете",
+		"RoleDescription":"Отговорникът за благосъстоянието на членовете помага на студентите в лично отношение, като се грижи всички да са включени в дейностите на Обществото. Също така наглежда нуждите на студентите и техните виждания в някои аспекти, като например желанието за по-ранно пускане на учебните графици."
 	},
-	"Masters' Rep":{
-		"Name":"Boris-Emanuel Yazadzhiyan",
-		"Manifesto":"My name is Boris-Emanuel Yazadzhiyan and I am following up on my undergraduate degree in Electronics and Electrical Engineering (University of Sunderland) with a Master`s in Energy and Sustainability with Electrical Power Engineering.  I am mainly motivated to be the Master`s rep on the ECSS committee because it will enable me to take an active part in the improvement of the university experience for all postgraduate students. In addition, I wish to broaden my horizons and take on responsibilities which challenge me more than just academically. As a student rep I will act as a bridge in communication between the students and the ECSS and will aim to highlight all student feedback to the committee for discussion and actions. The social / fun events I attended so far have been incredible and I am motivated to take part in their planning and use them as a tool for increasing student participation in the ECSS. Furthermore, having done a few volunteering projects involving the organisation of events, I appreciate the work and preparation that goes into running them. I intend on using my previous experience to support me when helping the social secretary develop fun ways to involve more students in the ECSS. I am particularly looking forward to working alongside the rest of the committee in the organisation of guest speaker talks and networking events with companies from industry, which are to help students get a feel for the companies they will potentially apply to after graduation. ",
+	"Магистърски":{
+		"Name":"Борис-Емануел Язаджиян",
+		"Manifesto":"Казвам се Борис-Емануел Язаджиян и продължавам бакалавърската си степен по Електроника и елекрическо инженерство (Университет Съндърланд) с магистратура по Енергия и Устойчивост с Електроенергетика. Основната ми мотивация да бъда магистърски представител в комитета на ECSS е, че това ще ми позволи да бъда активна част от подобряването на университетския живот за всички магистърски студенти. В добавка, бих искал да разширя хоризонта си и да си поставя предизвикателства не само от академичен характер. Като студентски представител ще играя ролята на мост на комуникацията между студентите и ECSS и ще целя да представям всички студентски отзиви пред комитета за обсъждане и предприемане на дейстия. Социалните/забавните събития, на които съм участвал до момента, бяха невероятни и съм мотивиран да взема участие в планирането им и да ги използвам за инструмент за повишаване на студентското участие в ECSS. Също така, имайки опит като доброволец в организирането на събития в миналото, оценявам работата и подготовката, които отиват в това. Имам намерение да използвам предишния си опит и да помагам на социалния секретар да намира забавни начини да ангажира повече студенти към ECSS. Имам конкретен интерес към това да работя наред с останалите от комитета за организиране на лекции и събития с гости от в индустрията, които да дадат на студентите досег с компаниите, към които може да кандидатстват след завършването си.",
 		"Facebook":"https://www.facebook.com/ed.gillbard",
 		"Email":"bey1g16@ecs.soton.ac.uk",
 		"Image":"images/committee/masters.jpg",
-		"RoleDisplayName":"Masters Representative",
-		"RoleDescription":"The masters rep liases with students on ECS masters courses, helping the ECSS committee who are often in their undergraduate degrees to cater for the masters audience."
+		"RoleDisplayName":"Магистърски представител",
+		"RoleDescription":"Магистърският представител комуникира със студентите от магистърски курсове в ECS, помагайки на комитета на ECSS, чиито членове често са студенти в бакалавърски програми, да правят необходимото и за магистърската общност."
 	},
-	"PhD Rep":{
-		"Name":"Ed Gillbard",
-		"Manifesto":"As your PhD representative, my ultimate aim would be to have as many doctorate students as possible getting involved in ECSS.  The weekly ECSS socials would play a large part in this, and getting you interested in these events would be my first priority.  I'd also be looking to help organise some more chilled out socials, aimed more at postgraduate students but open to everyone in ECSS.  Having talked to a few you,  there's a lot of interest in having PhD and MSc focused talks from industry/academia so I want to try and organise frequent talks with that in mind.  Aside from helping to set up events for you, I’ll be representing you all within ECSS, giving feedback and making sure ECSS is helping you as much as possible!",
+	"Докторантски":{
+		"Name":"Ед Гилбард",
+		"Manifesto":"Като представител на докторантите, основната ми цел е да включвам възможно най-много от тях в дейностите на ECSS. Седмичните социални събития на ECSS биха имали голяма роля в това и предизвикването на интерес към тях е мой първи приоритет. Също така бих желал да помагам в организирането на по-спокойни събирания, насочени към магистри и докторанти, но отворени за всички в ECSS. Говорейки с някои от вас, изглежда има голям интерес към лекции от индустрията/академичните среди с насоченост към магистри и докторанти, така че бих желал да организирам чести събития с тази идея. Освен организирането на събития, ще представям всички ви пред ECSS, предавайки отзивите ви и стараейки се ECSS да ви помага възможно най-много!",
 		"Facebook":"https://www.facebook.com/ed.gillbard",
 		"Email":"eg16g15@ecs.soton.ac.uk",
 		"Image":"images/committee/phd.jpg",
-		"RoleDisplayName":"PhD Representative",
-		"RoleDescription":"The PhD rep liases with students on ECS doctoral courses, helping the ECSS committee who are often in their undergraduate degrees to cater for the PhD audience."
+		"RoleDisplayName":"Докторантски представител",
+		"RoleDescription":"Докторантският представител комуникира с докторантите от ECS, помагайки на комитета на ECSS, чиито членове често са студенти в бакалавърски програми, да правят необходимото и за докторантската общност."
 	}
 }
