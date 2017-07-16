@@ -9,26 +9,24 @@ function showMember(id) {
             success: function (sponsor) {
                 $('#sponsorImage').prop('src', relPath + sponsor.Image);
 
-                //table data
+                //show data
                 var html = "";
-                var links = "<tr><td>";
+                var links = '<div class="sponsorInfoSection">';
 
                 delete sponsor.Image;
 
                 $.each(sponsor, function (key, value) {
                     if (key === "Name") {
-                        html += '<tr><td colspan="2">\n\
-                                <h1>' + value + '</h1><img id="medalIcon" src="' + relPath + 'images/icons/medal-' + sponsor.Type + '.png"><div id="medaltext">' + sponsor.Type + ' sponsor</div>\n\
-                             </td></tr>';
+                        html += '<div class="sponsorInfoSection"><h1>' + value + '</h1><img id="medalIcon" src="' + relPath + 'images/icons/medal-' + sponsor.Type + '.png"><div id="medaltext">' + sponsor.Type + ' sponsor</div></div>';
                     } else if (value.includes("http")) {
                         links += '<a href="' + value + '">' + key + '</a>';
                     } else if (key === "Info") {
-                        html += '<tr><td colspan="2">' + value + '</td></tr>';
+                        html += '<div class="sponsorInfoSection">' + value + '</div>';
                     } else if (value.includes("@")) {
                         links += '<a href="mailto:' + value + '">' + key + '</a>';
                     }
                 });
-                links += "</td></tr>";
+                links += "</div>";
                 html += links;
                 $('#sponsorTable').html(html);
                 //$('#links').html(links);
