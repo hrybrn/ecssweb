@@ -1,7 +1,16 @@
 <?php
 
+if(!isset($_GET['lang'])){
+    $lang = "uk";
+}
+
+else {
+    $lang = $_GET['lang'];
+}
+
 function getNavBar() {
     global $relPath;
+    global $lang;
     
     $nav = "";
     $nav .= '<script src="' . $relPath . 'jquery.js"></script>';
@@ -43,7 +52,7 @@ function getNavBar() {
         
     }
     
-    $nav .= '<a href=""><img id="langIcon" src="' . $relPath . '/images/flag-icons/uk.png" height="20"></a>';
+    $nav .= '<a href=""><img id="langIcon" src="' . $relPath . '/images/flag-icons/' . $lang . '.png" height="20"></a>';
     //$nav .= '
     //    <div id="shopButtonDiv">
     //    <form action="">
