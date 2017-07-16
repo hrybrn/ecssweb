@@ -80,7 +80,12 @@ body { margin: 0; padding: 0; }
 
 #sponsorTable {
     /*float: right;*/
+    margin: 10px;
     width: calc(100% - 480px);
+}
+
+.sponsorInfoSection {
+    margin: 20px 0;
 }
 
 #sponsorLink {
