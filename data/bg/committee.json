@@ -1,53 +1,62 @@
 {
+	"Вашият комитет":{
+		"Name":"Комитет на ECSS",
+		"Image":"images/everyone-cropped.png",
+		"RoleDisplayName":"2017-2018",
+		"RoleDescription":"",
+		"Manifesto":"Комитетът на ECSS работи неуморно от ваше име, за да подсигурят най-добрите социални събития и спонсорирани дейности. Кликнете на който и да е от бутоните по-горе, за да видите кой държи съответната роля и как смята да я изпълнява.",
+		"Facebook":"http://www.facebook.com/ecss.soton",
+		"Email":"society@ecs.soton.ac.uk"
+	},
 	"Президент":{
 		"Name":"Рики Тура",
-		"Manifesto":"Hi, I'm Ricki and I'm the ECSS president for 2017/18. Having spent the previous year as secretary for the society, it has been great to see ECSS grow on all fronts.<br>This year I plan to build upon the achievements accomplished so far, by boosting participation at the various socials and events hosted by the society through improved marketing and thorough planning. By taking into account member feedback, especially from our postgraduate students, I plan to host a wider range of socials so that everyone feels included. I also plan to host more events from our sponsoring companies, so that our members get greater exposure to the companies and industries that find ECS graduates so valuable.<br>In my spare time I play for the ECSS football team, participate in Parkruns, and make projects at Robosoc. If you have any questions, feel free to get in touch!",
+		"Manifesto":"Здравейте, аз съм Рики и съм президентът на ECSS за 2017-та/2018-та година. Прекарвайки миналата година като секретар на ECSS, за мен беше прекрасно да видя Обществото как расте във всички посоки.<br><br>Тази година смятам да надградя досегашните постижения като повиша общото присъствие на различните събития, организирани от Обществото, чрез подобрено промотиране и подробно планиране. Вземайки предвид отзивите на членовете на ECSS, особено тези на магистърските ни студенти, имам намерение да организирам по-голям подбор от социални събития, за да може всеки да се чувства като част от нас. Също така смятам да организирам повече събития със спонсориращите ни компании, за да може членовете ни да имат повече досег до компаниите и индустриите, които оценяват високо завършилите ECS.<br><br>В свободното си време играя във футболния отбор на ECSS, участвам в Parkruns и правя проекти в Robosoc. Ако имате въпроси, не се колебайте да се свържете с мен! ",
 		"Facebook":"https://www.facebook.com/ricki.tura",
 		"Email":"rst1g15@soton.ac.uk",
 		"Image":"images/committee/president.jpg",
 		"RoleDisplayName":"President",
-		"RoleDescription":"The President's job is to direct the Society and be the external representative. This involves maintaining relationships with the faculty, sponsors and other external sources, as well as chairing meetings within the Society. The President must keep track of every aspect of the Society to ensure the whole committee and all members are working towards the same goals."
+		"RoleDescription":"Работата на президента е да насочва Обществото и да бъде негов външен представител. Това включва поддържане на отношения с факултета, спонсорите и други външни източници, както и председателстване на срещи на Обществото. Президентът трябва да следи всички дейности във Обществото, за да е сигурно, че целият комитет и всички членове работят към едни и същи цели."
 	},
 
-	"Vice President":{
-		"Name":"Ayush Katariya",
-		"Manifesto":"Hi, I’m Ayush and I’m the ECSS Vice-President for the year 2017/2018. Having served the society as Academic Officer last year, it feels good to step up my role in order to help the society grow.<br>My main objectives this year are to improve the visibility of ECSS among our members and to have a wider variety of events and socials than we have had before. In my role as Vice President, I work alongside the President to ensure the smooth functioning of the society on all fronts.<br>I am an active member of the Wrestling Society and enjoy all forms of martial arts and performance sports. You can usually find me in Level 3 Labs annoying people who are trying to work, watching football at the Stags, or, at the Rockstone [Best Burgers in Town! (Unpaid Advertisement)]. In my spare time I like to play FIFA and try and do things as far away from my degree as possible. Feel free to get in touch!",
+	"Вицепрезидент":{
+		"Name":"Аюш Катария",
+		"Manifesto":"Здравейте, аз съм Аюш и съм вицепрезидентът на ECSS за 2017-та/2018-та година. Като Академичен Секретар за миналата година се радвам да поема по-висока роля, за да помогна на Обществото да расте.<br><br>Главните ми цели тази година са да направя ECSS по-видимо за нашите членове и да имаме по-голямо разнообразие от събития, отколкото сме имали преди. В ролята си на Вицепрезидент, работя наред с Президента с цел да се подсигури гладкото функциониране на Обществото на всички фронтове.<br><br>Аз съм активен член на Обществото по борба (Wrestling Society) и харесвам всякакви бойни изкуства и състезателни спортове на високо ниво. Обикновено можете да ме намерите в лабовете на 3-тия етаж да досаждам на хора, които се опитват да работят, или да гледам мач в Stags, или в Rockstone [Най-добрите бургери в града! (Неплатена Реклама)]. В свободното си време обичам да играя FIFA и да правя неща, възможно най-далечни от това, което уча. Чувствайте се свободни да се свържете с мен!",
 		"Facebook":"https://www.facebook.com/ayushkatariya",
 		"Email":"ak10n13@ecs.soton.ac.uk",
 		"Image":"images/committee/vicepresident.jpg",
-		"RoleDisplayName":"Vice President",
-		"RoleDescription":"The vice president assists the president in admin tasks and representing the society at faculty and SUSU society events."
+		"RoleDisplayName":"Вицепрезидент",
+		"RoleDescription":"Вицепрезидентът помага на Президента в административните задължения и в представляването на Обществото на събития на Факултета и на обществата на SUSU."
 	},
-	"Secretary":{
-		"Name":"Charis King",
-		"Manifesto":"Hello! My name is Charis, I&rsquo;m a first year EEE student and I would love to be secretary for ECSS. But Charis, why would I vote for you as secretary? Well, to start with I am pretty darn organised, I have proper decent handwriting, and I know the room booking system like the back of my hand. Making sure that everyone is in the right place at the right time is my thing, and I am ready to bring my passion for organisation to ECSS (and my baking skills!).",
+	"Секретар":{
+		"Name":"Чарис Кинг",
+                "Manifesto":"Здравейте, аз съм Чарис и съм секретар на ECSS. Накратко, аз разчиствам всички административни подробности в Обществото. Аз съм човекът, който има честта да води протокола на срещите на комитета (тествайки способностите си за писане без гледане на клавиатурата в този процес).<br><br>Целта ми като секретар тази година е да позволявам на Обществото да действа безпредпятствено, за да може да се правят още и още страхотни събития! Ако си върша работата добре, не би трябвало дори да забелязвате, че съм тук (въпреки че от години използвам очилата си, за да крия истинската си самоличност на супергерой, така че ме бива да крия в тайна присъствието си).<br><br>Когато не съм заета яростно да вписвам дневния ред на Обществото, ще ме намерите да шия триъгълни гирлянди на ръка, да намирам нова музика в Spotify, да правя твърде много торти или да поправям родителския принтер. Твърде често, обаче, попадам в налудничава комбинация от всички изброени едновременно.",
 		"Facebook":"https://www.facebook.com/charis.king.7",
 		"Email":"clk1g16@soton.ac.uk",
 		"Image":"images/committee/secretary.jpg",
-		"RoleDisplayName":"Secretary",
-		"RoleDescription":"The secretary is in charge of taking minutes, organising the meetings and sorting through admin items for the society."
+		"RoleDisplayName":"Секретар",
+		"RoleDescription":"Секретарят отговаря за воденето на протокол от срещите на Комитета, организирането на срещи на Комитета и сортирането на административните задължения на Обществото."
         },
-	"Academic":{
-		"Name":"Denisa Prisiceanu",
-		"Manifesto":"As Academic Officer I would not just continue upon the great work done by the previous officers but build upon the strong foundations left by them.<br>I would want professionals who have ECS backgrounds but work in roles other than technology to tell students how they went about their professional lives. I would want to give ECS students an opportunity to explore careers (like consultancy, investment banking, finance etc.) outside of technology, adding on to the traditional talks and roles that ECS students look forward to.<br>I would make sure that all companies, recruiters and generally all people know that they deal with the very best when they come to Southampton and aim to make ECS graduates exclusive and wanted by the companies rather than the other way round. Cheers!",
+	"Академичен секретар":{
+		"Name":"Дениса Присичеану",
+		"Manifesto":"Като Академичен секретар няма само да продължа чудесната работа на предишните отговорници, но и да надградя над стабилната основа, оставена от тях.<br><br>Бих искала професионалисти, произхождащи от ECS, но работещи в сфери, различни от технологиите, да разкажат на студентите как се е развил професионалният им живот. Бих искала да дам на студентите от ECS възможността да се запознаят с кариери (като консултанство, инвестиционно банкиране, финанси и т.н.), отделни от технологиите, добавяйки нови неща към традиционните лекции и роли, които студентите от ECS очакват.<br><br>Ще се погрижа всички компании, работодатели и като цяло всички хора да знаят, че си имат работа с най-доброто, когато дойдат в Саутхемптън, и целя да направя възпитаниците на ECS ексклузивни и желани от компаниите, вместо обратното.",
 		"Facebook":"https://www.facebook.com/denisa.prisiceanu",
 		"Email":"dcp1n13@ecs.soton.ac.uk",
 		"Image":"images/committee/academic.jpg",
-		"RoleDisplayName":"Academic Officer",
-		"RoleDescription":"The academic secretary has the job of organising ECSS talks and academic events, raising sponsorship funds for the society, managing all interaction with all ECSS sponsors as well as looking out for new ones."
+		"RoleDisplayName":"Академичен секретар",
+		"RoleDescription":"Академичният секретар има за работа да организира лекции и академични събития за ECSS, да набира средства от спонсори за Обществото, да управлява всички комуникации със спонсорите на ECSS, както и да се оглежда за нови."
 	},
-	"Social":{
-		"Name":"Luke Woolley",
-		"Manifesto":"Hi, my name is Luke, you may know me as the short guy with blue hair who drinks a lot. I&rsquo;m a first-year Electronics and Electrical Engineering student and I am your social sec. ECSS is a wonderful society that made me feel incredibly welcome when I first arrived and I want to give back. As social sec I would continue the great work that is currently going on, but I also have many new things to bring to the table. For one I want to improve the first social, including a bad weather contingency. I also want to introduce more socials that split people into smaller groups, such as internal leagues for board and card games, and a nerdy pub quiz as many people feel overwhelmed by the big events and pub crawls. I also want to have more ECSS themed pub crawls, such as more visits to the Alexandria Beer Emporium and themed pub crawls (ie sci fi). <br>And remember, at least I&rsquo;m better than events with no free pizza.",
+	"Социален секретар":{
+		"Name":"Люк Уули",
+		"Manifesto":"Здравейте, казвам се Люк, сигурно ме знаете като ниския със синята коса дето пие много. Уча Електроника и електрическо инженерство първа година и саъм вашият социален секретар. ECSS е прекрасно общество, което ме накара да се чувствам изключително добре дошъл когато дойдох за първи път, и искам да върна услугата. Като социален секретар бих искал да продължа страхотната работа, правена до момента, но също така има много нови неща, които мога да донеса на Обществото. Като начало бих подобрил първото социално събитие, включително резервен план при лошо време. Също така бих искал да въведа повече събития, където хората са разделени на по-малки групи, като например вътрешни турнири по настолни игри и игри с карти, както и nerdy pub quiz, тъй като много хора не се чувстват добре в претоварената обстановка на големите събития и pub crawls. Също така искам да организирам повече ECSS pub crawls, като например повече ходения до Alexandria Beer Emporium или тематични pub crawls (например sci fi).<br><br>И помнете, поне съм по-добре от събития без безплатна пица.",
 		"Facebook":"https://www.facebook.com/lukegwoolley",
 		"Email":"sw1n15@ecs.soton.ac.uk",
 		"Image":"images/committee/social.jpg",
-		"RoleDisplayName":"Social Secretary",
+		"RoleDisplayName":"Социален секретар",
 		"RoleDescription":"The social sec's job is, surprisingly enough, to organise and run the various socials that ECSS has!<br><br>We have a social about once a week, so there's plenty to be organised. As social sec you have to put together a calendar of events, invite people to them (usually FB and maybe e-mail) and make sure all the relevant stuff is sorted ahead of time such as room bookings or checkingthat pubs will be available for large groups.<br><br> After that is running the social, which is the fun bit! Make sure people are enjoying themselves and go around chatting. You might also have to delegate some pizza-buyers for the more chilled out socials.<br><br> All in all, it's good fun! There's a good bit of organisation but mostly the role involves getting to know lots of people and helping them have awesome events with their mates :D"
 	},
 	"Web":{
 		"Name":"Harry Brown",
-		"Manifesto":"I love the web. I was born with &lt;head&gt; on my forehead.<br>On a more serious note I&#039;m my name is Harry and I am looking to maintain the great work already going on, whilst also building on the website when needed. I'm that guy that makes this website look so cool",
+		"Manifesto":"I love the web. I was born with &lt;head&gt; on my forehead.<br><br>On a more serious note I&#039;m my name is Harry and I am looking to maintain the great work already going on, whilst also building on the website when needed. I'm that guy that makes this website look so cool",
 		"Facebook":"https://www.facebook.com/hrybrn",
 		"Email":"hb15g16@ecs.soton.ac.uk",
 		"Image":"images/committee/awesomewebmaster.jpg",
@@ -74,7 +83,7 @@
 	},
 	"Marketing":{
 		"Name":"George Elliott-Hunter",
-		"Manifesto":"First I was Academic Sec. Then I was Social Sec. Now, in my quest for ever less important roles I am going into MARKETING!<br>For the last year I&#039;ve pretty much been doing the Marketing role anyway. All of the FB event headers, merchandise graphics and so on are made by me. Even the Christmas party snowflake logo and the main society logo itself were designed by me!<br>But marketing should be more than just a graphic design role. It should be about presenting a consistent image across everything we do. If marketing were my proper committee position I would want to take responsibility for things like event descriptions, society e-mails and photographing our events, so that people can see what we get up to!<br><br>In short:<br>- Good at the Photoshops<br>- Owns a nice camera",
+		"Manifesto":"First I was Academic Sec. Then I was Social Sec. Now, in my quest for ever less important roles I am going into MARKETING!<br><br>All of the FB event headers, merchandise graphics and so on are made by me. Even the Christmas party snowflake logo and the main society logo itself were designed by me!<br><br>But marketing should be more than just a graphic design role. It should be about presenting a consistent image across everything we do.<br><br>In short:<br>- Good at the Photoshops<br>- Owns a nice camera",
 		"Facebook":"https://www.facebook.com/gelliotthunter",
 		"Email":"gpeh1g14@ecs.soton.ac.uk",
 		"Image":"images/committee/marketing.jpg",
@@ -83,7 +92,7 @@
 	},
 	"Sports":{
 		"Name":"Bradley Elvy",
-		"Manifesto":"Sports in ECSS is very limited and I would like to change that. In the past year I have seen the football team grow from struggling to get enough players for a game to having so many players turn up that it&#039;s hard to get everyone on the pitch. It would be great to see this happen for another sport in ECSS, even if it&#039;s just for the social aspect of the team. <br>I propose:<br>-Tournaments for games such as table tennis, badminton, snooker, pool, chess etc...<br>-Casual Leagues set up for sports within ECSS<br>-More intramural sports<br>-Focus on getting everyone involved, no matter what skill level (it&#039;s good for us to not be staring at a screen all day)",
+		"Manifesto":"Sports in ECSS is very limited and I would like to change that. In the past year I have seen the football team grow from struggling to get enough players for a game to having so many players turn up that it&#039;s hard to get everyone on the pitch. It would be great to see this happen for another sport in ECSS, even if it&#039;s just for the social aspect of the team. <br><br>I propose:<br>-Tournaments for games such as table tennis, badminton, snooker, pool, chess etc...<br>-Casual Leagues set up for sports within ECSS<br>-More intramural sports<br>-Focus on getting everyone involved, no matter what skill level (it&#039;s good for us to not be staring at a screen all day)",
 		"Facebook":"https://www.facebook.com/brad.elvy.1",
 		"Email":"be5g16@ecs.soton.ac.uk",
 		"Image":"images/committee/sports.jpg",
