@@ -31,21 +31,21 @@ function getNavBar() {
              $nav .= 
                 '
                  <div class="dropdown">
-                 <form action="' . $relPath . $address['default'] . '" target="_self">
+                 <form class="actionLink" action="' . $relPath . $address['default'] . '?lang=' . $lang . '" target="_self">
                  <button id="navButton">' . $name . '</button>
                 </form> 
                 <div class="dropdown-content">';
              
+            unset($address['default']);
+             
             foreach($address as $page => $link){
-                if($page != 'default') {
-                $nav .= '<a href="' . $relPath . $link . '" target="_self">' . $page . '</a>';
-                }
+                $nav .= '<a class="link" href="' . $relPath . $link . '?lang=' . $lang . '" target="_self">' . $page . '</a>';
             }
             $nav .= '</div></div>';
         } 
         else {
             $nav .= 
-                '<form action="'. $relPath . $address . '" target="_self">
+                '<form class="actionLink" action="'. $relPath . $address . '?lang=' . $lang . '" target="_self">
                  <button id="navButton">' . $name . '</button>
                  </form>'; 
         }
