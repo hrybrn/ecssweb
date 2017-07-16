@@ -4,7 +4,7 @@ $name = $_GET["name"];
 
 $relPath = "../";
 
-$raw = file_get_contents($relPath . "../data/societies.json");
+$raw = file_get_contents($relPath . "../data/en/societies.json");
 $committee = json_decode($raw, true);
 
 echo json_encode($committee[$name]);

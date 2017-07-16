@@ -5,7 +5,7 @@ $name = str_replace("%20", " ", $name);
 
 $relPath = "../";
 
-$raw = file_get_contents($relPath . "../data/sponsors.json");
+$raw = file_get_contents($relPath . "../data/en/sponsors.json");
 $sponsors = json_decode($raw, true);
 
 
