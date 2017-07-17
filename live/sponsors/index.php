@@ -40,10 +40,10 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
 <script src="<?=$relPath ?>sponsors/sponsors.js"></script>
 </head>
 <body>
-<div id="sponsorsPageContainer">
+<div id="sponsorsPageContainer" class="pageContainer">
     <div id="sponsorImageContainer"><img id="sponsorImage" class="pageImage"/></div>
     <div id="sponsorButtonGroup"><?= $gold; $silver; $bronze ?></div>
-    <div id="sponsorTable"></div>
+    <section id="sponsorTable"></section>
 </div>
 
 <script>

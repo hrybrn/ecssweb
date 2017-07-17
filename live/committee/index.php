@@ -33,10 +33,10 @@ $buttons .= '</div>';
 </head>
         
 <body>
-    <div id="committeePageContainer">
-        <img id="memberImage" class="pageImage"/>
+    <div id="committeePageContainer" class="pageContainer">
+        <img id="memberImage" />
         <?= $buttons ?>
-        <div id="memberTable"></div>
+        <section id="memberTable"></section>
     </div>
 
     <script>
