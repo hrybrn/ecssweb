@@ -7,6 +7,10 @@
 
 body { margin: 0; padding: 0; }
 
+.pageContainer {
+    margin: 15px;
+}
+
 #societyImageContainer {
     width: 380px;
     height: 380px;
@@ -43,6 +47,30 @@ body { margin: 0; padding: 0; }
     padding-left: 10px;
     padding-right: 10px;
     width: calc(100% - 400px);
+}
+
+.facebookIcon {
+    background: url("/images/icons/facebook-circle.png") no-repeat;
+    background-size: 28px 28px;
+}
+
+.emailIcon {
+    background: url("/images/icons/email-circle.png") no-repeat;
+    background-size: 28px 28px;
+}
+
+.linkIcon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin: 0 2px 4px 2px;
+    vertical-align: middle;
+    opacity: 0.9;
+    transition: opacity 0.1s linear;
+}
+
+.linkIcon:hover {
+    opacity: 0.4;
 }
 
 #linkIcon {
@@ -116,6 +144,10 @@ body { margin: 0; padding: 0; }
 .committeeMember {
     opacity: 0;
     transition: opacity 2.0s ease-in;
+}
+
+#contactSection a:hover > .linkIcon {
+    opacity: 0.4;
 }
 
 th, td {
@@ -218,8 +250,10 @@ li {
 }
 
 #committeeFam {
+    display: block;
+    margin: 0 15px 15px 0;
     float: left;
-    padding-right: 30px;
+    max-width: 520px;
 }
 
 .gold, .gold:active {
@@ -362,4 +396,12 @@ li {
         order: 3;
     }
 
+}
+
+@media (max-width: 750px) {
+    #committeeFam {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
