@@ -5,7 +5,7 @@ include_once($relPath . "navbar/navbar.php");
 
 echo getNavBar();
 
-$raw = file_get_contents($relPath . "../data/societies.json");
+$raw = file_get_contents($relPath . "../data/en/societies.json");
 $societies = json_decode($raw, true);
 
 $ecss = $societies['ECSS'];
