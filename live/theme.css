@@ -7,20 +7,22 @@
 
 body { margin: 0; padding: 0; }
 
+.pageContainer {
+    margin: 15px;
+    width: auto;
+}
+
 #societyImageContainer {
-    width: 380px;
-    height: 380px;
+    width: 350px;
+    height: 350px;
     float: left;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.pageImage {
+#memberImage, #societyImage {
     float: left;
-    padding: 10px;
-    padding-left: 30px;
-    padding-right: 0px;
     width: 350px;
 }
 
@@ -30,9 +32,8 @@ body { margin: 0; padding: 0; }
 }
 
 #memberTable {
-    padding-left: 20px;
-    padding-right: 20px;
-    width: calc(100% - 420px);
+    margin-left: 20px;
+    width: calc(100% - 370px);
 }
 
 #memberImage {
@@ -40,9 +41,33 @@ body { margin: 0; padding: 0; }
 }
 
 #societyTable {
-    padding-left: 10px;
-    padding-right: 10px;
-    width: calc(100% - 400px);
+    margin-left: 10px;
+    width: calc(100% - 360px);
+    overflow-x: auto;
+}
+
+.facebookIcon {
+    background: url("/images/icons/facebook-circle.png") no-repeat;
+    background-size: 28px 28px;
+}
+
+.emailIcon {
+    background: url("/images/icons/email-circle.png") no-repeat;
+    background-size: 28px 28px;
+}
+
+.linkIcon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin: 0 2px 4px 2px;
+    vertical-align: middle;
+    opacity: 0.9;
+    transition: opacity 0.1s linear;
+}
+
+.linkIcon:hover {
+    opacity: 0.4;
 }
 
 #linkIcon {
@@ -59,8 +84,9 @@ body { margin: 0; padding: 0; }
 }
 
 #sponsorImageContainer {
-    width: 460px;
-    height: 460px;
+    width: 400px;
+    height: 400px;
+    padding: 15px;
     float: left;
     display: flex;
     align-items: center;
@@ -68,20 +94,18 @@ body { margin: 0; padding: 0; }
 }
 
 #sponsorImage {
-    float: left;
-    width: 400px;
-    padding: 30px;
+    width: 100%;
 }
 
 #sponsorButtonGroup {
     float: left;
-    width: calc(100% - 460px);
+    margin-left: 10px;
+    width: calc(100% - 440px);
 }
 
 #sponsorTable {
-    /*float: right;*/
-    margin: 10px;
-    width: calc(100% - 480px);
+    margin: 10px 0 0 15px;
+    width: calc(100% - 445px);
 }
 
 .sponsorInfoSection {
@@ -91,11 +115,6 @@ body { margin: 0; padding: 0; }
 #sponsorLink {
     margin: 15px;
     margin-left: 0px;
-}
-
-#societyImage {
-    float: left;
-    padding: 15px;
 }
 
 #societyLink {
@@ -116,6 +135,10 @@ body { margin: 0; padding: 0; }
 .committeeMember {
     opacity: 0;
     transition: opacity 2.0s ease-in;
+}
+
+#contactSection a:hover > .linkIcon {
+    opacity: 0.4;
 }
 
 th, td {
@@ -187,12 +210,11 @@ button:active {
 
 
 .buttonGroup{
-    padding-left: 15px;
+    margin-left: 15px;
 
     /*text-align: center;*/
-    margin: 0px;
     float: left;
-    width: calc(100% - 395px);
+    width: calc(100% - 365px);
 }
 
 .mainNav{
@@ -218,8 +240,10 @@ li {
 }
 
 #committeeFam {
+    display: block;
+    margin: 0 15px 15px 0;
     float: left;
-    padding-right: 30px;
+    max-width: 520px;
 }
 
 .gold, .gold:active {
@@ -278,30 +302,37 @@ li {
     opacity: 1;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     #societyImageContainer, #societyImage, .buttonGroup, #societyTable, #memberImage, #memberTable {
         float: none;
     }
 
     #societyImageContainer {
-        width: 230px;
-        height: 230px;
-        margin: 0 auto;
+        max-width: calc(100% - 10px);
+        width: 200px;
+        height: auto;
+        padding: 0 5px;
+        margin: 30px auto 0 auto;
     }
 
     #societyImage {
-        width: 200px;
-    }
-
-    .buttonGroup, #societyTable, #memberTable {
         width: 100%;
     }
 
     #memberImage {
         max-width: calc(100% - 10px);
-        margin: 0 auto;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding: 0 5px;
+        margin: 30px auto 0 auto;
+    }
+
+    #memberTable {
+        width: calc(100% - 10px);
+        margin: 0 5px;
+    }
+
+    #societyTable {
+        margin: 0;
+        width: 100%;
     }
 
     #societiesPageContainer, #committeePageContainer {
@@ -311,6 +342,8 @@ li {
 
     .buttonGroup {
         order: 1;
+        width: 100%;
+        margin: 0;
     }
 
     #societyImageContainer, #memberImage {
@@ -327,22 +360,24 @@ li {
         float: none;
     }
 
+    #sponsorButtonGroup {
+        margin: 0;
+    }
+
     #sponsorImageContainer {
+        max-width: calc(100% - 10px);
+        width: 400px;
         height: auto;
-        margin: 0 auto;
+        padding: 0 5px;
+        margin: 30px auto 0 auto;
     }
 
-    #sponsorImage {
-        max-width: calc(100% - 60px);
-    }
-
-    #sponsorImageContainer, #sponsorButtonGroup, #sponsorTable {
+    #sponsorImage, #sponsorButtonGroup, #sponsorTable {
         width: 100%;
     }
 
-    #sponsorsPageContainer {
-        display: flex;
-        flex-direction: column;
+    #sponsorTable {
+        margin: 0 5px;
     }
 
     #sponsorsPageContainer {
@@ -361,5 +396,12 @@ li {
     #sponsorTable {
         order: 3;
     }
+}
 
+@media (max-width: 750px) {
+    #committeeFam {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
 }

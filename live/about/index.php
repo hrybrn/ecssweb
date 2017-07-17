@@ -1,6 +1,5 @@
+<!doctype html>
 <html>
-
-
     <head>
         <?php
         $relPath = "../";
@@ -8,6 +7,7 @@
         echo getNavBar();
         ?>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>About | ECSS</title>
         <link rel="stylesheet" href="<?= $relPath ?>navbar/navbar.css">
         <link rel="stylesheet" href="<?= $relPath ?>theme.css">
@@ -15,8 +15,8 @@
     </head>
 
     <body>
-        <img style="padding : 15px;" id="committeeFam" src="<?= $relPath ?>images/people.jpg" height="350">
-
+    <section class="pageContainer">
+        <img id="committeeFam" src="<?= $relPath ?>images/people.jpg">
         <h1>About ECSS</h1>
 
         <h3>
@@ -32,4 +32,6 @@
         <p>  We are always open however, to new and fresh ideas of events that you think we should run. If you have an ideas, send it our way and we'll see what we can do!
             Our most recent Constitution, SUSU Society Page, our latest Election Results and the subsequent pages on this website are available for your immediate browsing. If you are a UoS Student, you can also log into the portal for current merchandise orders, voting and more. If at any point you require any more information, or are interested in sponsoring our society, please do not hesitate to contact us.
         </p>
+    </section>
     </body>
+</html>

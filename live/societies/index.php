@@ -31,8 +31,8 @@
         <link rel="stylesheet" href="../theme.css">
     </head>
 <body>
-    <div id="societiesPageContainer">
-        <div id="societyImageContainer"><img id="societyImage" class="pageImage"/></div>
+    <div id="societiesPageContainer" class="pageContainer">
+        <div id="societyImageContainer"><img id="societyImage" /></div>
         <?= $buttons ?>
         <table id="societyTable" class="pageTable"></table>
     </div>
