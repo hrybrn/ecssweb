@@ -1,11 +1,32 @@
-function showMember(id){
-    
+function findGetParameter(parameterName) {
+    var result = null,
+        tmp = [];
+    location.search
+        .substr(1)
+        .split("&")
+        .forEach(function (item) {
+          tmp = item.split("=");
+          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        });
+    return result;
+}
+
+function showMember(id) {
+
+    var relPath = "../"
     var name = $('#button' + id).text();
+    
+    var lang = findGetParameter("lang");
+    if(lang === null) {
+        lang = "en";
+    }
+    console.log(lang);
+
     
     $.ajax({
         url: 'getMember.php',
         type: 'get',
-        data: 'name=' + name,
+        data: {'name' : name, 'lang' : lang},
         dataType: 'json',
         success: function(member){
             //image setup
@@ -28,7 +49,7 @@ function showMember(id){
                     links += '<a id="societyLink" href="' + value + '">' + key + '</a>';
                 }
                 else if(value.substring(0,6) == "mailto"){
-                    html += '<td>Email</td>\n\
+                    html += '<td>' + key + '</td>\n\
                              <td>\n\
                                 <a id="societyLink" href="' + value + '">' + value.substring(7,50) + '</a>\n\
                              </td>';

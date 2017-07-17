@@ -3,12 +3,13 @@
 <head>
 <?php
 $relPath = "../";
+$lang = $_GET["lang"];
 
 include_once($relPath . 'navbar/navbar.php');
 echo getNavBar();
 
 
-$raw = file_get_contents($relPath . "../data/en/sponsors.json");
+$raw = file_get_contents($relPath . "../data/" . $lang . "/sponsors.json");
 $sponsors = json_decode($raw, true);
 
 $gold = "";

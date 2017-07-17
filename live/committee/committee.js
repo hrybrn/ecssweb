@@ -1,8 +1,3 @@
-function showMember(id) {
-
-    var name = $('#button' + id).text();
-    //var lang = $.get("lang");
-
 function findGetParameter(parameterName) {
     var result = null,
         tmp = [];
@@ -15,6 +10,10 @@ function findGetParameter(parameterName) {
         });
     return result;
 }
+
+function showMember(id) {
+
+    var name = $('#button' + id).text();
 
     var lang = findGetParameter("lang");
     if(lang === null) {

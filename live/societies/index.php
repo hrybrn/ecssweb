@@ -3,12 +3,13 @@
     <head>
         <?php
         $relPath = "../";
-
+        $lang = $_GET["lang"];
+        
         include_once($relPath . "navbar/navbar.php");
 
         echo getNavBar();
 
-        $raw = file_get_contents($relPath . "../data/en/societies.json");
+        $raw = file_get_contents($relPath . "../data/" . $lang . "/societies.json");
         $societies = json_decode($raw, true);
 
         $buttons = '<div class="buttonGroup">';

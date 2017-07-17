@@ -1,10 +1,31 @@
+function findGetParameter(parameterName) {
+    var result = null,
+        tmp = [];
+    location.search
+        .substr(1)
+        .split("&")
+        .forEach(function (item) {
+          tmp = item.split("=");
+          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        });
+    return result;
+}
+
 function showMember(id) {
+
     var name = $('#button' + id).text();
+    
+    var lang = findGetParameter("lang");
+    if(lang === null) {
+        lang = "en";
+    }
+    console.log(lang);
+
 
     $.ajax({
     url: 'getMember.php',
             type: 'get',
-            data: 'name=' + name,
+            data: {'name' : name, 'lang' : lang},
             dataType: 'json',
             success: function (sponsor) {
                 $('#sponsorImage').prop('src', relPath + sponsor.Image);

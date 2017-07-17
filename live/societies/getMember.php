@@ -1,10 +1,11 @@
 <?php
 
 $name = $_GET["name"];
+$lang = $_GET["lang"];
 
 $relPath = "../";
 
-$raw = file_get_contents($relPath . "../data/en/societies.json");
-$committee = json_decode($raw, true);
+$raw = file_get_contents($relPath . "../data/" . $lang ."/societies.json");
+$societies = json_decode($raw, true);
 
-echo json_encode($committee[$name]);
+echo json_encode($societies[$name]);

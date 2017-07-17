@@ -1,11 +1,13 @@
 <?php
 
 $name = $_GET["name"];
+$lang = $_GET["lang"];
+
 $name = str_replace("%20", " ", $name);
 
 $relPath = "../";
 
-$raw = file_get_contents($relPath . "../data/en/sponsors.json");
+$raw = file_get_contents($relPath . "../data/" . $lang ."/sponsors.json");
 $sponsors = json_decode($raw, true);
 
 
