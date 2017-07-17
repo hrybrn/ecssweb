@@ -1,0 +1,35 @@
+{
+    "Gold" : {
+        "J. P. Morgan" : {
+            "Name" : "J. P. Morgan",
+            "Website" : "http://www.jpmorgan.com/",
+            "Image" : "images/sponsors/jpmorgan.jpg",
+            "Info" : "JP Morgan is one of the world’s largest and oldest banking institutions. It was founded in 1871 and has its headquarters in New York City, US. It has a team of over 26,000 happy employees. It provides a wide range of services, which include banking, financial and software solutions. It has been one of ECSS’s oldest sponsors and currently holds a Gold sponsor status. It offers a wide range of opportunities to ECS students."
+        },
+        "American Express" : {
+            "Name" : "American Express",
+            "Website" : "https://www.americanexpress.com/uk/",
+            "Image" : "images/sponsors/americanexpress.gif",
+            "Info" : "American Express provides innovative payment, travel and expense management solutions for individuals and businesses of all sizes."
+        }
+    },
+
+    "Silver": {
+        "ARM" : {
+            "Name" : "ARM",
+            "Website" : "http://www.arm.com/",
+            "Image" : "images/sponsors/arm.jpg",
+            "Info" : "ARM is a British semiconductor and software company.  It was founded in 1990 and has its headquarters in Cambridge, UK. Some of its clients include Apple and Samsung."
+        },
+        "FactSet" : {
+            "Name" : "FactSet",
+            "Website" : "http://factset.com/",
+            "Image" : "images/sponsors/factset.jpg",
+            "Info" : "FactSet is a company that specializes in financial data and software. It was founded in 1978 and has its headquarters in Norwalk, US. FactSet has a reputation for creating an excellent working environment for it’s employees all over the world and have been listed in the Forbes '200 best small companies'."
+        }
+    },
+
+    "Bronze": {
+        
+    }
+}
