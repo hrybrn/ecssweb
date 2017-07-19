@@ -1,0 +1,64 @@
+#creditsSection > h3 {
+    text-align: center;
+}
+
+#creditsSection > section {
+    width: 25%;
+    float: left;
+    margin: 10px 0;
+}
+
+.creditImageContainer {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.creditImageContainer > img {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.creditCaption {
+    display: block;
+    height: 3em;
+    margin: 10px;
+}
+
+@media (max-width: 1270px) {
+    #creditsSection > section {
+        width: 33.3%;
+    }
+}
+
+@media (max-width: 960px) {
+    #creditsSection > section {
+        width: 50%;
+    }
+}
+
+@media (max-width: 650px) {
+    #creditsSection > section {
+        width: 100%;
+        float: none;
+        margin: 20px 0;
+    }
+
+    .creditImageContainer {
+        height: auto;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .creditImageContainer > img {
+        max-width: 100%;
+        max-height: 300px;
+    }
+
+    .creditCaption {
+        height: auto;
+        margin: 10px 0;
+    }
+}

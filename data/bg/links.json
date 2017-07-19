@@ -1,0 +1,18 @@
+{
+    "Начало":"index.php",
+    "Комитет":"committee/index.php",
+    "Общества":"societies/index.php",
+    "Спонсори":"sponsors/",
+    "Файлове": {
+        "default":"/filestore/index.php/s/JeqwjpN2tkVKW5X",
+        "Протоколи от събрания":"/filestore/index.php/s/JeqwjpN2tkVKW5X",
+        "Файлове на комитета":"/filestore"
+    },
+    "За нас": {
+        "default":"about/index.php",
+        "За нас":"about/index.php",
+	"Конституция":"files/Constitution-2015.pdf",
+        "Контакти":"about/contact.php",
+        "За сайта":"about/credits.php"
+    }
+}

@@ -15,13 +15,16 @@ function test() {
 }
 
 function safe($sql) {
-    $pdo = new PDO('sqlite:ecss.db');
-    
-    $safe = str_replace("'", "''", $sql);
-    
-    $result = $pdo->query($safe);
-    
-    return $result->fetchAll();
+    return unsafe(sanitise($sql));
 }
 
-var_dump(test());
+function unsafe($sql){
+    $pdo = new PDO('sqlite:ecss.db');
+
+    return $pdo->query($sql);
+}
+
+function sanitise($string){
+    return str_replace("'", "''", $string);
+}
+

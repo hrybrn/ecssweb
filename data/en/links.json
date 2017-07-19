@@ -1,0 +1,18 @@
+{
+    "Home":"index.php",
+    "Committee":"committee/index.php",
+    "Societies":"societies/index.php",
+    "Sponsors":"sponsors/",
+    "Files": {
+        "default":"/filestore/index.php/s/JeqwjpN2tkVKW5X",
+        "Meeting Minutes":"/filestore/index.php/s/JeqwjpN2tkVKW5X",
+        "Committee Files":"/filestore"
+    },
+    "About": {
+        "default":"about/index.php",
+        "About":"about/index.php",
+	"Constitution":"files/Constitution-2015.pdf",
+        "Contact Us":"about/contact.php",
+        "Credits":"about/credits.php"
+    }
+}

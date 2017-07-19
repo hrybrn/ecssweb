@@ -1,0 +1,140 @@
+* {
+    font-family: Helvetica;
+}
+
+form {
+    display: inline;
+}
+
+.shopButton {
+    transition: background 0.3s linear;
+}
+
+#shopButtonDiv {
+    display: inline-block;
+    background-color: black;
+}
+
+#shopButtonDiv:hover {
+      background: url("../images/fire.gif") no-repeat scroll 0 0 transparent;
+      background-size: cover;
+}
+
+#shopButtonDiv:hover .shopButton {
+    background-color: transparent;
+}
+
+#langIcon {
+    height: 25px;
+    vertical-align: middle;
+    float: right;
+    padding: 20px;
+    transition: height 0.1s linear, padding 0.1s linear;
+}
+
+#langIcon:hover {
+    height: 29px;
+    padding: 18px;
+}
+
+.navbar {
+    background-color: black;
+}
+/* Dropdown Button */
+#navButton {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: black;
+    border-radius: 4px;
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 2px;
+}
+
+#navbarLogo {
+    padding: 3px;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+table #navbarTable {
+    padding: 0px;
+    margin: 0px;
+    border-collapse: collapse;
+}
+
+#navButton:active {
+    background-color: #ff5555;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    /*display: none;*/
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s linear;
+    
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+    
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    /*display: block;*/
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+#navButton:hover {
+    background-color: #D82129;
+}
+
+
+
+
+ul {
+    background: #333;
+}
+
+li {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family:Arial;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}

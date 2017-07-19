@@ -1,0 +1,113 @@
+{
+    "ECSS":{
+        "Име":"Общество за електроника и компютърни науки (ECSS)",
+        "Image":"images/ecss-logo-square.png",
+        "Описание":"Ей, ние сме обществото, което направи това!",
+        "Събития":"Вижте събитията във фейсбук групата ни.", 
+        "Facebook група":"http://www.facebook.com/groups/ecss.soton",
+        "Facebook страница":"http://www.facebook.com/ecss.soton",
+        "Уебсайт":"http://society.ecs.soton.ac.uk",
+        "Имейл":"mailto:society@ecs.soton.ac.uk"
+    },
+    "Киберсигурност":{
+        "Име":"Общество за киберсигурност (Cyber Security Society)",
+        "Image":"images/societies/sucss.png",
+        "Време":"Вторник, 18:00",
+        "Място":"Zepler Labs, 3-ти етаж",
+        "Facebook група":"https://www.facebook.com/groups/sucss/",
+        "Facebook страница":"https://www.facebook.com/sotoncyber/",
+        "Уебсайт":"http://cyberweb.ecs.soton.ac.uk",
+        "Имейл":"mailto:society@ecs.soton.ac.uk"
+    },
+    "Безжично общество":{
+        "Име":"Безжично общество (Wireless Society)",
+        "Image":"images/societies/suws.png",
+        "Време":"Четвъртък, 18:00",
+        "Място":"B59 Seminar Room",
+        "Уебсайт":"http://www.suws.org.uk",
+        "Southampton Open Wireless Network":"http://sown.org.uk/",
+        "Facebook група":"https://www.facebook.com/groups/391638664206919/?fref=nf",
+        "Директен контакт":"https://www.suws.org.uk/wp/contact-us",
+        "IRC":"https://secure.ecs.soton.ac.uk/student/index.php?page=irc"
+    },
+    "Студентска роботика":{
+        "Име":"Студентска роботика (Student Robotics)",
+        "Image":"images/societies/student-robotics.png",
+        "Време":"Сряда, 17:00",
+        "Място":"Mountbatten Seminar Room (53/4025)",
+        "Facebook група":"https://www.facebook.com/groups/student.robotics.southampton/",
+        "Уебсайт":"https://www.studentrobotics.org",
+        "Имейл":"mailto:southampton@studentrobotics.org"
+    },
+    "Robogals":{
+        "Име":"Робомомичета (Robogals)",
+        "Image":"images/societies/robogals.png",
+        "Facebook група":"https://www.facebook.com/groups/126854750821510/",
+        "Facebook страница":"https://www.facebook.com/SouthamptonRobogals/",
+        "Уебсайт":"http://southampton.robogals.org.uk",
+        "Имейл":"mailto:southampton.president@robogals.org"
+    },
+    "ECS Предприемачи":{
+        "Име":"ECS Предприемачи (ECS Entrepreneurs)",
+        "Image":"images/societies/ecs-entrepreneurs.png",
+        "Facebook група":"https://www.facebook.com/groups/ecsentrepreneurs/",
+        "Facebook страница":"https://www.facebook.com/ECSentrepreneurs/",
+        "Уебсайт":"https://ecsentrepreneurs.com",
+        "Имейл":"mailto:ecsentrepreneurs@gmail.com"
+    },
+    "ECS Жени":{
+        "Име":"ECS Жени (ECS Women)",
+        "Image":"images/societies/ecs-women.jpg",
+        "Facebook група":"https://www.facebook.com/groups/327192197365291/",
+        "Facebook страница":"https://www.facebook.com/EcsWomen/",
+        "Уебсайт":"http://ecswomen.ecs.soton.ac.uk",
+        "Имейл":"mailto:ecs-women@ecs.soton.ac.uk"
+    },
+    "Космически летеж":{
+        "Име":"Общество за космически летеж (Spaceflight Society)",
+        "Image":"images/societies/susf.png",
+        "Време":"Вторник, 18:00",
+        "Място":"B59 Seminar Room",
+        "Facebook група":"https://www.facebook.com/groups/suspaceflight/",
+        "Уебсайт":"https://susf.co.uk",
+        "Имейл":"mailto:admin@susf.co.uk"
+    },
+    "Toastrack":{
+        "Име":"Toastrack",
+        "Image":"images/societies/toastrack.jpg",
+        "Facebook страница":"https://www.facebook.com/toastrackbus",
+        "Уебсайт":"http://toastrackbus.org/",
+        "Имейл":"mailto:manager@toastrackbus.org"
+    },
+    "Робообщество":{
+        "Име":"Робообщество (Robosoc)",
+        "Image":"images/societies/robosoc.jpg",
+        "Facebook група":"https://www.facebook.com/groups/su.robosoc/",
+        "Уебсайт":"http://robosoc.com",
+        "Контакт":"http://robosoc.com/index.html"
+    },
+    "IEEE":{
+        "Име":"IEEE Студентски клон",
+        "Image":"images/societies/ieee.png",
+        "Събития":"http://www.ieee.ecs.soton.ac.uk/OurСъбития",
+        "Уебсайт":"http://www.ieee.ecs.soton.ac.uk/",
+        "Контакт":"http://www.ieee.ecs.soton.ac.uk/contact"
+    },
+    "IET":{
+        "Име":"IET Студентски клон",
+        "Image":"images/societies/iet.png",
+        "Уебсайт":"http://www.theiet.org/students/you-and-iet/on-campus/index.cfm?origin=on-campus"
+    },
+    "Global Game Jam":{
+        "Име":"Global Game Jam",
+        "Image":"images/societies/global-game-jam.jpg",
+        "Уебсайт":"http://globalgamejam.org/2015/jam-sites/university-southampton/games"
+    },
+    "Доджо за код":{
+        "Име":"Доджо за код (Code Dojo)",
+        "Image":"images/societies/code-dojo.png",
+        "Срещи":"Всеки месец",
+        "Уебсайт":"https://southamptoncodedojo.com/",
+	"Имейл":"admin@southamptoncodedojo.com"
+    }
+}
