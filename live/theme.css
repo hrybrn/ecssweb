@@ -127,11 +127,6 @@ body { margin: 0; padding: 0; }
     padding: 15px;
 }
 
-#twitterEmbed {
-    float: right;
-    padding: 15px;
-}
-
 .committeeMember {
     opacity: 0;
     transition: opacity 2.0s ease-in;
@@ -172,13 +167,6 @@ a:after {
 
 a:hover {
     color: red;
-}
-
-.logo {
-    padding: 40px;
-    display: inline-block;
-    float: left;
-    box-sizing: border-box;
 }
 
 button {

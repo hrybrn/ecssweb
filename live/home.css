@@ -1,0 +1,38 @@
+#intro {
+    min-height: 240px;
+}
+
+#logo {
+    display: block;
+    width: 200px;
+    margin: 40px 40px 40px 20px;
+    float: left;
+}
+
+#socialWidgets {
+    margin: 10px 0;
+    min-width: 1350px;
+}
+
+#twitterEmbed, #facebookPageEmbed, #facebookEventsEmbed {
+    float: left;
+    width: 33.3%;
+}
+
+#facebookPageEmbed > iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+#facebookEventsEmbed > iframe {
+    float: right;
+}
+
+@media (max-width: 460px) {
+    #logo {
+        float: none;
+        margin: 10px auto;
+        width: 100%;
+        max-width: 200px;
+    }
+}
