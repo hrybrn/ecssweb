@@ -30,15 +30,24 @@
             <p>To keep up with the latest events, join the <a href="https://www.facebook.com/groups/ecss.soton/">ECSS Facebook group</a> and follow us on Twitter, <a href="http://twitter.com/ecs_society">@ECS_Society.</a></p>
         </section>
     </div>
-    <div id="socialWidgets">
-        <div id="twitterEmbed">
-            <a class="twitter-timeline" data-width="400" data-height="400" data-dnt="true" data-theme="light" data-link-color="#E81C4F" href="https://twitter.com/ecs_society">Tweets by ecs_society</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <div id="socialWidgetsDiv">
+        <div id="socialTabs">
+            <ul>
+                <li onclick="showWidget(0)" class="activeTab">Twitter</li>
+                <li onclick="showWidget(1)">Facebook</li>
+                <li onclick="showWidget(2)">Events</li>
+            </ul>
         </div>
-        <div id="facebookPageEmbed">
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fecss.soton&tabs=timeline&width=450&height=400&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=1002687123208525" width="450" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        </div>
-        <div id="facebookEventsEmbed">
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fecss.soton&tabs=events&width=400&height=400&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=1002687123208525" width="400" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <div id="socialWidgets">
+            <div id="twitterEmbed" class="activeWidget">
+                <a class="twitter-timeline" data-width="280" data-height="400" data-dnt="true" data-theme="light" data-link-color="#E81C4F" href="https://twitter.com/ecs_society">Tweets by ecs_society</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div id="facebookPageEmbed" class="inactiveWidget">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fecss.soton&tabs=timeline&width=280&height=400&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=1002687123208525" width="280" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
+            <div id="facebookEventsEmbed" class="inactiveWidget">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fecss.soton&tabs=events&width=280&height=400&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=1002687123208525" width="280" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
         </div>
     </div>
 </div>
