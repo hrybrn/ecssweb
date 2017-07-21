@@ -17,6 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: setLang.php:70
+#: setLang.php:78
 msgid "hi"
-msgstr "嗨"
+msgstr "здрасти"
