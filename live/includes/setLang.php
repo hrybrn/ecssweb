@@ -77,13 +77,3 @@ textdomain($domain);
 
 // example
 ?>
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title><?= _("hi") ?></title>
-</head>
-<body>
-<?= _("hi") ?>
-</body>
-</html>
