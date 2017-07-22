@@ -52,6 +52,15 @@ form {
     border: none;
     cursor: pointer;
     margin: 2px;
+    transition: background 0.1s linear;
+}
+
+#navButton:hover {
+    background-color: #D82129;
+}
+
+#navButton a {
+    color: white;
 }
 
 #navbarLogo {
@@ -113,9 +122,7 @@ table #navbarTable {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 
-#navButton:hover {
-    background-color: #D82129;
-}
+
 
 
 

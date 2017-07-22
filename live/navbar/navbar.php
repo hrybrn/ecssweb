@@ -31,13 +31,13 @@ function getNavBar() {
              $nav .= 
                 '
                  <div class="dropdown">
-                 <form class="actionLink" action="' . $relPath . $address['default'] . '?lang=' . $lang . '" target="_self">
-                 <div id="navButton">' . $name . '</div>
+                 
+                 <div id="navButton"><a href="'. $relPath . $address['default'] . '?lang=' . $lang . '">' . $name . '</a></div>
                 </form> 
                 <div class="dropdown-content">';
              
             unset($address['default']);
-             
+            
             foreach($address as $page => $link){
                 $nav .= '<a class="link" href="' . $relPath . $link . '?lang=' . $lang . '" target="_self">' . $page . '</a>';
             }
@@ -45,9 +45,7 @@ function getNavBar() {
         } 
         else {
             $nav .= 
-                '<form class="actionLink" action="'. $relPath . $address . '?lang=' . $lang . '" target="_self">
-                 <button id="navButton">' . $name . '</button>
-                 </form>'; 
+                '<div id="navButton"><a href="'. $relPath . $address['default'] . '?lang=' . $lang . '">' . $name . '</a></div>'; 
         }
         
     }
