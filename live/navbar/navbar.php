@@ -1,12 +1,6 @@
 <?php
 
-if(!isset($_GET['lang'])){
-    $lang = "en";
-}
-
-else {
-    $lang = $_GET['lang'];
-}
+include_once ($relPath . 'includes/setLang.php');
 
 $currentURL = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $nakedURL = strtok($currentURL);

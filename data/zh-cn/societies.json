@@ -1,0 +1,113 @@
+{
+    "ECSS":{
+        "Name":"ECSS",
+        "Image":"images/ecss-logo-square.png",
+        "Description":"Hey we're the society that made this!",
+        "Events":"See our events page on our facebook group.", 
+        "Facebook Group":"http://www.facebook.com/groups/ecss.soton",
+        "Facebook Page":"http://www.facebook.com/ecss.soton",
+        "Website":"http://society.ecs.soton.ac.uk",
+        "Email":"mailto:society@ecs.soton.ac.uk"
+    },
+    "SUCSS":{
+        "Name":"Cyber Security Society",
+        "Image":"images/societies/sucss.png",
+        "Time":"Tuesdays at 6pm",
+        "Location":"Level 3 Zepler Labs",
+        "Facebook Group":"https://www.facebook.com/groups/sucss/",
+        "Facebook Page":"https://www.facebook.com/sotoncyber/",
+        "Website":"http://cyberweb.ecs.soton.ac.uk",
+        "Email":"mailto:society@ecs.soton.ac.uk"
+    },
+    "SUWS":{
+        "Name":"Wireless Society",
+        "Image":"images/societies/suws.png",
+        "Time":"Thursdays at 6pm",
+        "Location":"B59 Seminar Room",
+        "Website":"http://www.suws.org.uk",
+        "Southampton Open Wireless Network":"http://sown.org.uk/",
+        "Facebook Group":"https://www.facebook.com/groups/391638664206919/?fref=nf",
+        "Direct Contact":"https://www.suws.org.uk/wp/contact-us",
+        "IRC":"https://secure.ecs.soton.ac.uk/student/index.php?page=irc"
+    },
+    "Student Robotics":{
+        "Name":"Student Robotics",
+        "Image":"images/societies/student-robotics.png",
+        "Time":"Wednesdays at 5pm",
+        "Location":"Mountbatten Seminar Room (53/4025)",
+        "Facebook Group":"https://www.facebook.com/groups/student.robotics.southampton/",
+        "Website":"https://www.studentrobotics.org",
+        "Email":"mailto:southampton@studentrobotics.org"
+    },
+    "Robogals":{
+        "Name":"Robogals",
+        "Image":"images/societies/robogals.png",
+        "Facebook Group":"https://www.facebook.com/groups/126854750821510/",
+        "Facebook Page":"https://www.facebook.com/SouthamptonRobogals/",
+        "Website":"http://southampton.robogals.org.uk",
+        "Email":"mailto:southampton.president@robogals.org"
+    },
+    "ECS Entrepreneurs":{
+        "Name":"ECS Entrepreneurs",
+        "Image":"images/societies/ecs-entrepreneurs.png",
+        "Facebook Group":"https://www.facebook.com/groups/ecsentrepreneurs/",
+        "Facebook Page":"https://www.facebook.com/ECSentrepreneurs/",
+        "Website":"https://ecsentrepreneurs.com",
+        "Email":"mailto:ecsentrepreneurs@gmail.com"
+    },
+    "ECS Women":{
+        "Name":"ECS Women",
+        "Image":"images/societies/ecs-women.jpg",
+        "Facebook Group":"https://www.facebook.com/groups/327192197365291/",
+        "Facebook Page":"https://www.facebook.com/EcsWomen/",
+        "Website":"http://ecswomen.ecs.soton.ac.uk",
+        "Email":"mailto:ecs-women@ecs.soton.ac.uk"
+    },
+    "SUSFS":{
+        "Name":"Spaceflight Society",
+        "Image":"images/societies/susf.png",
+        "Time":"Tuesdays at 6pm",
+        "Location":"B59 Seminar Room",
+        "Facebook Group":"https://www.facebook.com/groups/suspaceflight/",
+        "Website":"https://susf.co.uk",
+        "Email":"mailto:admin@susf.co.uk"
+    },
+    "Toastrack":{
+        "Name":"Toastrack",
+        "Image":"images/societies/toastrack.jpg",
+        "Facebook Page":"https://www.facebook.com/toastrackbus",
+        "Website":"http://toastrackbus.org/",
+        "Email":"mailto:manager@toastrackbus.org"
+    },
+    "Robosoc":{
+        "Name":"Robosoc",
+        "Image":"images/societies/robosoc.jpg",
+        "Facebook Group":"https://www.facebook.com/groups/su.robosoc/",
+        "Website":"http://robosoc.com",
+        "Contact Us":"http://robosoc.com/index.html"
+    },
+    "IEEE":{
+        "Name":"IEEE Student Branch",
+        "Image":"images/societies/ieee.png",
+        "Events":"http://www.ieee.ecs.soton.ac.uk/OurEvents",
+        "Website":"http://www.ieee.ecs.soton.ac.uk/",
+        "Contact Us":"http://www.ieee.ecs.soton.ac.uk/contact"
+    },
+    "IET":{
+        "Name":"IET Student Branch",
+        "Image":"images/societies/iet.png",
+        "Website":"http://www.theiet.org/students/you-and-iet/on-campus/index.cfm?origin=on-campus"
+    },
+    "Global Game Jam":{
+        "Name":"Global Game Jam",
+        "Image":"images/societies/global-game-jam.jpg",
+        "Website":"http://globalgamejam.org/2015/jam-sites/university-southampton/games"
+    },
+    "Code Dojo":{
+        "Name":"Code Dojo",
+        "Image":"images/societies/code-dojo.png",
+        "Meetings":"Monthly",
+        "Website":"https://southamptoncodedojo.com/",
+	"Email":"admin@southamptoncodedojo.com"
+    }
+}
