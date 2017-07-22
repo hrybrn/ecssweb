@@ -8,6 +8,9 @@ else {
     $lang = $_GET['lang'];
 }
 
+$currentURL = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$nakedURL = strtok($currentURL);
+
 function getNavBar() {
     global $relPath;
     global $lang;
@@ -48,9 +51,14 @@ function getNavBar() {
         }
         
     }
-    
-    $nav .= '<a href=""><img id="langIcon" src="' . $relPath . '/images/flag-icons/' . $lang . '.png" height="20"></a>';
-    //$nav .= '
+    $nav .= '<div id="langMenu">';
+    $nav .= '<a href="' . $nakedURL . '?lang=en"" target="_self"><img class="langIcon" id="currentLangIcon" src="' . $relPath . '/images/flag-icons/en.png" height="20"></a>';
+    //$nav .= '<div id="innerLangMenu">';
+    $nav .= '<a href="' . $nakedURL . '?lang=bg" target="_self"><img class="langIcon" id="notCurrentLangIcon" src="' . $relPath . '/images/flag-icons/bg.png" height="20"></a>';
+    $nav .= '<a href="' . $nakedURL . '?lang=zh-cn" target="_self"><img class="langIcon" id="notCurrentLangIcon" src="' . $relPath . '/images/flag-icons/zh-cn.png" height="20"></a>';
+    $nav .= '</div>';
+
+//$nav .= '
     //    <div id="shopButtonDiv">
     //    <form action="">
     //    <button id="navButton" class="shopButton">Shop</button>

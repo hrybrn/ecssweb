@@ -24,17 +24,32 @@ form {
     background-color: transparent;
 }
 
-#langIcon {
+.langIcon {
     height: 25px;
     vertical-align: middle;
     float: right;
     padding: 20px;
+    padding-left: 0px;
     transition: height 0.1s linear, padding 0.1s linear;
 }
 
-#langIcon:hover {
+#notCurrentLangIcon {
+    visibility: visible;
+}
+
+.langIcon:hover {
     height: 29px;
     padding: 18px;
+}
+
+#currentLangIcon:hover #langMenu {
+    padding: 100px;
+    visibility: hidden;
+}
+
+#langMenu {
+    display: inline-block;
+    float: right;
 }
 
 .navbar {
