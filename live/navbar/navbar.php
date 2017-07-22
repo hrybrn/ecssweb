@@ -1,12 +1,6 @@
 <?php
 
-if(!isset($_GET['lang'])){
-    $lang = "en";
-}
-
-else {
-    $lang = $_GET['lang'];
-}
+include_once ($relPath . 'includes/setLang.php');
 
 function getNavBar() {
     global $relPath;
