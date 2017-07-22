@@ -31,9 +31,8 @@ function getNavBar() {
              $nav .= 
                 '
                  <div class="dropdown">
+                 <a id="navButton" href="'. $relPath . $address['default'] . '?lang=' . $lang . '" target="_self">' . $name . '</a>
                  
-                 <div id="navButton" onclick="location.href=\''. $relPath . $address['default'] . '?lang=' . $lang . '\'">' . $name . '</div>
-                </form> 
                 <div class="dropdown-content">';
              
             unset($address['default']);
@@ -45,7 +44,7 @@ function getNavBar() {
         } 
         else {
             $nav .= 
-                '<a><div id="navButton" onclick="location.href=\''. $relPath . $address . '?lang=' . $lang . '\'">' . $name . '</div></a>'; 
+                '<a id="navButton" href="'. $relPath . $address . '?lang=' . $lang . '" target="_self">' . $name . '</a>'; 
         }
         
     }

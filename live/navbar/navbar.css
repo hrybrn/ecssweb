@@ -58,9 +58,16 @@ form {
 #navButton:hover {
     background-color: #D82129;
 }
-
+/*
 #navButton a {
     color: white;
+}*/
+
+.navbarLink {
+    color: green;
+    display: block;
+    height: 100px;
+    width: 100px;
 }
 
 #navbarLogo {
