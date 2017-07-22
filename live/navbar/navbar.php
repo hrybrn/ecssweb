@@ -32,7 +32,7 @@ function getNavBar() {
                 '
                  <div class="dropdown">
                  <form class="actionLink" action="' . $relPath . $address['default'] . '?lang=' . $lang . '" target="_self">
-                 <button id="navButton">' . $name . '</button>
+                 <div id="navButton">' . $name . '</div>
                 </form> 
                 <div class="dropdown-content">';
              
