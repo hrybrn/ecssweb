@@ -4,7 +4,6 @@
 <?php
 
 $relPath = "../";
-$lang = $_GET["lang"];
 include_once($relPath . "navbar/navbar.php");
 
 echo getNavBar();

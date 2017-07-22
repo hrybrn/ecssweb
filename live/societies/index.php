@@ -2,9 +2,7 @@
 <html>
     <head>
         <?php
-        $relPath = "../";
-        $lang = $_GET["lang"];
-        
+        $relPath = "../";        
         include_once($relPath . "navbar/navbar.php");
 
         echo getNavBar();
