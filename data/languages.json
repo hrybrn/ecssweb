@@ -2,21 +2,26 @@
     "en": {
         "Name":"English",
         "Path":"data/en/",
-        "Icon":"images/flag-icons/en.png"
+        "Icon":"images/flag-icons/en.png",
+	"Enabled":"true",
     },
     "bg": {
         "Name":"Bulgarian",
         "Path":"data/bg/",
-        "Icon":"images/flag-icons/bg.png"
+        "Icon":"images/flag-icons/bg.png",
+	"Enabled":"true",
+	
     },
     "zh-cn": {
         "Name":"Chinese (Simplified)",
         "Path":"data/zh-cn/",
-        "Icon":"images/flag-icons/cn.png"
+        "Icon":"images/flag-icons/cn.png",
+	"Enabled":"false",
     },
     "ro": {
         "Name":"Romanian",
         "Path":"data/ro/",
-        "Icon":"images/flag-icons/ro.png"
+        "Icon":"images/flag-icons/ro.png",
+	"Enabled":"false",
     }
 }
