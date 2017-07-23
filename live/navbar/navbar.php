@@ -8,6 +8,7 @@ $nakedURL = strtok($currentURL);
 function getNavBar() {
     global $relPath;
     global $lang;
+    global $nakedURL;
     
     $nav = "";
     $nav .= '<script src="' . $relPath . 'jquery.js"></script>';
