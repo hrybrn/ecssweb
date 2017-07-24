@@ -2,6 +2,10 @@
     font-family: Helvetica;
 }
 
+img {
+    image-rendering: crisp-edges;
+}
+
 form {
     display: inline;
 }
