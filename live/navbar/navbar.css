@@ -27,8 +27,7 @@ form {
 .langIcon {
     height: 25px;
     vertical-align: middle;
-    text-align: right;
-    /*float: right;*/
+    float: right;
     padding: 20px;
     padding-left: 0px;
     transition: height 0.1s linear, padding 0.1s linear;
