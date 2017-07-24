@@ -58,7 +58,9 @@ form {
 
 .navbar {
     background-color: black;
-    overflow: hidden;
+    float: left; 
+    width: 100%;
+    margin-bottom: 18px;
 }
 /* Dropdown Button */
 #navButton {
