@@ -27,7 +27,8 @@ form {
 .langIcon {
     height: 25px;
     vertical-align: middle;
-    float: right;
+    text-align: right;
+    /*float: right;*/
     padding: 20px;
     padding-left: 0px;
     transition: height 0.1s linear, padding 0.1s linear;
@@ -54,6 +55,7 @@ form {
 
 .navbar {
     background-color: black;
+    overflow: hidden;
 }
 /* Dropdown Button */
 #navButton {
