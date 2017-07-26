@@ -2,6 +2,10 @@
     font-family: Helvetica;
 }
 
+img {
+    image-rendering: crisp-edges;
+}
+
 form {
     display: inline;
 }
@@ -54,6 +58,12 @@ form {
 
 .navbar {
     background-color: black;
+    
+    /* Overflowing lang icons "fix" - wrecks everything on mobile
+    float: left; 
+    width: 100%;
+    margin-bottom: 18px;
+    */
 }
 /* Dropdown Button */
 #navButton {

@@ -49,10 +49,18 @@ function getNavBar() {
     $nav .= '<div id="langMenu">';
     $nav .= '<a href="' . $nakedURL . '?lang=en"" target="_self"><img class="langIcon" id="currentLangIcon" src="' . $relPath . '/images/flag-icons/en.png" height="20"></a>';
     //$nav .= '<div id="innerLangMenu">';
+    
+    //DISABLED LANGUAGE ICONS
+    /*
     $nav .= '<a href="' . $nakedURL . '?lang=bg" target="_self"><img class="langIcon" id="notCurrentLangIcon" src="' . $relPath . '/images/flag-icons/bg.png" height="20"></a>';
     $nav .= '<a href="' . $nakedURL . '?lang=zh-cn" target="_self"><img class="langIcon" id="notCurrentLangIcon" src="' . $relPath . '/images/flag-icons/zh-cn.png" height="20"></a>';
+     */
+    
+    
     $nav .= '</div>';
-
+    
+    
+    //DISABLED SHOP BUTTON
 //$nav .= '
     //    <div id="shopButtonDiv">
     //    <form action="">
