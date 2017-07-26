@@ -6,7 +6,10 @@ $maxItems = 20;
 include_once($relPath . "../db/dbConnect.php");
 
 if(!(isset($_GET['search']))){
-    return false;
+    echo safe("
+    		SELECT *
+    		FROM items AS i;
+    		");
     exit;
 }
 
@@ -19,4 +22,4 @@ $sql = "
         LIMIT $maxItems;
        ";
 
-return safe($sql);
+echo safe($sql);

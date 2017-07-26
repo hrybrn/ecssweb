@@ -7,6 +7,7 @@ echo getNavBar();
 ?>
 
 <script src="shop.js"></script>
+<link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css" />
 
 <script>
 
