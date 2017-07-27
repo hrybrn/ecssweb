@@ -1,7 +1,32 @@
-.leafletImage {
-	width: 25%;
+* {
+    
 }
 
-p {
-	width:50%;
+#overview {
+    font-size: 18px;
 }
+
+.subsection {
+    margin: 20px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.subsectionImage {
+    width: 40%;
+    float: left;
+}
+
+div.subsectionText {
+    box-sizing: border-box;
+
+    padding: 20px;
+    width: 60%;
+    float: right;
+}
+
+#titleDiv {
+    margin: 20px;
+    margin-left: 50px;
+}
+
