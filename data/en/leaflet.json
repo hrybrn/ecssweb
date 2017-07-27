@@ -1,5 +1,6 @@
 {
     "Socials": {
+        "title":"Socials in ECSS",
         "Overview":"At ECSS we run socials to help people de-stress from the madness that is an ECS degree but also to meet people in the department. If you need to procrastinate, make friends or just chill and forget then this is for you.",
         "Subsections": {
             "Alcoholic": {
@@ -9,11 +10,7 @@
             "Non-Alcoholic": {
                 "Text":"Not all of university is getting so drunk you forget your own name, and to accommodate that we run many non-alcoholic and more relaxed events. We have bowling, trips to scoops and pub quizzes planned so keep an eye out for those.",
                 "Image":"images/leaflet/social/uno.jpg"
-            },
-           "About the social sec": {
-               "Text":"Hello! I am Luke Woolley your social sec for this year, and I am a second year studying Electronics and Electrical Engineering. I have bold plans for this year, I want to try and get more involved with other societies and have a larger range of events. My other hobbies include playing the saxophone, being a part of Toastrack and embarrassing myself on the dance floor. If you have any question or ideas for socials please shoot me a message!"
-               
-           }
+            }
         }
         
     }
