@@ -46,7 +46,7 @@ foreach ($sectionData as $key => $value) {
                 if ($subsubkey == "Image") {
                     //$body .= "<p>sub-image-lolool</p>";
                     //todo: print out image
-                    $body .= "<img class=\"subsectionImage\" src=\"" . $subsubvalue . "\">";
+                    $body .= "<img class=\"subsectionImage\" src=\"" . $relPath . $subsubvalue . "\">";
                 }
             }
             
