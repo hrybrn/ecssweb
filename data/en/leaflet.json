@@ -11,7 +11,19 @@
                 "Text":"Not all of university is getting so drunk you forget your own name, and to accommodate that we run many non-alcoholic and more relaxed events. We have bowling, trips to scoops and pub quizzes planned so keep an eye out for those.",
                 "Image":"images/leaflet/social/uno.jpg"
             }
+        } 
+    },
+    "Games": {
+        "title":"Games in ECSS",
+        "Overview":"At ECSS we run dedicated game socials every few weeks to help people from all years de-stress from the craziness of their degrees, and to help students from all years meet, make friends and play games.
+Make sure to follow the <a href='https://www.facebook.com/ecss.soton/'>ECSS Facebook</a> for news about events, including locations and times.",
+        "Subsections":{
+            "Board Game Socials":{
+                "Text":"We run regular board game nights throughout the year. Bring your own games or play some of ours with games ranging from classics like Catan, to trading card games like Magic, to fast-paced games such as Coup and Werewolf. We have them all so pop along and join in!"
+            },
+            "Video Game Socials":{
+                "Text":"Once a semester we book the large computer labs in Zepler to play games on. With every computer running Steam and our own TF2 servers it’s a great way to meet people at uni interested in the same games as you. In addition to the computers we also hook up consoles to the large TVs so you can look forward to playing classics like MarioKart and Halo as well."
+            }
         }
-        
     }
 }
