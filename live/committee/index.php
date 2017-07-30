@@ -37,12 +37,5 @@ $buttons .= '</div>';
         <?= $buttons ?>
         <section id="memberTable"></section>
     </div>
-
-    <script>
-        $('#button0').prop("hidden",true);
-        $(document).ready( function(){
-            showMember("0");
-        });
-    </script>
 </body>
 </html>

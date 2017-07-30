@@ -8,4 +8,8 @@ $relPath = "../";
 $raw = file_get_contents($relPath . "../data/" . $lang . "/committee.json");
 $committee = json_decode($raw, true);
 
+if (!array_key_exists($name, $committee)) {
+    $name = "Your Committee";
+}
+
 echo json_encode($committee[$name]);
