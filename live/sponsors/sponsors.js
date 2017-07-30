@@ -11,46 +11,62 @@ function findGetParameter(parameterName) {
     return result;
 }
 
-function showMember(id) {
-
-    var name = $('#button' + id).text();
-    
+function showMemberWithName(name) {
     var lang = findGetParameter("lang");
-    if(lang === null) {
+    if (lang === null) {
         lang = "en";
     }
     console.log(lang);
 
 
     $.ajax({
-    url: 'getMember.php',
-            type: 'get',
-            data: {'name' : name, 'lang' : lang},
-            dataType: 'json',
-            success: function (sponsor) {
-                $('#sponsorImage').prop('src', relPath + sponsor.Image);
+        url: 'getMember.php',
+        type: 'get',
+        data: {'name': name, 'lang': lang},
+        dataType: 'json',
+        success: function (sponsor) {
+            $('#sponsorImage').prop('src', relPath + sponsor.Image);
 
-                //show data
-                var html = "";
-                var links = '<div class="sponsorInfoSection">';
+            //show data
+            var html = "";
+            var links = '<div class="sponsorInfoSection">';
 
-                delete sponsor.Image;
+            delete sponsor.Image;
 
-                $.each(sponsor, function (key, value) {
-                    if (key === "Name") {
-                        html += '<div class="sponsorInfoSection"><h1>' + value + '</h1><img id="medalIcon" src="' + relPath + 'images/icons/medal-' + sponsor.Type + '.png"><div id="medaltext">' + sponsor.Type + ' sponsor</div></div>';
-                    } else if (value.includes("http")) {
-                        links += '<a href="' + value + '">' + key + '</a>';
-                    } else if (key === "Info") {
-                        html += '<div class="sponsorInfoSection">' + value + '</div>';
-                    } else if (value.includes("@")) {
-                        links += '<a href="mailto:' + value + '">' + key + '</a>';
-                    }
-                });
-                links += "</div>";
-                html += links;
-                $('#sponsorTable').html(html);
-                //$('#links').html(links);
+            $.each(sponsor, function (key, value) {
+                if (key === "Name") {
+                    html += '<div class="sponsorInfoSection"><h1>' + value + '</h1><img id="medalIcon" src="' + relPath + 'images/icons/medal-' + sponsor.Type + '.png"><div id="medaltext">' + sponsor.Type + ' sponsor</div></div>';
+                } else if (value.includes("http")) {
+                    links += '<a href="' + value + '">' + key + '</a>';
+                } else if (key === "Info") {
+                    html += '<div class="sponsorInfoSection">' + value + '</div>';
+                } else if (value.includes("@")) {
+                    links += '<a href="mailto:' + value + '">' + key + '</a>';
                 }
+            });
+            links += "</div>";
+            html += links;
+            $('#sponsorTable').html(html);
+        }
     });
 }
+
+function showMember(id) {
+
+    var name = $('#button' + id).text();
+
+    // update url hash
+    window.location.hash = name.replace(/ /g, "_");
+
+    showMemberWithName(name);
+}
+
+$(document).ready(function () {
+    if (window.location.hash) {
+        var name = window.location.hash.substr(1);
+        name = name.replace(/_/g, " ");
+        showMemberWithName(name);
+    } else {
+        showMember("0");
+    }
+});

@@ -48,7 +48,7 @@ function showMember(id) {
     var name = $('#button' + id).text();
 
     // update url hash
-    window.location.hash = name.replace(" ", "_");
+    window.location.hash = name.replace(/ /g, "_");
 
     showMemberWithName(name);
 }
@@ -57,7 +57,7 @@ $(document).ready( function(){
     $('#button0').prop("hidden",true);
     if (window.location.hash) {
         var name = window.location.hash.substr(1);
-        name = name.replace("_", " ");
+        name = name.replace(/_/g, " ");
         showMemberWithName(name);
     } else {
         showMember("0");

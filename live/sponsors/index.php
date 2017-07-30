@@ -44,11 +44,5 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
     <div id="sponsorButtonGroup"><?= $gold; $silver; $bronze ?></div>
     <section id="sponsorTable"></section>
 </div>
-
-<script>
-    $(document).ready(function () {
-        showMember("0");
-    });
-</script>
 </body>
 </html>

@@ -35,11 +35,5 @@
         <?= $buttons ?>
         <table id="societyTable" class="pageTable"></table>
     </div>
-
-        <script>
-            $(document).ready(function () {
-                showMember("0");
-            });
-        </script>
 </body>
 </html>
