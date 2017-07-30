@@ -1,3 +1,11 @@
+$('#shopButtonDiv').hover(
+    function() {
+        $('.shopButton').fadeIn('slow');
+    },function() {
+        $('.shopButton').fadeOut('slow');
+    }
+);
+
 function showDropdown() {
     var state = $('#child').prop('hidden');
     
