@@ -30,7 +30,7 @@ div.subsectionText {
     margin-left: 50px;
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 750px) {
     .subsectionImage {
         width: 100%;
         float: none;

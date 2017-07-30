@@ -72,7 +72,7 @@ foreach ($sectionData as $key => $value) {
 ?>
 <html>
     <title><?= $sectionData['title'] ?></title>
-
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css"/>
     <link rel="stylesheet" type="text/css" href="/leaflet/leaflet.css"/>
