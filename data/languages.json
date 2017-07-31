@@ -1,27 +1,30 @@
 {
-    "en": {
-        "Name":"English",
-        "Path":"data/en/",
-        "Icon":"images/flag-icons/en.png",
-	"Enabled":"true"
-    },
-    "bg": {
-        "Name":"Bulgarian",
-        "Path":"data/bg/",
-        "Icon":"images/flag-icons/bg.png",
-	"Enabled":"true"
-	
-    },
-    "zh-cn": {
-        "Name":"Chinese (Simplified)",
-        "Path":"data/zh-cn/",
-        "Icon":"images/flag-icons/cn.png",
-	"Enabled":"false"
-    },
-    "ro": {
-        "Name":"Romanian",
-        "Path":"data/ro/",
-        "Icon":"images/flag-icons/ro.png",
-	"Enabled":"false"
-    }
+  "en": {
+    "name": "English",
+    "path": "data/en/",
+    "icon": "images/flag-icons/en.png",
+    "locale": "en_GB",
+    "enabled": "true"
+  },
+  "bg": {
+    "name": "Bulgarian",
+    "path": "data/bg/",
+    "icon": "images/flag-icons/bg.png",
+    "locale": "bg_BG",
+    "enabled": "true"
+  },
+  "zh-cn": {
+    "name": "Chinese (Simplified)",
+    "path": "data/zh-cn/",
+    "icon": "images/flag-icons/cn.png",
+    "locale": "zh_CN",
+    "enabled": "false"
+  },
+  "ro": {
+    "name": "Romanian",
+    "path": "data/ro/",
+    "icon": "images/flag-icons/ro.png",
+    "locale": "ro_RO",
+    "enabled": "false"
+  }
 }

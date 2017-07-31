@@ -1,42 +1,53 @@
 <?php
+/**
+ * get language setting from url if valid $_GET['lang'] is set,
+ * or get language setting from http accept-language header if possible and redirect,
+ * otherwise use en as default and redirect.
+ */
 function setLang() {
     global $lang;
     global $relPath;
     if (!isset($relPath)) {
         $relPath = '../';
     }
-    $availableLocales = scandir($relPath . '../data/locale');
-    if (isset($_GET['lang'])) { // get language setting from url
-        foreach ($availableLocales as $availableLocale) { // check if valid lang
-            $availableLocale = strtolower(str_replace('_', '-', $availableLocale));
-            if ($_GET['lang'] === $availableLocale) {
-                $lang =  $availableLocale;
+
+    // get languages config
+    global $languages;
+    $raw = file_get_contents($relPath . '../data/languages.json');
+    $languages = json_decode($raw, true);
+
+    // get language setting from url
+    if (isset($_GET['lang'])) {
+        if (array_key_exists($_GET['lang'], $languages)) {
+            $lang = $_GET['lang'];
+            return;
+        }
+    }
+
+    // get language setting from http header
+    if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+        // get accept-language
+        $rawAcceptLanguage = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+        $parsingAcceptLanguages = explode(',', str_replace(';', ',', $rawAcceptLanguage)); // split
+        $acceptLanguages = array();
+        foreach ($parsingAcceptLanguages as $parsingAcceptLanguage) {
+            $count = preg_match('/^([a-z]{2})(-[a-z]{2})?$/i', $parsingAcceptLanguage, $match); // match language code
+            if ($count === 1) {
+                array_push($acceptLanguages, $match[0]);
+            }
+        }
+        // check valid language
+        foreach ($acceptLanguages as $acceptLanguage) {
+            $acceptLanguage = strtolower($acceptLanguage);
+            if (array_key_exists($acceptLanguage, $languages)) {
+                $lang =  $acceptLanguage;
+                redirectToLang($lang);
                 return;
             }
         }
     }
-    if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) { // get language setting from http header
-        $acceptLang = $_SERVER['HTTP_ACCEPT_LANGUAGE']; // raw string
-        $parsingAcceptLanguages = explode(',', str_replace(';', ',', $acceptLang)); // split string
-        $acceptLanguages = array();
-        foreach ($parsingAcceptLanguages as $parsingAcceptLanguage) {
-            $count = preg_match('/^([a-z]{2})(-[a-z]{2})?$/i', $parsingAcceptLanguage, $match); // match if language code
-            if ($count === 1) { // if match
-                array_push($acceptLanguages, $match[0]);
-            }
-        }
-        foreach ($acceptLanguages as $acceptLanguage) { // check if valid lang
-            foreach ($availableLocales as $availableLocale) {
-                $availableLocale = strtolower(str_replace('_', '-', $availableLocale));
-                $acceptLanguage = strtolower($acceptLanguage);
-                if (strcmp($acceptLanguage, $availableLocale) === 0) {
-                    $lang =  $availableLocale;
-                    redirectToLang($lang);
-                    return;
-                }
-            }
-        }
-    }
+
+    // default en
     $lang = 'en';
     redirectToLang($lang);
 }
@@ -61,19 +72,15 @@ function redirectToLang($lang) {
 setLang();
 
 // set locale
-$lc = str_replace('-', '_', $lang);
-$count = preg_match('/^([a-z]{2})_([a-z]{2})$/i', $lc, $match);
-if ($count === 1) {
-    $lc = strtolower($match[1]) . '_' . strtoupper($match[2]);
-}
+$lc = $languages[$lang]['locale'];
 
 putenv("LANG=$lc");
 setlocale(LC_ALL, $lc);
 
-$domain = 'messages';
-bindtextdomain($domain, $relPath . '../data/locale');
-bind_textdomain_codeset($domain, 'UTF-8');
-textdomain($domain);
+function setTextDomain($domain) {
+    global $relPath;
+    bindtextdomain($domain, $relPath . '../data/locale');
+    bind_textdomain_codeset($domain, 'UTF-8');
+    textdomain($domain);
+}
 
-// example
-?>
