@@ -7,10 +7,12 @@
 
         include_once($relPath . "navbar/navbar.php");
         echo getNavBar();
+
+        setTextDomain('title');
         
         ?>
         <meta charset="UTF-8">
-        <title>Home | ECSS</title>
+        <title><?= _('Home') ?> | ECSS</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="theme.css" />
         <link rel="stylesheet" type="text/css" href="home.css" />

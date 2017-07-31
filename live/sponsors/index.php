@@ -33,7 +33,7 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sponsors | ECSS</title>
+<title><?= _("Sponsors") ?> | ECSS</title>
 
 <script> var relPath = "<?= $relPath ?>";</script>
 <script src="<?=$relPath ?>sponsors/sponsors.js"></script>

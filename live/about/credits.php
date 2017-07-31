@@ -11,7 +11,7 @@ echo getNavBar();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../theme.css">
     <link rel="stylesheet" type="text/css" href="credits.css">
-    <title>Credits | ECSS</title>
+    <title><?= _("Credits") ?> | ECSS</title>
 </head>
 <body>
 <section id="creditsSection" class="pageContainer">

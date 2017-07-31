@@ -8,7 +8,7 @@
         ?>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>About | ECSS</title>
+        <title><?= _("About") ?> | ECSS</title>
         <link rel="stylesheet" href="<?= $relPath ?>navbar/navbar.css">
         <link rel="stylesheet" href="<?= $relPath ?>theme.css">
         <base target="_blank">
