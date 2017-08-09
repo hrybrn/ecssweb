@@ -21,16 +21,17 @@
     </head>
 
 <body>
+<?php setTextDomain('home'); ?>
 <div class="pageContainer">
     <div id="intro">
         <img id="logo" src="images/ecss-logo.png" alt="ECSS logo" />
         <section>
-            <h1>Welcome to ECSS!</h1>
-            <p>Welcome to the Electronics and Computer Science (ECS) Society website. </p>
-            <p>We are a student-run society for ECS at the University of Southampton. </p>
-            <p>On this website you will find information about the society such as who we are, what we aim to do, as well as what events we are currently organising! </p>
-            <p>Still reading? You can even find out more <a href="about/" target="_self">about us.</a></p>
-            <p>To keep up with the latest events, join the <a href="https://www.facebook.com/groups/ecss.soton/">ECSS Facebook group</a> and follow us on Twitter, <a href="http://twitter.com/ecs_society">@ECS_Society.</a></p>
+            <h1><?= _('Welcome to ECSS!') ?></h1>
+            <p><?= _('Welcome to the Electronics and Computer Science (ECS) Society website.') ?></p>
+            <p><?= _('We are a student-run society for ECS at the University of Southampton.') ?></p>
+            <p><?= _('On this website you will find information about the society such as who we are, what we aim to do, as well as what events we are currently organising!') ?></p>
+            <p><?= _('Still reading? You can even find out more <a href="about/" target="_self">about us</a>.') ?></p>
+            <p><?= _('To keep up with the latest events, join the <a href="https://www.facebook.com/groups/ecss.soton/">ECSS Facebook group</a> and follow us on Twitter, <a href="http://twitter.com/ecs_society">@ECS_Society</a>.') ?></p>
         </section>
     </div>
     <div id="socialWidgetsDiv">
@@ -38,7 +39,7 @@
             <ul>
                 <li onclick="showWidget(0)" class="activeTab">Twitter</li>
                 <li onclick="showWidget(1)">Facebook</li>
-                <li onclick="showWidget(2)">Events</li>
+                <li onclick="showWidget(2)"><?= _('Events') ?></li>
             </ul>
         </div>
         <div id="socialWidgets">
