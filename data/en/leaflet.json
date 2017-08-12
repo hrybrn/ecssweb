@@ -11,7 +11,25 @@
                 "Text":"Not all of university is getting so drunk you forget your own name, and to accommodate that we run many non-alcoholic and more relaxed events. We have bowling, trips to scoops and pub quizzes planned so keep an eye out for those.",
                 "Image":"images/leaflet/social/uno.jpg"
             }
+        }   
+    },
+
+    "Games": {
+        "title":"Games in ECSS"
+    },
+
+    "Welfare": {
+        "title":"Welfare in ECSS",
+        "Overview":"Any degree in the Electronic and Computer Science Society can be changing. Work loads can be high and stress can be difficult manage. The job of the welfare sec is to lend guidance and support when things get tough. Whether it’s bad results, home-sickness or just needing a chat the welfare sec will be able to point you in the right direction. This year’s welfare officer is Hope Shaw, a second year electronics student who has spent a year actively involved as a course rep.",
+        "Subsections": {
+            "Events": {
+                "Text":"Wellbeing events are held by the union, society and outside communities. We will hold a range of different events to help manage stress and take your mind of studies as well as teaming up and promoting outside groups. You can also find the welfare sec at most socials.",
+                "Image":"images/leaflet/welfare/daddyFelix.jpg"
+            },
+            "People to talk to":{
+                "Text":"Solent Mind—Support and advice for mental heath issues <br>+44(0)23 8202 7810 <br><br>Samaritans—confidential, 24/7 and free call line that will listen to anything you want to say<br>116 123<br><br>First Support—a small team in student services who offer face-to-face appointments or calls for students dealing with crisis.<br>+44(0)23 8059 7488 OR firstsupport@soton.ac.uk <br><br>Tutors—The senior tutors are great for anything relating to the course and will help you sort out issues with your studies.<br>Contact Jules Field<br><br>Student Services– for urgent issues the security team will respond out of hours.<br>+44(0)23 8059 2811<br><br>Enabling Sevices—Appointments can be booked for help with learning difficulties at the front desk.<br>Health Service— The university health services can provide appointments for health and mental issues.",
+                "Image":""
+            }
         }
-        
     }
 }

@@ -1,15 +1,25 @@
-<?
+<?php
+$relPath = "../";
+include_once($relPath . "/voting/votingChecker.php");
+include_once($relPath . "db/dbConnect.php");
+
+if(!$mode = check("nominate")){
+    echo "Nominations have been closed.";
+    exit;
+}
+
 $sql = "
         SELECT p.id, p.name
         FROM position AS p
         WHERE p.type = '$mode';";
 
-$result = unsafe($sql);
+$result = ex($sql);
 
 $options = "";
 
 foreach($result as $index => $data){
     $options .= '<option value="' . $data['id'] . '">' . $data['name'] . '</option>';
+}
 ?>
 
 <table>

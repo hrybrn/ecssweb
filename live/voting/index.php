@@ -1,11 +1,15 @@
-<?
+<?php
 $relPath = "../";
-
-include_once($relPath . "navbar/navbar.php");
 
 $raw = file_get_contents($relPath . "../data/setup.json");
 $setup = json_decode($raw, true);
 
-echo getNavBar();
+if($setup['phdMasters'] == "disabled")
+    $mode = "general";
+else
+    $mode = "phdMasters";
 
-include_once($relPath . "../voting/votingPage.php");
+$mode = $setup[$mode];
+
+//including relevant layout
+header( 'Location: http://society.ecs.soton.ac.uk/voting/' . $mode . '.php' ) ;
