@@ -48,6 +48,18 @@ foreach ($sectionData as $key => $value) {
                     //todo: print out image
                     $body .= "<img class=\"subsectionImage\" src=\"" . $relPath . $subsubvalue . "\">";
                 }
+
+                if ($subsubkey == "SlideShow") {
+                    $files = scandir($relPath . $subsubvalue);
+
+                    ?>
+                    <script>
+                        var files = <?= json_encode($files) ?>;
+                    </script>
+                    <?
+
+                    $body .= "<div class=\"slideshow\"></div>";
+                }
             }
             
             $body .= "</div>";
