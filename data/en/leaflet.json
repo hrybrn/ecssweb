@@ -31,5 +31,15 @@
                 "Image":""
             }
         }
+    },
+
+    "Sports": {
+        "title":"Sports in ECSS",
+        "Overview":"Sport is a large social aspect of ECSS. So much so that we have sub pages for: <br><br>1. Football <br>2. Netball <br>3. Running <br>4. badminton, squash, pool, table tennis",
+        "Subsections": {
+            "Slideshow": {
+                "Slideshow" : "images/leaflet/sports/slideshow"
+            }
+        }
     }
 }

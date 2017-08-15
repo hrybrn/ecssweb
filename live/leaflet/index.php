@@ -21,12 +21,11 @@ $body .= "<div id=\"titleDiv\">";
 $body .= "<h1 id=\"sectionTitle\">" . $section . "</h1>";
 
 foreach ($sectionData as $key => $value) {
-    if ($key === "Overview") {
+    if ($key == "Overview") {
         //todo: print out overview
         $body .= "<p id=\"overview\">" . $value . "</p>";
         $body .= "</div>";
-    } else
-    if ($key === "Subsections") {
+    } elseif ($key == "Subsections") {
         //$body .= "<p>lolool</p>";
         foreach ($value as $subkey => $subvalue) {
             //$body .= "<p>sub-lolool</p>";
@@ -49,12 +48,12 @@ foreach ($sectionData as $key => $value) {
                     $body .= "<img class=\"subsectionImage\" src=\"" . $relPath . $subsubvalue . "\">";
                 }
 
-                if ($subsubkey == "SlideShow") {
+                if ($subsubkey == "Slideshow") {
                     $files = scandir($relPath . $subsubvalue);
 
                     ?>
                     <script>
-                        var files = <?= json_encode($files) ?>;
+                        var files = <? echo json_encode($files); ?>
                     </script>
                     <?
 
@@ -66,28 +65,13 @@ foreach ($sectionData as $key => $value) {
         }
     }
 }
-
-/*
-  for($i = 0; $i < count($sectionData['text']); $i++){
-  if(in_array($i, $sectionData['titleIndexes'])){
-  $body .= "<h3>" . $sectionData['text'][$i] . "</h3>";
-  } else {
-  $body .= "<p>" . $sectionData['text'][$i] . "</p>";
-  }
-
-  if(isset($sectionData['images'][$i])){
-  $body .= "<img class='leafletImage' src='" . $relPath . $sectionData['images'][$i] . "'>";
-  }
-  }
-
- */
 ?>
 <html>
     <title><?= $sectionData['title'] ?></title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css"/>
-    <link rel="stylesheet" type="text/css" href="/leaflet/leaflet.css"/>
+    <link rel="stylesheet" type="text/css" href="<?= $relPath ?>/leaflet/leaflet.css"/>
 
     <body>
 <?= getNavBar(); ?>
