@@ -3,6 +3,10 @@
     "Committee":"committee/index.php",
     "Societies":"societies/index.php",
     "Sponsors":"sponsors/",
+    "Leaflet": {
+        "default":"index.php",
+        "Socials":"leaflet/?section=Socials"
+    },
     "Files": {
         "default":"/filestore/index.php/s/JeqwjpN2tkVKW5X",
         "Meeting Minutes":"/filestore/index.php/s/JeqwjpN2tkVKW5X",
@@ -11,7 +15,7 @@
     "About": {
         "default":"about/index.php",
         "About":"about/index.php",
-	"Constitution":"files/Constitution-2015.pdf",
+	    "Constitution":"files/Constitution-2015.pdf",
         "Contact Us":"about/contact.php",
         "Credits":"about/credits.php"
     }

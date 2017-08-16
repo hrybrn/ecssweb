@@ -3,6 +3,13 @@
     "Committee":"committee/index.php",
     "Societies":"societies/index.php",
     "Sponsors":"sponsors/",
+    "Leaflet": {
+        "default":"index.php",
+        "Socials":"leaflet/?lang=en&section=Socials",
+        "Games":"leaflet/?lang=en&section=Games",
+        "Welfare":"leaflet/?lang=en&section=Welfare",
+        "Sports":"leaflet/?lang=en&section=Sports"
+    },
     "Files": {
         "default":"/filestore/index.php/s/JeqwjpN2tkVKW5X",
         "Meeting Minutes":"/filestore/index.php/s/JeqwjpN2tkVKW5X",

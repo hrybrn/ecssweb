@@ -45,7 +45,7 @@
 
     "Sports": {
         "title":"Sports in ECSS",
-        "Overview":"Sport is a large social aspect of ECSS. So much so that we have sub pages for: <br><br>1. <a href='http://society.ecs.soton.ac.uk/leaflet/?lang=en&section=Football'>Football</a> <br>2. <a href='http://society.ecs.soton.ac.uk/leaflet/?lang=en&section=Netball'>Netball</a> <br>3. Running <br>4. Others",
+        "Overview":"Sport is a large social aspect of ECSS. So much so that we have sub pages for: <br><br>1. <a href='http://society.ecs.soton.ac.uk/leaflet/?lang=en&section=Football'>Football</a> <br>2. <a href='http://society.ecs.soton.ac.uk/leaflet/?lang=en&section=Netball'>Netball</a> <br>3. <a href='society.ecs.soton.ac.uk/leaflet/?lang=en&section=Running'>Running</a> <br>4. <a href='society.ecs.soton.ac.uk/leaflet/?lang=en&section=Others'>Others</a> <br><br>Whilst ECSS do not offer a wide range of sporting opportunities, the union does.<br>Take as many opportunities to get involved, and try new things whilst at university.<br>Make the most of your time here!<br><br><a href='https://www.southampton.ac.uk/sportandwellbeing/index.page?'>General Southampton sports facilities</a><br><br><a href='https://www.susu.org/sport'>Sports Societies</a>",
         "Subsections": {
             "": {
                 "Slideshow" : "images/leaflet/sports/slideshow"
@@ -82,6 +82,30 @@
         "Subsections": {
             "Contact us to help us get this going!": {
                 "Text":"<a href='https://www.facebook.com/brad.elvy.1'>Brad Elvy</a><br><br><a href='https://www.facebook.com/nick.turner.9847'>Nick turner</a> (SUES sports rep)<br><br><a href='https://www.facebook.com/riapandit98'>Ria Pandit</a> (PhySoc sports rep)"
+            }
+        }
+    },
+
+    "Running": {
+        "title":"Running in ECSS",
+        "Overview":"Since the end of last year, members of ECSS have started taking part in running events.<br>Some students took part in 10km runs or half marathons, but the attendance was highest at the weekly park run.",
+        "Subsections": {
+            "Parkrun": {
+                "Text":"The local Southampton Parkrun is held every Saturday in the common.<br>A group of us meet every week to start the run together and meet after to chat about times and the run. <br>It's a really easy way to be active, requires no money, experience or equipment (perfect for people who never go outside).<br>This year the park runs will continue, whilst some fun runs, fancy dress runs, and maybe even some longer distance events to raise money for charities or the society. The society may even look into getting ECSS branded running tops if there is enough interest.",
+                "Image":"images/leaflet/running/parkrun.jpg"
+            }
+        }
+    },
+
+    "Others": {
+        "title":"Other sports in ECSS",
+        "Overview":"Compete for the title of best player in ECSS! We have annual ladders in Table tennis, badminton, pool and squash. The ladders are set up in the first few weeks but anyone can join at any time.",
+        "Subsections":{
+            "How it works":{
+                "Text":"Players challenge each other no higher than 2 places above them, they play a best of 3 game, and report back to the league. If the challenger wins, they are moved above the player they challenged."
+            },
+            "Get in touch":{
+                "Text":"<a href='https://www.facebook.com/groups/1676587752611911/'>Table tennis</a><br><a href='https://www.facebook.com/groups/1079814182050120/'>Badminton</a><br><a href='https://www.facebook.com/groups/947358788681509/'>Squash</a>"
             }
         }
     }

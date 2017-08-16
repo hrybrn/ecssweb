@@ -27,17 +27,30 @@ function getNavBar() {
      */
     foreach ($links as $name => $address) {
         if(is_array($address)){
+            if(strpos($address['default'], "lang") === false){
              $nav .= 
                 '
                  <div class="dropdown">
                  <a id="navButton" href="'. $relPath . $address['default'] . '?lang=' . $lang . '" target="_self">' . $name . '</a>
                  
                 <div class="dropdown-content">';
+            } else {
+                $nav .= 
+                '
+                 <div class="dropdown">
+                 <a id="navButton" href="'. $relPath . $address['default'] . '" target="_self">' . $name . '</a>
+                 
+                <div class="dropdown-content">';
+            }
              
             unset($address['default']);
             
             foreach($address as $page => $link){
-                $nav .= '<a class="link" href="' . $relPath . $link . '?lang=' . $lang . '" target="_self">' . $page . '</a>';
+                if(strpos($link, "lang") === false){
+                    $nav .= '<a class="link" href="' . $relPath . $link . '?lang=' . $lang . '" target="_self">' . $page . '</a>';
+                } else {
+                    $nav .= '<a class="link" href="' . $relPath . $link . '" target="_self">' . $page . '</a>';
+                }
             }
             $nav .= '</div></div>';
         } 
