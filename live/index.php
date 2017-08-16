@@ -32,6 +32,11 @@
             <p><?= _('On this website you will find information about the society such as who we are, what we aim to do, as well as what events we are currently organising!') ?></p>
             <p><?= _('Still reading? You can even find out more <a href="about/" target="_self">about us</a>.') ?></p>
             <p><?= _('To keep up with the latest events, join the <a href="https://www.facebook.com/groups/ecss.soton/">ECSS Facebook group</a> and follow us on Twitter, <a href="http://twitter.com/ecs_society">@ECS_Society</a>.') ?></p>
+
+            <br><br>
+            <p style="text-align: center;">~~~ If you are a new to ECSS and you have just been accepted then well done! We look forward to introducing you to the society and hope you have a great time with us! ~~~
+            </p>
+            <br><br>
         </section>
     </div>
     <div id="socialWidgetsDiv">

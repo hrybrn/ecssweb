@@ -18,7 +18,7 @@ function getNavBar() {
     
     $nav .= '<div class="navbar">';
     //$nav .= '<img id="navbarLogo" src="' . $relPath . 'images/new-logo-white-transparent-ver2.png" height="60">';
-    $nav .= '<img id="navbarLogo" src="' . $relPath . 'images/ecss-oldlogo.png" height="60">';
+    $nav .= '<img id="navbarLogo" src="' . $relPath . 'images/new-logo-black.png" height="60">';
     
     /*
      * Every entry in $links contains an element of the navbar (link & address).
@@ -52,10 +52,10 @@ function getNavBar() {
     //$nav .= '<div id="innerLangMenu">';
     
     //DISABLED LANGUAGE ICONS
-    
+    /*
     $nav .= '<a href="' . $nakedURL . '?lang=bg" target="_self"><img class="langIcon" id="notCurrentLangIcon" src="' . $relPath . '/images/flag-icons/bg.png" height="20"></a>';
     $nav .= '<a href="' . $nakedURL . '?lang=zh-cn" target="_self"><img class="langIcon" id="notCurrentLangIcon" src="' . $relPath . '/images/flag-icons/zh-cn.png" height="20"></a>';
-     
+    */
     
     
     $nav .= '</div>';

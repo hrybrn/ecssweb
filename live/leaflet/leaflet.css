@@ -4,6 +4,7 @@
 
 #overview {
     font-size: 18px;
+
 }
 
 .subsection {
@@ -13,13 +14,17 @@
 }
 
 .subsectionImage {
-    width: 40%;
-    float: left;
+    width: 40% !important;
+    float: left !important;
 }
 
-.slideshow {
-    width: 40%;
-    height: 40%;
+div.slideshow {
+    height: 500px;
+    width: 800px;
+    background: no-repeat;
+    background-position: center;
+    background-size: contain;
+    float: right;
 }
 
 div.subsectionText {
@@ -52,3 +57,6 @@ div.subsectionText {
 
 }
 
+.slideshowButton {
+    position: relative;
+}
