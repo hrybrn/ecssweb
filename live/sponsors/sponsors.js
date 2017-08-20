@@ -36,8 +36,8 @@ function showMemberWithName(name) {
             $.each(sponsor, function (key, value) {
                 if (key === "Name") {
                     html += '<div class="sponsorInfoSection"><h1>' + value + '</h1><img id="medalIcon" src="' + relPath + 'images/icons/medal-' + sponsor.Type + '.png"><div id="medaltext">' + sponsor.Type + ' sponsor</div></div>';
-                } else if (value.includes("http")) {
-                    links += '<a href="' + value + '">' + key + '</a>';
+                } else if (value.includes("http") && key != "Info") {
+                    links += '<a class="spacedLink" href="' + value + '">' + key + '</a>';
                 } else if (key === "Info") {
                     html += '<div class="sponsorInfoSection">' + value + '</div>';
                 } else if (value.includes("@")) {

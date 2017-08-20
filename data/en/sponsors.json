@@ -15,7 +15,7 @@
     },
 
     "Silver": {
-	"Ultra Electronics" : {
+	    "Ultra Electronics" : {
             "Name" : "Ultra Electronics",
             "Website" : "http://www.ultra-electronics.com/",
             "Image" : "images/sponsors/ultra.jpg",
@@ -32,6 +32,13 @@
             "Website" : "http://www.baesystems.com/",
             "Image" : "images/sponsors/bae.jpg",
             "Info" : "BAE Systems are one of the largest defense, security and aerospace companies on the planet. They were founded in 1999 and have their headquarters in London. They are one of the biggest suppliers to the British and US Defense Forces among others."
+        },
+        "Deutsche Bank" : {
+            "Name" : "Deutsche Bank",
+            "Image" : "images/sponsors/deutscheBank.jpg",
+            "Website" : "https://www.db.com/unitedkingdom/",
+            "Careers" : "http://db.com/careers/technology",
+            "Info" : "<p><strong>Shape the future of global finance Intelligence.</strong></p><p>Insight. Innovation. If you&rsquo;re driven by new ideas, there&rsquo;s a lot to look forward to as part of the Technology team at Deutsche Bank. Together, we develop, manage and build the tools that keep our business and global client base connected. We&rsquo;re pioneering the next generation of systems that will make us a stronger, safer bank. This is your chance to lead that change.</p><p>We use technology to create a competitive edge, whether that&rsquo;s designing algorithms that predict price changes over microseconds, producing complex quantitative tools that execute trades for clients, or building applications capable of moving EUR trillions around the globe, every day. With a strong position in Europe and a significant presence in the Americas and Asia Pacific, our network and influence now extends to every part of the globe. Now, we&rsquo;re designing the digital bank of the future. You can help us create it.</p><p>Although we have many roles requiring programming skills, you don&rsquo;t need to be a technical expert to join Technology at Deutsche Bank. We&rsquo;re looking for future-focused developers, coders, programmers, as well as business and functional analysts to use their expertise to drive forward the way the banking industry runs today.</p><p>In each of these roles, you&rsquo;ll use your creativity and intellectual curiosity to solve difficult problems, and provide the kind of innovative solutions that will transform our business. Our future is yours to shape. Discover a career to look forward to at <a title='Deutsche Bank Careers' href='http://db.com/careers/technology' target='_blank'>db.com/careers/technology</a></p>"
         }
     },
 

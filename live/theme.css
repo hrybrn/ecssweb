@@ -386,3 +386,7 @@ li {
         margin: 0 auto;
     }
 }
+
+.spacedLink{
+    padding-right: 5px;
+}
