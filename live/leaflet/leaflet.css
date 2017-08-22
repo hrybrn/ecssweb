@@ -13,18 +13,19 @@
     overflow: hidden;
 }
 
-.subsectionImage {
-    width: 40% !important;
-    float: left !important;
-}
-
-div.slideshow {
+.slideshow {
     height: 500px;
     width: 800px;
     background: no-repeat;
     background-position: center;
     background-size: contain;
     float: right;
+}
+
+.subsectionImage {
+    width: 40%;
+    float: left;
+    display: block;
 }
 
 div.subsectionText {
@@ -43,7 +44,9 @@ div.subsectionText {
 @media screen and (max-width: 750px) {
     .subsectionImage {
         width: 100%;
+        max-width: 300px;
         float: none;
+        margin: 0 auto;
     }
 
     div.subsectionText {
