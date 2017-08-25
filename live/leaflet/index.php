@@ -104,6 +104,9 @@ foreach ($sectionData as $key => $value) {
 
             if(section == "Sports"){
                 $('#overview').css("float", "left");
+                $('#overview').css("width", "60%");
+                $('.subsectionText').css('float', 'none');
+                $('.subsectionText').css('width', '100%');
             }
         });
     </script>

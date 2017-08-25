@@ -15,11 +15,9 @@
 
 .slideshow {
     height: 500px;
-    width: 800px;
     background: no-repeat;
     background-position: center;
     background-size: contain;
-    float: right;
 }
 
 .subsectionImage {
