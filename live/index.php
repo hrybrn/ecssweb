@@ -1,25 +1,29 @@
+<?php
+$relPath = "";
+include_once ($relPath . 'includes/setLang.php');
+?>
 <!doctype html>
 <html>
 <head>
-    <?php
-    $relPath = "";
-
-    include_once($relPath . "navbar/navbar.php");
-    echo getNavBar();
-
-    setTextDomain('title');
-
-    ?>
     <meta charset="utf-8">
+    <?php
+    setTextDomain('title');
+    ?>
     <title><?= _('Home') ?> | ECSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="theme.css" />
     <link rel="stylesheet" type="text/css" href="home.css" />
     <script src="home.js"></script>
-    <base target="_blank">
 </head>
 <body>
-<?php setTextDomain('home'); ?>
+<?php
+include_once($relPath . "navbar/navbar.php");
+echo getNavBar();
+?>
+
+<?php
+setTextDomain('home');
+?>
 <div class="pageContainer">
     <div id="intro">
         <img id="logo" src="images/ecss-logo.png" alt="ECSS logo" />
