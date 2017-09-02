@@ -1,25 +1,23 @@
 <!doctype html>
 <html>
-    
-    <head>
-        <?php
-        $relPath = "";
+<head>
+    <?php
+    $relPath = "";
 
-        include_once($relPath . "navbar/navbar.php");
-        echo getNavBar();
+    include_once($relPath . "navbar/navbar.php");
+    echo getNavBar();
 
-        setTextDomain('title');
-        
-        ?>
-        <meta charset="UTF-8">
-        <title><?= _('Home') ?> | ECSS</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="theme.css" />
-        <link rel="stylesheet" type="text/css" href="home.css" />
-        <script src="home.js"></script>
-        <base target="_blank">
-    </head>
+    setTextDomain('title');
 
+    ?>
+    <meta charset="utf-8">
+    <title><?= _('Home') ?> | ECSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="theme.css" />
+    <link rel="stylesheet" type="text/css" href="home.css" />
+    <script src="home.js"></script>
+    <base target="_blank">
+</head>
 <body>
 <?php setTextDomain('home'); ?>
 <div class="pageContainer">
