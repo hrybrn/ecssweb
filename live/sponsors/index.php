@@ -16,6 +16,10 @@ $bronze = "";
 
 $i = 0;
 
+foreach ($sponsors['Default'] as $sponsor => $data) {
+    $gold .= '<button onclick="showMember(' . $i . ')" id="button' . $i++ . '">' . $sponsor . '</button>';
+}
+
 foreach ($sponsors['Gold'] as $sponsor => $data) {
     $gold .= '<button class="gold" onclick="showMember(' . $i . ')" id="button' . $i++ . '">' . $sponsor . '</button>';
 }

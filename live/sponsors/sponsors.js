@@ -35,7 +35,11 @@ function showMemberWithName(name) {
 
             $.each(sponsor, function (key, value) {
                 if (key === "Name") {
-                    html += '<div class="sponsorInfoSection"><h1>' + value + '</h1><img id="medalIcon" src="' + relPath + 'images/icons/medal-' + sponsor.Type + '.png"><div id="medaltext">' + sponsor.Type + ' sponsor</div></div>';
+                    if (sponsor.Type == "Default") {
+                        html += '<div class="sponsorInfoSection"><h1>' + value + '</h1></div>';
+                    } else {
+                        html += '<div class="sponsorInfoSection"><h1>' + value + '</h1><img id="medalIcon" src="' + relPath + 'images/icons/medal-' + sponsor.Type + '.png"><div id="medaltext">' + sponsor.Type + ' sponsor</div></div>';
+                    }
                 } else if (value.includes("http") && key != "Info") {
                     links += '<a class="spacedLink" href="' + value + '">' + key + '</a>';
                 } else if (key === "Info") {
@@ -62,6 +66,7 @@ function showMember(id) {
 }
 
 $(document).ready(function () {
+    $('#button0').prop("hidden",true);
     if (window.location.hash) {
         var name = window.location.hash.substr(1);
         name = name.replace(/_/g, " ");
