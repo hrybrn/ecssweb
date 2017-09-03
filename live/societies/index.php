@@ -25,7 +25,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><?= _("Societies") ?> | ECSS</title>
-        <base target="_blank">
 
         <link rel="stylesheet" href="../theme.css">
     </head>
