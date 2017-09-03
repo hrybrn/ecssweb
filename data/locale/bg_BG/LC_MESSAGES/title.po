@@ -8,64 +8,64 @@ msgstr ""
 "Project-Id-Version: ecssweb\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-21 14:34+0800\n"
-"PO-Revision-Date: 2017-09-03 12:18+0800\n"
+"PO-Revision-Date: 2017-09-03 12:10+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: \n"
 "X-Generator: Poedit 2.0.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Last-Translator: \n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"Language: zh_CN\n"
+"Language: bg_BG\n"
 
 msgid "Home"
-msgstr "主页"
+msgstr "Начало"
 
 msgid "Committee"
-msgstr "委员会"
+msgstr "Комитет"
 
 msgid "Societies"
-msgstr "社团"
+msgstr "Общества"
 
 msgid "Sponsors"
-msgstr "赞助商"
+msgstr "Спонсори"
 
 msgid "About"
-msgstr "关于"
+msgstr "За нас"
 
 msgid "Contact Us"
-msgstr "联系我们"
+msgstr "Контакти"
 
 msgid "Credits"
-msgstr "关于网站"
+msgstr "За сайта"
 
 # only for links
 msgid "Leaflet"
-msgstr "信息"
+msgstr ""
 
 msgid "Files"
-msgstr "文件"
+msgstr "Файлове"
 
 # leaflet
 msgid "Socials"
-msgstr "社交"
+msgstr ""
 
 msgid "Games"
-msgstr "游戏"
+msgstr ""
 
 msgid "Welfare"
-msgstr "福利"
+msgstr ""
 
 msgid "Sports"
-msgstr "运动"
+msgstr ""
 
 # files
 msgid "Meeting Minutes"
-msgstr "会议纪要"
+msgstr "Протоколи от събрания"
 
 msgid "Committee Files"
-msgstr "委员会文件"
+msgstr "Файлове на комитета"
 
 # about
 msgid "Constitution"
-msgstr "章程"
+msgstr "Конституция"

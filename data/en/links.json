@@ -18,7 +18,7 @@
     "About": {
         "default":"about/index.php",
         "About":"about/index.php",
-	"Constitution":"files/Constitution-2015.pdf",
+        "Constitution":"files/Constitution-2015.pdf",
         "Contact Us":"about/contact.php",
         "Credits":"about/credits.php"
     }
