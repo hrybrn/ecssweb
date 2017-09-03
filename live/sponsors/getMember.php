@@ -3,6 +3,7 @@
 $name = $_GET["name"];
 $lang = $_GET["lang"];
 
+
 $name = str_replace("%20", " ", $name);
 
 $relPath = "../";
