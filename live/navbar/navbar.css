@@ -76,7 +76,7 @@ form {
     */
 }
 /* Dropdown Button */
-#navButton {
+.navButton {
     display: inline-block;
     vertical-align: middle;
     background-color: black;
@@ -90,11 +90,11 @@ form {
     transition: background 0.1s linear;
 }
 
-#navButton:hover {
+.navButton:hover {
     background-color: #D82129;
 }
 /*
-#navButton a {
+.navButton a {
     color: white;
 }*/
 
@@ -117,7 +117,7 @@ table #navbarTable {
     border-collapse: collapse;
 }
 
-#navButton:active {
+.navButton:active {
     background-color: #ff5555;
 }
 
