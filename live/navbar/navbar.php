@@ -32,12 +32,12 @@ function getNavBar() {
             if(strpos($address['default'], "lang") === false){
                 $nav .= '
                 <div class="dropdown">
-                <a id="navButton" href="'. $relPath . $address['default'] . '?lang=' . $lang . '">' . _($name) . '</a>
+                <a class="navButton" href="'. $relPath . $address['default'] . '?lang=' . $lang . '">' . _($name) . '</a>
                 <div class="dropdown-content">';
             } else {
                 $nav .= '
                 <div class="dropdown">
-                <a id="navButton" href="'. $relPath . $address['default'] . '">' . _($name) . '</a>
+                <a class="navButton" href="'. $relPath . $address['default'] . '">' . _($name) . '</a>
                 <div class="dropdown-content">';
             }
 
@@ -53,12 +53,12 @@ function getNavBar() {
             $nav .= '</div></div>';
         }
         else {
-            $nav .= '<a id="navButton" href="'. $relPath . $address . '?lang=' . $lang . '">' . _($name) . '</a>';
+            $nav .= '<a class="navButton" href="'. $relPath . $address . '?lang=' . $lang . '">' . _($name) . '</a>';
         }
 
     }
     $nav .= '<div id="langMenu">';
-    $nav .= '<a href="' . $nakedURL . '?lang=en"" target="_self"><img class="langIcon" id="currentLangIcon" src="' . $relPath . '/images/flag-icons/en.png" height="20"></a>';
+    $nav .= '<a href="' . $nakedURL . '?lang=en"><img class="langIcon" id="currentLangIcon" src="' . $relPath . '/images/flag-icons/en.png" height="20"></a>';
     //$nav .= '<div id="innerLangMenu">';
 
     //DISABLED LANGUAGE ICONS
@@ -75,7 +75,7 @@ function getNavBar() {
 //$nav .= '
     //    <div id="shopButtonDiv">
     //    <form action="">
-    //    <button id="navButton" class="shopButton">Shop</button>
+    //    <button class="navButton" class="shopButton">Shop</button>
     //    </form>
     //    </div>';
     //$nav .= '<img src ="' . $relPath . '/images/fire.gif" height="30px">';
