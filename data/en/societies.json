@@ -96,7 +96,10 @@
     "IET":{
         "Name":"IET Student Branch",
         "Image":"images/societies/iet.png",
-        "Website":"http://www.theiet.org/students/you-and-iet/on-campus/index.cfm?origin=on-campus"
+        "Website":"http://www.theiet.org/students/you-and-iet/on-campus/index.cfm?origin=on-campus",
+        "Description":"The Southampton IET On Campus is an initiative from the IET which delivers the best professional resources and knowledge into the hands of engineering and technology students. All ECS students receive free membership to the IET and the IET On Campus events are a great way to get involved with the professional world, gain skills and make some contacts.  Like and follow our <a href='https://www.facebook.com/sotonIET/'>Facebook page</a> to keep up to date with what we have planned.",
+        "Email":"mailto:IET-OnCampus@ecs.soton.ac.uk",
+        "Facebook Page":"https://www.facebook.com/sotonIET/"
     },
     "Global Game Jam":{
         "Name":"Global Game Jam",
@@ -108,6 +111,6 @@
         "Image":"images/societies/code-dojo.png",
         "Meetings":"Monthly",
         "Website":"https://southamptoncodedojo.com/",
-	"Email":"admin@southamptoncodedojo.com"
+	    "Email":"admin@southamptoncodedojo.com"
     }
 }

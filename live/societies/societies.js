@@ -41,14 +41,8 @@ function showMemberWithName(name) {
                                 <h1>' + value + '</h1>\n\
                              </td></tr>'
                 }
-                else if (value.substring(0, 4) == "http") {
+                else if (value.substring(0, 4) == "http" || value.substring(0, 6) == "mailto") {
                     links += '<a id="societyLink" href="' + value + '">' + key + '</a>';
-                }
-                else if (value.substring(0, 6) == "mailto") {
-                    html += '<td>' + key + '</td>\n\
-                             <td>\n\
-                                <a id="societyLink" href="' + value + '">' + value.substring(7, 50) + '</a>\n\
-                             </td>';
                 }
                 else {
                     html += '\
