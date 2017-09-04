@@ -92,6 +92,7 @@ form {
 
 .navButton:hover {
     background-color: #D82129;
+    color: white;
 }
 /*
 .navButton a {
