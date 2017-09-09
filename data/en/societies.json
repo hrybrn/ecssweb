@@ -111,6 +111,7 @@
         "Image":"images/societies/code-dojo.png",
         "Meetings":"Monthly",
         "Website":"https://southamptoncodedojo.com/",
+        "Description":"The Southampton Code Dojo is a monthly meetup of technical people from around the Southampton area.<br><br>We meet on the second Thursday of each month, decide on a small challenge to work on, split up into groups and solve the problem separately, then come together and talk about the different ways we solved it.<br><br>It's a good way of improving our coding abilities by learning from each other, it's a lot of fun, and programmers of any ability are welcome.",
 	    "Email":"admin@southamptoncodedojo.com"
     }
 }
