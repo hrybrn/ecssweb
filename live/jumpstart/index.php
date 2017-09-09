@@ -21,8 +21,13 @@ $results = array();
 while($rowObject = $statement->fetchObject()){
 	$results[] = $rowObject;
 }
-
-var_dump($results);
 ?>
 <script src="jumpstart.js"></script>
 <link rel="stylesheet" href="<?= $relPath ?>theme.css">
+<script type="text/javascript">
+	var groups = <?= json_encode($results) ?>;
+
+	$(document).ready(function(){
+		load();
+	});
+</script>
