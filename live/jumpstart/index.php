@@ -15,7 +15,7 @@ $db = new PDO('sqlite:' . $dbLoc);
     ?>
     <title><?= _('Jumpstart') ?> | ECSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="theme.css" />
+    <link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css" />
 </head>
 <body>
 <?php
