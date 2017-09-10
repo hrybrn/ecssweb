@@ -6,13 +6,7 @@ function load(){
 	var highest = 0;
 
 	$(groups).each(function(){
-		var box = "<a onclick='openGroup(" + this.groupID + ")'><div id='group" + this.groupID + "' class=\"overviewSquare\">";
-		box += "<image src='../images/" + this.image + "'></image>";
-                box += "<h3>Group " + this.groupID + "</h3>";
-		box += "<p><marquee>" + this.name + "</marquee></p>";
-		box += "</div></a>";
-
-		boxes[this.groupID] = box;
+		boxes[this.groupID] = makeBox(this);
 
 		if(this.groupID > highest)
 			highest = this.groupID;
@@ -21,6 +15,16 @@ function load(){
 	for(var i=0;i<=highest;i++)
 		if(boxes[i] != "")
 			$('body').append(boxes[i]);
+}
+
+function makeBox(group){
+	var box = "<a onclick='openGroup(" + group.groupID + ")'><div id='group" + group.groupID + "' class=\"overviewSquare\">";
+	box += "<image src='../images/" + group.image + "'></image>";
+    box += "<h3>Group " + group.groupID + "</h3>";
+	box += "<p><marquee>" + group.name + "</marquee></p>";
+	box += "</div></a>";
+
+	return box;
 }
 
 function openGroup(groupID){
@@ -49,8 +53,25 @@ function openGroup(groupID){
 	        	html += "</table></div>";
 
 	        	$('#group' + groupID).append(html);
-	        	tableVisible[groupID] = true;
 	        }
 	    });
 	}
+}
+
+function search(){
+	var name = $('#nameInput').val();
+	var group = $('#groupInput').val();
+
+	$.ajax({
+		url: 'search.php',
+		type: 'get',
+		data: {'name': name, 'group': group},
+		dataType: 'json',
+		success: function (searchResults) {
+			$('.overviewSquare').remove();
+			
+			groups = searchResults;
+			load();
+		}
+	});
 }

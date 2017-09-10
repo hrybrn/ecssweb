@@ -46,5 +46,12 @@ while($rowObject = $statement->fetchObject()){
 		load();
 	});
 </script>
+
+<label for="nameInput">Name</label>
+<input type='text' id="nameInput">
+<label for="groupInput">Group</label>
+<input type='text' id="groupInput">
+<button onclick='search()'>Search</button>
+
 </body>
 </html>
