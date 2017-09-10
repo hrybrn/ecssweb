@@ -7,10 +7,6 @@
     
 }
 
-.overviewSquare:hover {
-    background-color: #D82129;
-}
-
 .overviewSquare img {
     display: inline-block;
     /*width: 100%;*/
@@ -32,12 +28,17 @@
     padding: 0px;
 }
 
-p {
+.overviewSquare p {
     margin: 0px;
     padding: 0px;
     transition: color 0.1s linear;
+    color: black;
 }
 
 .overviewSquare:hover p {
     color: white;
+}
+
+.groupTable {
+    position:absolute;
 }
