@@ -47,10 +47,8 @@ while($rowObject = $statement->fetchObject()){
 	});
 </script>
 
-<label for="nameInput">Name</label>
-<input type='text' id="nameInput">
-<label for="groupInput">Group</label>
-<input type='text' id="groupInput">
+<label for="searchInput">Name or Group ID</label>
+<input type='text' id="searchInput">
 <button onclick='search()'>Search</button>
 
 </body>

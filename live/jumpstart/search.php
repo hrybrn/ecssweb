@@ -5,11 +5,10 @@ $relPath = "../";
 $dbLoc = realpath($relPath . "../db/ecss.db");
 $db = new PDO('sqlite:' . $dbLoc);
 
-$name = $_GET['name'];
-$group = $_GET['group'];
+$search = $_GET['search'];
 
 //we search on group
-if(is_numeric($group)){
+if(is_numeric($search)){
 	$sql = "SELECT *
 			FROM jumpstart AS j
 			INNER JOIN helper AS h
@@ -18,7 +17,7 @@ if(is_numeric($group)){
 			AND j.groupID = :group;";
 
 	$statement = $db->prepare($sql);
-	$statement->execute(array(':group' => $group));
+	$statement->execute(array(':group' => $search));
 	$results = array();
 
 	while($rowObject = $statement->fetchObject()){
@@ -35,7 +34,7 @@ else{
 			AND j.name LIKE '%' || trim(:name) || '%';";
 
 	$statement = $db->prepare($sql);
-	$statement->execute(array(':name' => $name));
+	$statement->execute(array(':name' => $search));
 	$results = array();
 
 	while($rowObject = $statement->fetchObject()){

@@ -55,13 +55,12 @@ function openGroup(groupID){
 }
 
 function search(){
-	var name = $('#nameInput').val();
-	var group = $('#groupInput').val();
+	var search = $('#searchInput').val();
 
 	$.ajax({
 		url: 'search.php',
 		type: 'get',
-		data: {'name': name, 'group': group},
+		data: {'search': search},
 		dataType: 'json',
 		success: function (searchResults) {
 			$('.overviewSquare').remove();
