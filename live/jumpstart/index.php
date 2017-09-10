@@ -1,10 +1,24 @@
 <?php
-
 $relPath = "../";
+
+include_once ($relPath . 'includes/setLang.php');
 
 $dbLoc = realpath($relPath . "../db/ecss.db");
 $db = new PDO('sqlite:' . $dbLoc);
-
+?>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <?php
+    setTextDomain('title');
+    ?>
+    <title><?= _('Jumpstart') ?> | ECSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="theme.css" />
+</head>
+<body>
+<?php
 include_once($relPath . "navbar/navbar.php");
 echo getNavBar();
 
@@ -31,3 +45,5 @@ while($rowObject = $statement->fetchObject()){
 		load();
 	});
 </script>
+</body>
+</html>
