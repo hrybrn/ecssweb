@@ -19,9 +19,7 @@ $group['helpers'] = array();
 $group['freshers'] = array();
 
 while($row = $res->fetchObject()){
-	if($row->helper){
-		$group['helpers'][] = $row;
-	} else {
+	if(!$row->helper){
 		$group['freshers'][] = $row;
 	}
 }

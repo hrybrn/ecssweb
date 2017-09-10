@@ -42,10 +42,6 @@ function openGroup(groupID){
 	        success: function (group) {
 	        	var html = "<div class='groupTable'><table><tr><th>Name</th><th>Role</th></tr>";
 
-	        	$(group.helpers).each(function(){
-	        		html += "<tr><td>" + this.name + "</td><td>Helper</td></tr>";
-	        	});
-
 	        	$(group.freshers).each(function(){
 	        		html += "<tr><td>" + this.name + "</td><td>Fresher</td></tr>";
 	        	});
@@ -69,7 +65,7 @@ function search(){
 		dataType: 'json',
 		success: function (searchResults) {
 			$('.overviewSquare').remove();
-			
+
 			groups = searchResults;
 			load();
 		}
