@@ -39,8 +39,7 @@ while($rowObject = $statement->fetchObject()){
 ?>
     
 <div id="searchBar">
-<label for="searchInput">Name or Group ID</label>
-<input type='text' id="searchInput">
+<input type='text' id="searchInput" placeholder="Name or Group ID">
 <button onclick='search()'>Search</button>    
 </div> 
 
