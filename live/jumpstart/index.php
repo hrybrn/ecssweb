@@ -50,6 +50,12 @@ while($rowObject = $statement->fetchObject()){
 	var groups = <?= json_encode($results) ?>;
 
 	$(document).ready(function(){
+		$("#searchInput").keydown(function (e) {
+  			if (e.keyCode == 13) {
+    			search();
+  			}
+		});
+
 		load();
 	});
 </script>
