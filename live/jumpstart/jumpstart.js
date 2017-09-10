@@ -4,10 +4,10 @@ function load(){
 	var highest = 0;
 
 	$(groups).each(function(){
-		var box = "<div>";
-		box += "<h3>Group " + this.groupID + "</h3>";
-		box += "<image width=400 src='../images/" + this.image + "'></image>";
-		box += "<p>" + this.name + "</p>";
+		var box = "<div class=\"overviewSquare\">";
+		box += "<image src='../images/" + this.image + "'></image>";
+                box += "<h3>Group " + this.groupID + "</h3>";
+		box += "<p><marquee>" + this.name + "</marquee></p>";
 		box += "</div>";
 
 		boxes[this.groupID] = box;
