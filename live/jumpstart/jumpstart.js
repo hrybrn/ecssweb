@@ -21,7 +21,7 @@ function makeBox(group){
 	var box = "<a onclick='openGroup(" + group.groupID + ")'><div id='group" + group.groupID + "' class=\"overviewSquare\">";
 	box += "<image src='../images/" + group.image + "'></image>";
     box += "<h3>Group " + group.groupID + "</h3>";
-	box += "<p><marquee>" + group.name + "</marquee></p>";
+	box += "<p><marquee>Helper: " + group.name + "</marquee></p>";
 	box += "</div></a>";
 
 	return box;
@@ -40,13 +40,14 @@ function openGroup(groupID){
 	        data: {'groupID': groupID},
 	        dataType: 'json',
 	        success: function (group) {
-	        	var html = "<div class='groupTable'><table><tr><th>Name</th><th>Role</th></tr>";
+	        	var html = "<div class='groupTable'>";
+                        html += "<p class=\"groupTableHeader\">Members:</p>";
 
 	        	$(group.freshers).each(function(){
-	        		html += "<tr><td>" + this.name + "</td><td>Fresher</td></tr>";
+	        		html += "<p class=\"fresher\">" + this.name + "<p>";
 	        	});
 
-	        	html += "</table></div>";
+	        	//html += "</table></div>";
 
 	        	$('#group' + groupID).append(html);
 	        }

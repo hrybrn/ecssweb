@@ -37,6 +37,13 @@ while($rowObject = $statement->fetchObject()){
 	$results[] = $rowObject;
 }
 ?>
+    
+<div id="searchBar">
+<label for="searchInput">Name or Group ID</label>
+<input type='text' id="searchInput">
+<button onclick='search()'>Search</button>    
+</div> 
+
 <script src="jumpstart.js"></script>
 <link rel="stylesheet" href="<?= $relPath ?>theme.css">
 <script type="text/javascript">
@@ -47,9 +54,6 @@ while($rowObject = $statement->fetchObject()){
 	});
 </script>
 
-<label for="searchInput">Name or Group ID</label>
-<input type='text' id="searchInput">
-<button onclick='search()'>Search</button>
 
 </body>
 </html>
