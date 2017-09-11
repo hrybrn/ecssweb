@@ -28,6 +28,7 @@ echo getNavBar();
         <div class="slideshowImageContainer"><img src="<?= $relPath ?>images/people.jpg" alt=""></div>
         <div class="slideshowControl">
             <button class='slideshowButton' onclick='nextPhoto(-1)'>&lt;</button>
+            <button class='slideshowButton' onclick='pauseSlideshow()'>||</button>
             <button class='slideshowButton' onclick='nextPhoto(1)'>&gt;</button>
         </div>
     </div>
