@@ -39,6 +39,7 @@
     border: 0;
     background-color: rgba(0, 0, 0, 0.5);
     color: rgba(255, 255, 255, 0.9);
+    transition: color 0.1s linear, background-color 0.1s linear;
     cursor: pointer;
 }
 
@@ -46,3 +47,11 @@
     color: white;
 }
 /* end */
+
+@media (max-width: 800px) {
+    #slideshow {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
