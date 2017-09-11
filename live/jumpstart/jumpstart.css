@@ -12,8 +12,10 @@
 }
 
 .overviewSquare img {
-    display: inline-block;
-    width: 100%;
+    display: block;
+    object-fit: cover;
+    width:120px;    
+    height:120px;
     /*height: 120px;*/
     text-align: center;
     border-radius: 5px;
@@ -50,10 +52,12 @@
 */
 .groupTable {
     position:absolute;
+    background-color: white;
 }
 
 #searchBar {
     float: top;
+    margin: 5px;
 }
 
 .groupTableHeader {
