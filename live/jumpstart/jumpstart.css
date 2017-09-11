@@ -53,7 +53,7 @@
 }
 
 #searchBar {
-    float: top;
+    margin: 5px;
 }
 
 .groupTableHeader {
