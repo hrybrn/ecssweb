@@ -3,7 +3,7 @@
     width: 120px;
     border-radius: 5px;
     margin: 5px;
-    
+    cursor: pointer;
 }
 
 .overviewSquare:hover {
