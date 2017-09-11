@@ -25,9 +25,9 @@ echo getNavBar();
 
 //build group data
 $sql = "SELECT *
-		FROM jumpstart AS j
-		INNER JOIN helper AS h
-		ON j.memberID = h.memberID
+		FROM (jumpstart AS j
+		INNER JOIN helper AS h ON j.memberID = h.memberID)
+		INNER JOIN jumpstartGroup AS g ON j.groupID = g.groupID
 		WHERE j.helper = 1;";
 
 $statement = $db->query($sql);
