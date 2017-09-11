@@ -16,6 +16,7 @@ $db = new PDO('sqlite:' . $dbLoc);
     <title><?= _('Jumpstart') ?> | ECSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css" />
+    <link rel="stylesheet" href="<?= $relPath ?>jumpstart/jumpstart.css" />
 </head>
 <body>
 <?php
@@ -36,14 +37,28 @@ while($rowObject = $statement->fetchObject()){
 	$results[] = $rowObject;
 }
 ?>
+    
+<div id="searchBar">
+<input type='text' id="searchInput" placeholder="Name or Group ID">
+<button onclick='search()'>Search</button>    
+</div> 
+
 <script src="jumpstart.js"></script>
 <link rel="stylesheet" href="<?= $relPath ?>theme.css">
 <script type="text/javascript">
 	var groups = <?= json_encode($results) ?>;
 
 	$(document).ready(function(){
+		$("#searchInput").keydown(function (e) {
+  			if (e.keyCode == 13) {
+    			search();
+  			}
+		});
+
 		load();
 	});
 </script>
+
+
 </body>
 </html>
