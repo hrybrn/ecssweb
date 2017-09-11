@@ -1,3 +1,7 @@
+insert into jumpstartGroup(name) values ('Group 1');
+insert into jumpstartGroup(name) values ('Group 2');
+insert into jumpstartGroup(name) values ('Group 3');
+
 insert into jumpstart(name, groupID, helper) values ('Harry Brown', 1, 1);
 insert into jumpstart(name, groupID, helper) values ('Christopher Coles', 1, 0);
 insert into jumpstart(name, groupID, helper) values ('Josh Wright', 1, 0);
@@ -13,6 +17,6 @@ insert into jumpstart(name, groupID, helper) values ('Desislava Danielova Stamen
 insert into jumpstart(name, groupID, helper) values ('Stanimir Tashev', 3, 0);
 insert into jumpstart(name, groupID, helper) values ('Yoan-Daniel Malinov', 3, 0);
 
-insert into helper(memberID, image) values (1, "helpers/harry.jpg");
-insert into helper(memberID, image) values (5, "helpers/charis.jpg");
-insert into helper(memberID, image) values (9, "helpers/rayna.jpg");
+insert into helper(memberID, image, username) values (1, "helpers/harry.jpg", 'hb15g16');
+insert into helper(memberID, image, username) values (5, "helpers/charis.jpg", 'ck15g16');
+insert into helper(memberID, image, username) values (9, "helpers/rayna.jpg", 'rmb15g16');
