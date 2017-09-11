@@ -1,0 +1,48 @@
+#slideshow {
+    float: left;
+    margin: 0 15px 0 0;
+    width: 550px;
+    height: 350px;
+}
+
+/* styles for slideshow */
+/* begin */
+.slideshow {
+    position: relative; /* position must be relative/absolute/fixed for slideshwoControl to position properly */
+}
+
+.slideshowImageContainer {
+    width: 100%;
+    height: 100%;
+    /* image center vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slideshowImageContainer img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+}
+
+.slideshowControl {
+    position: absolute;
+    z-index: 999;
+    right: 10px;
+    bottom: 10px;
+}
+
+.slideshowButton {
+    margin: 0;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+}
+
+.slideshowButton:hover {
+    color: white;
+}
+/* end */

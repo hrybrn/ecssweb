@@ -11,8 +11,9 @@ include_once ($relPath . 'includes/setLang.php');
     ?>
     <title><?= _("About") ?> | ECSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="<?= $relPath ?>navbar/navbar.css">
     <link rel="stylesheet" href="<?= $relPath ?>theme.css">
+    <link rel="stylesheet" href="about.css">
+    <script src="about.js"></script>
 </head>
 <body>
 <?php
@@ -20,7 +21,17 @@ include_once($relPath . "navbar/navbar.php");
 echo getNavBar();
 ?>
 <section class="pageContainer">
-    <img id="committeeFam" src="<?= $relPath ?>images/people.jpg">
+    <!--<img id="committeeFam" src="<?= $relPath ?>images/people.jpg">-->
+
+    <div id="slideshow" class="slideshow">
+        <noscript>Javascript is required for the slideshow.</noscript>
+        <div class="slideshowImageContainer"><img src="<?= $relPath ?>images/people.jpg" alt=""></div>
+        <div class="slideshowControl">
+            <button class='slideshowButton' onclick='nextPhoto(-1)'>&lt;</button>
+            <button class='slideshowButton' onclick='nextPhoto(1)'>&gt;</button>
+        </div>
+    </div>
+
     <h1>About ECSS</h1>
 
     <h3>
