@@ -46,6 +46,11 @@
 .slideshowButton:hover {
     color: white;
 }
+
+.toggledSlideshowButton {
+    background-color: darkred;
+    color: white;
+}
 /* end */
 
 @media (max-width: 800px) {
