@@ -24,6 +24,7 @@ CREATE TABLE helper (
 CREATE TABLE task (
 	taskID INTEGER PRIMARY KEY AUTOINCREMENT,
 	name VARCHAR(255),
+	file BOOLEAN,
 	description VARCHAR(255)
 );
 
