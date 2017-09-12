@@ -20,8 +20,8 @@ function load(){
 function makeBox(group){
 	var box = "<a onclick='openGroup(" + group.groupID + ")'><div id='group" + group.groupID + "' class=\"overviewSquare\">";
 	box += "<image src='../images/" + group.image + "'></image>";
-    box += "<h3>Group " + group.groupID + "</h3>";
-	box += "<p><marquee>Helper: " + group.name + "</marquee></p>";
+    box += "<h3>" + group.groupName + "</h3>";
+	box += "<p><marquee>Helper: " + group.memberName + "</marquee></p>";
 	box += "</div></a>";
 
 	return box;

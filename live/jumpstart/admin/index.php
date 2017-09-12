@@ -13,7 +13,7 @@ include_once($relPath . "navbar/navbar.php");
 $username = "hb15g16";
 //live version
 
-$sql = "SELECT j.groupID, g.name
+$sql = "SELECT j.groupID, g.groupName
 		FROM (helper AS h
 		INNER JOIN jumpstart AS j ON h.memberID = j.memberID)
 		INNER JOIN jumpstartGroup AS g ON g.groupID = j.groupID
@@ -84,7 +84,7 @@ while($row = $statement->fetchObject()){
 			unset($entry);
 		}
 
-		$html = "<tr><td><p>" . $task->name . "</p><p>" . $task->description . "</p></td>";
+		$html = "<tr><td><p>" . $task->taskName . "</p><p>" . $task->description . "</p></td>";
 
 		if(!isset($entry)){
 			$value = "";

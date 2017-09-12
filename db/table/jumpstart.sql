@@ -1,11 +1,11 @@
 CREATE TABLE jumpstartGroup (
 	groupID INTEGER PRIMARY KEY AUTOINCREMENT,
-	name VARCHAR(255)
+	groupName VARCHAR(255)
 );
 
 CREATE TABLE jumpstart (
 	memberID INTEGER PRIMARY KEY AUTOINCREMENT,
-	name VARCHAR(255),
+	memberName VARCHAR(255),
 	groupID INTEGER,
 	helper BOOLEAN,
 	FOREIGN KEY (groupID) REFERENCES jumpstartGroup(groupID)
@@ -24,7 +24,7 @@ CREATE TABLE helper (
 
 CREATE TABLE task (
 	taskID INTEGER PRIMARY KEY AUTOINCREMENT,
-	name VARCHAR(255),
+	taskName VARCHAR(255),
 	file BOOLEAN,
 	description VARCHAR(255)
 );
