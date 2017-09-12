@@ -18,6 +18,7 @@ CREATE TABLE helper (
 	memberID INTEGER,
 	image VARCHAR(255),
 	username VARCHAR(255),
+	admin BOOLEAN,
 	FOREIGN KEY (memberID) REFERENCES jumpstart(memberID)
 );
 

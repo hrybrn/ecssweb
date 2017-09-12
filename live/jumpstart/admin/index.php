@@ -69,11 +69,14 @@ while($row = $statement->fetchObject()){
 	</tr>
 <?php
 	foreach($tasks as $task){
-		if($task->file){
+		$html = "<tr><td><p>" . $task->name . "</p><p>" . $task->description . "</p></td>";
 
-		} else {
-			$html = "<tr><td><p>" . $task->name . "</p><p>" . $task->description . "</p></td>";
-			
+		if($task->file){
+			$html .= "<tr><td><input type='file' id='task" . $task->taskID . "'></td></tr>";
+		}
+
+		else {
+
 			if(!isset($task->entry)){
 				$task->entry = "";
 			}
