@@ -45,12 +45,7 @@
 
     "Sports": {
         "title":"Sports in ECSS",
-        "Overview":"Sport is a large social aspect of ECSS. So much so that we have sub pages for: <br><br>1. <a href='?lang=en&section=Football'>Football</a> <br>2. <a href='?lang=en&section=Netball'>Netball</a> <br>3. <a href='?lang=en&section=Running'>Running</a> <br>4. <a href='?lang=en&section=Others'>Others</a> <br><br>Whilst ECSS do not offer a wide range of sporting opportunities, the union does.<br>Take as many opportunities to get involved, and try new things whilst at university.<br>Make the most of your time here!<br><br><a href='https://www.southampton.ac.uk/sportandwellbeing/index.page?'>General Southampton sports facilities</a><br><br><a href='https://www.susu.org/sport'>Sports Societies</a>",
-        "Subsections": {
-            "": {
-                "Slideshow" : "images/leaflet/sports/slideshow"
-            }
-        }
+        "Overview":"Sport is a large social aspect of ECSS. So much so that we have sub pages for: <br><br>1. <a href='?lang=en&section=Football'>Football</a> <br>2. <a href='?lang=en&section=Netball'>Netball</a> <br>3. <a href='?lang=en&section=Running'>Running</a> <br>4. <a href='?lang=en&section=Others'>Others</a> <br><br>Whilst ECSS do not offer a wide range of sporting opportunities, the union does.<br>Take as many opportunities to get involved, and try new things whilst at university.<br>Make the most of your time here!<br><br><a href='https://www.southampton.ac.uk/sportandwellbeing/index.page?'>General Southampton sports facilities</a><br><br><a href='https://www.susu.org/sport'>Sports Societies</a>"
     },
 
     "Football": {

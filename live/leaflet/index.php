@@ -101,13 +101,6 @@ foreach ($sectionData as $key => $value) {
             if(typeof files !== 'undefined'){
                 nextPhoto(0);
             }
-
-            if(section == "Sports"){
-                $('#overview').css("float", "left");
-                $('#overview').css("width", "60%");
-                $('.subsectionText').css('float', 'none');
-                $('.subsectionText').css('width', '100%');
-            }
         });
     </script>
 </html>
