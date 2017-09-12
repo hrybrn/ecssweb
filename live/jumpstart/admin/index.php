@@ -72,7 +72,7 @@ while($row = $statement->fetchObject()){
 		$html = "<tr><td><p>" . $task->name . "</p><p>" . $task->description . "</p></td>";
 
 		if($task->file){
-			$html .= "<tr><td><input type='file' id='task" . $task->taskID . "'></td></tr>";
+			$html .= "<td><input type='file' id='task" . $task->taskID . "'></td></tr>";
 		}
 
 		else {
