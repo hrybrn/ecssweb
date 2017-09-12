@@ -27,7 +27,8 @@ if(!$helper = $statement->fetchObject()){
 }
 
 $sql = "SELECT *
-		FROM task;";
+		FROM task AS t
+		LEFT JOIN taskEntry AS te ON t.taskID = te.taskID;";
 
 $statement = $db->query($sql);
 
@@ -66,6 +67,23 @@ while($row = $statement->fetchObject()){
 			<input type="text" id="name" placeholder="<?= $helper->name ?>">
 		</td>
 	</tr>
+<?php
+	foreach($tasks as $task){
+		if($task->file){
+
+		} else {
+			$html = "<tr><td><p>" . $task->name . "</p><p>" . $task->description . "</p></td>";
+			
+			if(!isset($task->entry)){
+				$task->entry = "";
+			}
+
+			$html .= "<td><textarea rows=5 placeholder='" . $task->entry . "'></textarea></td></tr>"; 
+		}
+
+		echo $html;
+	}
+?>
 	<tr>
 		<td></td>
 		<td>

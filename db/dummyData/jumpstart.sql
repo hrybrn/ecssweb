@@ -20,3 +20,5 @@ insert into jumpstart(name, groupID, helper) values ('Yoan-Daniel Malinov', 3, 0
 insert into helper(memberID, image, username) values (1, "helpers/harry.jpg", 'hb15g16');
 insert into helper(memberID, image, username) values (5, "helpers/charis.jpg", 'ck15g16');
 insert into helper(memberID, image, username) values (9, "helpers/rayna.jpg", 'rmb15g16');
+
+insert into task(name, file, description) values ('testChallenge', 0, 'This is a test Challenge');
