@@ -90,7 +90,7 @@
     "IEEE":{
         "Name":"IEEE Student Branch",
         "Image":"images/societies/ieee.png",
-        "Description":"<p>The University of Southampton IEEE Student Branch is active in promoting the IEEE through exciting and informative events ranging from technical seminars to industry talks to careers events as well as organising visits to company and research sites.</p><p>Those events are organised on a weekly basis, to keep our students up-to-date on state-of-the-art science, research and technology.</p><p>Please come and join us for our events and experience the idea of IEEE.</p>",
+        "Description":"The University of Southampton IEEE Student Branch is active in promoting the IEEE through exciting and informative events ranging from technical seminars to industry talks to careers events as well as organising visits to company and research sites.<br><br>Those events are organised on a weekly basis, to keep our students up-to-date on state-of-the-art science, research and technology.<br><br>Please come and join us for our events and experience the idea of IEEE.",
         "Events":"http://www.ieee.ecs.soton.ac.uk/OurEvents",
         "Website":"http://www.ieee.ecs.soton.ac.uk/",
         "Contact Us":"http://www.ieee.ecs.soton.ac.uk/contact"
