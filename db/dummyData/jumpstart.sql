@@ -23,3 +23,5 @@ insert into helper(memberID, image, username, admin) values (9, "helpers/rayna.j
 
 insert into task(name, file, description) values ('testChallenge', 0, 'This is a test challenge');
 insert into task(name, file, description) values ('testFile', 1, 'This is a test on file uploads');
+
+insert into taskEntry(groupID, taskID, entry, latest, entryTime) values (1, 1, 'Test Entry', 1, '2017-09-12 10:00:00');

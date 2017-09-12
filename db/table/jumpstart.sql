@@ -34,6 +34,8 @@ CREATE TABLE taskEntry (
 	groupID INTEGER,
 	taskID INTEGER,
 	entry VARCHAR(1000),
+	latest BOOLEAN,
+	entryTime TEXT,
 	FOREIGN KEY (groupID) REFERENCES jumpstartGroup(groupID),
 	FOREIGN KEY (taskID) REFERENCES task(taskID)
 );

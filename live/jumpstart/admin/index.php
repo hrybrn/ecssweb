@@ -27,8 +27,7 @@ if(!$helper = $statement->fetchObject()){
 }
 
 $sql = "SELECT *
-		FROM task AS t
-		LEFT JOIN taskEntry AS te ON t.taskID = te.taskID;";
+		FROM task AS t;";
 
 $statement = $db->query($sql);
 
@@ -68,24 +67,65 @@ while($row = $statement->fetchObject()){
 		</td>
 	</tr>
 <?php
+	$previousEntries = array();
+
 	foreach($tasks as $task){
+		//get current entry if it exists
+		$sql = "SELECT *
+				FROM taskEntry AS te
+				WHERE te.taskID = :taskID
+				AND te.latest = 1
+				AND te.groupID = :groupID";
+
+		$statement = $db->prepare($sql);
+		$statement->execute(array(':taskID' => $task->taskID, ':groupID' => $helper->groupID));
+
+		if(!$entry = $statement->fetchObject()){
+			unset($entry);
+		}
+
 		$html = "<tr><td><p>" . $task->name . "</p><p>" . $task->description . "</p></td>";
 
+		if(!isset($entry)){
+			$value = "";
+		} else {
+			$value = $entry->entry;
+		}
+
 		if($task->file){
-			$html .= "<td><input type='file' id='task" . $task->taskID . "'></td></tr>";
+			$html .= "<td><input type='file' id='task" . $task->taskID . "'>";
+
+			if(isset($entry)){
+				$time = new DateTime($entry->entryTime);
+				$html .= "<p>Submitted " . $time->format('H:i:s dS F Y') . "</p>";
+			}
+
+			$html .= "</td></tr>";
 		}
 
 		else {
+			
 
-			if(!isset($task->entry)){
-				$task->entry = "";
+			$html .= "<td><textarea id='task" . $task->taskID . "' rows=5>" . $value . "</textarea>";
+
+			if(isset($entry)){
+				$time = new DateTime($entry->entryTime);
+				$html .= "<p>Submitted " . $time->format('H:i:s dS F Y') . "</p>";
 			}
 
-			$html .= "<td><textarea rows=5 placeholder='" . $task->entry . "'></textarea></td></tr>"; 
+			$html .= "</td></tr>";
+
+			$previousEntries[$task->taskID] = $value;
 		}
 
+		
 		echo $html;
 	}
+	echo
+		"<script>
+			var previousEntries = " . json_encode($previousEntries) . ";
+			var groupID = " . $helper->groupID . ";
+		</script>";
 ?>
 	<tr>
 		<td></td>
