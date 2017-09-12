@@ -1,4 +1,5 @@
 function save(){
+	//save all text inputs
 	var changes = [];
 
 	Object.keys(previousEntries).forEach(function(taskID) {
@@ -17,10 +18,7 @@ function save(){
 		url: 'save.php',
 		type: 'get',
 		data: {'changes': changes, 'groupID': groupID, 'time': time},
-		dataType: 'json',
-		success: function (response) {
-			location.reload();
-		}
+		dataType: 'json'
 	});
 
 	

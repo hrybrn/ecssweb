@@ -10,7 +10,7 @@ $dbLoc = realpath($relPath . "../db/ecss.db");
 $db = new PDO('sqlite:' . $dbLoc);
 
 foreach($changes as $taskID => $newValue) {
-	if($newValue != ""){
+	if(trim($newValue) != ""){
 		//set previous entries to latest = 0
 		$sql = "SELECT te.taskEntryID
 				FROM taskEntry AS te
