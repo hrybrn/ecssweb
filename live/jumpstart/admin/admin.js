@@ -20,12 +20,16 @@ function save(){
 	data.time = time;
 	data.submit = true;
 
+	var done = [];
+
 	//upload files
 	$('input:file').each(function(){
 		var progress = '#prog' + this.id.replace("task", "");
 
+		done.push(this.id);
+
 		$(this).upload("fileUpload.php", data, function(success){
-			console.log(success);
+			done.pop();
 		}, $(progress));
 	});
 
@@ -35,7 +39,16 @@ function save(){
 		data: {'changes': changes, 'groupID': groupID, 'time': time},
 		dataType: 'json',
 		success: function(){
-			//location.reload();
+			
+			while(done.length > 0){
+				sleep(500);
+			}
+
+			location.reload();
 		}
 	});
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
