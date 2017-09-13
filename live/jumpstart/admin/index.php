@@ -63,7 +63,7 @@ while($row = $statement->fetchObject()){
 			<label>Name</label>
 		</td>
 		<td>
-			<input type="text" id="name" placeholder="<?= $helper->name ?>">
+			<input type="text" id="name" placeholder="<?= $helper->groupName ?>">
 		</td>
 	</tr>
 <?php

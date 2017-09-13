@@ -18,7 +18,10 @@ function save(){
 		url: 'save.php',
 		type: 'get',
 		data: {'changes': changes, 'groupID': groupID, 'time': time},
-		dataType: 'json'
+		dataType: 'json',
+		success: function(){
+			location.reload();
+		}
 	});
 
 	

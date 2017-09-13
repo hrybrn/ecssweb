@@ -10,31 +10,33 @@ $dbLoc = realpath($relPath . "../db/ecss.db");
 $db = new PDO('sqlite:' . $dbLoc);
 
 foreach($changes as $taskID => $newValue) {
+	echo $newValue;
 	if(trim($newValue) != ""){
 		//set previous entries to latest = 0
-		$sql = "SELECT te.taskEntryID
-				FROM taskEntry AS te
-				WHERE te.groupID = :groupID
-				AND te.taskID = :taskID
-				AND te.latest = 1;";
+		$sql = "UPDATE taskEntry
+				SET latest = 0
+				WHERE groupID = :groupID
+				AND taskID = :taskID
+				AND latest = 1;";
 
 		$statement = $db->prepare($sql);
 		$statement->execute(array(':groupID' => $groupID, ':taskID' => $taskID));
 
-		while($latest = $statement->fetchObject()){
-			$sql = "UPDATE taskEntry
-					SET latest = 0
-					WHERE taskEntryID = :taskEntryID;";
-
-			$statement = $db->prepare($sql);
-			$statement->execute(array(':taskEntryID' => $latest->taskEntryID));
-		}
-
 		//save it!!
-		$sql = "INSERT INTO taskEntry(groupID, taskID, entry, latest, entryTime) VALUES(:groupID, :taskID, :entry, :latest, :entryTime);";
+		$sql = "INSERT INTO taskEntry(groupID, taskID, entry, latest, entryTime)
+				VALUES(:groupID, :taskID, :entry, :latest, :entryTime);";
+
 		$statement = $db->prepare($sql);
-		$statement->execute(array(':groupID' => $groupID, ':taskID' => $taskID, ':entry' => $newValue, ':latest' => 1, ':entryTime' => $time->format(DateTime::RFC1036)));
+		$statement->execute(array(
+			':groupID' => $groupID,
+			':taskID' => $taskID,
+			':entry' => $newValue,
+			':latest' => 1,
+			':entryTime' => $time->format(DateTime::RFC1036)
+		));
 	}
 }
 
-echo "done!!";
+$result = array('status' => 'true');
+
+echo json_encode($result);
