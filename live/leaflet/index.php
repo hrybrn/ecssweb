@@ -60,7 +60,7 @@ foreach ($sectionData as $key => $value) {
                         }
                     }
 
-                    echo "
+                    $body .= "
                         <script>
                             var files = " . json_encode($files) . ";
                             var section = '" . $section . "';
@@ -73,34 +73,30 @@ foreach ($sectionData as $key => $value) {
                         $imageClass = "subsectionImage";
                     }
 
-                    $body .= "<div class=\"slideshow " . $imageClass . "\">";
-                    $body .= "<button class='slideshowButton' onclick='nextPhoto(-1)'>Previous</button><button class='slideshowButton' onclick='nextPhoto(1)'>Next</button></div>";
+                    $slideshowId = "slideshow" . $subkey;
+                    $body .= "<div id=\"" . $slideshowId . "\" class=\"slideshow " . $imageClass . "\">";
+                    $body .= "</div>";
+                    $body .= "<script>$(document).ready(function() { var slideshow = new Slideshow(document.getElementById(\"" . $slideshowId . "\"), files); });</script>";
                 }
             }
-            
+
             $body .= "</div>";
         }
     }
 }
 ?>
+<!doctype html>
 <html>
-    <title><?= $sectionData['title'] ?></title>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css"/>
-    <link rel="stylesheet" type="text/css" href="<?= $relPath ?>/leaflet/leaflet.css"/>
-    <script src="<?=$relPath ?>leaflet/leaflet.js"></script>
-
-    <body>
+<meta charset="utf-8">
+<title><?= $sectionData['title'] ?></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css"/>
+<link rel="stylesheet" type="text/css" href="<?= $relPath ?>/leaflet/leaflet.css"/>
+<link rel="stylesheet" href="<?= $relPath ?>static/slideshow.css">
+<script src="<?= $relPath ?>jquery.js"></script>
+<script src="<?= $relPath ?>static/slideshow.js"></script>
+<body>
 <?= getNavBar(); ?>
 <?= $body ?>
-    </body>
-
-    <script>
-        $(document).ready(function(){
-            if(typeof files !== 'undefined'){
-                nextPhoto(0);
-            }
-        });
-    </script>
+</body>
 </html>
