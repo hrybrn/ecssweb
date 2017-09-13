@@ -10,13 +10,13 @@ $db = new PDO('sqlite:' . $dbLoc);
 include_once($relPath . "navbar/navbar.php");
 
 //debug version
-//$username = "hb15g16";
+$username = "hb15g16";
 //live version
-require_once('/var/www/auth/lib/_autoload.php');
-$as = new SimpleSAML_Auth_Simple('default-sp');
-$as->requireAuth();
-$attributes = $as->getAttributes();
-$username = $attributes["http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"][0];
+//require_once('/var/www/auth/lib/_autoload.php');
+//$as = new SimpleSAML_Auth_Simple('default-sp');
+//$as->requireAuth();
+//$attributes = $as->getAttributes();
+//$username = $attributes["http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"][0];
 
 $sql = "SELECT j.groupID, g.groupName
 		FROM (helper AS h
@@ -106,7 +106,7 @@ while($row = $statement->fetchObject()){
 
 			if(isset($entry)){
 				$time = new DateTime($entry->entryTime);
-				$html .= "<p>Submitted " . $time->format('H:i:s dS F Y') . "</p><img class='taskimg' src='" . $entry->entry . "'>";
+				$html .= "<p id='para" . $task->taskID . "'>Submitted " . $time->format('H:i:s dS F Y') . "</p><img class='taskimg' id='img" . $task->taskID . "' src='" . $entry->entry . "'>";
 			}
 
 			$html .= "</td></tr>";

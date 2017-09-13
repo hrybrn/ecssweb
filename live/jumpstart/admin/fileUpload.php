@@ -18,16 +18,13 @@ foreach($_FILES as $task => $file){
 	if(isset($_POST["submit"])) {
 	    $check = getimagesize($file["tmp_name"]);
 	    if($check !== false) {
-	        echo "File is an image - " . $check["mime"] . ".";
 	        $uploadOk = 1;
 	    } else {
-	        echo "File is not an image.";
 	        $uploadOk = 0;
 	    }
 	}
 
 	if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"&& $imageFileType != "gif" ) {
-	    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
 	    $uploadOk = 0;
 	}
 
@@ -36,11 +33,10 @@ foreach($_FILES as $task => $file){
 	}
 
 	if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
 	// if everything is ok, try to upload file
 	} else {
 	    if (move_uploaded_file($file["tmp_name"], $target_file)) {
-	        echo "The file ". basename( $file["name"]). " has been uploaded.";
+	    	echo $target_file;
 
 	        $dbLoc = realpath($relPath . "../db/ecss.db");
 			$db = new PDO('sqlite:' . $dbLoc);
@@ -65,8 +61,6 @@ foreach($_FILES as $task => $file){
 				'latest' => 1,
 				'entryTime' => $time
 			));
-	    } else {
-	        echo "Sorry, there was an error uploading your file.";
 	    }
 	}
 }
@@ -76,7 +70,7 @@ function randomString()
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $randstring = '';
     for ($i = 0; $i < 10; $i++) {
-        $randstring .= $characters[rand(0, strlen($characters))];
+        $randstring .= $characters[rand(0, 51)];
     }
     return $randstring;
 }

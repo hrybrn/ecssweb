@@ -24,12 +24,16 @@ function save(){
 
 	//upload files
 	$('input:file').each(function(){
-		var progress = '#prog' + this.id.replace("task", "");
+		var index = this.id.replace("task", "");
+
+		var progress = '#prog' + index;
 
 		done.push(this.id);
 
 		$(this).upload("fileUpload.php", data, function(success){
-			done.pop();
+			var imageID = '#img' + index;
+			$(imageID).remove();
+			$('#para' + index).after("<img class='taskimg' src='" + success + "' id='" + imageID + "'>");
 		},
 		$(progress));
 	});
@@ -40,14 +44,6 @@ function save(){
 			type: 'get',
 			data: {'changes': changes, 'groupID': groupID, 'time': time},
 			dataType: 'json',
-			success: function(){
-				
-				while(done.length > 0){
-					sleep(500);
-				}
-
-				location.reload();
-			}
 		});
 	}
 }
