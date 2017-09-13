@@ -6,3 +6,8 @@ table, th, tr, td {
 table {
 	width: 100%;
 }
+
+.taskimg {
+	width: 200px;
+	height: auto;
+}

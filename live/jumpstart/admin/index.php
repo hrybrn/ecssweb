@@ -100,7 +100,7 @@ while($row = $statement->fetchObject()){
 
 			if(isset($entry)){
 				$time = new DateTime($entry->entryTime);
-				$html .= "<p>Submitted " . $time->format('H:i:s dS F Y') . "</p><img src='" . $entry->entry . "'>";
+				$html .= "<p>Submitted " . $time->format('H:i:s dS F Y') . "</p><img class='taskimg' src='" . $entry->entry . "'>";
 			}
 
 			$html .= "</td></tr>";
