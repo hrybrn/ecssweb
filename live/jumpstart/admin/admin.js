@@ -14,15 +14,28 @@ function save(){
 
 	var time = new Date().toString();
 
+	//generate post data
+	var data = {};
+	data.groupID = groupID;
+	data.time = time;
+	data.submit = true;
+
+	//upload files
+	$('input:file').each(function(){
+		var progress = '#prog' + this.id.replace("task", "");
+
+		$(this).upload("fileUpload.php", data, function(success){
+			console.log(success);
+		}, $(progress));
+	});
+
 	$.ajax({
 		url: 'save.php',
 		type: 'get',
 		data: {'changes': changes, 'groupID': groupID, 'time': time},
 		dataType: 'json',
 		success: function(){
-			location.reload();
+			//location.reload();
 		}
 	});
-
-	
 }

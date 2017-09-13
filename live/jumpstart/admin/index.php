@@ -50,6 +50,9 @@ while($row = $statement->fetchObject()){
     <link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css" />
     <link rel="stylesheet" href="<?= $relPath ?>jumpstart/admin/admin.css" />
     <script src="admin.js"></script>
+
+    
+
 </head>
 <body>
 <?= getNavBar(); ?>
@@ -93,11 +96,11 @@ while($row = $statement->fetchObject()){
 		}
 
 		if($task->file){
-			$html .= "<td><input type='file' id='task" . $task->taskID . "'>";
+			$html .= "<td><input type='file' id='task" . $task->taskID . "' name='task" . $task->taskID . "'><progress id='prog" . $task->taskID . "' value='0' min='0' max='100'></progress>";
 
 			if(isset($entry)){
 				$time = new DateTime($entry->entryTime);
-				$html .= "<p>Submitted " . $time->format('H:i:s dS F Y') . "</p>";
+				$html .= "<p>Submitted " . $time->format('H:i:s dS F Y') . "</p><img src='" . $entry->entry . "'>";
 			}
 
 			$html .= "</td></tr>";
@@ -132,4 +135,8 @@ while($row = $statement->fetchObject()){
 		<td>
 			<button onclick='save();'>Save</button>
 		</td>
+	</tr>
 </table>
+
+<script src="<?= $relPath ?>jquery.js"></script>
+<script src="<?= $relPath ?>ajaxfileupload.js"></script>
