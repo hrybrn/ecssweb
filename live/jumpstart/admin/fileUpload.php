@@ -3,8 +3,8 @@ $relPath = "../../";
 
 $target_dir = $relPath . "uploads/";
 
-if(!file_exists($targetDir)){
-	mkdir($targetDir);
+if(!file_exists($target_dir)){
+	mkdir($target_dir);
 }
 
 $groupID = $_POST['groupID'];
