@@ -79,7 +79,7 @@ foreach ($sectionData as $key => $value) {
                     $body .= "<script>$(document).ready(function() { var slideshow = new Slideshow(document.getElementById(\"" . $slideshowId . "\"), files); });</script>";
                 }
             }
-            
+
             $body .= "</div>";
         }
     }
@@ -88,15 +88,15 @@ foreach ($sectionData as $key => $value) {
 <!doctype html>
 <html>
 <meta charset="utf-8">
-    <title><?= $sectionData['title'] ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css"/>
-    <link rel="stylesheet" type="text/css" href="<?= $relPath ?>/leaflet/leaflet.css"/>
-    <link rel="stylesheet" href="<?= $relPath ?>static/slideshow.css">
-    <script src="<?= $relPath ?>jquery.js"></script>
-    <script src="<?= $relPath ?>static/slideshow.js"></script>
-    <body>
+<title><?= $sectionData['title'] ?></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css"/>
+<link rel="stylesheet" type="text/css" href="<?= $relPath ?>/leaflet/leaflet.css"/>
+<link rel="stylesheet" href="<?= $relPath ?>static/slideshow.css">
+<script src="<?= $relPath ?>jquery.js"></script>
+<script src="<?= $relPath ?>static/slideshow.js"></script>
+<body>
 <?= getNavBar(); ?>
 <?= $body ?>
-    </body>
+</body>
 </html>
