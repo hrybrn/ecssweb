@@ -30,7 +30,8 @@ function save(){
 
 		$(this).upload("fileUpload.php", data, function(success){
 			done.pop();
-		}, $(progress));
+		},
+		$(progress));
 	});
 
 	$.ajax({
