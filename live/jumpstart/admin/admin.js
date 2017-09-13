@@ -34,20 +34,22 @@ function save(){
 		$(progress));
 	});
 
-	$.ajax({
-		url: 'save.php',
-		type: 'get',
-		data: {'changes': changes, 'groupID': groupID, 'time': time},
-		dataType: 'json',
-		success: function(){
-			
-			while(done.length > 0){
-				sleep(500);
-			}
+	if(changes.length > 0){
+			$.ajax({
+			url: 'save.php',
+			type: 'get',
+			data: {'changes': changes, 'groupID': groupID, 'time': time},
+			dataType: 'json',
+			success: function(){
+				
+				while(done.length > 0){
+					sleep(500);
+				}
 
-			location.reload();
-		}
-	});
+				location.reload();
+			}
+		});
+	}
 }
 
 function sleep(ms) {
