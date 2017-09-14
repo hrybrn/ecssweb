@@ -19,6 +19,7 @@ function save(){
 	data.groupID = groupID;
 	data.time = time;
 	data.submit = true;
+	data.hash = hash;
 
 	var done = [];
 
@@ -42,7 +43,7 @@ function save(){
 			$.ajax({
 			url: 'save.php',
 			type: 'get',
-			data: {'changes': changes, 'groupID': groupID, 'time': time},
+			data: {'changes': changes, 'groupID': groupID, 'time': time, 'hash': hash},
 			dataType: 'json',
 		});
 	}

@@ -1,6 +1,9 @@
 <?php
 $relPath = "../../";
 
+$dbLoc = realpath($relPath . "../db/ecss.db");
+$db = new PDO('sqlite:' . $dbLoc);
+
 $target_dir = $relPath . "uploads/";
 
 if(!file_exists($target_dir)){
@@ -9,6 +12,28 @@ if(!file_exists($target_dir)){
 
 $groupID = $_POST['groupID'];
 $time = $_POST['time'];
+$hash = $_POST['hash'];
+
+$authenticated = false;
+//check that the hash is ok
+$sql = "SELECT uh.hash, uh.groupID, uh.expiry
+		FROM uploadHash AS uh";
+
+$statement = $db->query($sql);
+while($row = $statement->fetchObject()){
+	if($row->groupID = $groupID && $row->hash = $hash){
+		$expiry = new DateTime($row->expiry);
+		$diff = $expiry->diff(new DateTime());
+		if(!$diff->invert){
+			$authenticated = true;
+			break;
+		}
+	}
+}
+
+if(!$authenticated){
+	return;
+}
 
 foreach($_FILES as $task => $file){
 	$target_file = $target_dir . basename($file["name"]);
@@ -38,8 +63,7 @@ foreach($_FILES as $task => $file){
 	    if (move_uploaded_file($file["tmp_name"], $target_file)) {
 	    	echo $target_file;
 
-	        $dbLoc = realpath($relPath . "../db/ecss.db");
-			$db = new PDO('sqlite:' . $dbLoc);
+	        
 
 			$taskID = str_replace("task", "", $task);
 

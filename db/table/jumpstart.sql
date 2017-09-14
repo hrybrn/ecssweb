@@ -41,3 +41,11 @@ CREATE TABLE taskEntry (
 );
 
 CREATE INDEX taskEntryGroupIndex ON taskEntry(groupID);
+
+CREATE TABLE uploadHash (
+	hashID INTEGER PRIMARY KEY AUTOINCREMENT,
+	groupID INTEGER,
+	hash VARCHAR(255),
+	expiry TEXT,
+	FOREIGN KEY (groupID) REFERENCES jumpstartGroup(groupID)
+);

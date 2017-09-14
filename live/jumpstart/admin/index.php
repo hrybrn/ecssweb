@@ -33,6 +33,22 @@ if(!$helper = $statement->fetchObject()){
 	exit;
 }
 
+//generate time 30 minutes from now
+$time = new DateTime();
+$time->add('P30M');
+$expiry = $time->format(DateTime::RFC1036);
+
+//generate authentication hash
+$hash = hash("sha256", $expiry . $helper->groupID);
+
+$sql = "INSERT INTO uploadHash (groupID, hash, expiry) values (:groupID, :hash, :expiry);";
+$statement = $db->prepare($sql);
+$statement->execute(array(
+	':groupID' => $helper->groupID,
+	':hash' => $hash,
+	':expiry' => $expiry,
+));
+
 $sql = "SELECT *
 		FROM task AS t;";
 
@@ -135,6 +151,7 @@ while($row = $statement->fetchObject()){
 		"<script>
 			var previousEntries = " . json_encode($previousEntries) . ";
 			var groupID = " . $helper->groupID . ";
+			var hash = '" . $hash . "';
 		</script>";
 ?>
 	<tr>
