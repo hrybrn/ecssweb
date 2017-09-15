@@ -4,5 +4,5 @@
 Options -Indexes
 
 # To have custom error pages
-ErrorDocument 403 /includes/error_pages/403.php
+ErrorDocument 403 /includes/error_pages/403.html
 #ErrorDocument 404 /includes/error_pages/404.php
