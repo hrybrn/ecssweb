@@ -35,7 +35,7 @@ if(!$helper = $statement->fetchObject()){
 
 //generate time 30 minutes from now
 $time = new DateTime();
-$time->add('P30M');
+$time->add(new DateInterval('PT30M')); // valid for 30 minutes
 $expiry = $time->format(DateTime::RFC1036);
 
 //generate authentication hash

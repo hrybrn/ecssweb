@@ -23,7 +23,7 @@ $statement = $db->query($sql);
 while($row = $statement->fetchObject()){
 	if($row->groupID = $groupID && $row->hash = $hash){
 		$expiry = new DateTime($row->expiry);
-		$diff = $expiry->diff(new DateTime());
+		$diff = (new DateTime())->diff($expiry);
 		if(!$diff->invert){
 			$authenticated = true;
 			break;
