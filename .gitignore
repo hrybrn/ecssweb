@@ -1,2 +1,5 @@
 # JetBrains IDEs
 .idea/
+
+# do not track config file
+config/config.php

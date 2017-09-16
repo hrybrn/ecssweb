@@ -1,6 +1,7 @@
 <?php
-
 $relPath = "../../";
+
+include_once ($relPath . '../config/config.php');
 
 include_once ($relPath . 'includes/setLang.php');
 
@@ -9,15 +10,17 @@ $db = new PDO('sqlite:' . $dbLoc);
 
 include_once($relPath . "navbar/navbar.php");
 
-//debug version
-//$username = "hb15g16";
-
-//live version
-require_once('/var/www/auth/lib/_autoload.php');
-$as = new SimpleSAML_Auth_Simple('default-sp');
-$as->requireAuth();
-$attributes = $as->getAttributes();
-$username = $attributes["http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"][0];
+if (DEBUG) {
+    //debug version
+    $username = "hb15g16";
+} else {
+    //live version
+    require_once('/var/www/auth/lib/_autoload.php');
+    $as = new SimpleSAML_Auth_Simple('default-sp');
+    $as->requireAuth();
+    $attributes = $as->getAttributes();
+    $username = $attributes["http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"][0];
+}
 
 $sql = "SELECT j.groupID, g.groupName
 		FROM (helper AS h
