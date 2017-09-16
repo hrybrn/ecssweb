@@ -32,8 +32,8 @@ function save(){
 		done.push(this.id);
 
 		$(this).upload("fileUpload.php", data, function(success){
-			var imageID = '#img' + index;
-			$(imageID).remove();
+			var imageID = 'img' + index;
+			$('#' + imageID).remove();
 			$('#para' + index).after("<img class='taskimg' src='" + success + "' id='" + imageID + "'>");
 		},
 		$(progress));
@@ -42,7 +42,7 @@ function save(){
 	if(changes.length > 0){
 			$.ajax({
 			url: 'save.php',
-			type: 'get',
+			type: 'post',
 			data: {'changes': changes, 'groupID': groupID, 'time': time, 'hash': hash},
 			dataType: 'json',
 		});

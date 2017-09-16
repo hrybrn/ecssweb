@@ -1,8 +1,8 @@
 <?php
 
-$changes = $_GET['changes'];
-$groupID = $_GET['groupID'];
-$time = new DateTime($_GET['time']);
+$changes = $_POST['changes'];
+$groupID = $_POST['groupID'];
+$time = new DateTime($_POST['time']);
 
 $relPath = "../../";
 
