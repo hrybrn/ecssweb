@@ -31,7 +31,7 @@ function save(){
 
 		done.push(this.id);
 
-		$(this).upload("fileUpload.php", data, function(success){
+		$(this).upload("/jumpstart/admin/fileUpload.php", data, function(success){
 			var imageID = 'img' + index;
 			$('#' + imageID).remove();
 			$('#para' + index).after("<img class='taskimg' src='" + success + "' id='" + imageID + "'>");
@@ -39,11 +39,11 @@ function save(){
 		$(progress));
 	});
 
-	if(changes.length > 0){
+	if(changes.length > 0 || $('#name').val() != ""){
 			$.ajax({
-			url: 'save.php',
+			url: '/jumpstart/admin/save.php',
 			type: 'post',
-			data: {'changes': changes, 'groupID': groupID, 'time': time, 'hash': hash},
+			data: {'changes': changes, 'groupID': groupID, 'time': time, 'hash': hash, 'name': $('#name').val()},
 			dataType: 'json',
 		});
 	}

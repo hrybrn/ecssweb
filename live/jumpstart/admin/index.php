@@ -73,9 +73,9 @@ while($row = $statement->fetchObject()){
     ?>
     <title><?= _('Jumpstart') ?> | ECSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css" />
-    <link rel="stylesheet" href="<?= $relPath ?>jumpstart/admin/admin.css" />
-    <script src="admin.js"></script>
+    <link rel="stylesheet" type="text/css" href="/theme.css" />
+    <link rel="stylesheet" href="/jumpstart/admin/admin.css" />
+    <script src="/jumpstart/admin/admin.js"></script>
 
     
 
@@ -165,5 +165,5 @@ while($row = $statement->fetchObject()){
 	</tr>
 </table>
 
-<script src="<?= $relPath ?>jquery.js"></script>
-<script src="<?= $relPath ?>ajaxfileupload.js"></script>
+<script src="/jquery.js"></script>
+<script src="/ajaxfileupload.js"></script>

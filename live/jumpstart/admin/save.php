@@ -3,6 +3,7 @@
 $changes = $_POST['changes'];
 $groupID = $_POST['groupID'];
 $time = new DateTime($_POST['time']);
+$name = $_POST['name'];
 
 $relPath = "../../";
 
@@ -10,7 +11,6 @@ $dbLoc = realpath($relPath . "../db/ecss.db");
 $db = new PDO('sqlite:' . $dbLoc);
 
 foreach($changes as $taskID => $newValue) {
-	echo $newValue;
 	if(trim($newValue) != ""){
 		//set previous entries to latest = 0
 		$sql = "UPDATE taskEntry
@@ -35,6 +35,15 @@ foreach($changes as $taskID => $newValue) {
 			':entryTime' => $time->format(DateTime::RFC1036)
 		));
 	}
+}
+
+if($name != ""){
+	$sql = "UPDATE jumpstartGroup
+			SET groupName = :name
+			WHERE groupID = :groupID";
+
+	$statement = $db->prepare($sql);
+	$statement->execute(array(':groupID' => $groupID, ':name' => $name));
 }
 
 $result = array('status' => 'true');

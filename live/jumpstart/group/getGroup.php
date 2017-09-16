@@ -1,13 +1,13 @@
 <?php
 
-$relPath = "../";
+$relPath = "../../";
 
 $dbLoc = realpath($relPath . "../db/ecss.db");
 $db = new PDO('sqlite:' . $dbLoc);
 
 $groupID = $_GET['groupID'];
 
-$sql = "SELECT j.name, j.helper
+$sql = "SELECT j.memberName, j.helper
 		FROM jumpstart AS j
 		WHERE j.groupID = :groupID";
 

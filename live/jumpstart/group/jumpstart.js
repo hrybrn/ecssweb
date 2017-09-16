@@ -35,7 +35,7 @@ function openGroup(groupID){
 	} else {
 		tableVisible = groupID;
 		$.ajax({
-			url: 'getGroup.php',
+			url: '/jumpstart/group/getGroup.php',
 	        type: 'get',
 	        data: {'groupID': groupID},
 	        dataType: 'json',
@@ -44,7 +44,7 @@ function openGroup(groupID){
                         html += "<p class=\"groupTableHeader\">Members:</p>";
 
 	        	$(group.freshers).each(function(){
-	        		html += "<p class=\"fresher\">" + this.name + "<p>";
+	        		html += "<p class=\"fresher\">" + this.memberName + "<p>";
 	        	});
 
 	        	//html += "</table></div>";
@@ -59,7 +59,7 @@ function search(){
 	var search = $('#searchInput').val();
 
 	$.ajax({
-		url: 'search.php',
+		url: '/jumpstart/group/search.php',
 		type: 'get',
 		data: {'search': search},
 		dataType: 'json',

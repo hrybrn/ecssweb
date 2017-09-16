@@ -1,5 +1,5 @@
 <?php
-$relPath = "../";
+$relPath = "../../";
 
 include_once ($relPath . 'includes/setLang.php');
 
@@ -15,8 +15,8 @@ $db = new PDO('sqlite:' . $dbLoc);
     ?>
     <title><?= _('Jumpstart') ?> | ECSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css" />
-    <link rel="stylesheet" href="<?= $relPath ?>jumpstart/jumpstart.css" />
+    <link rel="stylesheet" type="text/css" href="/theme.css" />
+    <link rel="stylesheet" href="/jumpstart/group/jumpstart.css" />
 </head>
 <body>
 <?php
@@ -43,8 +43,8 @@ while($rowObject = $statement->fetchObject()){
 <button onclick='search()'>Search</button>    
 </div> 
 
-<script src="jumpstart.js"></script>
-<link rel="stylesheet" href="<?= $relPath ?>theme.css">
+<script src="/jumpstart/group/jumpstart.js"></script>
+<link rel="stylesheet" href="/theme.css">
 <script type="text/javascript">
 	var groups = <?= json_encode($results) ?>;
 
