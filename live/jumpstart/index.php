@@ -12,7 +12,7 @@ include_once($relPath . "includes/setLang.php");
     <title><?= _('Jumpstart') ?> | ECSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/theme.css" />
-    <link rel="stylesheet" type="text/css" href="jumpstart.css" />
+    <link rel="stylesheet" type="text/css" href="/jumpstart/jumpstart.css" />
 </head>
 <body>
 <?php
