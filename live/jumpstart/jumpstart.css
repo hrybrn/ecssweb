@@ -1,4 +1,63 @@
-.jumpstartLinks>li {
-    float: none;
+.logoContainer {
+    margin: 10px 0;
+    width: 25%;
+    height: 202px;
+}
+
+.logoContainer > img {
+    display: block;
+    margin: 0 auto;
+}
+
+#ibmLogoContainer {
+    float: left;
+}
+
+#ibmLogoContainer > p {
+    text-align: center;
+    margin: 0;
+    font-family: Helvetica;
+}
+
+#ibmLogoContainer > img {
+    height: 60px;
+    padding: 60px;
+}
+
+#jumpstartLogoContainer {
+    float: right;
+}
+
+#jumpstartLogoContainer > img {
+    height: 100%;
+}
+
+#jumpstartLinksContainer {
+    float: left;
+    width: 50%;
+    height: 202px;
+    margin: 10px 0;
+    text-align: center;
+    background-color: saddlebrown;
+}
+
+#jumpstartLinks {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#jumpstartLinks > li {
+    display: block;
+    float: left;
     background-color: red;
+}
+
+#cityChallenge {
+    clear: both;
+}
+
+#map {
+    height: 400px;
 }
