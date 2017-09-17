@@ -8,7 +8,7 @@ function load(){
 	$(groups).each(function(){
 		boxes[this.groupID] = makeBox(this);
 
-		if(this.groupID > highest)
+		if(parseInt(this.groupID) > highest)
 			highest = this.groupID;
 	});
 

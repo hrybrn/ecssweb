@@ -18,7 +18,6 @@ CREATE TABLE helper (
 	memberID INTEGER,
 	image VARCHAR(255),
 	username VARCHAR(255),
-	admin BOOLEAN,
 	FOREIGN KEY (memberID) REFERENCES jumpstart(memberID)
 );
 
@@ -48,4 +47,9 @@ CREATE TABLE uploadHash (
 	hash VARCHAR(255),
 	expiry TEXT,
 	FOREIGN KEY (groupID) REFERENCES jumpstartGroup(groupID)
+);
+
+CREATE TABLE admin (
+	adminID INTEGER PRIMARY KEY AUTOINCREMENT,
+	username VARCHAR(255)
 );

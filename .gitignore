@@ -6,3 +6,5 @@ config/config.php
 live/uploads/
 
 db/ecss\.db
+
+db/realData/
