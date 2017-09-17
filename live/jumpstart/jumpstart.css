@@ -1,6 +1,6 @@
 .logoContainer {
     margin: 10px 0;
-    width: 25%;
+    width: 30%;
     height: 202px;
 }
 
@@ -34,11 +34,14 @@
 
 #jumpstartLinksContainer {
     float: left;
-    width: 50%;
+    width: 40%;
     height: 202px;
     margin: 10px 0;
     text-align: center;
-    background-color: saddlebrown;
+    /* vertically centre align */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #jumpstartLinks {
@@ -46,12 +49,31 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: inherit;
 }
 
 #jumpstartLinks > li {
     display: block;
     float: left;
-    background-color: red;
+    margin: 0 20px;
+    padding: 0;
+    color: white;
+    background-color: darkred;
+    cursor: pointer;
+}
+
+#jumpstartLinks > li:hover {
+    background-color: #d82129;
+}
+
+#jumpstartLinks > li > a {
+    display: block;
+    padding: 14px 16px;
+    color: inherit;
+}
+
+#jumpstartLinks > li > a:hover {
+    background-color: inherit;
 }
 
 #cityChallenge {

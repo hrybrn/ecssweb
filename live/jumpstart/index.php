@@ -13,7 +13,6 @@ include_once($relPath . "includes/setLang.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/theme.css" />
     <link rel="stylesheet" type="text/css" href="jumpstart.css" />
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsi5_PVb95lyv6OTu6F3kpDiKZa_EgOnM"></script>
 </head>
 <body>
 <?php
@@ -26,8 +25,8 @@ echo getNavBar();
     <div id="jumpstartLogoContainer" class="logoContainer"><img src="/images/jumpstart/jumpstart_logo.png" alt="Jumpstart logo"></div>
     <div id="jumpstartLinksContainer">
         <ul id="jumpstartLinks">
-            <li>Timetable - MSc</li>
-            <li>Timetable - UG</li>
+            <li><a href="#">Timetable - MSc</a></li>
+            <li><a href="#">Timetable - UG</a></li>
             <li><a href="#cityChallenge">City Challenge</a></li>
         </ul>
     </div>
@@ -38,6 +37,7 @@ echo getNavBar();
     </div>
     <div id="map"></div>
 </div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsi5_PVb95lyv6OTu6F3kpDiKZa_EgOnM"></script>
 <script>
     var mapOptions = {
         center: new google.maps.LatLng(37.7831,-122.4039),
