@@ -3,3 +3,6 @@
 
 # do not track config file
 config/config.php
+live/uploads/
+
+db/ecss\.db
