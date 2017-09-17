@@ -1,7 +1,7 @@
 <?php
 $relPath = "../../";
 
-include_once ($relPath . '../config/config.php');
+require_once($relPath . '../config/config.php');
 
 include_once ($relPath . 'includes/setLang.php');
 
