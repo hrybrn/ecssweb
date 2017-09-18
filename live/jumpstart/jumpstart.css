@@ -55,11 +55,15 @@
 #jumpstartLinks > li {
     display: block;
     float: left;
-    margin: 0 20px;
+    margin: 0 30px 0 0;
     padding: 0;
     color: white;
     background-color: darkred;
     cursor: pointer;
+}
+
+#jumpstartLinks > li:last-child {
+    margin-right: 0;
 }
 
 #jumpstartLinks > li:hover {
@@ -82,4 +86,44 @@
 
 #map {
     height: 400px;
+}
+
+@media (max-width: 1255px) and (min-width: 951px), (max-width: 600px) {
+    #jumpstartLinks {
+        width: 100%;
+    }
+
+    #jumpstartLinks > li, #jumpstartLinks > li:last-child{
+        float: none;
+        width: 70%;
+        margin: 10px auto;
+    }
+
+}
+
+@media (max-width: 950px) and (min-width: 601px) {
+    .logoContainer {
+        width: 50%;
+    }
+
+    #jumpstartLinksContainer {
+        float: none;
+        width: 100%;
+        height: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logoContainer {
+        float: none !important;
+        width: 100%;
+    }
+
+    #ibmLogoContainer {
+        margin-top: 150px;
+    }
+
+    #jumpstartLinksContainer {
+        width: 100%;
+    }
 }
