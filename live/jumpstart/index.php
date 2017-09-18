@@ -6,10 +6,7 @@ include_once($relPath . "includes/setLang.php");
 <html>
 <head>
     <meta charset="utf-8">
-    <?php
-    setTextDomain('title');
-    ?>
-    <title><?= _('Jumpstart') ?> | ECSS</title>
+    <title>Jumpstart 2017 | ECSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/theme.css" />
     <link rel="stylesheet" type="text/css" href="/jumpstart/jumpstart.css" />
@@ -21,8 +18,8 @@ echo getNavBar();
 ?>
 <div class="pageContainer">
     <div><p>Jumpstart is an opportunity for freshers to meet other students in the faculty, take part in a range of activities, and settle into Southampton. It is the first event of the year organised by ECSS, and is sponsored by IBM. See below for the week’s timetable, and information on the City Challenge. If you have any questions feel free to <a href="/about/contact.php?lang=<?= $lang ?>">contact our committee</a>, and have fun!</p></div>
-    <div id="ibmLogoContainer" class="logoContainer"><p>Sponsor</p><img src="/images/jumpstart/jumpstart_sponsor_ibm.jpg" alt="Jumpstart sponsor IBM logo"></div>
     <div id="jumpstartLogoContainer" class="logoContainer"><img src="/images/jumpstart/jumpstart_logo.png" alt="Jumpstart logo"></div>
+    <div id="ibmLogoContainer" class="logoContainer"><p>Sponsor</p><img src="/images/jumpstart/jumpstart_sponsor_ibm.jpg" alt="Jumpstart sponsor IBM logo"></div>
     <div id="jumpstartLinksContainer">
         <ul id="jumpstartLinks">
             <li><a href="#">Timetable - MSc</a></li>
