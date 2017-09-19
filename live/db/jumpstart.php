@@ -43,6 +43,8 @@ while($line = fgetcsv($helpers)){
 }
 fclose($helpers);
 
+echo "done!";
+
 class Helper extends Fresher{
 	public $username;
 	public $memberID;

@@ -17,9 +17,9 @@ insert into jumpstart(memberName, groupID, helper) values ('Desislava Danielova 
 insert into jumpstart(memberName, groupID, helper) values ('Stanimir Tashev', 3, 0);
 insert into jumpstart(memberName, groupID, helper) values ('Yoan-Daniel Malinov', 3, 0);
 
-insert into helper(memberID, image, username, admin) values (1, "helpers/harry.jpg", 'hb15g16', 0);
-insert into helper(memberID, image, username, admin) values (5, "helpers/charis.jpg", 'ck15g16', 1);
-insert into helper(memberID, image, username, admin) values (9, "helpers/rayna.jpg", 'rb1g16', 0);
+insert into helper(memberID, image, username) values (1, "helpers/harry.jpg", 'hb15g16');
+insert into helper(memberID, image, username) values (5, "helpers/charis.jpg", 'ck15g16');
+insert into helper(memberID, image, username) values (9, "helpers/rayna.jpg", 'rb1g16');
 
 insert into task(taskName, file, description) values ('testChallenge', 0, 'This is a test challenge');
 insert into task(taskName, file, description) values ('testFile', 1, 'This is a test on file uploads');
