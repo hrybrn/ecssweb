@@ -84,8 +84,11 @@
     clear: both;
 }
 
-#map {
-    height: 400px;
+.centerDiv {
+    height: 500px;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 10px;
 }
 
 @media (max-width: 1255px) and (min-width: 951px), (max-width: 600px) {

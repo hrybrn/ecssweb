@@ -1,6 +1,33 @@
 <?php
 $relPath = "../";
 include_once($relPath . "includes/setLang.php");
+
+$locationFile = fopen($relPath . "../data/mapLocations.csv", 'r');
+$locations = array();
+
+while($line = fgetcsv($locationFile)){
+    //fix for excel adding blank lines at the bottom
+    if($line[0] != ""){
+        $locations[] = new Location(trim($line[0]), trim($line[1]), trim($line[2]), trim($line[3]));
+    }
+}
+
+fclose($locationFile);
+
+class Location {
+    public $label;
+    public $description;
+    public $lat;
+    public $lng;
+
+    public function __construct($label, $description, $lat, $lng){
+        $this->label = $label;
+        $this->description = $description;
+        $this->lat = floatval($lat);
+        $this->lng = floatval($lng);
+    }
+}
+
 ?>
 <!doctype html>
 <html>
@@ -11,6 +38,7 @@ include_once($relPath . "includes/setLang.php");
     <link rel="stylesheet" type="text/css" href="/theme.css" />
     <link rel="stylesheet" type="text/css" href="/jumpstart/jumpstart.css" />
     <script src="/jumpstart/jumpstart.js"></script>
+    <script src="/jquery.js"></script>
 </head>
 <body>
 <?php
@@ -20,12 +48,12 @@ echo getNavBar();
 <div class="pageContainer">
     <div><p>Jumpstart is an opportunity for freshers to meet other students in the faculty, take part in a range of activities, and settle into Southampton. It is the first event of the year organised by ECSS, and is sponsored by IBM. See below for the week’s timetable, and information on the City Challenge. If you have any questions feel free to <a href="/about/contact.php?lang=<?= $lang ?>">contact our committee</a>, and have fun!</p></div>
     <div id="jumpstartLogoContainer" class="logoContainer"><img src="/images/jumpstart/jumpstart_logo.png" alt="Jumpstart logo"></div>
-    <div id="ibmLogoContainer" class="logoContainer"><p>Sponsor</p><img src="/images/jumpstart/jumpstart_sponsor_ibm.jpg" alt="Jumpstart sponsor IBM logo"></div>
+    <div id="ibmLogoContainer" class="logoContainer"><p>Proud Sponsor</p><img src="/images/jumpstart/jumpstart_sponsor_ibm.jpg" alt="Jumpstart sponsor IBM logo"></div>
     <div id="jumpstartLinksContainer">
         <ul id="jumpstartLinks">
-            <li><a href="#">Timetable - MSc</a></li>
-            <li><a href="#">Timetable - UG</a></li>
-            <li><a href="#cityChallenge" onclick="scrollToCityChallenge(event)">City Challenge</a></li>
+            <li><a onclick="toggleCalendar(event)" id='mscTimetable'>Timetable - MSc</a></li>
+            <li><a onclick="toggleCalendar(event)" id='ugTimetable'>Timetable - UG</a></li>
+            <li><a href="#cityChallenge" onclick="toggleCalendar(event)" id='map'>City Challenge</a></li>
         </ul>
     </div>
     <div id="cityChallenge">
@@ -33,17 +61,54 @@ echo getNavBar();
         <p>Points can be achieved by exploring the main areas this side of the city; Highfield Campus, The Common, and Portswood; and completing various other challenges outlined below. In doing so, you’ll be introduced to the members of the ECSS committee, find your bearings in Southampton, and make some new friends!</p>
         <p>The winning team will be announced at the Jumpstart reception on Friday 29th September, with prizes from the faculty, ECSS, and IBM up for grabs. The challenges are listed below, you can do as many or as few as you like, in any order. Good luck!</p>
     </div>
-    <div id="map"></div>
+    <div id="mapCalendar" class="centerDiv"></div>
 </div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsi5_PVb95lyv6OTu6F3kpDiKZa_EgOnM"></script>
+<script src="/jquery.js"></script>
 <script>
     var mapOptions = {
-        center: new google.maps.LatLng(37.7831,-122.4039),
-        zoom: 12,
+        center: new google.maps.LatLng(50.9264099,-1.3953199),
+        zoom: 13,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    new google.maps.Map(document.getElementById('map'), mapOptions);
+    var locations = <?= json_encode($locations) ?>;
+
+    var map = new google.maps.Map(document.getElementById('mapCalendar'), mapOptions);
+
+    var markers = [];
+
+    function makeNameTag(name, description){
+        return "<span><h3>" + name + "</h3><p>" + description + "</p></span>";
+    }
+
+
+    $(document).ready(function(){
+        google.maps.event.addDomListener(window, 'load');
+
+        $(locations).each(function(index, position){
+            var marker = new google.maps.Marker({
+              position: position,
+              map: map,
+              title: position.label
+            });
+
+            marker.infowindow = new google.maps.InfoWindow({
+                content: makeNameTag(position.label, position.description)
+            });
+
+
+            marker.addListener('click', function(){
+                $(markers).each(function(){
+                    this.infowindow.close();
+                });
+
+                marker.infowindow.open(map, marker);
+            });
+
+            markers.push(marker);
+        });
+    });
 </script>
 </body>
 </html>
