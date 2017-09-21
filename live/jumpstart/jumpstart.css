@@ -101,7 +101,6 @@
         width: 70%;
         margin: 10px auto;
     }
-
 }
 
 @media (max-width: 950px) and (min-width: 601px) {
@@ -113,6 +112,10 @@
         float: none;
         width: 100%;
         height: 80px;
+    }
+
+    .centerDiv {
+        width: 85%;
     }
 }
 
@@ -128,5 +131,9 @@
 
     #jumpstartLinksContainer {
         width: 100%;
+    }
+
+    .centerDiv {
+        width: 85%;
     }
 }
