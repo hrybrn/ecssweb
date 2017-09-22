@@ -10,6 +10,12 @@ $db = new PDO('sqlite:' . $dbLoc);
 
 $statement = $db->query("SELECT * FROM helper;");
 if($statement->fetchObject()){
+	/*
+	for($i=1;$i <= 41;$i++){
+		$statement = $db->query("SELECT COUNT(*) AS count FROM jumpstart WHERE groupID = " . $i . ";");
+		echo "<br>Group " . $i . ": " . $statement->fetchObject()->count;
+	}
+	*/
 	exit;
 }
 
