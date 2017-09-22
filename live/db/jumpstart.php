@@ -8,6 +8,11 @@ $relPath = "../";
 $dbLoc = realpath($relPath . "../db/ecss.db");
 $db = new PDO('sqlite:' . $dbLoc);
 
+$statement = $db->query("SELECT * FROM helper;");
+if($statement->fetchObject()){
+	exit;
+}
+
 //count helpers
 $helpers = fopen("helperdata.csv",'r');
 $count = 0;
