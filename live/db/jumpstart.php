@@ -67,6 +67,32 @@ while($line = fgetcsv($freshers)){
 }
 fclose($freshers);
 
+echo "freshers added";
+
+$committee = array();
+
+$committee['ricki'] = array();
+$committee['ricki'][':username'] = 'rst1g15';
+
+$committee['charis'] = array();
+$committee['charis'][':username'] = 'clk1g16';
+
+$committee['chris'] = array();
+$committee['chris'][':username'] = 'cc11g16';
+
+$committee['harry'] = array();
+$committee['harry'][':username'] = 'hb15g16';
+
+$committee['george'] = array();
+$committee['george'][':username'] = 'gpeh1g14';
+
+$sql = "INSERT INTO admin(username) VALUES(:username);";
+
+foreach($committee as $member){
+	$statement = $db->prepare($sql);
+	$statement->execute($member);
+}
+
 class Course{
 	public $uk;
 	public $eu;

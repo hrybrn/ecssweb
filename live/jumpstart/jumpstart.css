@@ -91,7 +91,7 @@
     padding-bottom: 10px;
 }
 
-@media (max-width: 1255px) and (min-width: 951px), (max-width: 600px) {
+@media (max-width: 2000px) and (min-width: 1180px){
     #jumpstartLinks {
         width: 100%;
     }
@@ -103,7 +103,7 @@
     }
 }
 
-@media (max-width: 950px) and (min-width: 601px) {
+@media (max-width: 1180px) and (min-width: 601px) {
     .logoContainer {
         width: 50%;
     }
@@ -119,7 +119,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .logoContainer {
         float: none !important;
         width: 100%;
