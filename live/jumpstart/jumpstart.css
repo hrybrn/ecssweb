@@ -54,8 +54,8 @@
 
 #jumpstartLinks > li {
     display: block;
-    float: left;
-    margin: 0 30px 0 0;
+    margin: 5px;
+    float: center;
     padding: 0;
     color: white;
     background-color: darkred;

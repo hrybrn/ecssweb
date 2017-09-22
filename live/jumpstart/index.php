@@ -54,6 +54,7 @@ echo getNavBar();
             <li><a onclick="toggleCalendar(event)" id='mscTimetable'>Timetable - MSc</a></li>
             <li><a onclick="toggleCalendar(event)" id='ugTimetable'>Timetable - UG</a></li>
             <li><a href="#cityChallenge" onclick="toggleCalendar(event)" id='map'>City Challenge</a></li>
+            <li><a href="/jumpstart/group">Jumpstart Groups</a></li>
         </ul>
     </div>
     <div id="cityChallenge">
