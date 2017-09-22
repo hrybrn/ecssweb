@@ -29,15 +29,20 @@ function getNavBar() {
     setTextDomain('title');
     foreach ($links as $name => $address) {
         if(is_array($address)){
+            if($address['default'] == '#'){
+                $onclick = " onclick='return false;' ";
+            } else {
+                $onclick = "";
+            }
             if(strpos($address['default'], "lang") === false){
                 $nav .= '
                 <div class="dropdown">
-                <a class="navButton" href="'. $relPath . $address['default'] . '?lang=' . $lang . '">' . _($name) . '</a>
+                <a class="navButton" href="'. $relPath . $address['default'] . '?lang=' . $lang . '"' . $onclick . '>' . _($name) . '</a>
                 <div class="dropdown-content">';
             } else {
                 $nav .= '
                 <div class="dropdown">
-                <a class="navButton" href="'. $relPath . $address['default'] . '">' . _($name) . '</a>
+                <a class="navButton" href="'. $relPath . $address['default'] . '"' . $onclick . '>' . _($name) . '</a>
                 <div class="dropdown-content">';
             }
 
