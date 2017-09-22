@@ -43,7 +43,57 @@ while($line = fgetcsv($helpers)){
 }
 fclose($helpers);
 
-echo "done!";
+echo "helpers added";
+
+$freshers = fopen($relPath . "../data/freshers.csv", "r");
+while($line = fgetcsv($freshers)){
+	if($line[0] != ""){
+		$fresher = new Fresher($line[0], (integer)$line[1]);
+
+		$statement = $db->prepare($fresher->fresherSql());
+		$statement->execute($fresher->fresherInfo());
+	}
+}
+fclose($freshers);
+
+class Course{
+	public $uk;
+	public $eu;
+	public $int;
+
+	public $name;
+
+	public function __construct($name){
+		$this->name = $name;
+		$uk = array();
+		$eu = array();
+		$int = array();
+	}
+
+	public function is($name){
+		return $this->name === $name;
+	}
+
+	public function size(){
+		return count($this->uk) + count($this->eu)+ count($this->int);
+	}
+
+	public function empty(){
+		return count($this->uk) + count($this->eu)+ count($this->int) === 0;
+	}
+
+	public function uk(){
+		return count($this->uk) / $this->size(); 
+	}
+
+	public function eu(){
+		return count($this->eu) / $this->size(); 
+	}
+
+	public function int(){
+		return count($this->int) / $this->size(); 
+	}
+}
 
 class Helper extends Fresher{
 	public $username;
@@ -89,7 +139,7 @@ class Fresher {
 	}
 
 	public function fresherSql(){
-		return "INSERT INTO jumpstart(memberName, groupID, helper) VALUES(:name, :groupID, :helper); SELECT last_insert_rowid();";
+		return "INSERT INTO jumpstart(memberName, groupID, helper) VALUES(:name, :groupID, :helper);";
 	}
 
 	public function fresherInfo(){
