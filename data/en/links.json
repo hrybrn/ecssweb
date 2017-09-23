@@ -6,7 +6,8 @@
     "Jumpstart": {
         "default":"#",
         "Overview":"jumpstart",
-        "Groups":"jumpstart/group"
+        "Groups":"jumpstart/group",
+        "Challenge Entries":"jumpstart/admin"
     },
     "Socials":"leaflet/?section=Socials&lang=en",
     "Games":"leaflet/?section=Games&lang=en",
