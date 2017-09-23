@@ -1,8 +1,7 @@
 # JetBrains IDEs
 .idea/
 
-# do not track config file
-config/config.php
+# do not track uploads
 live/uploads/
 
 db/ecss\.db

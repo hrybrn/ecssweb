@@ -54,7 +54,7 @@
         "ARM" : {
             "Name" : "ARM",
             "Website" : "http://www.arm.com/",
-            "Image" : "images/sponsors/arm.jpg",
+            "Image" : "images/sponsors/arm.png",
             "Info" : "ARM is a British semiconductor and software company.  It was founded in 1990 and has its headquarters in Cambridge, UK. Some of its clients include Apple and Samsung."
         },
         "Schroders" : {

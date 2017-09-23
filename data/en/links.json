@@ -8,12 +8,15 @@
         "Overview":"jumpstart",
         "Groups":"jumpstart/group"
     },
-    "Leaflet": {
-        "default":"#",
-        "Socials":"leaflet/?lang=en&section=Socials",
-        "Games":"leaflet/?lang=en&section=Games",
-        "Welfare":"leaflet/?lang=en&section=Welfare",
-        "Sports":"leaflet/?lang=en&section=Sports"
+    "Socials":"leaflet/?section=Socials&lang=en",
+    "Games":"leaflet/?section=Games&lang=en",
+    "Welfare":"leaflet/?section=Welfare&lang=en",
+    "Sports":{
+        "default": "leaflet/?lang=en&section=Sports",
+        "Football": "leaflet/?lang=en&section=Football",
+        "Netball": "leaflet/?lang=en&section=Netball",
+        "Running": "leaflet/?lang=en&section=Running",
+        "Others": "leaflet/?lang=en&section=Others"
     },
     "Files": {
         "default":"/filestore/index.php/s/JeqwjpN2tkVKW5X",
