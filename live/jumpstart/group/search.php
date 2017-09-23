@@ -26,6 +26,8 @@ if(is_numeric($search)){
 } 
 //we search on fresher/helper name
 else{
+	$search = preg_replace('/\s+/', ' ', $search);
+
 	$sql = "SELECT k.*, h.*, g.groupName
 			FROM ((jumpstart AS j
 			INNER JOIN jumpstart AS k ON j.groupID = k.groupID)

@@ -72,7 +72,7 @@ echo getNavBar();
         Points can be achieved by exploring the main areas this side of the city; Highfield Campus, The Common, and Portswood; and completing various challenges outlined below. In doing so, you’ll be introduced to the members of the ECSS committee, find your bearings in Southampton, and make some new friends!
     </p>
     <p>
-        The winning team will be announced at the Jumpstart reception on Friday 29th September, with prizes from the faculty, ECSS, and IBM up for grabs. Some of the challenges are listed on the map below with red pins, and some you do whilst on your travels. You can do as many or as few as you like, in any order. Good luck!
+        The winning team will be announced at the Jumpstart reception on Friday 29th September, with prizes from the faculty, ECSS, and IBM up for grabs. Some of the challenges are listed on the map below with red pins, and some you do whilst on your travels (make sure to remind your helpers). You can do as many or as few as you like, in any order. Good luck!
     </p>
     </div>
     <div id="mapCalendar" class="centerDiv"></div>
