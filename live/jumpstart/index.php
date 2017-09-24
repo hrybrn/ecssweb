@@ -108,9 +108,9 @@ echo getNavBar();
             };
 
             if(position.cityChallenge){
-                options.icon = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
+                options.icon = 'https://maps.google.com/mapfiles/ms/icons/red-dot.png';
             } else {
-                options.icon = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+                options.icon = 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png'
             }
             
             var marker = new google.maps.Marker(options);
