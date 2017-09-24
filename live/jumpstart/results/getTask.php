@@ -59,7 +59,7 @@ while($entry = $statement->fetchObject()){
 
 ksort($entries);
 
-$output = "<table id'tasks'><tr><th>Group</th><th>Entry</tr></tr>";
+$output = "<table id='tasks'><tr><th>Group</th><th>Entry</tr></tr>";
 
 if($file){
 	foreach($entries as $entry){
