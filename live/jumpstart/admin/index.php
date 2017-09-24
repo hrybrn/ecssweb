@@ -32,7 +32,7 @@ $statement = $db->prepare($sql);
 $statement->execute(array(':username' => $username));
 
 if(!$helper = $statement->fetchObject()){
-	echo "You're not a helper! Sorry my dude!";
+	header('Location: /jumpstart/committee');
 	exit;
 }
 
