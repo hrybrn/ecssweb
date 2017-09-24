@@ -50,6 +50,22 @@ foreach($groups as $id => $name){
 }
 
 echo "</select>";
+
+$sql = "SELECT t.taskID, t.taskName
+		FROM task AS t";
+
+$statement = $db->query($sql);
+$tasks = array();
+while($task = $statement->fetchObject()){
+	$tasks[$task->taskID] = $task->taskName;
+}
+
+echo "<select id='taskSelect'>";
+foreach($tasks as $id => $name){
+	echo "<option value='" . $id . "'>" . $name . "</option>";
+}
+
+echo "</select>";
 ?>
 
 <script src='/jquery.js'></script>

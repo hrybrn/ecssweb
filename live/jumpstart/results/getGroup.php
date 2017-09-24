@@ -72,5 +72,5 @@ foreach($entries as $entry){
 	}
 }
 
-$result['data'] = $table
-;echo json_encode($result);
+$result['data'] = $table;
+echo json_encode($result);

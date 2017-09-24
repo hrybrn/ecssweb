@@ -1,14 +1,31 @@
 function load(){
 	$('#groupSelect').change(function(){
-		showEntries($('#groupSelect').find(':selected').val());
+		showGroupEntries($('#groupSelect').find(':selected').val());
+	});
+
+	$('#taskSelect').change(function(){
+		showTaskEntries($('#taskSelect').find(':selected').val());
 	});
 }
 
-function showEntries(id){
+function showGroupEntries(id){
 	$.ajax({
-		url: '/jumpstart/results/getResults.php',
+		url: '/jumpstart/results/getGroup.php',
 		type: 'get',
         data: {'groupID': id, 'lang': lang},
+        dataType: 'json',
+        success: function (tasks) {
+        	$('#tasks').remove();
+        	$('body').append(tasks.data);
+        }
+	});
+}
+
+function showTaskEntries(id){
+	$.ajax({
+		url: '/jumpstart/results/getTask.php',
+		type: 'get',
+        data: {'taskID': id, 'lang': lang},
         dataType: 'json',
         success: function (tasks) {
         	$('#tasks').remove();
