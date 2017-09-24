@@ -126,7 +126,7 @@ while($row = $statement->fetchObject()){
 
 			if(isset($entry)){
 				$time = new DateTime($entry->entryTime);
-				$html .= "<p id='para" . $task->taskID . "'>Submitted " . $time->format('H:i:s dS F Y') . "</p><img class='taskimg' id='img" . $task->taskID . "' src='" . $entry->entry . "'>";
+				$html .= "<p id='para" . $task->taskID . "'>Submitted " . $time->format('d/m/Y, H:i:s') . "</p><img class='taskimg' id='img" . $task->taskID . "' src='" . $entry->entry . "'>";
 			}
 
 			$html .= "</td></tr>";
@@ -139,7 +139,7 @@ while($row = $statement->fetchObject()){
 
 			if(isset($entry)){
 				$time = new DateTime($entry->entryTime);
-				$html .= "<p>Submitted " . $time->format('H:i:s dS F Y') . "</p>";
+				$html .= "<p id='para" . $task->taskID . "'>Submitted " . $time->format('d/m/Y, H:i:s') . "</p>";
 			}
 
 			$html .= "</td></tr>";

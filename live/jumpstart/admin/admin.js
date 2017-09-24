@@ -33,7 +33,12 @@ function save(){
 
 		$(this).upload("/jumpstart/admin/fileUpload.php", data, function(success){
 			var imageID = 'img' + index;
+			//remove previous image and time submitted
 			$('#' + imageID).remove();
+			$('#para' + index).remove();
+
+			//show new image and time
+			$(progress).after("<p id='para" + index + "'>Submitted " + new Date().toLocaleString('en-GB') + "</p>");
 			$('#para' + index).after("<img class='taskimg' src='" + success + "' id='" + imageID + "'>");
 		},
 		$(progress));
@@ -45,6 +50,18 @@ function save(){
 			type: 'post',
 			data: {'changes': changes, 'groupID': groupID, 'time': time, 'hash': hash, 'name': $('#name').val()},
 			dataType: 'json',
+			success: function(success){
+				if(!success.status){
+					return false;
+				}
+
+				$.each(changes, function(index, value){
+					if(typeof value !== "undefined"){
+						$('#para' + index).remove();
+						$('#task' + index).after("<p id='para" + index + "'>Submitted " + new Date().toLocaleString('en-GB') + "</p>");
+					}
+				});
+			}
 		});
 	}
 }

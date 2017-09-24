@@ -63,7 +63,7 @@ foreach($_FILES as $task => $file){
 	    if (move_uploaded_file($file["tmp_name"], $target_file)) {
 	    	echo $target_file;
 
-	        
+	        image_fix_orientation($target_file);
 
 			$taskID = str_replace("task", "", $task);
 
@@ -89,12 +89,43 @@ foreach($_FILES as $task => $file){
 	}
 }
 
-function randomString()
-{
+function randomString(){
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $randstring = '';
     for ($i = 0; $i < 10; $i++) {
         $randstring .= $characters[rand(0, 51)];
     }
     return $randstring;
+}
+
+function image_fix_orientation($filename) {
+	$imageFileType = pathinfo($filename,PATHINFO_EXTENSION);
+	switch($imageFileType){
+		case "jpg":
+		case "jpeg":
+			$image = imagecreatefromjpeg($filename);
+			break;
+		case "png":
+			$image = imagecreatefrompng($filename);
+			break;
+		case "gif":
+			$image = imagecreatefromgif($filename);
+			break;
+	}
+
+    $image = imagerotate($image, array_values([0, 0, 0, 180, 0, 0, -90, 0, 90])[@exif_read_data($filename)['Orientation'] ?: 0], 0);
+
+    switch($imageFileType){
+		case "jpg":
+		case "jpeg":
+			imagejpeg($image, $filename);
+			break;
+		case "png":
+			imagepng($image, $filename);
+			break;
+		case "gif":
+			imagegif($image, $filename);
+	}
+
+	imagedestroy($image);
 }
