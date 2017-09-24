@@ -30,6 +30,7 @@ $statement = $db->prepare($sql);
 $statement->execute(array(':username' => $username));
 
 if(!$user = $statement->fetchObject()){
+    echo "user " . $username . " doesn't have permissions for this page";
 	exit;
 }
 
