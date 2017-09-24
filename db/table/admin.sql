@@ -1,0 +1,15 @@
+CREATE TABLE taskScore(
+	taskScoreID INTEGER PRIMARY KEY AUTOINCREMENT,
+	taskScoreName TEXT
+);
+
+CREATE TABLE score(
+	scoreID INTEGER PRIMARY KEY AUTOINCREMENT,
+	score TEXT,
+	groupID INTEGER,
+	adminID INTEGER,
+	taskScoreID INTEGER,
+	FOREIGN KEY(groupID) REFERENCES jumpstartGroup(groupID),
+	FOREIGN KEY(adminID) REFERENCES admin(adminID),
+	FOREIGN KEY(taskScoreID) REFERENCES taskScore(taskScoreID)
+);
