@@ -21,10 +21,9 @@ function toggleCalendar(e){
 
 function addCalendar(id){
 	if(id == "mscTimetableCalendar"){
-		$('body').append('<div id="' + id + '" class="centerDiv"><iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=0s8rbd2g07uf6uqil2fir8decg%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=Europe%2FLondon" style="border-width:0; margin=auto;" width="100%" height="500" frameborder="0" scrolling="no"></iframe></div>');
+		$('body').append('<div id="' + id + '" class="centerDiv"><iframe src="https://calendar.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=0s8rbd2g07uf6uqil2fir8decg%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=Europe%2FLondon&amp;dates=20170925%2F20171001" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>');
 	}
-
 	if(id == "ugTimetableCalendar"){
-		$('body').append('<div id="' + id + '" class="centerDiv"><iframe src="https://calendar.google.com/calendar/embed?src=gvo3td8eik1aclq6hvj554c848%40group.calendar.google.com&ctz=Europe/London" style="border: 0; margin:auto;" width="100%" height="500" frameborder="0" scrolling="no"></iframe>')
+		$('body').append('<div id="' + id + '" class="centerDiv"><iframe src="https://calendar.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=gvo3td8eik1aclq6hvj554c848%40group.calendar.google.com&amp;color=%2329527A&amp;ctz=Europe%2FLondon&amp;dates=20170925%2F20171001" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>');
 	}
 }
