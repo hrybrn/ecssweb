@@ -1,5 +1,5 @@
 #!/bin/bash
-cd "/home/hb/ecssweb"
+cd "/var/www"
 #may as well keep up to date
 #git pull origin master
 
