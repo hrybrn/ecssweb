@@ -10,12 +10,10 @@ $db = new PDO('sqlite:' . $dbLoc);
 
 $statement = $db->query("SELECT * FROM helper;");
 if($statement->fetchObject()){
-	/*
 	for($i=1;$i <= 41;$i++){
 		$statement = $db->query("SELECT COUNT(*) AS count FROM jumpstart WHERE groupID = " . $i . ";");
 		echo "<br>Group " . $i . ": " . $statement->fetchObject()->count;
 	}
-	*/
 	exit;
 }
 
@@ -30,7 +28,7 @@ while($line = fgetcsv($helpers)){
 fclose($helpers);
 
 //create groups
-for($i = 1; $i <= $count; $i++){
+for($i = 1; $i <= $count + 1; $i++){
 	$sql = "INSERT INTO jumpstartGroup(groupName) VALUES('Group " . $i . "');";
 	$db->query($sql);
 }
@@ -86,12 +84,36 @@ $committee['harry'][':username'] = 'hb15g16';
 $committee['george'] = array();
 $committee['george'][':username'] = 'gpeh1g14';
 
+$committee['luke'] = array();
+$committee['luke'][':username'] = 'sw1n15';
+
+$committee['angus'] = array();
+$committee['angus'][':username'] = 'ab27g15';
+
+$committee['brad'] = array();
+$committee['brad'][':username'] = 'be5g15';
+
+$committee['ayush'] = array();
+$committee['ayush'][':username'] = 'ak10n13';
+
+$committee['hope'] = array();
+$committee['hope'][':username'] = 'hos1n15';
+
+$committee['denisa'] = array();
+$committee['denisa'][':username'] = 'dcp1n13';
+
+$committee['ed'] = array();
+$committee['ed'][':username'] = 'eg16g15';
+
 $sql = "INSERT INTO admin(username) VALUES(:username);";
 
 foreach($committee as $member){
 	$statement = $db->prepare($sql);
 	$statement->execute($member);
 }
+
+$sql = "DELETE FROM jumpstartGroup WHERE groupID = 17;";
+$db->query($sql);
 
 class Course{
 	public $uk;

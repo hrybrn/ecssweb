@@ -33,21 +33,21 @@ if(!$user = $statement->fetchObject()){
 	exit;
 }
 
-$sql = "SELECT g.groupID, g.groupName
-        FROM jumpstartGroup AS g";
+$sql = "SELECT ts.taskScoreID, ts.taskScoreName
+        FROM taskScore AS ts";
 
 $statement = $db->query($sql);
-$groups = array();
-while($group = $statement->fetchObject()){
-    $groups[$group->groupID] = $group->groupName;
+$tasks = array();
+while($task = $statement->fetchObject()){
+    $tasks[$task->taskScoreID] = $task->taskScoreName;
 }
 
-$groupSelect = "<select id='groupSelect'>";
-foreach($groups as $id => $name){
-    $groupSelect .= "<option value='" . $id . "'>" . $name . "</option>";
+$taskSelect = "<select id='taskSelect'>";
+foreach($tasks as $id => $name){
+    $taskSelect .= "<option value='" . $id . "'>" . $name . "</option>";
 }
 
-$groupSelect .= "</select>";
+$taskSelect .= "</select>";
 
 ?>
 <!doctype html>
@@ -70,12 +70,12 @@ $groupSelect .= "</select>";
 <?= getNavBar(); ?>
 <script src="/jquery.js"></script>
 <script src="/ajaxfileupload.js"></script>
-<?= $groupSelect ?>
+<?= $taskSelect ?>
 <button onclick='save()''>Save</button>
 <script>
     var lang = '<?= $lang ?>';
     $(document).ready(function(){
         load();
-        showGroup(1);
+        showTask(1);
     });
 </script>

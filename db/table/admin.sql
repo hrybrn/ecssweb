@@ -9,6 +9,7 @@ CREATE TABLE score(
 	groupID INTEGER,
 	adminID INTEGER,
 	taskScoreID INTEGER,
+	latest BOOLEAN,
 	FOREIGN KEY(groupID) REFERENCES jumpstartGroup(groupID),
 	FOREIGN KEY(adminID) REFERENCES admin(adminID),
 	FOREIGN KEY(taskScoreID) REFERENCES taskScore(taskScoreID)

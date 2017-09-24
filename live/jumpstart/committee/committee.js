@@ -1,13 +1,13 @@
-var groupID = 0;
+var taskScoreID = 0;
 
-function showGroup(id){
+function showTask(id){
 	$.ajax({
-		url: '/jumpstart/committee/getGroup.php',
+		url: '/jumpstart/committee/getTask.php',
 		type: 'get',
-        data: {'groupID': id, 'lang': lang},
+        data: {'taskScoreID': id, 'lang': lang},
         dataType: 'json',
         success: function (tasks) {
-        	groupID = id;
+        	taskScoreID = id;
         	$('#scores').remove();
         	$('body').append(tasks.data);
         }
@@ -15,24 +15,37 @@ function showGroup(id){
 }
 
 function load(){
-	$('#groupSelect').change(function(){
-		showGroup($('#groupSelect').find(':selected').val());
+	$('#taskSelect').change(function(){
+		showTask($('#taskSelect').find(':selected').val());
 	});
 }
 
 function save(){
 	saveData = {};
 
+	var needToSave = false;
+
 	$('.score').each(function(){
-		if(this.val() != ""){
-			saveData[this.data('taskScoreID')] = this.val();
+		if($(this).val() != ""){
+			saveData[$(this).data('groupid')] = $(this).val();
+
+			needToSave = true;
 		}
 	});
 
-	$.ajax({
-		url: '/jumpstart/committee/saveScores.php',
-		type: 'get',
-        data: {'groupID': groupID, 'scores': saveData},
-        dataType: 'json'
-	});
+	if(needToSave){
+		$.ajax({
+			url: '/jumpstart/committee/saveScores.php',
+			type: 'get',
+	        data: {'taskScoreID': taskScoreID, 'scores': saveData},
+	        dataType: 'json',
+	        success: function(result){
+	        	if(!result.status){
+	        		return false;
+	        	}
+
+	        	showTask(taskScoreID);
+	        }
+		});
+	}
 }

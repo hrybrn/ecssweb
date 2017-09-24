@@ -1,6 +1,6 @@
 <?php
 
-$groupID = $_GET['groupID'];
+$taskScoreID = $_GET['taskScoreID'];
 $relPath = "../../";
 
 require_once($relPath . '../config/config.php');
@@ -36,17 +36,17 @@ if(!$user = $statement->fetchObject()){
 	exit;
 }
 
-$sql = "SELECT s.score, s.groupID, ts.taskScoreName, ts.taskScoreID
-        FROM taskScore AS ts
-        LEFT JOIN score AS s ON s.taskScoreID = ts.taskScoreID
-        WHERE s.groupID = :groupID;";
+$sql = "SELECT g.groupID, g.groupName, s.score
+        FROM jumpstartGroup AS g
+        LEFT JOIN (SELECT * FROM score WHERE taskScoreID = :taskScoreID AND latest = 1) AS s
+        ON g.groupID = s.groupID;";
 
 $statement = $db->query($sql);
-$statement->execute(array(':groupID' => $groupID));
+$statement->execute(array(':taskScoreID' => $taskScoreID));
 
 $scores = array();
 while($score = $statement->fetchObject()){
-    $scores[$score->taskScoreID] = $score;
+    $scores[$score->groupID] = $score;
 }
 
 ksort($scores);
@@ -59,7 +59,7 @@ foreach($scores as $score){
     } else {
         $value = "";
     }
-    $row = "<tr><td>" . $score->taskScoreName . "</td><td><input type='text' class='score' placeholder='" . $value . "''></td></tr>";
+    $row = "<tr><td>" . $score->groupName . " (Group " . $score->groupID . ")</td><td><input type='text' class='score' data-groupid='" . $score->groupID . "' placeholder='" . $value . "''></td></tr>";
 
     $output .= $row; 
 }
