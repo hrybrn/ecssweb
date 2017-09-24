@@ -58,8 +58,8 @@ echo getNavBar();
     <div id="ibmLogoContainer" class="logoContainer"><p>Proud Sponsor</p><img src="/images/jumpstart/jumpstart_sponsor_ibm.jpg" alt="Jumpstart sponsor IBM logo"></div>
     <div id="jumpstartLinksContainer">
         <ul id="jumpstartLinks">
-            <li><a onclick="toggleCalendar(id)" id='mscTimetable'>Timetable - MSc</a></li>
-            <li><a onclick="toggleCalendar(id)" id='ugTimetable'>Timetable - UG</a></li>
+            <li><a href="#mscTimetableCalendar" onclick="toggleCalendar(id)" id='mscTimetable'>Timetable - MSc</a></li>
+            <li><a href="#ugTimetableCalendar" onclick="toggleCalendar(id)" id='ugTimetable'>Timetable - UG</a></li>
             <li><a href="#cityChallenge" onclick="toggleCalendar(id)" id='map'>City Challenge</a></li>
             <li><a href="/jumpstart/group">Jumpstart Groups</a></li>
         </ul>
