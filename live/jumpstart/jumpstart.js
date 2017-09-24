@@ -9,8 +9,8 @@ function scrollToCityChallenge(e) {
 }
 
 
-function toggleCalendar(e){
-	var currentid = e.path[0].id + 'Calendar';	
+function toggleCalendar(id){
+	var currentid = id + 'Calendar';	
 	$('.centerDiv').hide();
 	if($('#' + currentid).length == 0){
 		addCalendar(currentid);
