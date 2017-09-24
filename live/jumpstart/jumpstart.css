@@ -93,7 +93,7 @@
 
 @media (max-width: 1400px) and (min-width: 900px){
     #jumpstartLinks {
-        width: 100%;
+        width: 75%;
     }
 
     #jumpstartLinks > li, #jumpstartLinks > li:last-child{
