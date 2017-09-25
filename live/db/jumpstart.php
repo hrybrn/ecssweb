@@ -28,7 +28,7 @@ while($line = fgetcsv($helpers)){
 fclose($helpers);
 
 //create groups
-for($i = 1; $i <= $count + 1; $i++){
+for($i = 1; $i <= $count + 2; $i++){
 	$sql = "INSERT INTO jumpstartGroup(groupName) VALUES('Group " . $i . "');";
 	$db->query($sql);
 }
@@ -113,6 +113,9 @@ foreach($committee as $member){
 }
 
 $sql = "DELETE FROM jumpstartGroup WHERE groupID = 17;";
+$db->query($sql);
+
+$sql = "DELETE FROM jumpstartGroup WHERE groupID = 25;";
 $db->query($sql);
 
 class Course{
