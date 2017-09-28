@@ -52,7 +52,7 @@ $statement->execute(array(
 	':expiry' => $expiry,
 ));
 
-$sql = "SELECT *
+$sql = "SELECT *, t.taskID AS tid
 		FROM task AS t
 		LEFT JOIN (
 			SELECT *
@@ -117,11 +117,11 @@ while($row = $statement->fetchObject()){
 		}
 
 		if($task->file){
-			$html .= "<td><input type='file' id='task" . $task->taskID . "' name='task" . $task->taskID . "'><progress id='prog" . $task->taskID . "' value='0' min='0' max='100'></progress>";
+			$html .= "<td><input type='file' id='task" . $task->tid . "' name='task" . $task->tid . "'><progress id='prog" . $task->tid . "' value='0' min='0' max='100'></progress>";
 
-			if(isset($entry)){
+			if(isset($task->entry)){
 				$time = new DateTime($task->entryTime);
-				$html .= "<p id='para" . $task->taskID . "'>Submitted " . $time->format('d/m/Y, H:i:s') . "</p><img class='taskimg' id='img" . $task->taskID . "' src='" . $task->entry . "'>";
+				$html .= "<p id='para" . $task->tid . "'>Submitted " . $time->format('d/m/Y, H:i:s') . "</p><img class='taskimg' id='img" . $task->tid . "' src='" . $task->entry . "'>";
 			}
 
 			$html .= "</td></tr>";
@@ -130,11 +130,11 @@ while($row = $statement->fetchObject()){
 		else {
 			
 
-			$html .= "<td><textarea id='task" . $task->taskID . "' rows=5>" . $value . "</textarea>";
+			$html .= "<td><textarea id='task" . $task->tid . "' rows=5>" . $value . "</textarea>";
 
 			if(isset($entry)){
 				$time = new DateTime($task->entryTime);
-				$html .= "<p id='para" . $task->taskID . "'>Submitted " . $time->format('d/m/Y, H:i:s') . "</p>";
+				$html .= "<p id='para" . $task->tid . "'>Submitted " . $time->format('d/m/Y, H:i:s') . "</p>";
 			}
 
 			$html .= "</td></tr>";
