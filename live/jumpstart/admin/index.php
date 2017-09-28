@@ -53,9 +53,18 @@ $statement->execute(array(
 ));
 
 $sql = "SELECT *
-		FROM task AS t;";
+		FROM task AS t
+		LEFT JOIN (
+			SELECT *
+			FROM taskEntry
+			WHERE latest = 1
+			AND groupID = :groupID
+		)
+		AS te
+		ON t.taskID = te.taskID;";
 
-$statement = $db->query($sql);
+$statement = $db->prepare($sql);
+$statement->execute(array(':groupID' => $helper->groupID));
 
 $tasks = array();
 while($row = $statement->fetchObject()){
@@ -99,20 +108,6 @@ while($row = $statement->fetchObject()){
 	$previousEntries = array();
 
 	foreach($tasks as $task){
-		//get current entry if it exists
-		$sql = "SELECT *
-				FROM taskEntry AS te
-				WHERE te.taskID = :taskID
-				AND te.latest = 1
-				AND te.groupID = :groupID";
-
-		$statement = $db->prepare($sql);
-		$statement->execute(array(':taskID' => $task->taskID, ':groupID' => $helper->groupID));
-
-		if(!$entry = $statement->fetchObject()){
-			unset($entry);
-		}
-
 		$html = "<tr><td><p>" . $task->taskName . "</p><p>" . $task->description . "</p></td>";
 
 		if(!isset($entry)){
