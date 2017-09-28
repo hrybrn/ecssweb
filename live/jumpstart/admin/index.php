@@ -110,18 +110,18 @@ while($row = $statement->fetchObject()){
 	foreach($tasks as $task){
 		$html = "<tr><td><p>" . $task->taskName . "</p><p>" . $task->description . "</p></td>";
 
-		if(!isset($entry)){
+		if(!isset($task->entry)){
 			$value = "";
 		} else {
-			$value = $entry->entry;
+			$value = $task->entry;
 		}
 
 		if($task->file){
 			$html .= "<td><input type='file' id='task" . $task->taskID . "' name='task" . $task->taskID . "'><progress id='prog" . $task->taskID . "' value='0' min='0' max='100'></progress>";
 
 			if(isset($entry)){
-				$time = new DateTime($entry->entryTime);
-				$html .= "<p id='para" . $task->taskID . "'>Submitted " . $time->format('d/m/Y, H:i:s') . "</p><img class='taskimg' id='img" . $task->taskID . "' src='" . $entry->entry . "'>";
+				$time = new DateTime($task->entryTime);
+				$html .= "<p id='para" . $task->taskID . "'>Submitted " . $time->format('d/m/Y, H:i:s') . "</p><img class='taskimg' id='img" . $task->taskID . "' src='" . $task->entry . "'>";
 			}
 
 			$html .= "</td></tr>";
@@ -133,7 +133,7 @@ while($row = $statement->fetchObject()){
 			$html .= "<td><textarea id='task" . $task->taskID . "' rows=5>" . $value . "</textarea>";
 
 			if(isset($entry)){
-				$time = new DateTime($entry->entryTime);
+				$time = new DateTime($task->entryTime);
 				$html .= "<p id='para" . $task->taskID . "'>Submitted " . $time->format('d/m/Y, H:i:s') . "</p>";
 			}
 
