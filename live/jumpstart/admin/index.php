@@ -108,6 +108,11 @@ while($row = $statement->fetchObject()){
 	$previousEntries = array();
 
 	foreach($tasks as $task){
+		if(isset($task->entryTime)){
+			$task->entryTime = str_replace(" (GMT Daylight Time)", "", $task->entryTime);
+		}
+
+
 		$html = "<tr><td><p>" . $task->taskName . "</p><p>" . $task->description . "</p></td>";
 
 		if(!isset($task->entry)){
