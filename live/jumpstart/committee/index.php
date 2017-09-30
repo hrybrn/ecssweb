@@ -21,7 +21,7 @@ if (DEBUG) {
     $attributes = $as->getAttributes();
     $username = $attributes["http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"][0];
 
-    var_dump($attributes["http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"]);
+    var_dump($attributes);
     exit;
 }
 
