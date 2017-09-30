@@ -18,7 +18,7 @@ function setLang() {
 
     // get language setting from url
     if (isset($_GET['lang'])) {
-        if (array_key_exists($_GET['lang'], $languages)) {
+        if (array_key_exists($_GET['lang'], $languages) && $languages[$_GET['lang']]['enabled'] === 'true') {
             $lang = $_GET['lang'];
             return;
         }
@@ -39,7 +39,7 @@ function setLang() {
         // check valid language
         foreach ($acceptLanguages as $acceptLanguage) {
             $acceptLanguage = strtolower($acceptLanguage);
-            if (array_key_exists($acceptLanguage, $languages)) {
+            if (array_key_exists($acceptLanguage, $languages) && $languages[$acceptLanguage]['enabled'] === 'true') {
                 $lang =  $acceptLanguage;
                 redirectToLang($lang);
                 return;

@@ -11,7 +11,7 @@
     "path": "data/bg/",
     "icon": "images/flag-icons/bg.png",
     "locale": "bg_BG",
-    "enabled": "true"
+    "enabled": "false"
   },
   "zh-cn": {
     "name": "Chinese (Simplified)",
