@@ -83,6 +83,7 @@
     "Robosoc":{
         "Name":"Robosoc",
         "Image":"images/societies/robosoc.jpg",
+        "Description":"Robosoc is a society that helps students who wish to build robots. We work with the idea that no matter what your knowledge of robotics is, we are approachable and able to help with all the steps along the way. The help ranges from tutorials presented for begineers to sourcing parts required for the big projects such as a 3D printer or battlebots.",
         "Facebook Group":"https://www.facebook.com/groups/su.robosoc/",
         "Website":"http://robosoc.com",
         "Contact Us":"http://robosoc.com/index.html"
