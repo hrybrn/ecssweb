@@ -116,6 +116,7 @@ while($row = $res->fetchObject()){
 if($voting){
 	echo "<script src='/voting/vote.js'></script>";
 	echo "<script src='/jquery-ui.js'></script>";
+	echo '<script src="/jquery.ui.touch-punch.min.js"></script>';
 	echo '<link rel="stylesheet" type="text/css" href="/voting/vote.css" />';
 	echo '<link rel="stylesheet" type="text/css" href="/jquery-ui.css" />';
 
