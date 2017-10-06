@@ -66,19 +66,16 @@ $statement =$db->query($sql);
 $election = $statement->fetchObject();
 
 //check there hasn't been another submission for this role by this person
-$sql = "SELECT COUNT(*) AS count
-		FROM ((nomination AS n
-		INNER JOIN nomination AS m ON n.positionID = m.positionID)
-		INNER JOIN nomination AS o ON n.electionID = o.electionID)
-		INNER JOIN nomination AS p ON n.nominationUsername = p.nominationUsername
+$sql = "SELECT *
+		FROM nomination AS n
 		WHERE n.nominationUsername = :username
-		AND n.electionID = :electionID;";
+		AND n.electionID = :electionID
+		AND n.positionID = :positionID;";
 
 $statement = $db->prepare($sql);
-$statement->execute([':username' => $userInfo['username'], ':electionID'=> $election->electionID]);
+$statement->execute([':username' => $userInfo['username'], ':electionID'=> $election->electionID, ':positionID' => $positionID]);
 
-$result = $statement->fetchObject();
-if($result->count > 0){
+if($statement->fetchObject()){
 	echo json_encode(['status' => false, 'message' => 'You have already submitted for this role, please email Harry Brown at <a href=\'mailto:hb15g16@soton.ac.uk\'>hb15g16@soton.ac.uk</a> to change your manifesto']);
 	exit;
 }
@@ -113,4 +110,10 @@ $statement->execute([
 	':nominationUsername' => $userInfo['username']
 ]);
 
-echo json_encode(['status' => true, 'message' => 'Thank you ' . $name . " for your nomination in this election."]);
+$sql = "select last_insert_rowid() AS nominationID;";
+
+$statement = $db->query($sql);
+$res = $statement->fetchObject();
+
+
+echo json_encode(['status' => true, 'nominationID' => $res->nominationID, 'message' => 'Thank you ' . $name . " for your nomination in this election."]);

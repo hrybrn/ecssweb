@@ -29,6 +29,7 @@ create table nomination (
     manifesto VARCHAR(1000),
     nominationName VARCHAR(255),
     nominationUsername VARCHAR(255),
+    image VARCHAR(255),
     FOREIGN KEY(positionID) REFERENCES position(positionID),
     FOREIGN KEY(electionID) REFERENCES election(electionID)
 );

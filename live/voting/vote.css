@@ -1,0 +1,38 @@
+.nomination {
+    border: solid 1px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    padding-top: 0px;
+   	max-width: 300px;
+}
+
+.nomination table td, tr {
+	text-align: center;
+}
+
+#submit {
+	float: right;
+}
+
+span {
+    text-align: center;
+}
+
+.group {
+    width: 80%;
+    margin-left: 10%; 
+}
+
+.group div img{
+    display: block;
+    object-fit: cover;
+    width: 300px;    
+    height: 240px;
+    margin: auto;
+    /*height: 120px;*/
+    text-align: center;
+    border-radius: 5px;
+    transition: opacity 0.2s linear;
+}

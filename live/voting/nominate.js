@@ -1,6 +1,6 @@
 $(document).ready(function(){
-	$('#roleSelect').change(function(){
-		showInfo($('#roleSelect').find(':selected').val());
+	$("#roleSelect").change(function(){
+		showInfo($("#roleSelect").find(":selected").val());
 	});
 
 	showInfo(first);
@@ -23,6 +23,8 @@ function showInfo(positionID){
 			
 			table += "<tr><td>Name</td><td><input id='name' type='text' value='" + userInfo.firstName + " " + userInfo.lastName + "'></td></tr>"
 			table += "<tr><td>Manifesto</td><td><textarea id='manifesto' rows=3></textarea></td></tr>";
+			table += "<tr><td>Image</td><td><input type='file' id='imageUpload' name='imageUpload'><progress id='prog' value='0' min='0' max='100'></progress></td></tr>";
+			table += "<tr><td><p id='returnMessage'></p></td></tr>";
 
 			table += "</table>";
 			$('#table').remove();
@@ -43,11 +45,27 @@ function submit(){
 		data: {'positionID': positionID, 'name': name, 'manifesto': manifesto},
 		dataType: 'json',
 		success: function(result){
-			$('#table').remove();
-			$('#roleSelect').remove();
-			$('#submitButton').remove();
-
-			$('body').append(result.message);
+			var data = {};
+			data.nominationID = result.nominationID;
+			if(result.status){
+				$("#imageUpload").upload(
+					"/voting/imageUpload.php",
+					data,
+					function(success){
+						$('#table').remove();
+						$('#roleSelect').remove();
+						$('#submitButton').remove();
+			
+						$('body').append(success.message);
+					},
+					$("#prog"));
+			} else {
+				$('#table').remove();
+				$('#roleSelect').remove();
+				$('#submitButton').remove();
+	
+				$('body').append(result.message);
+			}			
 		}
 	});
 }

@@ -79,30 +79,35 @@ $sql = "SELECT *
 		WHERE datetime(e.nominationStartDate) < datetime('now')
 		AND datetime(e.nominationEndDate) > datetime('now');";
 
-if(!$res = $db->query($sql)){
+$res = $db->query($sql);
+$testResult = $res->fetchObject();
+
+if(!$testResult){
 	//no current nomination phase, checking for voting phase
 	$sql = "SELECT *
 			FROM (election AS e
 			INNER JOIN position AS p
 			ON e.electionTypeID = p.electionTypeID)
 			LEFT JOIN nomination AS n
-			ON e.electionID = n.electionID
+			ON p.positionID = n.positionID
 			WHERE datetime(e.votingStartDate) < datetime('now')
 			AND datetime(e.votingEndDate) > datetime('now');";
 
 	$voting = true;
 	
-	if(!$res = $db->query($sql)){
+	$res = $db->query($sql);
+	$testResult = $res->fetchObject();
+
+	if(!$testResult){
 		//no current election is happening
 
 		echo "No election is taking place currently, Sorry!";
 		exit;
 	}
 }
-
+$election = [$testResult];
 //$res is now the db result object
-//get the election object
-$election = array();
+//get the other election objects
 while($row = $res->fetchObject()){
 	$election[] = $row;
 }
@@ -110,8 +115,41 @@ while($row = $res->fetchObject()){
 //voting page
 if($voting){
 	echo "<script src='/voting/vote.js'></script>";
-} else {
+	echo "<script src='/jquery-ui.js'></script>";
+	echo '<link rel="stylesheet" type="text/css" href="/voting/vote.css" />';
+	echo '<link rel="stylesheet" type="text/css" href="/jquery-ui.css" />';
+
+	//create button div
+	$buttonDiv = "<div id='buttonDiv'>";
+	$used = [];
+	foreach($election as $nomination){
+		if(!in_array($nomination->positionName, $used)){
+			if(!isset($first)){
+				$first = "button" . $nomination->positionID;
+			}
+
+			$used[] = $nomination->positionName;
+			$buttonDiv .= "<button data-positionid='" . $nomination->positionID . "' id='button" . $nomination->positionID . "' onclick='showPosition(id)'>" . $nomination->positionName . "</button>";
+		}
+	}
+
+	$buttonDiv .= "<button id='submit' onclick='submit()'>Submit Section</button>";
+	$buttonDiv .= "</div>";
+
+	echo $buttonDiv;
+
+	echo "<span><p>Please rank the entries with your most preferred entry at the top and your least preferred at the bottom.</p></span>";
+	echo "
+		<script>
+			var first = '" . $first . "';
+		</script>
+		<div id='nominationDiv'></div>"; 
+} 
+//nomination page
+else {
 	echo "<script src='/voting/nominate.js'></script>";
+	echo "<script src='/ajaxfileupload.js'></script>";
+
 	$select = "<select id='roleSelect'>";
 	foreach($election as $position){
 		if(!isset($first)){
