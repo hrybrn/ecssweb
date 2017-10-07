@@ -77,11 +77,14 @@ function submit() {
 		intsInOrder.push(parseInt(this));
 	});
 
+	// get value of csrf token
+	var csrftoken = $('meta[name=csrftoken]').attr('content');
+
 	$.ajax({
 		url: "/voting/submitVote.php",
 		type: 'post',
 		dataType: 'json',
-		data: { 'entryData': intsInOrder, 'positionID': positionID },
+		data: { 'entryData': intsInOrder, 'positionID': positionID, 'csrftoken': csrftoken },
 		success: function (result) {
 			if(result.status){
 				$("#button" + positionID).remove();
