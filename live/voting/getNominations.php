@@ -79,4 +79,6 @@ while($row = $statement->fetchObject()){
     $result[] = $row;
 }
 
+shuffle($result);
+
 echo json_encode(array('status' => true, 'data' => $result));

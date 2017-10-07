@@ -25,8 +25,8 @@ function showPosition(buttonid) {
 			}
 
 			$.each(nominations.data, function () {
-				var div = "<div id='" + this.nominationID + "' class='group'><h3>" + this.nominationName + "<img class='dragme'></h3>";
-				div += "<div data-nominationid='" + this.nominationID + "'><p>" + this.manifesto + "</p>";
+				var div = "<div id='" + this.nominationID + "' class='group'><h3 style='text-align: center;'>" + this.nominationName + "<img class='dragme'></h3>";
+				div += "<div class='content' data-nominationid='" + this.nominationID + "'><p>" + this.manifesto + "</p>";
 				div += "<image src='/nominations/" + this.image + "'</div></div>";
 
 				$('#nominationDiv').append(div);
@@ -50,7 +50,7 @@ function showPosition(buttonid) {
 			$("#nominationDiv").accordion({
 				collapsible: true,
 				header: "> div > h3",
-				autoheight: false
+				heightStyle: "content"
 			}).sortable({
 				axis: "y",
 				handle: ".dragme",
