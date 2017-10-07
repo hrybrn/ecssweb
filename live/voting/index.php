@@ -61,7 +61,7 @@ $voting = false;
     <?php
     setTextDomain('title');
     ?>
-    <title><?= _('Home') ?> | ECSS</title>
+    <title><?= _('Voting') ?> | ECSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css" />
 </head>
