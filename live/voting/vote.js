@@ -25,9 +25,9 @@ function showPosition(buttonid) {
 			}
 
 			$.each(nominations.data, function () {
-				var div = "<div id='" + this.nominationID + "' class='group'><h3 style='text-align: center;'>" + this.nominationName + "<img class='dragme'></h3>";
+				var div = "<div id='" + this.nominationID + "' class='group'><h3 class='unselectable' style='text-align: center;'>" + this.nominationName + "<img class='dragme'></h3>";
 				div += "<div class='content' data-nominationid='" + this.nominationID + "'><p>" + this.manifesto + "</p>";
-				div += "<image src='/nominations/" + this.image + "'</div></div>";
+				div += "<image class='unselectable' src='/nominations/" + this.image + "'</div></div>";
 
 				$('#nominationDiv').append(div);
 
