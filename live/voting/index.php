@@ -139,7 +139,7 @@ if($voting){
 
 	echo $buttonDiv;
 
-	echo "<span><p>Please rank the entries with your most preferred entry at the top and your least preferred at the bottom.</p></span>";
+	echo "<p class='intro'>Please rank the entries with your most preferred entry at the top and your least preferred at the bottom.</p>";
 	echo "
 		<script>
 			var first = '" . $first . "';
@@ -171,3 +171,6 @@ else {
 			var userInfo = " . json_encode($userInfo) . ";
 		</script>";
 }
+?>
+</body>
+</html>

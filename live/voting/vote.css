@@ -16,8 +16,9 @@
 	float: right;
 }
 
-span {
+.intro {
     text-align: center;
+    margin: 5px;
 }
 
 .group {
