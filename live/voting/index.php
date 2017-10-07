@@ -120,8 +120,11 @@ if($voting){
 	echo '<link rel="stylesheet" type="text/css" href="/voting/vote.css" />';
 	echo '<link rel="stylesheet" type="text/css" href="/jquery-ui.css" />';
 
+	// auth status
+    echo '<p class="authStatus">Hello, ' . $userInfo['username'] .' <a href="' . $relPath . 'auth/logout.php" class="button">Logout</a></p>';
+
 	//create button div
-	$buttonDiv = "<div id='buttonDiv'>";
+	$buttonDiv = "<div id='buttonDiv' class='buttonDiv'>";
 	$used = [];
 	foreach($election as $nomination){
 		if(!in_array($nomination->positionName, $used)){
@@ -139,7 +142,7 @@ if($voting){
 
 	echo $buttonDiv;
 
-	echo "<p class='intro'>Please rank the entries with your most preferred entry at the top and your least preferred at the bottom.</p>";
+	echo "<p class='intro'>Please rank the entries with your most preferred entry at the top and your least preferred at the bottom. Click headers to view their details.</p>";
 	echo "
 		<script>
 			var first = '" . $first . "';

@@ -16,9 +16,22 @@
 	float: right;
 }
 
+.authStatus {
+    padding: 10px;
+    margin: 0;
+}
+
+.authStatus {
+    text-align: right;
+    background: #f6f6f6;
+}
+
+.intro, .buttonDiv {
+    margin: 10px;
+}
+
 .intro {
     text-align: center;
-    margin: 5px;
 }
 
 .group {

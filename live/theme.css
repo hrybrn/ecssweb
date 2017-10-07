@@ -169,30 +169,29 @@ a:hover {
     color: red;
 }
 
-button {
-    border-radius: 5px;
-    border: solid #ffffff;
-    padding-top: 10px;
-    padding-bottom:10px;
-    padding-left: 10px; 
-    padding-right: 10px;
+button, .button {
+    border-radius: 2px;
+    border: 0;
+    padding: 10px;
     background-color: darkred;
     color: #ffffff;
-    size: 14px;
+    font-size: 12px;
     margin: 5px;
     transition: background-color 0.1s linear;
-
+    display: inline-block;
+    cursor: pointer;
 }
 
 button:focus {
     outline:0;
 }
 
-button:hover {
+button:hover, .button:hover{
     background-color: #D82129;
+    color: white;
 }
 
-button:active {
+button:active, .button:active {
     background-color: #ff5555;
 }
 
