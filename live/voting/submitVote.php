@@ -55,7 +55,7 @@ if($emailParts[1] != "ecs.soton.ac.uk"){
 session_name('csrf_protection');
 session_start();
 if (!hash_equals($_SESSION['csrftoken'], $_POST['csrftoken'])) {
-    echo json_encode(['status' => false, 'message' => "Authorise failed."]);
+    echo json_encode(['status' => false, 'message' => "Authorization failed."]);
     exit();
 }
 
