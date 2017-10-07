@@ -26,12 +26,18 @@
     background: #f6f6f6;
 }
 
-.intro, .buttonDiv {
+.intro, .buttonDiv, #message {
+    clear: both;
     margin: 10px;
 }
 
-.intro {
+.intro, #message {
     text-align: center;
+}
+
+#nominationDiv {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .group {
