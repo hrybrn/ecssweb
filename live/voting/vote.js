@@ -50,7 +50,8 @@ function showPosition(buttonid) {
 			$("#nominationDiv").accordion({
 				collapsible: true,
 				header: "> div > h3",
-				autoheight: false
+				heightStyle: "content",
+				active: false
 			}).sortable({
 				axis: "y",
 				handle: ".dragme",
