@@ -90,7 +90,7 @@ function submit() {
 				$("#button" + positionID).remove();
 				$(".group").remove();
 
-				$("#nominationDiv").append("<span id='message'><p>" + result.message + "</p></span>");
+                $("#nominationDiv").append("<p id='message'>" + result.message + "</p>");
 			}
 		}
 	});
