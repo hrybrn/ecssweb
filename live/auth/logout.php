@@ -3,6 +3,10 @@ $relPath = "../";
 require_once($relPath . '../config/config.php');
 
 // logout
+// clear csrf token
+include_once($relPath . 'includes/destorySession.php');
+destorySession('csrf_protection');
+// logout from logon.soton.ac.uk
 if (!DEBUG) {
     require_once('/var/www/auth/lib/_autoload.php');
     $as = new SimpleSAML_Auth_Simple('default-sp');
