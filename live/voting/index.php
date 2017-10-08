@@ -36,6 +36,14 @@ if (DEBUG) {
     $attributes = $as->getAttributes();
 }
 
+// csrf token
+session_name('csrf_protection');
+session_start();
+if (empty($_SESSION['csrftoken'])) {
+    $_SESSION['csrftoken'] = bin2hex(random_bytes(32));
+}
+$csrftoken = $_SESSION['csrftoken'];
+
 $userInfo = array(
 	'username' => $attributes["http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"][0],
 	'groups' => $attributes["http://schemas.xmlsoap.org/claims/Group"],
@@ -63,6 +71,7 @@ $voting = false;
     ?>
     <title><?= _('Voting') ?> | ECSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrftoken" content="<?= $csrftoken ?>">
     <link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css" />
 </head>
 <body>
