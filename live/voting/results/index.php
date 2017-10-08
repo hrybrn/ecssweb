@@ -83,7 +83,11 @@ include_once($relPath . "navbar/navbar.php");
 echo getNavBar();
 
 $sql = "SELECT COUNT(DISTINCT v.voteUsername) AS count
-        FROM vote AS v;";
+        FROM (vote AS v
+        INNER JOIN nomination AS n ON v.nominationID = n.nominationID)
+        INNER JOIN election AS e ON n.electionID = e.electionID
+        WHERE datetime(e.votingStartDate) < datetime('now')
+        AND datetime(e.votingEndDate) > datetime('now');";
 
 $statement = $db->query($sql);
 
