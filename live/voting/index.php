@@ -151,7 +151,7 @@ if($voting){
 
 	echo $buttonDiv;
 
-	echo "<p class='intro'>Please rank the entries with your most preferred entry at the top and your least preferred at the bottom. Click headers to view their details.</p>";
+	echo "<p class='intro'>This year ECSS will be selecting a charity to support throughout the year by doing sponsored runs, bake sales and more. We need your help to decide on which cause to support, and doing so is easy. Please rank the entries with your most preferred entry at the top and your least preferred at the bottom. Click headers to view their details. Voting closes on Friday 13th October at 16:00.</p>";
 	echo "
 		<script>
 			var first = '" . $first . "';
