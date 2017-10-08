@@ -54,8 +54,8 @@ $userInfo = array(
 
 $emailParts = explode("@", $userInfo['email']);
 
-if($emailParts[1] != "ecs.soton.ac.uk"){
-	echo "You're not a member of ECS";
+if(!in_array("fpStudent", $userInfo['groups'])){
+	echo json_encode(['status' => false, 'message' => "You're not a member of ECS"]);
 	exit;
 }
 
@@ -69,7 +69,7 @@ $voting = false;
     <?php
     setTextDomain('title');
     ?>
-    <title><?= _('Voting') ?> | ECSS</title>
+    <title>Voting | ECSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrftoken" content="<?= $csrftoken ?>">
     <link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css" />

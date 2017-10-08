@@ -46,7 +46,7 @@ $userInfo = array(
 
 $emailParts = explode("@", $userInfo['email']);
 
-if($emailParts[1] != "ecs.soton.ac.uk"){
+if(!in_array("fpStudent", $userInfo['groups'])){
 	echo json_encode(['status' => false, 'message' => "You're not a member of ECS"]);
 	exit;
 }
