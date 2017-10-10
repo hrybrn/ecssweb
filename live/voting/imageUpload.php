@@ -52,7 +52,7 @@ $userInfo = array(
 
 $emailParts = explode("@", $userInfo['email']);
 
-if(!in_array("fpStudent", $userInfo['groups'])){
+if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo['groups']))){
 	echo json_encode(['status' => false, 'message' => "You're not a member of ECS"]);
 	exit;
 }
