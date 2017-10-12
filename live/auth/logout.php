@@ -12,7 +12,12 @@ if (!DEBUG) {
     $as = new SimpleSAML_Auth_Simple('default-sp');
     // logout if logged in
     if ($as->isAuthenticated()) {
-        $as->logout('https://society.ecs.soton.ac.uk/auth/logout.php');
+        //$as->logout('https://society.ecs.soton.ac.uk/auth/logout.php'); // this does not work for now
+        /*
+        work around. actually sign out from logon.soton.ac.uk and society.ecs.soton.ac.uk SimpleSamlPhp,
+        but still show 'error occurred' sometimes
+        */
+        header('Location: https://logon.soton.ac.uk/adfs/ls/?wa=wsignout1.0');
         exit();
     }
 }
