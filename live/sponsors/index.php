@@ -40,7 +40,7 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
 <title><?= _("Sponsors") ?> | ECSS</title>
 
 <script> var relPath = "<?= $relPath ?>";</script>
-<script src="<?=$relPath ?>sponsors/sponsors.js"></script>
+<script src="<?=$relPath ?>sponsors/buttonControl.js"></script>
 </head>
 <body>
 <div id="sponsorsPageContainer" class="pageContainer">
