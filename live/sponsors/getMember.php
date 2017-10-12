@@ -29,3 +29,17 @@ function assembleData() {
             }
     }
 }
+
+$dbLoc = realpath($relPath . "../db/ecss.db");
+$db = new PDO('sqlite:' . $dbLoc);
+
+$sql = "INSERT INTO sponsorLog(sponsorName, sponsorLogTime) VALUES(:sponsorName, :sponsorLogTime);";
+
+$time = new DateTime('now');
+$time = $time->format('Y-m-d H:i:s');
+
+$statement = $db->prepare($sql);
+$statement->execute([
+    ":sponsorName" => $name,
+    ":sponsorLogTime" => $time
+]);
