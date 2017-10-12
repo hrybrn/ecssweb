@@ -66,7 +66,6 @@ function showMember(id) {
 }
 
 $(document).ready(function () {
-    $('#button0').prop("hidden",true);
     if (window.location.hash) {
         var name = window.location.hash.substr(1);
         name = name.replace(/_/g, " ");
@@ -74,4 +73,6 @@ $(document).ready(function () {
     } else {
         showMember("0");
     }
+    
+    $('#button0').remove();
 });
