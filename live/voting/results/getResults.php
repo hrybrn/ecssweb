@@ -68,6 +68,20 @@ $electionID = $_GET['electionID'];
 
 $sql = "SELECT *
         FROM election AS e
+        INNER JOIN electionType AS et
+        ON e.electionTypeID = et.electionTypeID
+        WHERE datetime(e.votingEndDate) < datetime('now')
+        AND e.electionID = :electionID;";
+
+$statement = $db->prepare($sql);
+$statement->execute([':electionID']);
+if(!$statement->fetchObject()){
+    echo json_encode(["status" => false, "message" => "This election has not finished yet! wait a bit!"]);
+    exit;
+}
+
+$sql = "SELECT *
+        FROM election AS e
         INNER JOIN position AS p
         ON e.electionTypeID = p.electionTypeID
         WHERE e.electionID = :electionID;";
