@@ -1,7 +1,8 @@
 function showTask(id){
 	$.ajax({
-		url: '/voting/results/getResults.php?electionID=' + id,
+		url: '/voting/results/getResults.php',
 		type: 'get',
+        data: {'electionID': id},
         dataType: 'json',
         success: function (results) {
         	if(results.status){
@@ -28,8 +29,8 @@ function showTask(id){
 
 function load(){
 	$('#taskSelect').change(function(){
-		showTask($('#taskSelect').find(':selected').val());
+		showTask($('#electionSelect').find(':selected').val());
 	});
 
-	showTask($('#taskSelect').find(':selected').val());
+	showTask($('#electionSelect').find(':selected').val());
 }

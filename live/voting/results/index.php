@@ -103,7 +103,7 @@ while($election = $statement->fetchObject()){
     $elections[$election->electionID] = $election;
 }
 
-echo "<select>";
+echo "<select id='electionSelect'>";
 
 foreach($elections as $electionID => $election){
     $year = new DateTime($election->votingEndDate);
