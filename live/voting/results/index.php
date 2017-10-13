@@ -92,7 +92,7 @@ $sql = "SELECT n.nominationName, v.ranking
         WHERE n.positionID = 3
         AND n.electionID = 1;";
 $res = "<p>";
-$statement = $db->prepare($sql);
+$statement = $db->query($sql);
 while($row = $statement->fetchObject()){
     $res .= $row->nominationName . "," . $row->ranking;
 }
