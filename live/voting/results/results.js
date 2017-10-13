@@ -1,8 +1,7 @@
 function showTask(id){
 	$.ajax({
-		url: '/voting/results/getResults.php',
+		url: '/voting/results/getResults.php?electionID=' + id,
 		type: 'get',
-        data: {'electionID': id},
         dataType: 'json',
         success: function (results) {
         	if(results.status){
@@ -18,7 +17,7 @@ function showTask(id){
 	        		table += "</table>";
 	        		overall += table;
 	        	});
-	        	
+
         		$('#resultsDiv').html(overall);
         	} else {
         		$('#resultsDiv').html("<p class='errorMessage'>" + results.message + "</p>");
