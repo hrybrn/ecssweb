@@ -6,14 +6,20 @@ function showTask(id){
         dataType: 'json',
         success: function (results) {
         	if(results.status){
+        		var overall = "";
+        		$.each(results.standings, function(positionName, standings){
+        			var table = "<table><tr><th colspan='2'>" + positionName + "</th></tr>";
+	        		table += "<tr><th>Candidate</th><th>Percentage</th></tr>";
 
-        		var table = "<table><tr><th>Candidate</th><th>Percentage</th></tr>";
-        		for(var i = 0; i < results.standings.length; i++){
-        			table += "<tr><td>" + results.standings[i].nominationName + "</td><td>" + results.standings[i].percentage + "</td></tr>";
-        		}
+	        		for(var i = 0; i < standings.length; i++){
+	        			table += "<tr><td>" + standings[i].nominationName + "</td><td>" + standings[i].percentage + "</td></tr>";
+	        		}
 
-        		table += "</table>";
-        		$('#resultsDiv').html(table);
+	        		table += "</table>";
+	        		overall += table;
+	        	});
+	        	
+        		$('#resultsDiv').html(overall);
         	} else {
         		$('#resultsDiv').html("<p class='errorMessage'>" + results.message + "</p>");
         	}

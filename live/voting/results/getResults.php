@@ -64,27 +64,62 @@ if(!$user = $statement->fetchObject()){
     exit;
 }
 
-$sql = "SELECT count(*) AS count
-        FROM vote AS v
-        WHERE v.ranking = 0;";
+$electionID = $_GET['electionID'];
 
-$statement = $db->query($sql);
-$numberOfVotes = $statement->fetchObject()->count;
+$sql = "SELECT *
+        FROM election AS e
+        INNER JOIN position AS p
+        ON e.electionTypeID = p.electionTypeID
+        WHERE e.electionID = :electionID;";
 
-$sql = "SELECT n.nominationName, count(*) AS count
-        from vote as v
-        inner join nomination as n
-        on v.nominationID = n.nominationID
-        where v.ranking = 0
-        group by v.nominationID
-        order by count desc;";
+$statement = $db->prepare($sql);
+$statement->execute([':electionID' => $electionID]);
+$positions = [];
 
-$statement = $db->query($sql);
+while($position = $statement->fetchObject()){
+    $positions[] = $position;
+}
+
 $standings = [];
+foreach($positions as $position){
+    $sql = "SELECT count(*) AS count
+        FROM vote AS v
+        INNER JOIN nomination AS n
+        ON v.nominationID = n.nominationID
+        WHERE v.ranking = 0
+        AND n.electionID = :electionID
+        AND n.positionID = :positionID;";
 
-while($row = $statement->fetchObject()){
-    $row->percentage = ($row->count / $numberOfVotes * 100) . "%";
-    $standings[] = $row;
+    $statement = $db->prepare($sql);
+    $statement->execute([':electionID' => $electionID, ':positionID' => $position->positionID]);
+
+    if (!$numberOfVotes = $statement->fetchObject()){
+        echo json_encode(["status" => false, "message" => "no votes in this election"]);
+        exit;
+    }
+
+    $numberOfVotes = $numberOfVotes->count;
+
+    $sql = "SELECT n.nominationName, count(*) AS count
+            from vote as v
+            inner join nomination as n
+            on v.nominationID = n.nominationID
+            where v.ranking = 0
+            and n.positionID = :positionID
+            group by v.nominationID
+            order by count desc;";
+
+    $statement = $db->prepare($sql);
+    $statement->execute([':positionID' => $position->positionID]);
+
+    $section = [];
+    while($row = $statement->fetchObject()){
+        $row->percentage = ($row->count / $numberOfVotes * 100);
+        $row->percentage = number_format((float)$row->percentage, 2, '.', '') . "%";  
+        $section[] = $row;
+    }
+
+    $standings[$position->positionName] = $section;
 }
 
 echo json_encode(["status" => true, "standings" => $standings]);
