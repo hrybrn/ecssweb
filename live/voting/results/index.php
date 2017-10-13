@@ -90,7 +90,7 @@ $sql = "SELECT n.nominationName, v.ranking
         INNER JOIN nomination AS n
         ON v.nominationID = n.nominationID
         WHERE n.positionID = 3
-        AND n.electionID = 1;"
+        AND n.electionID = 1;";
 
 $statement = $db->prepare($sql);
 while($row = $statement->fetchObject()){
