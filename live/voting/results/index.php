@@ -52,15 +52,8 @@ $userInfo = array(
 	'lastName' => $attributes["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"][0]
 );
 
-$sql = "SELECT a.adminID
-        FROM admin AS a
-        WHERE a.username = :username;";
-
-$statement = $db->prepare($sql);
-$statement->execute(array(':username' => $userInfo['username']));
-
-if(!$user = $statement->fetchObject()){
-    echo "user " . $username . " doesn't have permissions for this page";
+if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo['groups']))){
+    echo json_encode(['status' => false, 'message' => "You're not a member of ECS"]);
     exit;
 }
 ?>
@@ -90,26 +83,16 @@ if(!$user = $statement->fetchObject()){
 include_once($relPath . "navbar/navbar.php");
 echo getNavBar();
 
-$sql = "SELECT *
-        FROM election AS e
-        INNER JOIN electionType AS et
-        ON e.electionTypeID = et.electionTypeID
-        WHERE datetime(e.votingEndDate) < datetime('now');";
+$electionID = 1;
 
-$statement = $db->query($sql);
+$sql = "SELECT n.nominationName, v.ranking
+        FROM vote AS v
+        INNER JOIN nomination AS n
+        ON v.nominationID = n.nominationID
+        WHERE n.positionID = 3
+        AND n.electionID = 1;"
 
-$elections = [];
-while($election = $statement->fetchObject()){
-    $elections[$election->electionID] = $election;
+$statement = $db->prepare($sql);
+while($row = $statement->fetchObject()){
+    echo $row->nominationName . "," . $row->ranking;
 }
-
-echo "<select id='electionSelect'>";
-
-foreach($elections as $electionID => $election){
-    $year = new DateTime($election->votingEndDate);
-    $year = $year->format("Y");
-    echo "<option value='" . $electionID . "'>" . $election->electionName . " " . $year . "</option>";
-}
-
-echo "</select>";
-echo "<div id='resultsDiv'></div>";
