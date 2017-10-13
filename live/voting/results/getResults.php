@@ -75,7 +75,7 @@ $sql = "SELECT *
 
 $statement = $db->prepare($sql);
 $statement->execute([':electionID']);
-if(!$statement->fetchObject()){
+if(!($statement->fetchObject())){
     echo json_encode(["status" => false, "message" => "This election has not finished yet! wait a bit!"]);
     exit;
 }
