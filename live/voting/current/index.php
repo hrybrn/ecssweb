@@ -63,6 +63,7 @@ if(!$user = $statement->fetchObject()){
     echo "user " . $username . " doesn't have permissions for this page";
     exit;
 }
+
 ?>
 <!doctype html>
 <html>
@@ -77,38 +78,19 @@ if(!$user = $statement->fetchObject()){
     <link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css" />
 </head>
 <body>
-<script src="/voting/results/results.js" type="text/javascript"></script>
-<script src="/jquery.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        load();
-    });
-</script>
-
 <?php
 include_once($relPath . "navbar/navbar.php");
 echo getNavBar();
 
-$sql = "SELECT *
-        FROM election AS e
-        INNER JOIN electionType AS et
-        ON e.electionTypeID = et.electionTypeID
-        WHERE datetime(e.votingEndDate) < datetime('now');";
+$sql = "SELECT COUNT(DISTINCT v.voteUsername) AS count
+        FROM (vote AS v
+        INNER JOIN nomination AS n ON v.nominationID = n.nominationID)
+        INNER JOIN election AS e ON n.electionID = e.electionID
+        WHERE datetime(e.votingStartDate) < datetime('now')
+        AND datetime(e.votingEndDate) > datetime('now');";
 
 $statement = $db->query($sql);
 
-$elections = [];
-while($election = $statement->fetchObject()){
-    $elections[$election->electionID] = $election;
-}
+$result = $statement->fetchObject()->count;
 
-echo "<select>";
-
-foreach($elections as $electionID => $election){
-    $year = new DateTime($election->votingEndDate);
-    $year = $year->format("Y");
-    echo "<option value='" . $electionID . "'>" . $election->electionName . " " . $year . "</option>";
-}
-
-echo "</select>";
+echo "Number of voters: " . $result;

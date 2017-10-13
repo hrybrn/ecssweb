@@ -60,55 +60,31 @@ $statement = $db->prepare($sql);
 $statement->execute(array(':username' => $userInfo['username']));
 
 if(!$user = $statement->fetchObject()){
-    echo "user " . $username . " doesn't have permissions for this page";
+    echo json_encode(["status" => false, "message" => "user " . $username . " doesn't have permissions for this page"]);
     exit;
 }
-?>
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <?php
-    setTextDomain('title');
-    ?>
-    <title>Voting | ECSS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrftoken" content="<?= $csrftoken ?>">
-    <link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css" />
-</head>
-<body>
-<script src="/voting/results/results.js" type="text/javascript"></script>
-<script src="/jquery.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-    $(document).ready(function(){
-        load();
-    });
-</script>
-
-<?php
-include_once($relPath . "navbar/navbar.php");
-echo getNavBar();
-
-$sql = "SELECT *
-        FROM election AS e
-        INNER JOIN electionType AS et
-        ON e.electionTypeID = et.electionTypeID
-        WHERE datetime(e.votingEndDate) < datetime('now');";
+$sql = "SELECT count(*) AS count
+        FROM vote AS v
+        WHERE v.ranking = 0;";
 
 $statement = $db->query($sql);
+$numberOfVotes = $statement->fetchObject()->count;
 
-$elections = [];
-while($election = $statement->fetchObject()){
-    $elections[$election->electionID] = $election;
+$sql = "SELECT n.nominationName, count(*) AS count
+        from vote as v
+        inner join nomination as n
+        on v.nominationID = n.nominationID
+        where v.ranking = 0
+        group by v.nominationID
+        order by count desc;";
+
+$statement = $db->query($sql);
+$standings = [];
+
+while($row = $statement->fetchObject()){
+    $row->percentage = ($row->count / $numberOfVotes * 100) . "%";
+    $standings[] = $row;
 }
 
-echo "<select>";
-
-foreach($elections as $electionID => $election){
-    $year = new DateTime($election->votingEndDate);
-    $year = $year->format("Y");
-    echo "<option value='" . $electionID . "'>" . $election->electionName . " " . $year . "</option>";
-}
-
-echo "</select>";
+echo json_encode(["status" => true, "standings" => $standings]);
