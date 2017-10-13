@@ -94,7 +94,7 @@ $sql = "SELECT n.nominationName, v.ranking
 $res = "<p>";
 $statement = $db->query($sql);
 while($row = $statement->fetchObject()){
-    $res .= $row->nominationName . "," . $row->ranking;
+    $res .= $row->nominationName . "," . $row->ranking . "\n";
 }
 
 $res .= "</p>";
