@@ -112,3 +112,4 @@ foreach($elections as $electionID => $election){
 }
 
 echo "</select>";
+echo "<div id='resultsDiv'></div>";
