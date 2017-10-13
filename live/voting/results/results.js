@@ -2,7 +2,7 @@ function showTask(id){
 	$.ajax({
 		url: '/voting/results/getResults.php',
 		type: 'get',
-        data: {'electionID', id},
+        data: {'electionID': id},
         dataType: 'json',
         success: function (results) {
         	if(results.status){
