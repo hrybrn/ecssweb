@@ -91,13 +91,11 @@ $sql = "SELECT n.nominationName, v.ranking
         ON v.nominationID = n.nominationID
         WHERE n.positionID = 3
         AND n.electionID = 1;";
-$res = "<p>";
+$res = "";
 $statement = $db->query($sql);
 while($row = $statement->fetchObject()){
     $res .= $row->nominationName . "," . $row->ranking . "\n";
 }
-
-$res .= "</p>";
 
 $csv = fopen("results.csv", 'w');
 
