@@ -1,0 +1,20 @@
+p {
+	padding: 20px;
+}
+
+h3 {
+	padding: 20px;
+	text-align: center;
+}
+
+#currentRound {
+	text-align: center;
+	height: 350px;
+
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+#buttonDiv {
+	text-align: center;
+}

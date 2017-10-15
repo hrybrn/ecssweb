@@ -3,5 +3,6 @@
 
 # do not track uploads
 live/uploads/
+live/images/nominations/
 
 db/ecss\.db
