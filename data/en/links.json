@@ -9,7 +9,11 @@
         "Groups":"jumpstart/group",
         "Challenge Entries":"jumpstart/admin"
     },
-    "Voting":"voting",
+    "Voting": {
+        "default": "#",
+        "Nominations": "voting",
+        "Results": "voting/results"
+    },
     "Socials":"leaflet/?section=Socials&lang=en",
     "Games":"leaflet/?section=Games&lang=en",
     "Welfare":"leaflet/?section=Welfare&lang=en",
