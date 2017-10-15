@@ -25,12 +25,13 @@ echo getNavBar();
 ?>
 
 <h3>Final Results of the Charity Election</h3>
-
-<div id='currentRound'></div>
-<div id='buttonDiv'>
-    <button id='previous'>Previous Round</button>
-    <button id='next'>See The Rundown</button>
-    <button id='final'>Final Results</button>
+<div id='overallDiv'>
+    <div id='currentRound'></div>
+    <div id='buttonDiv'>
+        <button id='previous'>Previous Round</button>
+        <button id='next'>See The Rundown</button>
+        <button id='final'>Final Results</button>
+    </div>
 </div>
 
 <script type="text/javascript">

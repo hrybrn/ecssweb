@@ -8,10 +8,18 @@ h3 {
 }
 
 #currentRound {
-	text-align: center;
+	display: inline-block;
 	height: 350px;
+	text-align: center;
+	border-style: solid;
+	border-color: #881414;
 }
 
 #buttonDiv {
+	text-align: center;
+}
+
+#overallDiv {
+	margin: auto;
 	text-align: center;
 }
