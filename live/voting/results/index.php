@@ -26,7 +26,7 @@ echo getNavBar();
 
 <h3>Final Results of the Charity Election</h3>
 
-<span id='currentRound'></span>
+<div id='currentRound'></div>
 <div id='buttonDiv'>
     <button id='previous'>Previous Round</button>
     <button id='next'>See The Rundown</button>
