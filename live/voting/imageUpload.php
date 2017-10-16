@@ -60,7 +60,7 @@ if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo
 foreach($_FILES as $task => $file){
 	$target_file = $target_dir . basename($file["name"]);
 	$uploadOk = 1;
-	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 	// Check if image file is a actual image or fake image
 	if(isset($_POST["submit"])) {
 	    $check = getimagesize($file["tmp_name"]);
