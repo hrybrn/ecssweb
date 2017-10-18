@@ -1,5 +1,5 @@
 <?php
-$relPath = "../";
+$relPath = "../../";
 include_once ($relPath . 'includes/setLang.php');
 
 $dbLoc = realpath($relPath . "../db/ecss.db");
@@ -66,14 +66,18 @@ if($emailParts[1] != "ecs.soton.ac.uk"){
 <body>
 <script type="text/javascript" src='/jquery.js'></script>
 <script type="text/javascript" src='/shop/shop.js'></script>
-<script type="text/javascript" src='/static/slideshow.js'></script>
-<link rel="stylesheet" href="/shop/slideshow.css">
 <?php
 include_once($relPath . "navbar/navbar.php");
 echo getNavBar();
-?>
 
-<input type='text' id='searchBox'>
-<button id='searchButton'>Search</button>
+$itemID = $_GET['itemID'];
 
-<div id='itemDiv'></div>
+$sql = "SELECT *
+		FROM item AS i
+		WHERE i.itemID = :itemID";
+
+$statement = $db->prepare($sql);
+$statement->execute([':itemID' => $itemID]);
+$item = $statement->fetchObject();
+
+var_dump($item);

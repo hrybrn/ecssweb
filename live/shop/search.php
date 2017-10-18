@@ -50,30 +50,39 @@ if($emailParts[1] != "ecs.soton.ac.uk"){
 	echo "You're not a member of ECS";
 	exit;
 }
-?>
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <?php
-    setTextDomain('title');
-    ?>
-    <title>Shop | ECSS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/theme.css" />
-    <link rel="stylesheet" type="text/css" href="/shop/shop.css" />
-</head>
-<body>
-<script type="text/javascript" src='/jquery.js'></script>
-<script type="text/javascript" src='/shop/shop.js'></script>
-<script type="text/javascript" src='/static/slideshow.js'></script>
-<link rel="stylesheet" href="/shop/slideshow.css">
-<?php
-include_once($relPath . "navbar/navbar.php");
-echo getNavBar();
-?>
 
-<input type='text' id='searchBox'>
-<button id='searchButton'>Search</button>
+$search = $_GET['search'];
 
-<div id='itemDiv'></div>
+$results = produceResults($db, $search);
+
+if(empty($results)){
+    $results = produceResults($db, "");
+}
+
+
+
+echo json_encode(['status' => true, 'data' => $results]);
+
+
+function produceResults($db, $search){
+    $search = preg_replace('/\s+/', ' ', $search);
+
+    $sql = "SELECT *
+            FROM item AS i
+            INNER JOIN itemColour AS ic
+            ON i.itemID = ic.itemID
+            WHERE i.itemName LIKE '%' || trim(:name) || '%';";
+
+    $statement = $db->prepare($sql);
+    $statement->execute(array(':name' => $search));
+    $results = array();
+
+    while($rowObject = $statement->fetchObject()){
+        if(!isset($results[$rowObject->itemID])){
+            $results[$rowObject->itemID] = array();
+        }
+        $results[$rowObject->itemID][] = $rowObject;
+    }
+
+    return $results;
+}

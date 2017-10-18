@@ -1,5 +1,11 @@
-function Slideshow(container, imagesPaths) {
+function Slideshow(container, imagesPaths, interval) {
     var slideshow = this;
+
+    if(typeof interval == "undefined"){
+        interval = 5000;
+    }
+
+    this.updateTime(interval);
 
     this.container = container;
     this.imagesPaths = imagesPaths;
@@ -57,7 +63,13 @@ Slideshow.prototype.startSlideshow = function() {
     var slideshow = this;
     this.autoSlideshow = setInterval(function() {
         slideshow.nextPhoto(1);
-    }, 5000);
+    }, Slideshow.prototype.interval);
+}
+
+Slideshow.prototype.interval = 5000;
+
+Slideshow.prototype.updateTime = function(newTime){
+    Slideshow.prototype.interval = newTime;
 }
 
 Slideshow.prototype.nextPhoto = function(skip) {
