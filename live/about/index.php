@@ -16,6 +16,7 @@ include_once ($relPath . 'includes/setLang.php');
     <link rel="stylesheet" href="<?= $relPath ?>static/slideshow.css">
     <script src="<?= $relPath ?>jquery.js"></script>
     <script src="<?= $relPath ?>static/slideshow.js"></script>
+    <script src="/load-image.min.js"></script>
 </head>
 <body>
 <?php
