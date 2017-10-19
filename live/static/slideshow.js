@@ -54,8 +54,20 @@ function Slideshow(container, imagesPaths, interval) {
 }
 
 Slideshow.prototype.updateImage = function(imagePath) {
-    this.image.src = imagePath;
-    this.image.alt = "";
+    var slideshow = this;
+
+    var orientation = 0;
+
+    loadImage(imagePath, function(img){
+        $(slideshow.imageContainer).empty();
+        slideshow.image = img;
+        slideshow.imageContainer.appendChild(img);
+    }, {
+        contain: true,
+        meta: true,
+        canvas: true,
+        orientation: true
+    });
 }
 
 Slideshow.prototype.startSlideshow = function() {
@@ -63,7 +75,7 @@ Slideshow.prototype.startSlideshow = function() {
     var slideshow = this;
     this.autoSlideshow = setInterval(function() {
         slideshow.nextPhoto(1);
-    }, Slideshow.prototype.interval);
+    }, this.interval);
 }
 
 Slideshow.prototype.interval = 5000;

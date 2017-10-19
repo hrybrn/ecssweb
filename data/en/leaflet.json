@@ -5,11 +5,11 @@
         "Subsections": {
             "Alcoholic": {
                 "Text":"As does every society at university, we also run alcoholic events. Two white t-shirt socials a year, the Halloween house crawl, and pub golf are just a few of the nights we have to offer.",
-                "Image":"images/leaflet/social/dos.jpg"
+                "Slideshow":"images/leaflet/social/WhiteTee"
             },
             "Non-Alcoholic": {
                 "Text":"Not all of university is getting so drunk you forget your own name, and to accommodate that we run many non-alcoholic and more relaxed events. We have bowling, trips to scoops and pub quizzes planned so keep an eye out for those.",
-                "Image":"images/leaflet/social/uno.jpg"
+                "Slideshow":"images/leaflet/social/Scoops"
             }
         }   
     },
@@ -20,11 +20,11 @@
         "Subsections": {
             "Board Game Socials": {
                 "Text":"We run regular board game nights throughout the year. Bring your own games or play some of ours with games ranging from classics like Catan, to card games like Magic, to quick games like Coup and Werewolf. We have them all so pop along and join in!",
-                "Image":"images/leaflet/games/catan.png"
+                "Slideshow":"images/leaflet/games/GamesSoc/BoardGames"
             },
             "Video Game Socials": {
                 "Text":"Once a semester we book the large computer labs in Zepler to play games on. With every computer running Steam and our own TF2 server it’s a great way to meet people at Uni interested in the same gamers as you. In addition to the computers we also hook up consoles to the large TV’s so you can look forward to playing classics like MarioKart and Halo as well.",
-                "Image":"images/leaflet/games/vidya.jpg"
+                "Slideshow":"images/leaflet/games/GamesSoc/VideoGames"
             }
         }
     },
@@ -39,6 +39,17 @@
             },
             "People to talk to":{
                 "Text":"Solent Mind—Support and advice for mental heath issues <br>+44(0)23 8202 7810 <br><br>Samaritans—confidential, 24/7 and free call line that will listen to anything you want to say<br>116 123<br><br>First Support—a small team in student services who offer face-to-face appointments or calls for students dealing with crisis.<br>+44(0)23 8059 7488 OR firstsupport@soton.ac.uk <br><br>Tutors—The senior tutors are great for anything relating to the course and will help you sort out issues with your studies.<br>Contact Jules Field<br><br>Student Services– for urgent issues the security team will respond out of hours.<br>+44(0)23 8059 2811<br><br>Enabling Sevices—Appointments can be booked for help with learning difficulties at the front desk.<br>Health Service— The university health services can provide appointments for health and mental issues."
+            }
+        }
+    },
+
+    "Charity": {
+        "title":"Charity is ECSS",
+        "Overview":"This October we held a society wide vote for our charity of the year and the result is:<br><a href='https://www.southampton.ac.uk/youreit'>You&rsquo;re it &ndash; Southampton Centre for Cancer Immunology</a><br />Immunology is saving lives. Our groundbreaking research using the body&rsquo;s immune system to eradicate cancer is so powerful it can last a lifetime. A lifetime that can be so much longer. But revolutionary research needs revolutionary facilities. We need to raise &pound;25m to build a new, state-of-the-art Centre for Cancer Immunology, planned to officially open in spring/summer 2018. You can be part of the cure.<br /><br>There are many ways you can get fundraising yourself, some suggestions are:</p><p><br />- Shaving your head, waxing or any form of style transformation<br />- Sponsored run walk or even skip<br />- Give up your favorite treat</p>",
+        "Subsections": {
+            "About You're It": {
+                "Text":"The University of Southampton leads the UK in cancer immunology research. Our exciting discoveries are moving out of the laboratory into clinical trials, where they are already making a world of difference to people with cancer. We are seeing real success. But there is much more to do.<br />Our major campaign will fund the first dedicated cancer immunology centre in the UK. Connected to leading institutions worldwide, this cutting-edge research hub will enable our interdisciplinary teams to expand clinical trials, explore new areas and develop lifesaving drugs. This is the biggest fundraising campaign the University has ever undertaken and you can be a part of it. Thanks to philanthropic support, developments for our new building are well under way. But we need to reach our &pound;25m target to make this life-changing Centre a reality. Join us and support our campaign; together we will save more lives from cancer.<br />Your immune system. Your support. The cure for cancer? <a href='https://www.southampton.ac.uk/youreit'>You&rsquo;re it</a><br />We are very proud to be supporting such a good cause and are aiming to hold several fundraisers tis year to help support the cause.",
+                "Image":"images/leaflet/welfare/youreit.jpg"
             }
         }
     },

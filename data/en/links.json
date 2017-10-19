@@ -16,7 +16,11 @@
     },
     "Socials":"leaflet/?section=Socials&lang=en",
     "Games":"leaflet/?section=Games&lang=en",
-    "Welfare":"leaflet/?section=Welfare&lang=en",
+    "Welfare":{
+        "default": "#",
+        "Overview":"leaflet/?section=Welfare&lang=en",
+        "Charity":"leaflet/?section=Charity&lang=en"
+    },
     "Sports":{
         "default": "leaflet/?lang=en&section=Sports",
         "Football": "leaflet/?lang=en&section=Football",

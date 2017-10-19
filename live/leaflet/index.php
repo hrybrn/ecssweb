@@ -56,27 +56,30 @@ foreach ($sectionData as $key => $value) {
 
                     foreach ($unfiltered as $file) {
                         if($file != '.' && $file != '..'){
-                            $files[] = $relPath . "images/leaflet/" . $lower . "/slideshow/" . $file;
+                            $files[] = $relPath . $subsubvalue . "/" . $file;
                         }
                     }
 
+                    $subkey = preg_replace("/ /", "", $subkey);
+                    $subkey = preg_replace("/-/", "", $subkey);
+
                     $body .= "
                         <script>
-                            var files = " . json_encode($files) . ";
+                            var " . $subkey . " = " . json_encode($files) . ";
                             var section = '" . $section . "';
                         </script>
                         ";
 
                     $imageClass = "";
 
-                    if($section == "Football"){
+                    if($section == "Football" || $section == "Games" || $section == "Socials"){
                         $imageClass = "subsectionImage";
                     }
 
                     $slideshowId = "slideshow" . $subkey;
                     $body .= "<div id=\"" . $slideshowId . "\" class=\"slideshow " . $imageClass . "\">";
                     $body .= "</div>";
-                    $body .= "<script>$(document).ready(function() { var slideshow = new Slideshow(document.getElementById(\"" . $slideshowId . "\"), files); });</script>";
+                    $body .= "<script>$(document).ready(function() { var slideshow = new Slideshow(document.getElementById(\"" . $slideshowId . "\"), " . $subkey . "); });</script>";
                 }
             }
 
@@ -90,11 +93,12 @@ foreach ($sectionData as $key => $value) {
 <meta charset="utf-8">
 <title><?= $sectionData['title'] ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="<?= $relPath ?>theme.css"/>
-<link rel="stylesheet" type="text/css" href="<?= $relPath ?>/leaflet/leaflet.css"/>
-<link rel="stylesheet" href="<?= $relPath ?>static/slideshow.css">
-<script src="<?= $relPath ?>jquery.js"></script>
-<script src="<?= $relPath ?>static/slideshow.js"></script>
+<link rel="stylesheet" type="text/css" href="/theme.css"/>
+<link rel="stylesheet" type="text/css" href="/leaflet/leaflet.css"/>
+<link rel="stylesheet" href="/static/slideshow.css">
+<script src="/jquery.js"></script>
+<script src="/load-image.min.js"></script>
+<script src="/static/slideshow.js"></script>
 <body>
 <?= getNavBar(); ?>
 <?= $body ?>
