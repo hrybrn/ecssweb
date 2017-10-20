@@ -33,7 +33,7 @@ function search(search){
 						colours.push(this.itemColourImage);
 					});
 
-					var item = "<div id='item" + this[0].itemID + "' class='item' onclick='window.location = \"/shop/item?itemID=" + this.itemID + "\";'>";
+					var item = "<div id='item" + this[0].itemID + "' class='item' onclick='window.location = \"/shop/item?itemID=" + this[0].itemID + "\";'>";
 					item += "<h3 class='itemName'>" + this[0].itemName + "</h3>";
 					item += "<div id='" + slideshowID + "'></div>";
 					item += "</div>";
