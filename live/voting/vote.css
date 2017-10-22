@@ -80,3 +80,7 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+#nominationDescription {
+    margin-left: 10%;
+}
