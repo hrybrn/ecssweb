@@ -163,15 +163,6 @@ else {
 	echo "<script src='/voting/nominate.js'></script>";
 	echo "<script src='/ajaxfileupload.js'></script>";
 
-	echo "<div id='nominationDescription'><p>The MSc Rep and PhD Rep positions are essential in ECSS. As a society that aims to cater for the entire department, it is very important that the MSc and PhD communities are represented on committee. Furthermore, our MSc and PhD focused events are heavily reliant on these roles being filled.</p>
-	<p>To summarise, the responsibility of the reps would be:</p>
-	
-	<p>- Attend committee meetings, ensuring that events ran by the society attract MSc/PhD students</p>
-	
-	<p>- With assistance from the rest of the committee, plan MSc/PhD specific events for ECS students</p>
-	
-	<p>Elections close on Wednesday 25th October at 4pm.</p></div>";
-
 	$select = "<select id='roleSelect'>";
 	foreach($election as $position){
 		if(!isset($first)){
@@ -185,6 +176,15 @@ else {
 
 	echo $select;
 	echo "<button id='submitButton' onclick='submit()'>Submit</button>";
+
+	echo "<div id='nominationDescription'><p>The MSc Rep and PhD Rep positions are essential in ECSS. As a society that aims to cater for the entire department, it is very important that the MSc and PhD communities are represented on committee. Furthermore, our MSc and PhD focused events are heavily reliant on these roles being filled.</p>
+	<p>To summarise, the responsibility of the reps would be:</p>
+	
+	<p>- Attend committee meetings, ensuring that events ran by the society attract MSc/PhD students</p>
+	
+	<p>- With assistance from the rest of the committee, plan MSc/PhD specific events for ECS students</p>
+	
+	<p>Elections close on Wednesday 25th October at 4pm.</p></div>";
 
 	echo "
 		<script>
