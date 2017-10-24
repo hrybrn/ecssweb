@@ -50,6 +50,18 @@ if($emailParts[1] != "ecs.soton.ac.uk"){
 	echo "You're not a member of ECS";
 	exit;
 }
+
+$sql = "SELECT a.adminID
+FROM admin AS a
+WHERE a.username = :username;";
+
+$statement = $db->prepare($sql);
+$statement->execute(array(':username' => $userInfo['username']));
+
+if(!$user = $statement->fetchObject()){
+echo "user " . $username . " doesn't have permissions for this page";
+exit;
+
 ?>
 <!doctype html>
 <html>
@@ -119,6 +131,10 @@ while($row = $statement->fetchObject()){
     </h3>
 
     <p>
+        <?= $items[0]->itemPrice ?>
+    </p>
+
+    <p>
         <?= $items[0]->itemDesc ?>
     </p>
 
@@ -128,8 +144,8 @@ while($row = $statement->fetchObject()){
                 Colour
             </td>
             <td>
-                <select>
-                    <?
+                <select id='colourSelect'>
+                    <?php
                         foreach($items as $item){
                             echo "<option value=" . $item->itemColourID . ">" . $item->itemColourName . "</option>";
                         }
@@ -142,8 +158,8 @@ while($row = $statement->fetchObject()){
                 Size
             </td>
             <td>
-                <select>
-                    <?
+                <select id='sizeSelect'>
+                    <?php
                         foreach($sizes as $size){
                             echo "<option value=" . $size->sizeID . ">" . $size->sizeName . "</option>";
                         }
@@ -152,9 +168,32 @@ while($row = $statement->fetchObject()){
             </td>
         </tr>
     </table>
-    <button id='buy'>Buy</button>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="VVBTZS6SKRHUQ">
+
+        <input type="hidden" name="item_name" value="<?= $items[0]->itemName ?>">
+        <input type="hidden" name="item_number" value="<?= $itemID ?>">
+
+        <input type="hidden" name="quantity" value="1">
+        <input type="hidden" name="amount" value=<?= preg_replace("/£/", "", $items[0]->itemPrice) ?>>  
+
+        <input type="hidden" name="on0" value="Colour">        
+        <input type="hidden" name="os0" value="<?= $items[0]->itemColourName ?>" id='colour'>
+
+        <input type="hidden" name="on1" value="Size">  
+        <input type="hidden" name="os1" value="<?= $sizes[0]->sizeName ?>" id='size'>
+
+        <input type="hidden" name="on2" value="Username">  
+        <input type="hidden" name="os2" value="<?= $userInfo['username'] ?>">
+        
+        <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+    </form>
+
     <p>
-        Payments authenticated through iSolutions and Paypal.
+        Payments authenticated by iSolutions, and paid through Paypal.
+    </p>
 </div>
 
 <script type="text/javascript">
@@ -162,4 +201,15 @@ while($row = $statement->fetchObject()){
     var indexedFiles = <?= json_encode($indexedFiles) ?>;
     
     var slideshow = new Slideshow(document.getElementById("itemSlideshow"), files, 2000);
+
+    $('#sizeSelect').change(function(){
+        var size = $('#sizeSelect').find(':selected').html();
+
+        $('#size').val(size);
+    });
+
+    $('#colourSelect').change(function(){
+        var colour = $('#colourSelect').find(':selected').html();
+        $('#colour').val(colour);
+    });
 </script>
