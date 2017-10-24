@@ -104,8 +104,8 @@ $indexedFiles = [];
 
 while($row = $statement->fetchObject()){
     $items[] = $row;
-    $files[] = "../" . $row->itemColourImage;
-    $indexedFiles[$row->itemColourID] = "../" . $row->itemColourImage;
+    $files[] = "../../" . $row->itemColourImage;
+    $indexedFiles[$row->itemColourID] = "../../" . $row->itemColourImage;
 }
 
 $sql = "SELECT *

@@ -30,7 +30,7 @@ function search(search){
 					slideshowID = "slideshow" + this[0].itemID;
 
 					$.each(this, function(){
-						colours.push(this.itemColourImage);
+						colours.push("../" + this.itemColourImage);
 					});
 
 					var item = "<div id='item" + this[0].itemID + "' class='item' onclick='window.location = \"/shop/item?itemID=" + this[0].itemID + "\";'>";
