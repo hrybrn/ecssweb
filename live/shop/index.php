@@ -50,6 +50,19 @@ if($emailParts[1] != "ecs.soton.ac.uk"){
 	echo "You're not a member of ECS";
 	exit;
 }
+
+$sql = "SELECT a.adminID
+FROM admin AS a
+WHERE a.username = :username;";
+
+$statement = $db->prepare($sql);
+$statement->execute(array(':username' => $userInfo['username']));
+
+if(!$user = $statement->fetchObject()){
+echo "user " . $username . " doesn't have permissions for this page";
+exit;
+}
+
 ?>
 <!doctype html>
 <html>

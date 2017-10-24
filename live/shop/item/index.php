@@ -61,7 +61,7 @@ $statement->execute(array(':username' => $userInfo['username']));
 if(!$user = $statement->fetchObject()){
 echo "user " . $username . " doesn't have permissions for this page";
 exit;
-
+}
 ?>
 <!doctype html>
 <html>
@@ -176,7 +176,7 @@ while($row = $statement->fetchObject()){
         <input type="hidden" name="item_number" value="<?= $itemID ?>">
 
         <input type="hidden" name="quantity" value="1">
-        <input type="hidden" name="amount" value=<?= preg_replace("/£/", "", $items[0]->itemPrice) ?>>  
+        <input type="hidden" name="amount" value="<?= preg_replace("/£/", "", $items[0]->itemPrice) ?>">  
 
         <input type="hidden" name="on0" value="Colour">        
         <input type="hidden" name="os0" value="<?= $items[0]->itemColourName ?>" id='colour'>
