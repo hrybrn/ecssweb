@@ -59,7 +59,8 @@ $statement = $db->prepare($sql);
 $statement->execute(array(':username' => $userInfo['username']));
 
 if(!$user = $statement->fetchObject()){
-echo "user " . $username . " doesn't have permissions for this page";
+    http_response_code(403);
+    echo "user " . $userInfo['username'] . " doesn't have permissions for this page";
 exit;
 }
 ?>
