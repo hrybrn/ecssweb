@@ -96,6 +96,7 @@ $sql = "INSERT INTO application(
             companyID,
             applicationName,
             applicationUsername,
+            applicationEmail,
             applicationCourse,
             applicationYear) VALUES(
             :companyID,
