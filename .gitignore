@@ -4,5 +4,7 @@
 # do not track uploads
 live/uploads/
 live/images/nominations/
+data/CV/
+data/Cover/
 
 db/ecss\.db
