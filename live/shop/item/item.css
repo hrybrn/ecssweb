@@ -1,17 +1,30 @@
+.itemPageContainer {
+	text-align: center;
+	margin: 15px auto;
+}
+
+.itemPageSection {
+	margin: 0 15px;
+}
+
 #itemSlideshowContainer {
 	display: inline-block;
-	margin-left: 10%;
-	margin-top: 10%;
 }
 
 #itemInfo {
 	display: inline-block;
-	float: right;
-	margin-right: 30%;
-	margin-top: 10%;
 	text-align: center;
 }
 
 #sizeAndColour {
 	table-layout: fixed;
+}
+
+@media (max-width: 450px) {
+
+	#itemSlideshowContainer canvas {
+		width: 300px;
+		height: 300px;
+	}
+
 }
