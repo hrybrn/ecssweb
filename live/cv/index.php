@@ -154,6 +154,7 @@ if($entry = $statement->fetchObject()){
                 </select>
             </td>
         </tr>
+        
         <tr>
             <td>
                 Upload your CV
@@ -170,6 +171,11 @@ if($entry = $statement->fetchObject()){
             <td>
                 <input type="file" name="Cover" id="Cover"></input>
                 <progress id="progCover" value='0' min='0' max='100'></progress>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                Accepted file types are: .doc, .docx, .pdf, .rtf, .txt, .wks, .wkp and .wpd
             </td>
         </tr>
         <tr>

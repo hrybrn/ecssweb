@@ -78,7 +78,7 @@ foreach($_FILES as $task => $file){
 	$uploadOk = true;
 	$fileEx = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-	$allowed = ['doc', 'docx', 'pdf', 'rtf', 'tex', 'txt', 'wks', 'wkp', 'wpd'];
+	$allowed = ['doc', 'docx', 'pdf', 'rtf', 'txt', 'wks', 'wkp', 'wpd'];
 
 	if(!in_array($fileEx, $allowed)){
 		$uploadOk = false;
