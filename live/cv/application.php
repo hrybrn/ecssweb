@@ -51,7 +51,7 @@ if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo
 }
 
 $name = $_GET['name'];
-$year = $_GET['year'];
+$year = (string) $_GET['year'];
 $course = $_GET['course'];
 
 $failure = ['status' => false, 'message' => 'Something went wrong with your application.'];
