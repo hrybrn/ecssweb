@@ -59,7 +59,8 @@ $statement = $db->prepare($sql);
 $statement->execute(array(':username' => $userInfo['username']));
 
 if(!$user = $statement->fetchObject()){
-echo "user " . $username . " doesn't have permissions for this page";
+    http_response_code(403);
+    echo "user " . $userInfo['username'] . " doesn't have permissions for this page";
 exit;
 }
 
@@ -75,19 +76,23 @@ exit;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/theme.css" />
     <link rel="stylesheet" type="text/css" href="/shop/shop.css" />
+    <script type="text/javascript" src='/jquery.js'></script>
+    <script type="text/javascript" src='/shop/shop.js'></script>
+    <script type="text/javascript" src='/static/slideshow.js'></script>
+    <script type="text/javascript" src='/load-image.min.js'></script>
+    <link rel="stylesheet" href="/shop/slideshow.css">
 </head>
 <body>
-<script type="text/javascript" src='/jquery.js'></script>
-<script type="text/javascript" src='/shop/shop.js'></script>
-<script type="text/javascript" src='/static/slideshow.js'></script>
-<script type="text/javascript" src='/load-image.min.js'></script>
-<link rel="stylesheet" href="/shop/slideshow.css">
 <?php
 include_once($relPath . "navbar/navbar.php");
 echo getNavBar();
 ?>
-
-<input type='text' id='searchBox'>
-<button id='searchButton'>Search</button>
-
-<div id='itemDiv'></div>
+<div class="pageContainer">
+    <div class="searchBar">
+        <input type="search" id='searchBox' placeholder="Item Name">
+        <button id='searchButton'>Search</button>
+    </div>
+    <div id='itemDiv'></div>
+</div>
+</body>
+</html>

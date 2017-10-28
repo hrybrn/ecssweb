@@ -10,6 +10,12 @@ $(document).ready(function(){
     			search($('#searchBox').val());
   			}
 		});
+
+		$("#searchBox").on("keyup search", function () {
+			if ($('#searchBox').val() === "") {
+                search($('#searchBox').val());
+            }
+        })
 });
 
 function search(search){
