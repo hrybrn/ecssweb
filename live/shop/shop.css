@@ -2,6 +2,15 @@
 	margin: 5px;
 }
 
+.searchBar > input[type="search"] {
+	height: 30px;
+	font-size: 11pt;
+	border: 1px solid darkred;
+	border-radius: 5px;
+	padding: 0 3px;
+	-webkit-appearance: none; /* Safari hack */
+}
+
 .item {
 	display: inline-block;
 	border: 1px solid;
