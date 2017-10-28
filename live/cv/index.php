@@ -165,7 +165,7 @@ if($entry = $statement->fetchObject()){
         </tr>
         <tr>
             <td>
-                Upload your cover letter (optional)
+                Upload your cover letter (mandatory, not optional)
             </td>
             <td>
                 <input type="file" name="Cover" id="Cover"></input>
