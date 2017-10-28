@@ -4,6 +4,12 @@
     "Committee":"committee/index.php",
     "Societies":"societies/index.php",
     "Sponsors":"sponsors/",
+    "Jumpstart": {
+        "default":"#",
+        "Overview":"jumpstart",
+        "Groups":"jumpstart/group",
+        "Challenge Entries":"jumpstart/admin"
+    },
     "Voting": {
         "default": "#",
         "Nominations": "voting",
