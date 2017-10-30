@@ -103,10 +103,14 @@ if($entry = $statement->fetchObject()){
     //check for cover letter and cv
     if($entry->applicationCV == ""){
         $errorBlock .= "<br><br>You seem to be missing a CV, email Harry Brown at <a href='mailto:hb15g16@soton.ac.uk'>hb15g16@soton.ac.uk</a> if you want to add one!";
+    } else {
+        $errorBlock .= "<br><br>Your CV has been uploaded successfully.";
     }
 
     if($entry->applicationCover == ""){
         $errorBlock .= "<br><br>You seem to be missing a Cover Letter, email Harry Brown at <a href='mailto:hb15g16@soton.ac.uk'>hb15g16@soton.ac.uk</a> if you want to add one!";
+    } else {
+        $errorBlock .= "<br><br>Your cover letter has been uploaded successfully.";
     }
 
     //print that error block!
