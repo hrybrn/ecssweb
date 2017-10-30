@@ -122,11 +122,12 @@ while($row = $statement->fetchObject()){
 }
 
 ?>
-<div id='itemSlideshowContainer'>
+<div class="pageContainer itemPageContainer">
+<div id='itemSlideshowContainer' class="itemPageSection">
     <div id='itemSlideshow'></div>
 </div>
 
-<div id='itemInfo'>
+<div id='itemInfo' class="itemPageSection">
     <h3>
         <?= $items[0]->itemName ?>
     </h3>
@@ -196,7 +197,7 @@ while($row = $statement->fetchObject()){
         Payments authenticated by iSolutions, and paid through Paypal.
     </p>
 </div>
-
+</div>
 <script type="text/javascript">
     var files = <?= json_encode($files) ?>;
     var indexedFiles = <?= json_encode($indexedFiles) ?>;
@@ -214,3 +215,5 @@ while($row = $statement->fetchObject()){
         $('#colour').val(colour);
     });
 </script>
+</body>
+</html>
