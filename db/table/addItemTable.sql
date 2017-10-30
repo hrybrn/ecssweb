@@ -27,6 +27,8 @@ INSERT INTO itemColour (itemID, itemColourName, itemColourImage) VALUES (1, 'All
 INSERT INTO itemColour (itemID, itemColourName, itemColourImage) VALUES (1, 'Harry', "images/committee/awesomewebmaster.jpg");
 INSERT INTO itemColour (itemID, itemColourName, itemColourImage) VALUES (1, 'Rayna', "images/rayna.jpg");
 INSERT INTO itemColour (itemID, itemColourName, itemColourImage) VALUES (1, 'Felix', "images/helpers/fdn.jpg");
+INSERT INTO itemColour (itemID, itemColourName, itemColourImage) VALUES (1, 'Charis', "images/helpers/charis.jpg");
+INSERT INTO itemColour (itemID, itemColourName, itemColourImage) VALUES (1, 'Pier', "images/helpers/ppi.jpg");
 
 INSERT INTO size (itemID, sizeName) VALUES (1, "S");
 INSERT INTO size (itemID, sizeName) VALUES (1, "M");

@@ -132,77 +132,82 @@ while($row = $statement->fetchObject()){
         <?= $items[0]->itemName ?>
     </h3>
 
-    <p>
-        <?= $items[0]->itemPrice ?>
-    </p>
+    <div id='itemInfo'>
+        <h3>
+            <?= $items[0]->itemName ?>
+        </h3>
 
-    <p>
-        <?= $items[0]->itemDesc ?>
-    </p>
+        <p>
+            <?= $items[0]->itemPrice ?>
+        </p>
 
-    <table id='sizeAndColour'>
-        <tr>
-            <td>
-                Colour
-            </td>
-            <td>
-                <select id='colourSelect'>
-                    <?php
-                        foreach($items as $item){
-                            echo "<option value=" . $item->itemColourID . ">" . $item->itemColourName . "</option>";
-                        }
-                    ?>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Size
-            </td>
-            <td>
-                <select id='sizeSelect'>
-                    <?php
-                        foreach($sizes as $size){
-                            echo "<option value=" . $size->sizeID . ">" . $size->sizeName . "</option>";
-                        }
-                    ?>
-                </select>
-            </td>
-        </tr>
-    </table>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="VVBTZS6SKRHUQ">
+        <p>
+            <?= $items[0]->itemDesc ?>
+        </p>
 
-        <input type="hidden" name="item_name" value="<?= $items[0]->itemName ?>">
-        <input type="hidden" name="item_number" value="<?= $itemID ?>">
+        <table id='sizeAndColour'>
+            <tr>
+                <td>
+                    Colour
+                </td>
+                <td>
+                    <select id='colourSelect'>
+                        <?php
+                            foreach($items as $item){
+                                echo "<option value=" . $item->itemColourID . ">" . $item->itemColourName . "</option>";
+                            }
+                        ?>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Size
+                </td>
+                <td>
+                    <select id='sizeSelect'>
+                        <?php
+                            foreach($sizes as $size){
+                                echo "<option value=" . $size->sizeID . ">" . $size->sizeName . "</option>";
+                            }
+                        ?>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="VVBTZS6SKRHUQ">
 
-        <input type="hidden" name="quantity" value="1">
-        <input type="hidden" name="amount" value="<?= preg_replace("/£/", "", $items[0]->itemPrice) ?>">  
+            <input type="hidden" name="item_name" value="<?= $items[0]->itemName ?>">
+            <input type="hidden" name="item_number" value="<?= $itemID ?>">
 
-        <input type="hidden" name="on0" value="Colour">        
-        <input type="hidden" name="os0" value="<?= $items[0]->itemColourName ?>" id='colour'>
+            <input type="hidden" name="quantity" value="1">
+            <input type="hidden" name="amount" value="<?= preg_replace("/£/", "", $items[0]->itemPrice) ?>">  
 
-        <input type="hidden" name="on1" value="Size">  
-        <input type="hidden" name="os1" value="<?= $sizes[0]->sizeName ?>" id='size'>
+            <input type="hidden" name="on0" value="Colour">        
+            <input type="hidden" name="os0" value="<?= $items[0]->itemColourName ?>" id='colour'>
 
-        <input type="hidden" name="on2" value="Username">  
-        <input type="hidden" name="os2" value="<?= $userInfo['username'] ?>">
-        
-        <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
-        <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-    </form>
+            <input type="hidden" name="on1" value="Size">  
+            <input type="hidden" name="os1" value="<?= $sizes[0]->sizeName ?>" id='size'>
 
-    <p>
-        Payments authenticated by iSolutions, and paid through Paypal.
-    </p>
-</div>
-</div>
+            <input type="hidden" name="on2" value="Username">  
+            <input type="hidden" name="os2" value="<?= $userInfo['username'] ?>">
+            
+            <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+        <p>
+            Payments authenticated by iSolutions, and paid through Paypal.
+        </p>
+    </div>
+
 <script type="text/javascript">
     var files = <?= json_encode($files) ?>;
     var indexedFiles = <?= json_encode($indexedFiles) ?>;
     
-    var slideshow = new Slideshow(document.getElementById("itemSlideshow"), files, 2000);
+    //var slideshow = new Slideshow(document.getElementById("itemSlideshow"), files, 2000);
 
     $('#sizeSelect').change(function(){
         var size = $('#sizeSelect').find(':selected').html();
