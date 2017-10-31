@@ -64,21 +64,23 @@ if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo
 	exit;
 }
 
-//now that you are authenticated and the database is connected, we can now generate your hash
-$date = new Datetime();
-$date = $date->format('Y-m-d');
-$hash = $userInfo['username'] . $date;
-
 //deliberately throw your data away
 unset($userInfo);
 unset($attributes);
+
+//after comments suggesting that we dont hash on username, we now hash on incoming ip
+//now that you are authenticated and the database is connected, we can now generate your hash
+$date = new Datetime();
+$date = $date->format('Y-m-d');
+$hash = $_SERVER['REMOTE_ADDR'] . $date;
+
+
 
 //we hash your username plus the date 100 times over to make the solving difficulty a bit harder
 for($i = 0; $i < 100; $i++){
     $hash = hash("sha512", $hash);
 }
 
-//the only reason why we keep some data related to your username is that we want to eliminate spam
 //here is where we check for spam
 //if you want to see our table structure you can look at https://github.com/hrybrn/ecssweb/blob/master/db/table/comments.sql
 
@@ -99,7 +101,7 @@ $statement->execute([':ourHash' => $hash]);
 $result = $statement->fetchObject();
 
 //return an error if there have been more than 5 comments in the past day
-if($result->count >= 5){
+if($result->count >= 10){
     echo json_encode(['status' => false, 'message' => 'You have already made 5 comments in the last 24 hours. Please submit your comment later.']);
     exit;
 }

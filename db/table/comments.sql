@@ -7,6 +7,6 @@ CREATE TABLE comment (
 
 CREATE TABLE commentHash (
     commentHashID INTEGER PRIMARY KEY AUTOINCREMENT,
-    commentHash VARCHAR(1023),
+    commentHash VARCHAR(255),
     commentHashDate TEXT
 );
