@@ -1,0 +1,71 @@
+# titles of the website.
+# Copyright (C) 2017 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ecssweb\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-21 14:34+0800\n"
+"PO-Revision-Date: 2017-09-03 12:18+0800\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.0.3\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_CN\n"
+
+msgid "Home"
+msgstr "主页"
+
+msgid "Committee"
+msgstr "委员会"
+
+msgid "Societies"
+msgstr "社团"
+
+msgid "Sponsors"
+msgstr "赞助商"
+
+msgid "About"
+msgstr "关于"
+
+msgid "Contact Us"
+msgstr "联系我们"
+
+msgid "Credits"
+msgstr "关于网站"
+
+# only for links
+msgid "Leaflet"
+msgstr "信息"
+
+msgid "Files"
+msgstr "文件"
+
+# leaflet
+msgid "Socials"
+msgstr "社交"
+
+msgid "Games"
+msgstr "游戏"
+
+msgid "Welfare"
+msgstr "福利"
+
+msgid "Sports"
+msgstr "运动"
+
+# files
+msgid "Meeting Minutes"
+msgstr "会议纪要"
+
+msgid "Committee Files"
+msgstr "委员会文件"
+
+# about
+msgid "Constitution"
+msgstr "章程"

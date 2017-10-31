@@ -28,7 +28,7 @@ $buttons .= '</div>';
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Committee | ECSS</title>
+<title><?= _("Committee") ?> | ECSS</title>
 </head>
         
 <body>
@@ -37,12 +37,5 @@ $buttons .= '</div>';
         <?= $buttons ?>
         <section id="memberTable"></section>
     </div>
-
-    <script>
-        $('#button0').prop("hidden",true);
-        $(document).ready( function(){
-            showMember("0");
-        });
-    </script>
 </body>
 </html>

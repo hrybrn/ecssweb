@@ -1,0 +1,13 @@
+table, th, tr, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+	width: 100%;
+}
+
+.taskimg {
+	width: 200px;
+	height: auto;
+}

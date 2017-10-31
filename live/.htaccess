@@ -1,0 +1,8 @@
+# This file is for config Apache http server
+
+# To disable directory listing
+Options -Indexes
+
+# To have custom error pages
+ErrorDocument 403 /includes/error_pages/403.html
+#ErrorDocument 404 /includes/error_pages/404.php

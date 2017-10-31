@@ -1,9 +1,10 @@
 * {
-    
+
 }
 
 #overview {
     font-size: 18px;
+
 }
 
 .subsection {
@@ -12,9 +13,16 @@
     overflow: hidden;
 }
 
+.slideshow {
+    height: 500px;
+    background: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 .subsectionImage {
     width: 40%;
-    float: left;
+    display: block;
 }
 
 div.subsectionText {
@@ -30,3 +38,25 @@ div.subsectionText {
     margin-left: 50px;
 }
 
+@media screen and (max-width: 750px) {
+    .subsectionImage {
+        width: 100%;
+        max-width: 300px;
+        float: none;
+        margin: 0 auto;
+    }
+
+    div.subsectionText {
+        box-sizing: border-box;
+
+        padding: 20px;
+        width: 100%;
+        float: none;
+    }
+
+
+}
+
+.slideshowButton {
+    position: relative;
+}

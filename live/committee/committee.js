@@ -11,12 +11,9 @@ function findGetParameter(parameterName) {
     return result;
 }
 
-function showMember(id) {
-
-    var name = $('#button' + id).text();
-
+function showMemberWithName(name) {
     var lang = findGetParameter("lang");
-    if(lang === null) {
+    if (lang === null) {
         lang = "en";
     }
     console.log(lang);
@@ -24,7 +21,7 @@ function showMember(id) {
     $.ajax({
         url: 'getMember.php',
         type: 'get',
-        data: {'name' : name, 'lang' : lang},
+        data: {'name': name, 'lang': lang},
         dataType: 'json',
         success: function (member) {
             //image setup
@@ -34,7 +31,7 @@ function showMember(id) {
             var html = "";
 
             html +=
-                    '<h1>' + member.Name + '\n\
+                '<h1>' + member.Name + '\n\
                     <a href="' + member.Facebook + '"><img id="linkIcon" src="' + relPath + 'images/icons/facebook-circle.png"></a>\n\
                     <a href="mailto:' + member.Email + '"><img id="linkIcon" src="' + relPath + 'images/icons/email-circle.png"></a></h1>\n\
                     <h3>' + member.RoleDisplayName + '</h3>\n\
@@ -45,3 +42,25 @@ function showMember(id) {
         }
     });
 }
+
+function showMember(id) {
+
+    var name = $('#button' + id).text();
+
+    // update url hash
+    window.location.hash = name.replace(/ /g, "_");
+
+    showMemberWithName(name);
+}
+
+$(document).ready( function(){
+    $('#button0').prop("hidden",true);
+    if (window.location.hash) {
+        var name = window.location.hash.substr(1);
+        name = name.replace(/_/g, " ");
+        showMemberWithName(name);
+    } else {
+        showMember("0");
+    }
+});
+

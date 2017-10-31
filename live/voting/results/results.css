@@ -1,0 +1,25 @@
+p {
+	padding: 20px;
+}
+
+h3 {
+	padding: 20px;
+	text-align: center;
+}
+
+#currentRound {
+	display: inline-block;
+	height: 350px;
+	text-align: center;
+	border-style: solid;
+	border-color: #881414;
+}
+
+#buttonDiv {
+	text-align: center;
+}
+
+#overallDiv {
+	margin: auto;
+	text-align: center;
+}

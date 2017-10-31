@@ -1,15 +1,118 @@
 {
     "Socials": {
         "title":"Socials in ECSS",
-        "Overview":"At ECSS we run socials to help people de-stress from the madness that is an ECS degree but also to meet people in the department. If you need to procrastinate, make friends or just chill and forget then this is for you.",
+        "Overview":"At ECSS we run socials to help people de-stress from the madness that is an ECS degree but also to meet people in the department. If you need to procrastinate, make friends, or just chill and forget then this is for you.",
         "Subsections": {
             "Alcoholic": {
-                "Text":"As does every society at university, we also run alcoholic events. Two white t-shirt socials a year, the Halloween house crawl and pub golf are just a few of the rowdy nights we have to offer.",
-                "Image":"images/leaflet/social/dos.jpg"
+                "Text":"As does every society at university, we also run alcoholic events. Two white t-shirt socials a year, the Halloween house crawl, and pub golf are just a few of the nights we have to offer.",
+                "Slideshow":"images/leaflet/social/WhiteTee"
             },
             "Non-Alcoholic": {
                 "Text":"Not all of university is getting so drunk you forget your own name, and to accommodate that we run many non-alcoholic and more relaxed events. We have bowling, trips to scoops and pub quizzes planned so keep an eye out for those.",
-                "Image":"images/leaflet/social/uno.jpg"
+                "Slideshow":"images/leaflet/social/Scoops"
+            }
+        }   
+    },
+
+    "Games": {
+        "title":"Games in ECSS",
+        "Overview":"At ECSS we run dedicated game socials every few weeks to help people from all years de-stress from the craziness of their degree, as well as to help them meet, make friends and play games with other students.<br>Make sure to follow the <a href='https://www.facebook.com/ecss.soton/'>ECSS facebook</a> for news about events, including locations and times.",
+        "Subsections": {
+            "Board Game Socials": {
+                "Text":"We run regular board game nights throughout the year. Bring your own games or play some of ours with games ranging from classics like Catan, to card games like Magic, to quick games like Coup and Werewolf. We have them all so pop along and join in!",
+                "Slideshow":"images/leaflet/games/GamesSoc/BoardGames"
+            },
+            "Video Game Socials": {
+                "Text":"Once a semester we book the large computer labs in Zepler to play games on. With every computer running Steam and our own TF2 server it’s a great way to meet people at Uni interested in the same gamers as you. In addition to the computers we also hook up consoles to the large TV’s so you can look forward to playing classics like MarioKart and Halo as well.",
+                "Slideshow":"images/leaflet/games/GamesSoc/VideoGames"
+            }
+        }
+    },
+
+    "Welfare": {
+        "title":"Welfare in ECSS",
+        "Overview":"Any degree in the Electronic and Computer Science Society can be challenging. Work loads can be high and stress can be difficult manage. The job of the welfare sec is to lend guidance and support when things get tough. Whether it’s bad results, home-sickness or just needing a chat the welfare sec will be able to point you in the right direction. This year’s welfare officer is Hope Shaw, a second year electronics student who has spent a year actively involved as a course rep.",
+        "Subsections": {
+            "Events": {
+                "Text":"Wellbeing events are held by the union, society and outside communities. We will hold a range of different events to help manage stress and take your mind of studies as well as teaming up and promoting outside groups. You can also find the welfare sec at most socials.",
+                "Image":"images/leaflet/welfare/daddyFelix.jpg"
+            },
+            "People to talk to":{
+                "Text":"Solent Mind—Support and advice for mental heath issues <br>+44(0)23 8202 7810 <br><br>Samaritans—confidential, 24/7 and free call line that will listen to anything you want to say<br>116 123<br><br>First Support—a small team in student services who offer face-to-face appointments or calls for students dealing with crisis.<br>+44(0)23 8059 7488 OR firstsupport@soton.ac.uk <br><br>Tutors—The senior tutors are great for anything relating to the course and will help you sort out issues with your studies.<br>Contact Jules Field<br><br>Student Services– for urgent issues the security team will respond out of hours.<br>+44(0)23 8059 2811<br><br>Enabling Sevices—Appointments can be booked for help with learning difficulties at the front desk.<br>Health Service— The university health services can provide appointments for health and mental issues."
+            }
+        }
+    },
+
+    "Charity": {
+        "title":"Charity is ECSS",
+        "Overview":"This October we held a society wide vote for our charity of the year and the result is:<br><a href='https://www.southampton.ac.uk/youreit'>You&rsquo;re it &ndash; Southampton Centre for Cancer Immunology</a><br />Immunology is saving lives. Our groundbreaking research using the body&rsquo;s immune system to eradicate cancer is so powerful it can last a lifetime. A lifetime that can be so much longer. But revolutionary research needs revolutionary facilities. We need to raise &pound;25m to build a new, state-of-the-art Centre for Cancer Immunology, planned to officially open in spring/summer 2018. You can be part of the cure.<br /><br>There are many ways you can get fundraising yourself, some suggestions are:</p><p><br />- Shaving your head, waxing or any form of style transformation<br />- Sponsored run walk or even skip<br />- Give up your favorite treat</p>",
+        "Subsections": {
+            "About You're It": {
+                "Text":"The University of Southampton leads the UK in cancer immunology research. Our exciting discoveries are moving out of the laboratory into clinical trials, where they are already making a world of difference to people with cancer. We are seeing real success. But there is much more to do.<br />Our major campaign will fund the first dedicated cancer immunology centre in the UK. Connected to leading institutions worldwide, this cutting-edge research hub will enable our interdisciplinary teams to expand clinical trials, explore new areas and develop lifesaving drugs. This is the biggest fundraising campaign the University has ever undertaken and you can be a part of it. Thanks to philanthropic support, developments for our new building are well under way. But we need to reach our &pound;25m target to make this life-changing Centre a reality. Join us and support our campaign; together we will save more lives from cancer.<br />Your immune system. Your support. The cure for cancer? <a href='https://www.southampton.ac.uk/youreit'>You&rsquo;re it</a><br />We are very proud to be supporting such a good cause and are aiming to hold several fundraisers tis year to help support the cause.",
+                "Image":"images/leaflet/welfare/youreit.jpg"
+            }
+        }
+    },
+
+    "Sports": {
+        "title":"Sports in ECSS",
+        "Overview":"Sport is a large social aspect of ECSS. So much so that we have sub pages for: <br><br>1. <a href='?lang=en&section=Football'>Football</a> <br>2. <a href='?lang=en&section=Netball'>Netball</a> <br>3. <a href='?lang=en&section=Running'>Running</a> <br>4. <a href='?lang=en&section=Others'>Others</a> <br><br>Whilst ECSS do not offer a wide range of sporting opportunities, the union does.<br>Take as many opportunities to get involved, and try new things whilst at university.<br>Make the most of your time here!<br><br><a href='https://www.southampton.ac.uk/sportandwellbeing/index.page?'>General Southampton sports facilities</a><br><br><a href='https://www.susu.org/sport'>Sports Societies</a>"
+    },
+
+    "Football": {
+        "title":"Football in ECSS",
+        "Overview": "ECSS FC (Est. 2007) is an intramural football team that plays in the weekend league. Last year the football team massively improved on the previous year placing mid table in the division, and also winning a plate for coming first in the bottom half of a weekend tournament. There are currently socials every couple weeks, where we go to whatever club the team are feeling on the day.<br><br>For more information about training, socials, and tour, join our <a href='https://www.facebook.com/groups/687261761358331/'>Facebook group</a>.",
+        "Subsections": {
+            "Performance": {
+                "Text":"In the coming year, we aim of course to improve our league position, but also to enhance the social aspect via club society cards, fresher involvement and through shirt sponsors. We are planning to branch out to similar departments in other universities for friendlies and social events.",
+                "Image":"images/leaflet/football/squad.jpg"
+            },
+            "Tour": {
+                "Text":"Every year we go on a football tour, which involves absolutely no football whatsoever. Last year we went to Budapest, had a great 4 days and 4 nights seeing the city, spa, and clubs.<br>You don’t have to get very drunk to enjoy our tour, but it helps.",
+                "Slideshow":"images/leaflet/football/slideshow"
+            },
+            "Captain": {
+                "Text":"<a href='https://www.facebook.com/brad.elvy.1'>Brad Elvy</a>",
+                "Image":"images/committee/sports.jpg"
+            },
+            "Social and Tour Secretary": {
+                "Text":"<a href='https://www.facebook.com/charlie.geen.7'>Charlie Geen</a>",
+                "Image":"images/leaflet/football/geen.jpg"
+            }
+        }
+    },
+
+    "Netball": {
+        "title":"Netball in ECSS",
+        "Overview":"This year we are joining up with the Physoc and with the SUES (Southampton University Engineering Society) to create a women’s netball team. We welcome players of any ability.<br>The team will train and play weekly, and participate in tournaments throughout the year.<br>As the team is new for 2017/2018, the team, and sports reps from each society, will be looking for players to take up the roles of captain, vice captain and social sec.<br><br>Please join our <a href='https://www.facebook.com/groups/820484134777402/'>Facebook Group</a> to get involved!",
+        "Subsections": {
+            "Contact us to help us get this going!": {
+                "Text":"<a href='https://www.facebook.com/brad.elvy.1'>Brad Elvy</a><br><br><a href='https://www.facebook.com/nick.turner.9847'>Nick turner</a> (SUES sports rep)<br><br><a href='https://www.facebook.com/riapandit98'>Ria Pandit</a> (PhySoc sports rep)",
+                "Image":"images/leaflet/netball/logo.jpg"
+            }
+        }
+    },
+
+    "Running": {
+        "title":"Running in ECSS",
+        "Overview":"Since the end of last year, members of ECSS have started taking part in running events.<br>Some students took part in 10km runs or half marathons, but the attendance was highest at the weekly park run.",
+        "Subsections": {
+            "Parkrun": {
+                "Text":"The local Southampton Parkrun is held every Saturday in the common.<br>A group of us meet every week to start the run together and meet after to chat about times and the run. <br>It's a really easy way to be active, requires no money, experience or equipment (perfect for people who never go outside).<br>This year the park runs will continue, whilst some fun runs, fancy dress runs, and maybe even some longer distance events to raise money for charities or the society. The society may even look into getting ECSS branded running tops if there is enough interest.",
+                "Image":"images/leaflet/running/parkrun.jpg"
+            }
+        }
+    },
+
+    "Others": {
+        "title":"Other sports in ECSS",
+        "Overview":"Compete for the title of best player in ECSS! We have annual ladders in Table tennis, badminton, pool and squash. The ladders are set up in the first few weeks but anyone can join at any time.",
+        "Subsections":{
+            "How it works":{
+                "Text":"Players challenge each other no higher than 2 places above them, they play a best of 3 game, and report back to the league. If the challenger wins, they are moved above the player they challenged."
+            },
+            "Get in touch":{
+                "Text":"<a href='https://www.facebook.com/groups/1676587752611911/'>Table tennis</a><br><a href='https://www.facebook.com/groups/1079814182050120/'>Badminton</a><br><a href='https://www.facebook.com/groups/947358788681509/'>Squash</a>"
             }
         } 
     },

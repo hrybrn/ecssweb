@@ -1,0 +1,86 @@
+.nomination {
+    border: solid 1px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    padding-top: 0px;
+   	max-width: 300px;
+}
+
+.nomination table td, tr {
+	text-align: center;
+}
+
+#submit {
+	float: right;
+}
+
+.authStatus {
+    padding: 10px;
+    margin: 0;
+}
+
+.authStatus {
+    text-align: right;
+    background: #f6f6f6;
+}
+
+.intro, .buttonDiv, #message {
+    clear: both;
+    margin: 10px;
+}
+
+.intro, #message {
+    text-align: center;
+}
+
+#nominationDiv {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.group {
+    width: 80%;
+    margin-left: 10%;
+    padding-bottom: 0;
+}
+
+.group div img{
+    display: block;
+    object-fit: cover;
+    width: 240px;    
+    height: 240px;
+    margin: auto;
+    /*height: 120px;*/
+    text-align: center;
+    border-radius: 5px;
+    transition: opacity 0.2s linear;
+}
+
+.dragme {
+    float:right;
+    height: 20px;
+    width: 20px;
+    background-image: url("../images/dragdrop.png");
+    background-size: 20px 20px;
+    display: block;
+    object-fit: contain;
+}
+
+.content {
+   padding-bottom: 0px;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#nominationDescription {
+    margin-left: 10%;
+}

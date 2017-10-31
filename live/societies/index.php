@@ -24,8 +24,7 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Societies | ECSS</title>
-        <base target="_blank">
+        <title><?= _("Societies") ?> | ECSS</title>
 
         <link rel="stylesheet" href="../theme.css">
     </head>
@@ -35,11 +34,5 @@
         <?= $buttons ?>
         <table id="societyTable" class="pageTable"></table>
     </div>
-
-        <script>
-            $(document).ready(function () {
-                showMember("0");
-            });
-        </script>
 </body>
 </html>

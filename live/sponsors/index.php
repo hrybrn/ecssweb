@@ -16,6 +16,10 @@ $bronze = "";
 
 $i = 0;
 
+foreach ($sponsors['Default'] as $sponsor => $data) {
+    $gold .= '<button onclick="showMember(' . $i . ')" id="button' . $i++ . '">' . $sponsor . '</button>';
+}
+
 foreach ($sponsors['Gold'] as $sponsor => $data) {
     $gold .= '<button class="gold" onclick="showMember(' . $i . ')" id="button' . $i++ . '">' . $sponsor . '</button>';
 }
@@ -33,10 +37,10 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sponsors | ECSS</title>
+<title><?= _("Sponsors") ?> | ECSS</title>
 
 <script> var relPath = "<?= $relPath ?>";</script>
-<script src="<?=$relPath ?>sponsors/sponsors.js"></script>
+<script src="<?=$relPath ?>sponsors/buttonControl.js"></script>
 </head>
 <body>
 <div id="sponsorsPageContainer" class="pageContainer">
@@ -44,11 +48,5 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
     <div id="sponsorButtonGroup"><?= $gold; $silver; $bronze ?></div>
     <section id="sponsorTable"></section>
 </div>
-
-<script>
-    $(document).ready(function () {
-        showMember("0");
-    });
-</script>
 </body>
 </html>

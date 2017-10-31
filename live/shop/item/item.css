@@ -1,0 +1,44 @@
+.itemPageContainer {
+	text-align: center;
+	margin: 15px auto;
+}
+
+.itemPageSection {
+	margin: 0 15px;
+}
+
+#itemSlideshowContainer {
+	display: inline-block;
+	margin-left: 10%;
+	margin-top: 5%;
+	width: 340px;
+}
+
+#itemInfo {
+	display: inline-block;
+	text-align: center;
+	margin-left: 5%;
+	margin-right: 5%;
+	vertical-align: center;
+}
+
+#containsEverything {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sizeAndColour {
+	table-layout: fixed;
+}
+
+.colour {
+	display: inline-block;
+    object-fit: cover;
+    width: 150px;    
+    height: 150px;
+    /*height: 120px;*/
+    border-radius: 5px;
+	transition: opacity 0.2s linear;
+	margin: 10px;
+}

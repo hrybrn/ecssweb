@@ -12,6 +12,7 @@
     "SUCSS":{
         "Name":"Cyber Security Society",
         "Image":"images/societies/sucss.png",
+        "Description":"We're a group of students interested in the various aspects of cyber security. We host sessions on various topics, some with external speakers, and provide lots of practical opportunities to put what you've learned into practice at CTF competitions and workshops.",
         "Time":"Tuesdays at 6pm",
         "Location":"Level 3 Zepler Labs",
         "Facebook Group":"https://www.facebook.com/groups/sucss/",
@@ -33,7 +34,8 @@
     "Student Robotics":{
         "Name":"Student Robotics",
         "Image":"images/societies/student-robotics.png",
-        "Time":"Wednesdays at 5pm",
+        "Description":"Student robotics (AKA Source Bots) is a society that organises and develops the software and hardware behind a robotics competition for 16-18 year olds. We have 2 sides, We volunteer at schools to help them learn how to build robots using our kits, and we also do a lot of development on our kits, we are really interested in doing the hard parts of robotics. We write code that actually gets used, and in a team we actually want to work in.",
+        "Time":"Monday at 6pm",
         "Location":"Mountbatten Seminar Room (53/4025)",
         "Facebook Group":"https://www.facebook.com/groups/student.robotics.southampton/",
         "Website":"https://www.studentrobotics.org",
@@ -42,14 +44,19 @@
     "Robogals":{
         "Name":"Robogals",
         "Image":"images/societies/robogals.png",
+        "Description":"Robogals is a student-run organisation that aims to increase female participation in engineering and technology through fun and educational initiatives aimed at girls in primary and secondary school. We're part of an international organisation, with other chapters all across the world, working together to encourage more women to go into STEM.",
+        "Location":"Zepler level 3 labs",
+        "Time":"Tuesdays 6-8pm",
         "Facebook Group":"https://www.facebook.com/groups/126854750821510/",
         "Facebook Page":"https://www.facebook.com/SouthamptonRobogals/",
         "Website":"http://southampton.robogals.org.uk",
         "Email":"mailto:southampton.president@robogals.org"
     },
-    "ECS Entrepreneurs":{
-        "Name":"ECS Entrepreneurs",
-        "Image":"images/societies/ecs-entrepreneurs.png",
+    "Entrepreneur Club":{
+        "Name":"Entrepreneur Club",
+        "Image":"images/societies/entrepreneur_club.png",
+        "Description":"We are a student-led community for students that are looking to break into the tech entrepreneurship scene, whether this is through starting their own company, or just getting employed at a startup.<p>Our main event this year is our weekly \"Build your idea over Breakfast\" series, where students get to share the progress they've made working on their ideas, get feedback from mentors and other students, and also potentially find other founding members for their newly formed startup.</p><p>In the past years, we've helped student startups at Southampton University raise more than &pound;200,000 in investments from various investors, and our goal is to grow the startup culture at Southampton University.</p>",
+        "Meetings":"Weekly",
         "Facebook Group":"https://www.facebook.com/groups/ecsentrepreneurs/",
         "Facebook Page":"https://www.facebook.com/ECSentrepreneurs/",
         "Website":"https://ecsentrepreneurs.com",
@@ -57,7 +64,8 @@
     },
     "ECS Women":{
         "Name":"ECS Women",
-        "Image":"images/societies/ecs-women.jpg",
+        "Image":"images/societies/ecswomen.png",
+        "Description":"Who are we?<p>ECSWomen society started by students to support women in the School of Electronics and Computer Science at the University of Southampton.</p><p>What do we do ?</p><p>- Soft Skills workshops- conference posters, soft skills, CV building</p><p>- Academic talks with tech companies e.g. Bloomberg</p><p>- Social events - movie nights , pizza night, dinners etc.</p><p>- mentorship scheme</p><p>Events are open to all - whatever level of study.</p><p>When's our next event?</p><p>Please like our Facebook page to stay up-to-date with upcoming events.</p>",
         "Facebook Group":"https://www.facebook.com/groups/327192197365291/",
         "Facebook Page":"https://www.facebook.com/EcsWomen/",
         "Website":"http://ecswomen.ecs.soton.ac.uk",
@@ -75,6 +83,9 @@
     "Toastrack":{
         "Name":"Toastrack",
         "Image":"images/societies/toastrack.jpg",
+        "Description":"The \"Toastrack\" is a 1929 vintage Dennis bus owned by Southampton University since 1958 and is driven and maintained by students and staff of the university. If you are a student or graduate you are welcome to become part of the team that looks after and maintains her.",
+        "Time":"Sundays at 1pm",
+        "Location":"Meet at Zepler before heading to the garage",
         "Facebook Page":"https://www.facebook.com/toastrackbus",
         "Website":"http://toastrackbus.org/",
         "Email":"mailto:manager@toastrackbus.org"
@@ -82,13 +93,15 @@
     "Robosoc":{
         "Name":"Robosoc",
         "Image":"images/societies/robosoc.jpg",
+        "Description":"Robosoc is a society that helps students who wish to build robots. We work with the idea that no matter what your knowledge of robotics is, we are approachable and able to help with all the steps along the way. The help ranges from tutorials presented for begineers to sourcing parts required for the big projects such as a 3D printer or battlebots.",
         "Facebook Group":"https://www.facebook.com/groups/su.robosoc/",
-        "Website":"http://robosoc.com",
+        "Website":"http://robosocblog.com",
         "Contact Us":"http://robosoc.com/index.html"
     },
     "IEEE":{
         "Name":"IEEE Student Branch",
         "Image":"images/societies/ieee.png",
+        "Description":"The University of Southampton IEEE Student Branch is active in promoting the IEEE through exciting and informative events ranging from technical seminars to industry talks to careers events as well as organising visits to company and research sites.<br><br>Those events are organised on a weekly basis, to keep our students up-to-date on state-of-the-art science, research and technology.<br><br>Please come and join us for our events and experience the idea of IEEE.",
         "Events":"http://www.ieee.ecs.soton.ac.uk/OurEvents",
         "Website":"http://www.ieee.ecs.soton.ac.uk/",
         "Contact Us":"http://www.ieee.ecs.soton.ac.uk/contact"
@@ -96,11 +109,15 @@
     "IET":{
         "Name":"IET Student Branch",
         "Image":"images/societies/iet.png",
-        "Website":"http://www.theiet.org/students/you-and-iet/on-campus/index.cfm?origin=on-campus"
+        "Website":"http://www.theiet.org/students/you-and-iet/on-campus/index.cfm?origin=on-campus",
+        "Description":"The Southampton IET On Campus is an initiative from the IET which delivers the best professional resources and knowledge into the hands of engineering and technology students. All ECS students receive free membership to the IET and the IET On Campus events are a great way to get involved with the professional world, gain skills and make some contacts.  Like and follow our <a href='https://www.facebook.com/sotonIET/'>Facebook page</a> to keep up to date with what we have planned.",
+        "Email":"mailto:IET-OnCampus@ecs.soton.ac.uk",
+        "Facebook Page":"https://www.facebook.com/sotonIET/"
     },
     "Global Game Jam":{
         "Name":"Global Game Jam",
         "Image":"images/societies/global-game-jam.jpg",
+        "Description":"The Global Game Jam® (GGJ) is the world's largest game jam event (game creation) taking place around the world at physical locations. Think of it as a hackathon focused on game development. It is the growth of an idea that in today’s heavily connected world, we could come together, be creative, share experiences and express ourselves in a multitude of ways using video games – it is very universal. The weekend stirs a global creative buzz in games, while at the same time exploring the process of development, be it programming, iterative design, narrative exploration or artistic expression. It is all condensed into a 48 hour development cycle. The GGJ encourages people with all kinds of backgrounds to participate and contribute to this global spread of game development and creativity.",
         "Website":"http://globalgamejam.org/2015/jam-sites/university-southampton/games"
     },
     "Code Dojo":{
@@ -108,6 +125,15 @@
         "Image":"images/societies/code-dojo.png",
         "Meetings":"Monthly",
         "Website":"https://southamptoncodedojo.com/",
-	"Email":"admin@southamptoncodedojo.com"
+        "Description":"The Southampton Code Dojo is a monthly meetup of technical people from around the Southampton area.<br><br>We meet on the second Thursday of each month, decide on a small challenge to work on, split up into groups and solve the problem separately, then come together and talk about the different ways we solved it.<br><br>It's a good way of improving our coding abilities by learning from each other, it's a lot of fun, and programmers of any ability are welcome.",
+	    "Email":"admin@southamptoncodedojo.com"
+    },
+    "DevECS":{
+        "Name":"DevECS",
+        "Image":"images/societies/devecs.png",
+        "Description":"DevECS can help you gain practical, paid experience working on real projects for industry clients. Not only will you earn money, but a range of skills and experiences that will make you to stand out to future employers.<p>Follow our Facebook and Twitter to keep up to date with events and available positions, or drop us an email!</p>",
+        "Facebook":"https://www.facebook.com/devecs/",
+        "Twitter":"https://twitter.com/Dev_ECS",
+        "Email":"devecs@ecs.soton.ac.uk"
     }
 }

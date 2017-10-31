@@ -1,17 +1,38 @@
 {
     "Home":"index.php",
+    "Ultra Electronics Applications":"cv",
     "Committee":"committee/index.php",
     "Societies":"societies/index.php",
     "Sponsors":"sponsors/",
+    "Voting": {
+        "default": "#",
+        "Nominations": "voting",
+        "Results": "voting/results"
+    },
+    "Socials":"leaflet/?section=Socials&lang=en",
+    "Games":"leaflet/?section=Games&lang=en",
+    "Welfare":{
+        "default": "#",
+        "Overview":"leaflet/?section=Welfare&lang=en",
+        "Charity":"leaflet/?section=Charity&lang=en"
+    },
+    "Sports":{
+        "default": "leaflet/?lang=en&section=Sports",
+        "Football": "leaflet/?lang=en&section=Football",
+        "Netball": "leaflet/?lang=en&section=Netball",
+        "Running": "leaflet/?lang=en&section=Running",
+        "Others": "leaflet/?lang=en&section=Others"
+    },
     "Files": {
         "default":"/filestore/index.php/s/JeqwjpN2tkVKW5X",
         "Meeting Minutes":"/filestore/index.php/s/JeqwjpN2tkVKW5X",
         "Committee Files":"/filestore"
     },
+    "Feedback": "comment",
     "About": {
-        "default":"about/index.php",
+        "default":"#",
         "About":"about/index.php",
-	"Constitution":"files/Constitution-2015.pdf",
+        "Constitution":"files/Constitution-2015.pdf",
         "Contact Us":"about/contact.php",
         "Credits":"about/credits.php"
     }

@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-09 11:55+0800\n"
+"PO-Revision-Date: 2017-08-09 12:01+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_CN\n"
+
+#: index.php:28
+msgid "Welcome to ECSS!"
+msgstr "欢迎来到ECSS！"
+
+#: index.php:29
+msgid "Welcome to the Electronics and Computer Science (ECS) Society website."
+msgstr "欢迎来到电子和计算机科学（ECS）社团网站。"
+
+#: index.php:30
+msgid "We are a student-run society for ECS at the University of Southampton."
+msgstr "我们是在南安普顿大学ECS的学生社团。"
+
+#: index.php:31
+msgid ""
+"On this website you will find information about the society such as who we "
+"are, what we aim to do, as well as what events we are currently organising!"
+msgstr "在这个网站上，您会找到有关社团的信息，例如我们是谁，我们的目标是做什么，以及我们正在组织什么活动！"
+
+#: index.php:32
+msgid ""
+"Still reading? You can even find out more <a href=\"about/\" target=\"_self"
+"\">about us</a>."
+msgstr "还在浏览吗？您甚至可以了解更多<a href=\"about/\" target=\"_self\">关于我们</a>。"
+
+#: index.php:33
+msgid ""
+"To keep up with the latest events, join the <a href=\"https://www.facebook."
+"com/groups/ecss.soton/\">ECSS Facebook group</a> and follow us on Twitter, "
+"<a href=\"http://twitter.com/ecs_society\">@ECS_Society</a>."
+msgstr "为了跟上最新的活动，请加入 <a href=\"https://www.facebook.com/groups/ecss.soton/\">ECSS Facebook 群组</a>，并关注我们的Twitter <a href=\"http://twitter.com/ecs_society\">@ECS_Society</a>。"
+
+#: index.php:41
+msgid "Events"
+msgstr "活动"
+

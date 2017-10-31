@@ -1,0 +1,75 @@
+@media (max-width: 1050px) and (min-width: 601px) {
+    #formDiv {
+        position: absolute;
+        width: 90%;
+        height: 60%;
+        margin: 10% 0 0 5%;
+        padding-top: 100px;
+    }
+    
+    #formDiv button {
+        position: relative;
+        display: block;
+        float: right;
+    }
+    
+    #errorBlock {
+        position: absolute;
+        width: 90%;
+        height: 60%;
+        margin: 10% 0 0 5%;
+        text-align: center;
+    }   
+}
+
+@media (max-width: 600px) {
+    #formDiv {
+        position: absolute;
+        width: 90%;
+        height: 60%;
+        margin: 10% 0 0 5%;
+    }
+    
+    #formDiv button {
+        position: relative;
+        display: block;
+        float: right;
+    }
+    
+    #errorBlock {
+        position: absolute;
+        width: 90%;
+        height: 60%;
+        margin: 10% 0 0 5%;
+        text-align: center;
+    }   
+}
+
+@media (min-width: 1051px) {
+    #formDiv {
+        position: absolute;
+        width: 40%;
+        height: 20%;
+        z-index: 15;
+        top: 50%;
+        left: 50%;
+        margin: -10% 0 0 -20%;
+    }
+    
+    #formDiv button {
+        position: relative;
+        display: block;
+        float: right;
+    }
+    
+    #errorBlock {
+        position: absolute;
+        width: 50%;
+        height: 20%;
+        z-index: 15;
+        top: 50%;
+        left: 50%;
+        margin: -10% 0 0 -25%;
+        text-align: center;
+    }   
+}

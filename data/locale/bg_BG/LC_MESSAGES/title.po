@@ -1,0 +1,71 @@
+# titles of the website.
+# Copyright (C) 2017 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ecssweb\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-21 14:34+0800\n"
+"PO-Revision-Date: 2017-09-03 12:10+0800\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.0.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language: bg_BG\n"
+
+msgid "Home"
+msgstr "Начало"
+
+msgid "Committee"
+msgstr "Комитет"
+
+msgid "Societies"
+msgstr "Общества"
+
+msgid "Sponsors"
+msgstr "Спонсори"
+
+msgid "About"
+msgstr "За нас"
+
+msgid "Contact Us"
+msgstr "Контакти"
+
+msgid "Credits"
+msgstr "За сайта"
+
+# only for links
+msgid "Leaflet"
+msgstr ""
+
+msgid "Files"
+msgstr "Файлове"
+
+# leaflet
+msgid "Socials"
+msgstr ""
+
+msgid "Games"
+msgstr ""
+
+msgid "Welfare"
+msgstr ""
+
+msgid "Sports"
+msgstr ""
+
+# files
+msgid "Meeting Minutes"
+msgstr "Протоколи от събрания"
+
+msgid "Committee Files"
+msgstr "Файлове на комитета"
+
+# about
+msgid "Constitution"
+msgstr "Конституция"

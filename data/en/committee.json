@@ -56,7 +56,7 @@
 	},
 	"Web":{
 		"Name":"Harry Brown",
-		"Manifesto":"I love the web. I was born with &lt;head&gt; on my forehead.<br><br>On a more serious note I&#039;m my name is Harry and I am looking to maintain the great work already going on, whilst also building on the website when needed. I'm that guy that makes this website look so cool",
+		"Manifesto":"I love the web. I was born with &lt;head&gt; on my forehead.<br><br>On a more serious note I&#039;m Harry, the guy who built this website and maintains it.",
 		"Facebook":"https://www.facebook.com/hrybrn",
 		"Email":"hb15g16@ecs.soton.ac.uk",
 		"Image":"images/committee/awesomewebmaster.jpg",
@@ -109,11 +109,11 @@
 		"RoleDescription":"The welfare officer caters for students in a personal manner by ensuring everyone is included in the society's activities. They also take care of the needs of students and their view of certain aspects like the push for releasing timetables earlier."
 	},
 	"Masters' Rep":{
-		"Name":"Boris-Emanuel Yazadzhiyan",
-		"Manifesto":"My name is Boris-Emanuel Yazadzhiyan and I am following up on my undergraduate degree in Electronics and Electrical Engineering (University of Sunderland) with a Master`s in Energy and Sustainability with Electrical Power Engineering.  I am mainly motivated to be the Master`s rep on the ECSS committee because it will enable me to take an active part in the improvement of the university experience for all postgraduate students. In addition, I wish to broaden my horizons and take on responsibilities which challenge me more than just academically. As a student rep I will act as a bridge in communication between the students and the ECSS and will aim to highlight all student feedback to the committee for discussion and actions. The social / fun events I attended so far have been incredible and I am motivated to take part in their planning and use them as a tool for increasing student participation in the ECSS. Furthermore, having done a few volunteering projects involving the organisation of events, I appreciate the work and preparation that goes into running them. I intend on using my previous experience to support me when helping the social secretary develop fun ways to involve more students in the ECSS. I am particularly looking forward to working alongside the rest of the committee in the organisation of guest speaker talks and networking events with companies from industry, which are to help students get a feel for the companies they will potentially apply to after graduation. ",
-		"Facebook":"https://www.facebook.com/ed.gillbard",
-		"Email":"bey1g16@ecs.soton.ac.uk",
-		"Image":"images/committee/masters.jpg",
+		"Name":"Evgeny Saveliev",
+		"Manifesto":"Hi, my name is Evgeny Saveliev and I&rsquo;m the ECSS Masters&rsquo; Rep.<p>I study MSc Computer Science, after completing my undergraduate degree in Natural Sciences (the University of Cambridge) and working in industry for a year (a fintech startup based in Germany).</p><p>My goal is simple &ndash; to get the Masters&rsquo; students involved in ECSS events as much as possible. The society&rsquo;s social, careers and other events are a fantastic opportunity for everyone to enrich their university life, further their career prospects, and to just have fun. Unfortunately, we Masters&rsquo; students sometimes miss out on this for various reasons &ndash; too busy with the studies, or perhaps the fact that most events aren&rsquo;t specifically catered to the Masters&rsquo; cohort.</p><p>I will:</p><p>&nbsp; &nbsp; &bull; Aim to run at least one Masters&rsquo; specific event each Semester.</p><p>&nbsp; &nbsp; &bull; Explore the option to organise some Masters&rsquo; events during the summer (project) period, when the MSc students are still around.</p><p>I aim to focus on these two aspects throughout the year:</p><p>&nbsp; &nbsp; &bull; Help Masters&rsquo; students with MSc-specific career prospects.</p><p>&nbsp; &nbsp; &bull; Organise social events that the MSc students will enjoy.</p><p>Meanwhile, if you have any ideas or suggestions, I would really appreciate if you drop me an email at <a href='mailto:ess1n17@soton.ac.uk'>ess1n17@soton.ac.uk</a>!</p>",
+		"Facebook":"https://www.facebook.com/e.s.saveliev",
+		"Email":"ess1n17@soton.ac.uk",
+		"Image":"images/committee/newmasters.jpg",
 		"RoleDisplayName":"Masters Representative",
 		"RoleDescription":"The masters rep liases with students on ECS masters courses, helping the ECSS committee who are often in their undergraduate degrees to cater for the masters audience."
 	},

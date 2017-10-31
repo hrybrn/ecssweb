@@ -1,6 +1,6 @@
 <?php
 
-function test() {
+function test(){
     $pdo = new PDO('sqlite:test.db');
 
     $test = "create table test(test varchar(255));";
@@ -14,14 +14,13 @@ function test() {
     return $result->fetchAll();
 }
 
-function safe($sql) {
-    $pdo = new PDO('sqlite:ecss.db');
-    
-    $safe = str_replace("'", "''", $sql);
-    
-    $result = $pdo->query($safe);
-    
-    return $result->fetchAll();
+function safe($string){
+    return str_replace("'", "''", $string);
 }
 
-var_dump(test());
+function ex($sql){
+    global $relPath
+    $pdo = new PDO('sqlite:' . $relPath . '../db/ecss.db');
+
+    return $pdo->query($sql)->fetchAll();
+}

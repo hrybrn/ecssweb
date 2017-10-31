@@ -24,7 +24,7 @@ foreach($ecss as $key => $val){
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact Us | ECSS</title>
+<title><?= _("Contact Us") ?> | ECSS</title>
 </head>
 <body>
 <section id="contactSection" class="pageContainer">

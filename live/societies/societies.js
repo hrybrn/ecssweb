@@ -11,48 +11,38 @@ function findGetParameter(parameterName) {
     return result;
 }
 
-function showMember(id) {
-
-    var relPath = "../"
-    var name = $('#button' + id).text();
-    
+function showMemberWithName(name) {
     var lang = findGetParameter("lang");
-    if(lang === null) {
+    if (lang === null) {
         lang = "en";
     }
     console.log(lang);
 
-    
+
     $.ajax({
         url: 'getMember.php',
         type: 'get',
-        data: {'name' : name, 'lang' : lang},
+        data: {'name': name, 'lang': lang},
         dataType: 'json',
-        success: function(member){
+        success: function (member) {
             //image setup
-            $('#societyImage').prop('src',relPath + member.Image);
-            
+            $('#societyImage').prop('src', relPath + member.Image);
+
             //table data
             var html = "<table>";
 
             delete member.Image;
-            
-            var links= '<tr><td>Links</td><td><div>';
-            
-            $.each(member, function(key,value){
-                if(key == "Name"){
+
+            var links = '<tr><td>Links</td><td><div>';
+
+            $.each(member, function (key, value) {
+                if (key == "Name") {
                     html += '<tr><td colspan="2">\n\
                                 <h1>' + value + '</h1>\n\
                              </td></tr>'
                 }
-                else if(value.substring(0,4) == "http"){
+                else if (value.substring(0, 4) == "http" || value.substring(0, 6) == "mailto") {
                     links += '<a id="societyLink" href="' + value + '">' + key + '</a>';
-                }
-                else if(value.substring(0,6) == "mailto"){
-                    html += '<td>' + key + '</td>\n\
-                             <td>\n\
-                                <a id="societyLink" href="' + value + '">' + value.substring(7,50) + '</a>\n\
-                             </td>';
                 }
                 else {
                     html += '\
@@ -62,11 +52,30 @@ function showMember(id) {
                             </tr>';
                 }
             });
-            
+
             links += "</div></td></tr>";
-           // html += "</table>";
             html += links;
             $('#societyTable').html(html);
-        }   
+        }
     });
 }
+
+function showMember(id) {
+
+    var name = $('#button' + id).text();
+
+    // update url hash
+    window.location.hash = name.replace(/ /g, "_");
+
+    showMemberWithName(name);
+}
+
+$(document).ready(function () {
+    if (window.location.hash) {
+        var name = window.location.hash.substr(1);
+        name = name.replace(/_/g, " ");
+        showMemberWithName(name);
+    } else {
+        showMember("0");
+    }
+});

@@ -1,0 +1,35 @@
+.searchBar {
+	margin: 5px;
+}
+
+.searchBar > input[type="search"] {
+	height: 30px;
+	font-size: 11pt;
+	border: 1px solid darkred;
+	border-radius: 5px;
+	padding: 0 3px;
+	-webkit-appearance: none; /* Safari hack */
+}
+
+.item {
+	display: inline-block;
+	border: 1px solid;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	cursor: pointer;
+}
+
+.itemName {
+	text-align: center;
+}
+
+.itemImage {
+	
+    object-fit: cover;
+    width: 150px;    
+    height: 150px;
+    /*height: 120px;*/
+    border-radius: 5px;
+    transition: opacity 0.2s linear;
+}

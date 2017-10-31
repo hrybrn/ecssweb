@@ -29,19 +29,29 @@ form {
 }
 
 .langIcon {
-    height: 25px;
+    /*height: 25px;*/
+    height: 17px;
     vertical-align: middle;
     float: right;
+    /*padding: 20px;*/
+    padding: 25px;
+    padding-left: 0px;
+    padding-right: 15px;
+    transition: height 0.1s linear, padding 0.1s linear, opacity 0.1s linear;
+}
+
+#currentLangIcon {
+    height: 25px;
     padding: 20px;
     padding-left: 0px;
-    transition: height 0.1s linear, padding 0.1s linear;
 }
 
 #notCurrentLangIcon {
     visibility: visible;
 }
 
-.langIcon:hover {
+.langIcon:hover, #currentLangIcon:hover {
+    opacity: 0.97;
     height: 29px;
     padding: 18px;
 }
@@ -66,7 +76,8 @@ form {
     */
 }
 /* Dropdown Button */
-#navButton {
+
+.navButton {
     display: inline-block;
     vertical-align: middle;
     background-color: black;
@@ -80,11 +91,12 @@ form {
     transition: background 0.1s linear;
 }
 
-#navButton:hover {
+.navButton:hover {
     background-color: #D82129;
+    color: white;
 }
 /*
-#navButton a {
+.navButton a {
     color: white;
 }*/
 
@@ -107,7 +119,7 @@ table #navbarTable {
     border-collapse: collapse;
 }
 
-#navButton:active {
+.navButton:active {
     background-color: #ff5555;
 }
 
