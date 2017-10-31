@@ -22,6 +22,12 @@
 	vertical-align: center;
 }
 
+#containsEverything {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #sizeAndColour {
 	table-layout: fixed;
 }
