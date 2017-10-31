@@ -122,15 +122,16 @@ while($row = $statement->fetchObject()){
 }
 
 ?>
-<div class="pageContainer itemPageContainer">
-<div id='itemSlideshowContainer' class="itemPageSection">
-    <div id='itemSlideshow'></div>
+<div id='itemSlideshowContainer'>
+    <div id='itemColours'>
+        <?php
+            foreach($files as $colour){
+                echo "<img class='colour' src='" . $colour . "'>";
+            }
+        ?>
+    </div>
 </div>
 
-<div id='itemInfo' class="itemPageSection">
-    <h3>
-        <?= $items[0]->itemName ?>
-    </h3>
 
     <div id='itemInfo'>
         <h3>
