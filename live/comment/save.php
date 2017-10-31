@@ -1,7 +1,5 @@
 <?php
 $relPath = "../";
-//this sets the language of the page based on your browser
-include_once ($relPath . 'includes/setLang.php');
 
 //this connects us to the database
 $dbLoc = realpath($relPath . "../db/ecss.db");
@@ -37,13 +35,19 @@ if (DEBUG) {
     $attributes = $as->getAttributes();
 }
 
-// csrf token -- this protects us from sophisticated authentication faking
+// csrf token -- this protects you from sophisticated authentication faking
 session_name('csrf_protection');
 session_start();
 if (empty($_SESSION['csrftoken'])) {
     $_SESSION['csrftoken'] = bin2hex(random_bytes(32));
 }
 $csrftoken = $_SESSION['csrftoken'];
+
+// verify csrf token
+if (!hash_equals($_SESSION['csrftoken'], $_POST['csrftoken'])) {
+    echo json_encode(['status' => false, 'message' => "Authorization failed."]);
+    exit();
+}
 
 //this converts your user data into a more readable array, so you can more easily see how we're using it
 $userInfo = array(
@@ -56,7 +60,7 @@ $userInfo = array(
 
 //if you aren't in ECS, this is where we kick you out!
 if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo['groups']))){
-	echo "You're not a member of ECS";
+    echo "You're not a member of ECS";
 	exit;
 }
 
@@ -106,7 +110,7 @@ $statement = $db->prepare($sql);
 $statement->execute([':ourHash' => $hash, ':ourDate' => $date]);
 
 //now we save the comment
-$comment = $_GET['comment'];
+$comment = $_POST['comment'];
 $sql = "INSERT INTO comment(commentMessage) VALUES(:comment);";
 
 $statement = $db->prepare($sql);

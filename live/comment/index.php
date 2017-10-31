@@ -38,7 +38,7 @@ if (DEBUG) {
     $attributes = $as->getAttributes();
 }
 
-// csrf token -- this protects us from sophisticated authentication faking
+// csrf token -- this protects you from sophisticated authentication faking
 session_name('csrf_protection');
 session_start();
 if (empty($_SESSION['csrftoken'])) {
@@ -57,6 +57,7 @@ $userInfo = array(
 
 //if you aren't in ECS, this is where we kick you out!
 if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo['groups']))){
+    http_response_code(403);
 	echo "You're not a member of ECS";
 	exit;
 }
@@ -110,10 +111,11 @@ echo getNavBar();
 function submit(){
     var saveData = {};
     saveData.comment = $('#comment').val();
+    saveData.csrftoken = $('meta[name=csrftoken]').attr('content');
 
     $.ajax({
         url: '/comment/save.php',
-        type: 'get',
+        type: 'post',
         data: saveData,
         dataType: 'json',
         success: function (response) {
