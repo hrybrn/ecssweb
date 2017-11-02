@@ -20,6 +20,12 @@
         margin: 10% 0 0 5%;
         text-align: center;
     }   
+
+    #intro {
+        width: 90%;
+        text-align: center;
+        margin-left: 5%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -43,6 +49,12 @@
         margin: 10% 0 0 5%;
         text-align: center;
     }   
+
+    #intro {
+        width: 90%;
+        text-align: center;
+        margin-left: 5%;
+    }
 }
 
 @media (min-width: 1051px) {
@@ -51,7 +63,7 @@
         width: 40%;
         height: 20%;
         z-index: 15;
-        top: 50%;
+        top: 60%;
         left: 50%;
         margin: -10% 0 0 -20%;
     }
@@ -67,9 +79,17 @@
         width: 50%;
         height: 20%;
         z-index: 15;
-        top: 50%;
+        top: 60%;
         left: 50%;
         margin: -10% 0 0 -25%;
         text-align: center;
     }   
+
+    #intro {
+        width: 70%;
+        text-align: center;
+        margin-left: 15%;
+        padding-bottom: 5%;
+    }
 }
+

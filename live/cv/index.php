@@ -54,7 +54,7 @@ $userInfo = array(
 
 $emailParts = explode("@", $userInfo['email']);
 
-if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo['groups']))){
+if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo['groups']) || in_array("vnStudent", $userInfo['groups']) || in_array("vnStaff", $userInfo['groups']))){
 	echo json_encode(['status' => false, 'message' => "You're not a member of ECS"]);
 	exit;
 }
@@ -97,6 +97,14 @@ $sql = "SELECT *
 $statement = $db->prepare($sql);
 $statement->execute([':username' => $userInfo['username'], ':companyID' => $current->companyID]);
 
+?>
+<div id='intro'>
+<h3>Following Ultra Electronics' information talk and interview briefing on Tuesday 23rd October, applications are now open for their Interview Day that is taking place on campus on Tuesday 21st November.</h3>
+<p>Please enter your details below, along with your CV and cover letter (both in PDF format) to apply. The cover letter should outline the reasons why you would like to apply for an internship, placement, or graduate role with Ultra Electronics, and is your chance to differentiate yourself from other applicants.</p>
+<p>The deadline for applications is 6:00pm on Wednesday 8th November, and applicants will be notified in due course if they are successful and invited to the Interview Day.</p>
+<p style='font-weight: bold;'>This deadline is a hard deadline, we will not accept any late applications.</p>
+</div>
+<?php
 //wow! previous entry!
 if($entry = $statement->fetchObject()){
     $errorBlock = "Hi " . $userInfo['firstName'] . ", you seem to have already entered your information on this form.<br><br>If you need to make any changes, email Harry Brown at <a href='mailto:hb15g16@soton.ac.uk'>hb15g16@soton.ac.uk</a>.";
