@@ -66,12 +66,6 @@ $userInfo = array(
 	'lastName' => $attributes["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"][0]
 );
 
-$emailParts = explode("@", $userInfo['email']);
-
-if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo['groups']) || in_array("vnStudent", $userInfo['groups']) || in_array("vnStaff", $userInfo['groups']))){
-	echo json_encode(['status' => false, 'message' => "You're not a member of ECS"]);
-	exit;
-}
 
 foreach($_FILES as $task => $file){
 	$target_file = $target_dir . basename($file["name"]);

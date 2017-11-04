@@ -43,12 +43,6 @@ $userInfo = array(
 	'lastName' => $attributes["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"][0]
 );
 
-$emailParts = explode("@", $userInfo['email']);
-
-if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo['groups']) || in_array("vnStudent", $userInfo['groups']) || in_array("vnStaff", $userInfo['groups']))){
-	echo json_encode(['status' => false, 'message' => "You're not a member of ECS"]);
-	exit;
-}
 
 $name = $_GET['name'];
 $year = (string) $_GET['year'];
