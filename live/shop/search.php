@@ -51,6 +51,19 @@ if($emailParts[1] != "ecs.soton.ac.uk"){
 	exit;
 }
 
+$sql = "SELECT a.adminID
+FROM admin AS a
+WHERE a.username = :username;";
+
+$statement = $db->prepare($sql);
+$statement->execute(array(':username' => $userInfo['username']));
+
+if(!$user = $statement->fetchObject()){
+    http_response_code(403);
+    echo "user " . $userInfo['username'] . " doesn't have permissions for this page";
+exit;
+}
+
 $search = $_GET['search'];
 
 $results = produceResults($db, $search);
@@ -69,8 +82,6 @@ function produceResults($db, $search){
 
     $sql = "SELECT *
             FROM item AS i
-            INNER JOIN itemColour AS ic
-            ON i.itemID = ic.itemID
             WHERE i.itemName LIKE '%' || trim(:name) || '%';";
 
     $statement = $db->prepare($sql);
@@ -78,10 +89,7 @@ function produceResults($db, $search){
     $results = array();
 
     while($rowObject = $statement->fetchObject()){
-        if(!isset($results[$rowObject->itemID])){
-            $results[$rowObject->itemID] = array();
-        }
-        $results[$rowObject->itemID][] = $rowObject;
+        $results[$rowObject->itemID] = $rowObject;
     }
 
     return $results;

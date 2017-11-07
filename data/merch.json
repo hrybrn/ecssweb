@@ -1,0 +1,115 @@
+{
+    "Slogans":[
+        "Are you sitting on the F5 key? Cause your ass is refreshing.",
+        "Switches be trippin' ",
+        "They see me scrollin', they hatin'",
+        "// TODO: Slogan",
+        "[\"hip\", \"hip\"]",
+        "ECS, more like ECSESH"
+    ],
+
+    "Sizes":[
+        "S",
+        "M",
+        "L",
+        "XL"
+    ],
+
+    "Styles":{
+        "Zipped Hoodie":{
+            "Description":"Rep your ECSS pride with an embroidered logo on the breast and a slogan of your choosing on the back of this hoodie, with contrast hood, zip and pullstrings",
+            "Price":"£15.00",
+            "Slogan":true,
+            "Sizes":true,
+            "Image":"images/merch/zhoodie.png",
+            "Colours":[
+                "Navy/Grey",
+                "Navy/Red",
+                "Navy/Blue",
+                "Green/White",
+                "Blue/Grey",
+                "Red/Black",
+                "Grey/Navy",
+                "Black/Gold",
+                "Black/Grey",
+                "Black/Orange",
+                "Black/Red"
+            ]
+        },
+
+        "Non-Zipped Hoodie":{
+            "Description":"Rep your ECSS pride with an embroidered logo on the breast and a slogan of your choosing on the back of this hoodie, with contrast hood and pullstrings",
+            "Price":"£15.00",
+            "Slogan":true,
+            "Sizes":true,
+            "Image":"images/merch/hoodie.png",
+            "Colours":[
+                "Navy/Grey",
+                "Navy/Red",
+                "Navy/Blue",
+                "Green/White",
+                "Blue/Grey",
+                "Red/Black",
+                "Grey/Navy",
+                "Black/Gold",
+                "Black/Grey",
+                "Black/Orange",
+                "Black/Red",
+                "Burgundy/Navy"
+            ]
+        },
+
+        "Onesie":{
+            "Description":"New this year!",
+            "Price":"£17.00",
+            "Slogan":false,
+            "Sizes":true,
+            "Image":"images/merch/onesie.png",
+            "Colours":[
+                "Black"
+            ]
+        },
+
+        "T-Shirt":{
+            "Description":"The classic ECSS tee, finished with a printed logo on the breast.",
+            "Price":"£4.00",
+            "Slogan":false,
+            "Sizes":true,
+            "Image":"images/merch/tshirt.png",
+            "Colours":[
+                "Grey", 
+                "Black", 
+                "White", 
+                "Blue", 
+                "Red", 
+                "Green", 
+                "Gold", 
+                "Navy", 
+                "Burgundy"
+            ]
+        },
+
+        "Sports Tee":{
+            "Description":"New this year! Worn by the ECSS Parkrunners",
+            "Price":"£11.00",
+            "Slogan":"My code runs even slower",
+            "Sizes":true,
+            "Image":"images/merch/stee.png",
+            "Colours":[
+                "Red/Black",
+                "Black/Red"
+            ]
+        },
+
+        "Tie":{
+            "Description":"Famously worn by the ECSS Football Team",
+            "Price":"£10.00",
+            "Slogans":false,
+            "Sizes":false,
+            "Image":"images/merch/tie.png",
+            "Colours":[
+                "Navy"
+            ]            
+        }
+    }
+}

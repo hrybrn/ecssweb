@@ -63,6 +63,22 @@ if(!$user = $statement->fetchObject()){
     echo "user " . $userInfo['username'] . " doesn't have permissions for this page";
 exit;
 }
+
+
+//check for open shop and retrieve collection dates
+$sql = "SELECT *
+        FROM shop AS s
+        INNER JOIN collectionDates AS cd
+        ON cd.shopID = s.shopID
+        WHERE datetime(s.openDate) < datetime('now')
+        AND datetime(s.shutDate) > datetime('now');";
+
+$statement = $db->query($sql);
+$collectionDates = [];
+
+while($row = $statement->fetchObject()){
+    $collectionDates[$row->collectionDateID] = $row->collectionDate;
+}
 ?>
 <!doctype html>
 <html>
@@ -79,10 +95,6 @@ exit;
 <body>
 <script type="text/javascript" src='/jquery.js'></script>
 <script type="text/javascript" src='/shop/item/item.js'></script>
-
-<script type="text/javascript" src='/static/slideshow.js'></script>
-<script type="text/javascript" src='/load-image.min.js'></script>
-<link rel="stylesheet" href="/shop/item/slideshow.css">
 <?php
 include_once($relPath . "navbar/navbar.php");
 echo getNavBar();
@@ -90,46 +102,52 @@ echo getNavBar();
 $itemID = $_GET['itemID'];
 
 $sql = "SELECT *
-		FROM item AS i
-        INNER JOIN itemColour AS ic
-        ON i.itemID = ic.itemID
-		WHERE i.itemID = :itemID";
+        FROM ((((item AS i
+        INNER JOIN itemColour AS ic ON i.itemID = ic.itemID)
+        LEFT JOIN itemSize AS isi ON i.itemID = isi.itemID)
+        LEFT JOIN itemSlogan AS isl ON i.itemID = isl.itemID)
+        LEFT JOIN size AS si ON isi.sizeID = si.sizeID)
+        LEFT JOIN slogan AS sl ON isl.sloganID = sl.sloganID
+        WHERE i.itemID = :itemID;";
 
 $statement = $db->prepare($sql);
 $statement->execute([':itemID' => $itemID]);
 
 $items = [];
-
-$files = [];
-$indexedFiles = [];
-
 while($row = $statement->fetchObject()){
     $items[] = $row;
-    $files[] = "../../" . $row->itemColourImage;
-    $indexedFiles[$row->itemColourID] = "../../" . $row->itemColourImage;
 }
 
-$sql = "SELECT *
-        FROM size AS s
-        WHERE s.itemID = :itemID";
+if(empty($items)){
+    echo "Invalid itemID";
+    exit;
+}
 
-$statement = $db->prepare($sql);
-$statement->execute([':itemID' => $itemID]);
-
+$colours = [];
 $sizes = [];
-while($row = $statement->fetchObject()){
-    $sizes[] = $row;
+$slogans = [];
+
+foreach ($items as $row){
+    $colours[$row->colourID] = $row->colourName;
+    $sizes[$row->sizeID] = $row->sizeName;
+    $slogans[$row->sloganID] = $row->sloganName;
 }
 
+unset($slogans[""]);
+unset($sizes[""]);
+
+if(empty($sizes)){
+    $sizes[0] = "One Size Fits All"; 
+}
+
+if(empty($slogans)){
+    $slogans[0] = "No Slogan"; 
+}
 ?>
 <div id='containsEverything'>
 <div id='itemSlideshowContainer'>
     <div id='itemColours'>
-        <?php
-            foreach($files as $colour){
-                echo "<img class='colour' src='" . $colour . "'>";
-            }
-        ?>
+        <img class='colour' src='<?= $relPath . $items[0]->itemImage ?>'>
     </div>
 </div>
 
@@ -155,8 +173,8 @@ while($row = $statement->fetchObject()){
                 <td>
                     <select id='colourSelect'>
                         <?php
-                            foreach($items as $item){
-                                echo "<option value=" . $item->itemColourID . ">" . $item->itemColourName . "</option>";
+                            foreach($colours as $colourID => $colourName){
+                                echo "<option value=" . $colourID . ">" . $colourName . "</option>";
                             }
                         ?>
                     </select>
@@ -169,8 +187,42 @@ while($row = $statement->fetchObject()){
                 <td>
                     <select id='sizeSelect'>
                         <?php
-                            foreach($sizes as $size){
-                                echo "<option value=" . $size->sizeID . ">" . $size->sizeName . "</option>";
+                            foreach($sizes as $sizeID => $sizeName){
+                                echo "<option value=" . $sizeID . ">" . $sizeName . "</option>";
+                            }
+
+                            
+                        ?>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Slogan
+                </td>
+                <td>
+                    <select id='sloganSelect'>
+                        <?php
+                            foreach($slogans as $sloganID => $sloganName){
+                                echo "<option value=" . $sloganID . ">" . $sloganName . "</option>";
+                            }
+
+                            if(empty($slogans)){
+                                echo "<option value=0>No Slogan</option>"; 
+                            }
+                        ?>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Collection Date
+                </td>
+                <td>
+                    <select id='collectionSelect'>
+                        <?php
+                            foreach($collectionDates as $collectionID => $collectionDate){
+                                echo "<option value=" . $collectionID . ">" . $collectionDate . "</option>";
                             }
                         ?>
                     </select>
@@ -188,13 +240,19 @@ while($row = $statement->fetchObject()){
             <input type="hidden" name="amount" value="<?= preg_replace("/£/", "", $items[0]->itemPrice) ?>">  
 
             <input type="hidden" name="on0" value="Colour">        
-            <input type="hidden" name="os0" value="<?= $items[0]->itemColourName ?>" id='colour'>
+            <input type="hidden" name="os0" value="<?= isset($colours[0]) ? $colours[0] : $colours[1] ?>" id='colour'>
 
             <input type="hidden" name="on1" value="Size">  
-            <input type="hidden" name="os1" value="<?= $sizes[0]->sizeName ?>" id='size'>
+            <input type="hidden" name="os1" value="<?= isset($sizes[0]) ? $sizes[0] : $sizes[1]?>" id='size'>
 
             <input type="hidden" name="on2" value="Username">  
             <input type="hidden" name="os2" value="<?= $userInfo['username'] ?>">
+
+            <input type="hidden" name="on3" value="Slogan">  
+            <input type="hidden" name="os3" value="<?= isset($slogans[0]) ? $slogans[0] : $slogans[1]?>">
+
+            <input type="hidden" name="on4" value="CollectionDate">  
+            <input type="hidden" name="os4" value="<?= $collectionDates[1] ?>">
             
             <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
             <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
@@ -206,11 +264,6 @@ while($row = $statement->fetchObject()){
     </div>
 </div>
 <script type="text/javascript">
-    var files = <?= json_encode($files) ?>;
-    var indexedFiles = <?= json_encode($indexedFiles) ?>;
-    
-    //var slideshow = new Slideshow(document.getElementById("itemSlideshow"), files, 2000);
-
     $('#sizeSelect').change(function(){
         var size = $('#sizeSelect').find(':selected').html();
 

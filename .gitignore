@@ -8,3 +8,5 @@ data/CV/
 data/Cover/
 
 db/ecss\.db
+
+\.vscode/launch\.json

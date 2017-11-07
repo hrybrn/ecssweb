@@ -17,9 +17,9 @@
 #itemInfo {
 	display: inline-block;
 	text-align: center;
-	margin-left: 5%;
+	margin-left: 15%;
 	margin-right: 5%;
-	vertical-align: center;
+	padding-left: 5%;
 }
 
 #containsEverything {
@@ -34,11 +34,30 @@
 
 .colour {
 	display: inline-block;
-    object-fit: cover;
-    width: 150px;    
-    height: 150px;
+    object-fit: contain;  
+    height: 300px;
     /*height: 120px;*/
     border-radius: 5px;
 	transition: opacity 0.2s linear;
 	margin: 10px;
+}
+
+@media (max-width: 1100px){
+	.colour {
+		width: 90%;
+		margin-left: 5%;
+	}
+	#itemSlideshowContainer {
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	#itemInfo {
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	#containsEverything {
+		display: block;
+	}
 }

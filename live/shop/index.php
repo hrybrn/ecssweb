@@ -78,8 +78,6 @@ exit;
     <link rel="stylesheet" type="text/css" href="/shop/shop.css" />
     <script type="text/javascript" src='/jquery.js'></script>
     <script type="text/javascript" src='/shop/shop.js'></script>
-    <script type="text/javascript" src='/static/slideshow.js'></script>
-    <script type="text/javascript" src='/load-image.min.js'></script>
     <link rel="stylesheet" href="/shop/slideshow.css">
 </head>
 <body>
