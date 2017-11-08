@@ -1,5 +1,6 @@
 .searchBar {
 	margin: 5px;
+	text-align: center;
 }
 
 .searchBar > input[type="search"] {
