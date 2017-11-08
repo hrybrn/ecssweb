@@ -46,22 +46,9 @@ $userInfo = array(
 
 $emailParts = explode("@", $userInfo['email']);
 
-if($emailParts[1] != "ecs.soton.ac.uk"){
-	echo "You're not a member of ECS";
+if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo['groups']))){
+	echo json_encode(['status' => false, 'message' => "You're not a member of ECS"]);
 	exit;
-}
-
-$sql = "SELECT a.adminID
-FROM admin AS a
-WHERE a.username = :username;";
-
-$statement = $db->prepare($sql);
-$statement->execute(array(':username' => $userInfo['username']));
-
-if(!$user = $statement->fetchObject()){
-    http_response_code(403);
-    echo "user " . $userInfo['username'] . " doesn't have permissions for this page";
-exit;
 }
 
 //paypal ids for prices
