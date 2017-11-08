@@ -63,7 +63,7 @@ function getNavBar() {
 
     }
     $nav .= '<div id="langMenu">';
-    $nav .= '<a href="' . $nakedURL . '?lang=en"><img class="langIcon" id="currentLangIcon" src="' . $relPath . '/images/flag-icons/en.png" height="20"></a>';
+    //$nav .= '<a href="' . $nakedURL . '?lang=en"><img class="langIcon" id="currentLangIcon" src="' . $relPath . '/images/flag-icons/en.png" height="20"></a>';
     //$nav .= '<div id="innerLangMenu">';
 
     //DISABLED LANGUAGE ICONS
