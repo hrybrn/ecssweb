@@ -36,7 +36,8 @@ setTextDomain('home');
             <p><?= _('To keep up with the latest events, join the <a href="https://www.facebook.com/groups/ecss.soton/">ECSS Facebook group</a> and follow us on Twitter, <a href="http://twitter.com/ecs_society">@ECS_Society</a>.') ?></p>
 
             <br><br>
-            <p style="text-align: center;">~~~ If you are a new to ECSS and you have just been accepted then well done! We look forward to introducing you to the society and hope you have a great time with us! ~~~
+            <p style="text-align: center;">
+            Our web store is now live! Take a look at all of the ECSS branded merchandise we have for sale <a href='/shop'>here</a>.
             </p>
             <br><br>
         </section>
