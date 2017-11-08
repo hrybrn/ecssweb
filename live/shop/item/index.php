@@ -72,7 +72,8 @@ $paypal = [
     "WV8C2JGKPECQ8",
     "8WLSYFSRZ5JSY",
     "6FLZWM6KXK7LS",
-    "GC3SGSZ333KXE"
+    "GC3SGSZ333KXE",
+    "27SUETDFQ8YZY"
 ];
 
 //check for open shop and retrieve collection dates
