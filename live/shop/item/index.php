@@ -144,7 +144,6 @@ if(empty($slogans)){
 }
 
 sort($colours);
-ksort($sizes);
 sort($slogans);
 sort($collectionDates);
 ?>
@@ -246,7 +245,7 @@ sort($collectionDates);
             <input type="hidden" name="os0" value="<?= $colours[0] ?>" id='colour'>
 
             <input type="hidden" name="on1" value="Size">  
-            <input type="hidden" name="os1" value="<?= $sizes[0] ?>" id='size'>
+            <input type="hidden" name="os1" value="<?= isset($sizes[0]) ? $sizes[0] : $sizes[1] ?>" id='size'>
 
             <input type="hidden" name="on2" value="Username">  
             <input type="hidden" name="os2" value="<?= $userInfo['username'] ?>">
