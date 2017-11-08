@@ -33,3 +33,10 @@
     border-radius: 5px;
     transition: opacity 0.2s linear;
 }
+
+#itemDiv {
+	display: flex;
+    align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}

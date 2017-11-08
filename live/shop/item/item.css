@@ -1,3 +1,9 @@
+select {
+	text-overflow: ellipsis;
+	width: 100%;
+}
+
+
 .itemPageContainer {
 	text-align: center;
 	margin: 15px auto;
@@ -55,9 +61,10 @@
 	#itemInfo {
 		width: 90%;
 		margin-left: 5%;
-		margin-right: 5%;
 	}
 	#containsEverything {
 		display: block;
+		margin: -5%;
+		width: 100%;
 	}
 }

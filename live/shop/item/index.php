@@ -64,6 +64,16 @@ if(!$user = $statement->fetchObject()){
 exit;
 }
 
+//paypal ids for prices
+$paypal = [
+    "",
+    "VVBTZS6SKRHUQ",
+    "Z8ZPHKTEU7MRG",
+    "WV8C2JGKPECQ8",
+    "8WLSYFSRZ5JSY",
+    "6FLZWM6KXK7LS",
+    "GC3SGSZ333KXE"
+];
 
 //check for open shop and retrieve collection dates
 $sql = "SELECT *
@@ -135,6 +145,7 @@ foreach ($items as $row){
 
 unset($slogans[""]);
 unset($sizes[""]);
+unset($colours[""]);
 
 if(empty($sizes)){
     $sizes[0] = "One Size Fits All"; 
@@ -143,6 +154,11 @@ if(empty($sizes)){
 if(empty($slogans)){
     $slogans[0] = "No Slogan"; 
 }
+
+sort($colours);
+ksort($sizes);
+sort($slogans);
+sort($collectionDates);
 ?>
 <div id='containsEverything'>
 <div id='itemSlideshowContainer'>
@@ -231,33 +247,35 @@ if(empty($slogans)){
         </table>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="VVBTZS6SKRHUQ">
+            <input type="hidden" name="hosted_button_id" value="<?= $paypal[$itemID] ?>">
 
             <input type="hidden" name="item_name" value="<?= $items[0]->itemName ?>">
             <input type="hidden" name="item_number" value="<?= $itemID ?>">
 
             <input type="hidden" name="quantity" value="1">
-            <input type="hidden" name="amount" value="<?= preg_replace("/£/", "", $items[0]->itemPrice) ?>">  
 
             <input type="hidden" name="on0" value="Colour">        
-            <input type="hidden" name="os0" value="<?= isset($colours[0]) ? $colours[0] : $colours[1] ?>" id='colour'>
+            <input type="hidden" name="os0" value="<?= $colours[0] ?>" id='colour'>
 
             <input type="hidden" name="on1" value="Size">  
-            <input type="hidden" name="os1" value="<?= isset($sizes[0]) ? $sizes[0] : $sizes[1]?>" id='size'>
+            <input type="hidden" name="os1" value="<?= $sizes[0] ?>" id='size'>
 
             <input type="hidden" name="on2" value="Username">  
             <input type="hidden" name="os2" value="<?= $userInfo['username'] ?>">
 
             <input type="hidden" name="on3" value="Slogan">  
-            <input type="hidden" name="os3" value="<?= isset($slogans[0]) ? $slogans[0] : $slogans[1]?>">
+            <input type="hidden" name="os3" value="<?= $slogans[0] ?>" id='slogan'>
 
             <input type="hidden" name="on4" value="CollectionDate">  
-            <input type="hidden" name="os4" value="<?= $collectionDates[1] ?>">
+            <input type="hidden" name="os4" value="<?= $collectionDates[0] ?>" id='collectionDate'>
             
             <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
             <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
         </form>
 
+        <p>
+            The slogan option 'No Slogan' is for an item with no text on the back.
+        </p>
         <p>
             Payments authenticated by iSolutions, and paid through Paypal.
         </p>
@@ -273,6 +291,16 @@ if(empty($slogans)){
     $('#colourSelect').change(function(){
         var colour = $('#colourSelect').find(':selected').html();
         $('#colour').val(colour);
+    });
+
+    $('#sloganSelect').change(function(){
+        var colour = $('#sloganSelect').find(':selected').html();
+        $('#slogan').val(colour);
+    });
+
+    $('#collectionSelect').change(function(){
+        var colour = $('#collectionSelect').find(':selected').html();
+        $('#collectionDate').val(colour);
     });
 </script>
 </body>
