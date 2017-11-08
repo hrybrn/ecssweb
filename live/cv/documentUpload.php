@@ -1,4 +1,5 @@
 <?php
+exit;
 $relPath = "../";
 
 $dbLoc = realpath($relPath . "../db/ecss.db");
