@@ -32,6 +32,7 @@ function search(search){
 					var item = "<div id='item" + this.itemID + "' class='item' onclick='window.location = \"/shop/item?itemID=" + this.itemID + "\";'>";
 					item += "<h3 class='itemName'>" + this.itemName + "</h3>";
 					item += "<div><img class='itemImage' src='../" + this.itemImage + "'></div>";
+					item += "<p style='text-align: center;'>" + this.itemPrice + "</p>";
 					item += "</div>";
 
 					$('#itemDiv').append(item);
