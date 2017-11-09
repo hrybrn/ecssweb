@@ -97,7 +97,6 @@ foreach ($sectionData as $key => $value) {
 <link rel="stylesheet" type="text/css" href="/leaflet/leaflet.css"/>
 <link rel="stylesheet" href="/static/slideshow/slideshow.css">
 <script src="/jquery.js"></script>
-<script src="/load-image.min.js"></script>
 <script src="/static/slideshow/slideshow.js"></script>
 <body>
 <?= getNavBar(); ?>
