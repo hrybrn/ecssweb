@@ -13,9 +13,9 @@ include_once ($relPath . 'includes/setLang.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="<?= $relPath ?>theme.css">
     <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="<?= $relPath ?>static/slideshow.css">
+    <link rel="stylesheet" href="/static/slideshow/slideshow.css">
     <script src="<?= $relPath ?>jquery.js"></script>
-    <script src="<?= $relPath ?>static/slideshow.js"></script>
+    <script src="/static/slideshow/slideshow.js"></script>
     <script src="/load-image.min.js"></script>
 </head>
 <body>
