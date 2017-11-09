@@ -1,11 +1,21 @@
-function Slideshow(container, imagesPaths, interval) {
+/*
+ * JS Image Slideshow
+ * https://github.com/allc/JS-Image-Slideshow
+ *
+ * Copyright (c) 2017 Cui Jinxuan
+ *
+ * Licensed under the MIT license:
+ * https://github.com/allc/JS-Image-Slideshow/blob/master/LICENSE
+ */
+function Slideshow(container, imagesPaths, options) {
+    //'use strict';
     var slideshow = this;
 
-    if(typeof interval == "undefined"){
-        interval = 5000;
+    if(options && options.interval){
+        this.interval = options.interval;
+    } else {
+        this.interval = 5000;
     }
-
-    this.updateTime(interval);
 
     this.container = container;
     this.imagesPaths = imagesPaths;
@@ -18,10 +28,15 @@ function Slideshow(container, imagesPaths, interval) {
     // image container
     this.imageContainer = document.createElement("div");
     this.imageContainer.classList.add("slideshowImageContainer");
-    // image
-    this.image = document.createElement("img");
-    this.updateImage(this.imagesPaths[this.currentIndex]);
-    this.imageContainer.appendChild(this.image);
+    // images
+    this.images = [];
+    for (var i = 0; i < imagesPaths.length; i++) {
+        var image = document.createElement("img");
+        image.src = this.imagesPaths[i];
+        image.classList.add('slideshowHiddenImage');
+        this.imageContainer.appendChild(image);
+        this.images.push(image);
+    }
     // add image container
     this.container.appendChild(this.imageContainer);
 
@@ -50,24 +65,15 @@ function Slideshow(container, imagesPaths, interval) {
     this.container.appendChild(this.controlContainer);
 
     // start
+    this.updateImage(this.currentIndex);
     this.startSlideshow();
 }
 
-Slideshow.prototype.updateImage = function(imagePath) {
-    var slideshow = this;
-
-    var orientation = 0;
-
-    loadImage(imagePath, function(img){
-        $(slideshow.imageContainer).empty();
-        slideshow.image = img;
-        slideshow.imageContainer.appendChild(img);
-    }, {
-        contain: true,
-        meta: true,
-        canvas: true,
-        orientation: true
-    });
+Slideshow.prototype.updateImage = function(nextIndex, lastIndex) {
+    if (typeof lastIndex !== 'undefined') {
+        this.images[lastIndex].classList.add("slideshowHiddenImage");
+    }
+    this.images[nextIndex].classList.remove("slideshowHiddenImage");
 }
 
 Slideshow.prototype.startSlideshow = function() {
@@ -78,13 +84,8 @@ Slideshow.prototype.startSlideshow = function() {
     }, this.interval);
 }
 
-Slideshow.prototype.interval = 5000;
-
-Slideshow.prototype.updateTime = function(newTime){
-    Slideshow.prototype.interval = newTime;
-}
-
 Slideshow.prototype.nextPhoto = function(skip) {
+    var lastIndex = this.currentIndex;
     this.currentIndex += skip;
 
     if(this.currentIndex < 0){
@@ -95,7 +96,7 @@ Slideshow.prototype.nextPhoto = function(skip) {
         this.currentIndex = this.currentIndex - this.imagesPaths.length;
     }
 
-    this.updateImage(this.imagesPaths[this.currentIndex]);
+    this.updateImage(this.currentIndex, lastIndex);
 
     if (this.isPlaying) {
         // reset timer
