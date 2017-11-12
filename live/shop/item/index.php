@@ -168,6 +168,11 @@ sort($collectionDates);
             <?= $items[0]->itemDesc ?>
         </p>
 
+        <p>Size Guide:</p>
+        <p>
+            <?= $items[0]->itemSizeGuide ?>
+        </p>
+
         <table id='sizeAndColour'>
             <tr>
                 <td>
