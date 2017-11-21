@@ -46,11 +46,6 @@ $userInfo = array(
 
 $emailParts = explode("@", $userInfo['email']);
 
-if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo['groups']) || in_array("pjStudent", $userInfo['groups']) || in_array("pjStaff", $userInfo['groups']))){
-	echo json_encode(['status' => false, 'message' => "You're not a member of ECS"]);
-	exit;
-}
-
 //paypal ids for prices
 $paypal = [
     "",

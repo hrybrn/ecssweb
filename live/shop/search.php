@@ -44,10 +44,6 @@ $userInfo = array(
 	'lastName' => $attributes["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"][0]
 );
 
-if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo['groups']))){
-	echo json_encode(['status' => false, 'message' => "You're not a member of ECS"]);
-	exit;
-}
 
 $search = $_GET['search'];
 
