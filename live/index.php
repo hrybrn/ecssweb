@@ -37,7 +37,8 @@ setTextDomain('home');
 
             <br><br>
             <p style="text-align: center;">
-            Our web store is now live! Take a look at all of the ECSS branded merchandise we have for sale <a href='/shop'>here</a>.
+            We have a new gold sponsor, <a href='talent.io'>talent.io</a>! 
+            You can find our more about them <a href='https://society.ecs.soton.ac.uk/sponsors/?lang=en#talent.io'>here</a>.
             </p>
             <br><br>
         </section>
