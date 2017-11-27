@@ -19,6 +19,10 @@ function getComments(read){
             var tableHtml = "<tr><th>Comment</th><th>Response</th><th>Responder</th></tr>";
 
             $.each(comments, function(id, val){
+                if(this.adminResponse == null){
+                    this.adminResponse = "";
+                    this.adminName = "";
+                }
                 tableHtml += "<tr><td>" + this.commentMessage + "</td>";
                 tableHtml += "<td><textarea rows='4' cols='50' id='response" + id + "'>" + this.adminResponse + "</textarea></td>"
                 tableHtml += "<td>" + this.adminName + "</td>";
