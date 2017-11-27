@@ -51,6 +51,10 @@ $comments = [];
 
 $statement = $db->query($sql);
 while($comment = $statement->fetchObject()){
+    if($comment->commentMessage == null){
+        $comment->commentMessage = "";
+        $comment->adminName = "";
+    }
     $comments[$comment->commentID] = $comment;
 }
 
