@@ -86,7 +86,8 @@ echo getNavBar();
     </tr>
 <?php
 $sql = "SELECT * FROM comment AS c
-        LEFT JOIN admin AS a ON a.adminID = c.adminID;";
+        LEFT JOIN admin AS a ON a.adminID = c.adminID
+        WHERE a.adminResponse = '%';";
 
 $statement = $db->query($sql);
 
