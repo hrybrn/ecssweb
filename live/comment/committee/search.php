@@ -44,7 +44,7 @@ if($read == "true"){
     $sql = "SELECT * FROM comment AS c
             LEFT JOIN admin AS a
             ON a.adminID = c.adminID
-            WHERE c.adminResponse = 'h';";
+            WHERE c.adminResponse = '';";
 }
 
 $comments = [];
