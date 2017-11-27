@@ -39,7 +39,8 @@ $read = $_GET['read'];
 if($read == "true"){
     $sql = "SELECT * FROM comment AS c
             LEFT JOIN admin AS a
-            ON a.adminID = c.adminID;";
+            ON a.adminID = c.adminID
+            WHERE c.adminResponse = '%';";
 } else {
     $sql = "SELECT * FROM comment AS c
             LEFT JOIN admin AS a
