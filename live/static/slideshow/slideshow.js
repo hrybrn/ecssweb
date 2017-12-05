@@ -45,19 +45,19 @@ function Slideshow(container, imagesPaths, options) {
     this.controlContainer.classList.add("slideshowControl");
     // previous button
     this.previousButton = document.createElement("button");
-    this.previousButton.textContent = '<';
+    this.previousButton.textContent = '◂';
     this.previousButton.classList.add("slideshowButton");
     this.previousButton.addEventListener("click", function(){slideshow.nextPhoto(-1)});
     this.controlContainer.appendChild(this.previousButton);
     // pause button
     this.pauseButton = document.createElement("button");
-    this.pauseButton.textContent = '||';
+    this.pauseButton.textContent = '⏸';
     this.pauseButton.classList.add("slideshowButton");
     this.pauseButton.addEventListener("click", function(){slideshow.pausePlay()});
     this.controlContainer.appendChild(this.pauseButton);
     // next button
     this.nextButton = document.createElement("button");
-    this.nextButton.textContent = '>';
+    this.nextButton.textContent = '▸';
     this.nextButton.classList.add("slideshowButton");
     this.nextButton.addEventListener("click", function(){slideshow.nextPhoto(1)});
     this.controlContainer.appendChild(this.nextButton);
