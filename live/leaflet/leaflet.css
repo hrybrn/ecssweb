@@ -8,8 +8,10 @@
 }
 
 .subsection {
-    margin: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
     margin-bottom: 50px;
+    margin-top: 20px;
     overflow: hidden;
 }
 
@@ -34,8 +36,17 @@ div.subsectionText {
 }
 
 #titleDiv {
-    margin: 20px;
-    margin-left: 50px;
+    /*
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
+    */
+    padding: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #e5e5e5;
+    /*border-radius: 20px;*/
 }
 
 @media screen and (max-width: 750px) {
