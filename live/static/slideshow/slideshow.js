@@ -51,7 +51,7 @@ function Slideshow(container, imagesPaths, options) {
     this.controlContainer.appendChild(this.previousButton);
     // pause button
     this.pauseButton = document.createElement("button");
-    this.pauseButton.textContent = '⏸';
+    this.pauseButton.textContent = '||';
     this.pauseButton.classList.add("slideshowButton");
     this.pauseButton.addEventListener("click", function(){slideshow.pausePlay()});
     this.controlContainer.appendChild(this.pauseButton);
