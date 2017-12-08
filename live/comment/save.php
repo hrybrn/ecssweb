@@ -83,7 +83,7 @@ $committee = [
 ];
 
 if(isset($committee[$userInfo['username']])){
-	$comment += $committee[$userInfo['username']];
+	$comment .= $committee[$userInfo['username']];
 }
 
 //deliberately throw your data away
