@@ -64,6 +64,28 @@ if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo
 	exit;
 }
 
+//this is where we tell you if a committee member made the comment (wouldnt want them abusing their power)
+$comment = $_POST['comment'];
+
+$committee = [
+	'rst1g15' => ' From Ricki x',
+	'ak10n13' => ' From Ayush x',
+	'clk1g16' => ' From Charis x',
+	'dcp1n13' => ' From Denisa x',
+	'sw1n15' => ' From Luke x',
+	'hb15g16' => ' From Harry x',
+	'cc11g16' => ' From Chris x',
+	'ab27g15' => ' From Angus x',
+	'gpeh1g14' => ' From George x',
+	'be5g16' => ' From Brad x',
+	'hos1n15' => ' From Hope x',
+	'ess1n17' => ' From Jeff x'
+];
+
+if(isset($committee[$userInfo['username']])){
+	$comment += $committee[$userInfo['username']];
+}
+
 //deliberately throw your data away
 unset($userInfo);
 unset($attributes);
@@ -112,7 +134,6 @@ $statement = $db->prepare($sql);
 $statement->execute([':ourHash' => $hash, ':ourDate' => $date]);
 
 //now we save the comment
-$comment = $_POST['comment'];
 $sql = "INSERT INTO comment(commentMessage) VALUES(:comment);";
 
 $statement = $db->prepare($sql);
