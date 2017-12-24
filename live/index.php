@@ -37,7 +37,7 @@ setTextDomain('home');
 
             <br><br>
             <p style="text-align: center;">
-            We have a new gold sponsor, <a href='talent.io'>talent.io</a>! 
+            We have a new gold sponsor, <a href='http://talent.io'>talent.io</a>! 
             You can find our more about them <a href='https://society.ecs.soton.ac.uk/sponsors/?lang=en#talent.io'>here</a>.
             </p>
             <br><br>
