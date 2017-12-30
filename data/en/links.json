@@ -27,6 +27,7 @@
         "default":"#",
         "About":"about/index.php",
         "Constitution":"files/Constitution-2015.pdf",
+        "Voting Results":"voteresult",
         "Contact Us":"about/contact.php",
         "Credits":"about/credits.php"
     }

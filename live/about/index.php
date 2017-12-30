@@ -29,21 +29,16 @@ echo getNavBar();
         <noscript>Javascript is required for the slideshow.</noscript>
     </div>
 
-    <h1>About ECSS</h1>
 
-    <h3>
+    <p><span style="font-size: 13pt;"><strong>ECSS is a student run society within the School of Electronics and Computer Science at the University of Southampton. We are a society for the students. That means we are here to help you.</strong></span></p>
+    <p><strong><span style="font-size: 13pt;">A Brief History:</span></strong></p>
+    <p>ECSS was founded in 2005 when two pre-existing societies merged, the Software Engineering and Computer Science Society (SECSS) and the Electronic Electrical Electromechanical and Computer Engineering Society (EEECES). Officially, SECSS was renamed to the Electronics and Computer Science Society to become a departmental society. EEECES had never been affiliated with the Union and had been rejected in both 2004 and 2005.</p>
+    <p><strong><span style="font-size: 13pt;">Present Day:</span></strong></p>
+    <p>The aim of the society is to run a range of events, activities and opportunities, as well as to support the groups and societies which run within the School of Electronics and Computer Science.</p>
+    <p>Through the year that we (the current committee) are in power, we will provide you with a range of events and activities. These range from club nights and pub crawls, to sports events and games nights.</p>
+    <p>We also provide academic and job related activities such as talks from external companies, including those that sponsor ECSS, as well as ECS alumni.</p>
+    <p>We are always open however, to new and fresh ideas of events that you think we should run. If you have an ideas, send it our way and we'll see what we can do! Our most recent <a href="https://society.ecs.soton.ac.uk/files/Constitution-2015.pdf">Constitution</a>, <a href="https://www.susu.org/groups/ecss">SUSU Society Page</a>, our <a href="/voteresult">latest Election Results</a> and the subsequent pages on this website are available for your immediate browsing. If at any point you require any more information, or are interested in sponsoring our society, please do not hesitate to contact us.</p>
 
-        ECSS is a student run society within the School of Electronics and Computer Science at the University of Southampton. We are a society for the students.
-        That means we are here to help you.</h3>
-    <p>
-        Through the year that we (the current committee) are in power, we
-        will try to provide you with a range of events and activities. We have a
-        number of plans of different events we are planning on running.
-        These range from pirate, golf and cocktail pub crawls to sporting events such as a table tennis tournament.
-        We also provide more academic and job related activities such as talks from outside companies, as well as day trips to these companies such as J.P. Morgan and IBM.</p>
-    <p>  We are always open however, to new and fresh ideas of events that you think we should run. If you have an ideas, send it our way and we'll see what we can do!
-        Our most recent Constitution, SUSU Society Page, our latest Election Results and the subsequent pages on this website are available for your immediate browsing. If you are a UoS Student, you can also log into the portal for current merchandise orders, voting and more. If at any point you require any more information, or are interested in sponsoring our society, please do not hesitate to contact us.
-    </p>
 </section>
 <script>
     var files = ["..\/images\/people.jpg", "..\/images\/everyone.png", "..\/images\/leaflet\/games\/GamesSoc\/VideoGames\/IMG_2378.JPG", "..\/images\/leaflet\/running\/parkrun.jpg", "..\/images\/leaflet\/games\/GamesSoc\/BoardGames\/IMG_3138.JPG"];
