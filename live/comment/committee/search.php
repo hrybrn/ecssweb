@@ -40,7 +40,7 @@ if($read == "true"){
     $sql = "SELECT * FROM comment AS c
             LEFT JOIN admin AS a
             ON a.adminID = c.adminID
-            WHERE c.adminResponse = '%';";
+            WHERE c.adminResponse IS NOT NULL;";
 } else {
     $sql = "SELECT * FROM comment AS c
             LEFT JOIN admin AS a
