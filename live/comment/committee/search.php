@@ -40,12 +40,14 @@ if($read == "true"){
     $sql = "SELECT * FROM comment AS c
             LEFT JOIN admin AS a
             ON a.adminID = c.adminID
-            WHERE c.adminResponse IS NOT NULL;";
+            WHERE c.adminResponse IS NOT NULL
+            AND c.adminResponse <> '';";
 } else {
     $sql = "SELECT * FROM comment AS c
             LEFT JOIN admin AS a
             ON a.adminID = c.adminID
-            WHERE c.adminResponse IS NULL;";
+            WHERE c.adminResponse IS NULL
+            OR c.adminResponse = '';";
 }
 
 $comments = [];
