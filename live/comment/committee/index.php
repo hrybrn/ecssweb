@@ -62,3 +62,8 @@ echo getNavBar();
 
 <script src='/jquery.js'></script>
 <script src='/comment/committee/committee.js'></script>
+
+<style>
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
+</style>

@@ -97,4 +97,9 @@ while($comment = $statement->fetchObject()){
 }
 ?>
 </table>
+
+<style>
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
+</style>
 </div>
