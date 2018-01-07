@@ -366,6 +366,10 @@ li {
         width: 100%;
     }
 
+    #sponsorImage {
+        height: 300px;
+    }
+
     #sponsorTable {
         margin: 0 5px;
     }
