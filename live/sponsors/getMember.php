@@ -21,10 +21,26 @@ echo $data;
 function assembleData() {
     global $name;
     global $sponsors;
+    global $relPath;
+
     foreach($sponsors as $type => $sponsor) {
         foreach ($sponsor as $title => $data)
             if ($title == $name) {
                 $data['Type'] = $type;
+
+                //find files for slideshow
+                if(isset($data['Slideshow'])){
+                    $data['Files'] = scandir($relPath . 'images/' . $data['Slideshow']);
+
+                    if (($key = array_search(".", $data['Files'])) !== false) {
+                        unset($data['Files'][$key]);
+                    }
+
+                    if (($key = array_search("..", $data['Files'])) !== false) {
+                        unset($data['Files'][$key]);
+                    }
+                }
+
                 return json_encode($data);
             }
     }

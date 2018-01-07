@@ -41,12 +41,18 @@ foreach ($sponsors['Bronze'] as $sponsor => $data) {
 
 <script> var relPath = "<?= $relPath ?>";</script>
 <script src="<?=$relPath ?>sponsors/buttonControl.js"></script>
+
+<!--slideshow requirements-->
+<link rel="stylesheet" href="/static/slideshow/slideshow.css">
+<script src="<?= $relPath ?>jquery.js"></script>
+<script src="/static/slideshow/slideshow.js"></script>
+
 </head>
 <body>
 <div id="sponsorsPageContainer" class="pageContainer">
-    <div id="sponsorImageContainer"><img id="sponsorImage" class="pageImage"/></div>
+    <div id="sponsorImageContainer"><div id="sponsorImage" class="pageImage"></div></div>
     <div id="sponsorButtonGroup"><?= $gold; $silver; $bronze ?></div>
-    <section id="sponsorTable"></section>
+    <div id="sponsorTable"></div>
 </div>
 </body>
 </html>

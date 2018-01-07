@@ -101,5 +101,6 @@ while($comment = $statement->fetchObject()){
 <style>
 tr:nth-child(even) {background: #CCC}
 tr:nth-child(odd) {background: #FFF}
+
 </style>
 </div>

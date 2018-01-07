@@ -10,6 +10,7 @@ function findGetParameter(parameterName) {
         });
     return result;
 }
+var slideshow;
 
 function showMemberWithName(name) {
     var lang = findGetParameter("lang");
@@ -25,13 +26,28 @@ function showMemberWithName(name) {
         data: {'name': name, 'lang': lang},
         dataType: 'json',
         success: function (sponsor) {
-            $('#sponsorImage').prop('src', relPath + sponsor.Image);
+
+            if(sponsor.Image != null){
+                $('.slideshowImageContainer').remove();
+                $('.slideshowControl').remove();
+                $('#sponsorImage').css("background-image", "url(/" + sponsor.Image + ")");
+                //$('#sponsorImage').prop('src', relPath + sponsor.Image);
+            } else {
+                var inter = [];
+
+                $.each(sponsor.Files, function(){
+                    inter.push("/images/sponsors/slideshow/" + this);
+                });
+
+                slideshow = new Slideshow(document.getElementById("sponsorImage"), inter);
+            }
 
             //show data
             var html = "";
             var links = '<div class="sponsorInfoSection">';
 
             delete sponsor.Image;
+            delete sponsor.Files;
 
             $.each(sponsor, function (key, value) {
                 if (key === "Name") {
