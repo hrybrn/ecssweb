@@ -39,6 +39,8 @@ function assembleData() {
                     if (($key = array_search("..", $data['Files'])) !== false) {
                         unset($data['Files'][$key]);
                     }
+
+                    shuffle($data['Files']);
                 }
 
                 return json_encode($data);
