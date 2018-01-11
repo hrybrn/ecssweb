@@ -93,7 +93,7 @@ echo getNavBar();
     This is assuming you don't name drop yourself, or give your identity away within it.
     </p>
     <p>
-    All source code is available on the <a href='https://github.com/hrybrn/ecssweb/tree/master/live/comment'>Github Repo</a>, and is documented with what everything does.
+    All source code is available on the <a href='https://github.com/hrybrn/ecssweb/tree/master/live/comment'>Github Repo</a>, and is well documented with what everything does.
     </p>
     <p>
     If you have any suggestions of how to improve this page or the site in general please submit them here as well!
