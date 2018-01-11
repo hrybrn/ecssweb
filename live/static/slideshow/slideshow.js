@@ -16,7 +16,7 @@ function Slideshow(container, imagesPaths, options) {
     } else if (typeof options.background == 'undefined') {
         options.background = true;
     }
-    
+
     var slideshow = this;
 
     // set interval
