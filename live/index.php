@@ -26,9 +26,14 @@ setTextDomain('home');
 ?>
 <div class="pageContainer">
     <div id="intro">
-        <img id="logo" src="images/ecss-logo.png" alt="ECSS logo" />
-        <section>
+        <div id='logoContainer'>
+            <img id="logo" src="images/sponsors/jpmorgan.jpg" alt="ECSS logo" style='margin-top: 55px;'/>
+            <img id="logo" src="images/sponsors/talentio.png" alt="ECSS logo" style='float:right;'/>
+        </div>
+        <section style='text-align: center;'>
+            <img id="inlinelogo" src="images/ecss-logo-square.png" alt="ECSS logo" style='width:180px;'/>
             <h1><?= _('Welcome to ECSS!') ?></h1>
+           
             <p><?= _('Welcome to the Electronics and Computer Science (ECS) Society website.') ?></p>
             <p><?= _('We are a student-run society for ECS at the University of Southampton.') ?></p>
             <p><?= _('On this website you will find information about the society such as who we are, what we aim to do, as well as what events we are currently organising!') ?></p>
@@ -36,10 +41,6 @@ setTextDomain('home');
             <p><?= _('To keep up with the latest events, join the <a href="https://www.facebook.com/groups/ecss.soton/">ECSS Facebook group</a> and follow us on Twitter, <a href="http://twitter.com/ecs_society">@ECS_Society</a>.') ?></p>
 
             <br><br>
-            <p style="text-align: center;">
-            We have a new gold sponsor, <a href='http://talent.io'>talent.io</a>! 
-            You can find our more about them <a href='https://society.ecs.soton.ac.uk/sponsors/?lang=en#talent.io'>here</a>.
-            </p>
             <br><br>
         </section>
     </div>

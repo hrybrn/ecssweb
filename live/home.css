@@ -3,10 +3,19 @@
 }
 
 #logo {
-    display: block;
-    width: 200px;
-    margin: 40px 40px 40px 20px;
+    display: flex;
+    width: 300px;
+    height: auto;
+    margin: 40px 40px 40px 40px;
     float: left;
+}
+
+#logoContainer {
+    display: flex-container;
+    flex-wrap: nowrap;
+    justify-content: center;
+    vertical-align: center;
+    width: 100%;
 }
 
 #socialWidgetsDiv {
