@@ -86,17 +86,20 @@ echo getNavBar();
 ?>
 <div id='formDiv' style='display: block; text-align: center; width: 90%; margin-left: 5%;'>
     <p>
-    ECSS wants to hear feedback from you guys on what we do well, and what we could do better on.
-    Any data you submit in this form is anonymous and cannot be traced back to you.
+        ECSS wants to hear feedback from you guys on what we do well, and what we could do better on.
+        Any data you submit in this form is anonymous and cannot be traced back to you.
     </p>
     <p style='font-weight: bold;'>
-    This is assuming you don't name drop yourself, or give your identity away within it.
+        This is assuming you don't name drop yourself, or give your identity away within it.
     </p>
     <p>
-    All source code is available on the <a href='https://github.com/hrybrn/ecssweb/tree/master/live/comment'>Github Repo</a>, and is well documented with what everything does.
+        The committee will reply to submitted feedback, and both the feedback and response will be visible.
     </p>
     <p>
-    If you have any suggestions of how to improve this page or the site in general please submit them here as well!
+        All source code is available on the <a href='https://github.com/hrybrn/ecssweb/tree/master/live/comment'>Github Repo</a>, and is well documented with what everything does.
+    </p>
+    <p>
+        If you have any suggestions of how to improve this page or the site in general please submit them here as well!
     </p>
 
     <div>
