@@ -49,10 +49,10 @@ div.subsectionText {
     /*border-radius: 20px;*/
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
     .subsectionImage {
         width: 100%;
-        max-width: 300px;
+        max-width: 400px;
         float: none;
         margin: 0 auto;
     }
@@ -65,7 +65,16 @@ div.subsectionText {
         float: none;
     }
 
+}
 
+@media (max-width: 500px) {
+    .subsection {
+        margin: 20px;
+    }
+
+    #titleDiv {
+        padding: 20px 20px 20px 50px;
+    }
 }
 
 .slideshowButton {
