@@ -19,7 +19,7 @@ function getNavBar() {
 
     $nav .= '<div class="navbar">';
     //$nav .= '<img id="navbarLogo" src="' . $relPath . 'images/new-logo-white-transparent-ver2.png" height="60">';
-    $nav .= '<img id="navbarLogo" src="' . $relPath . 'images/new-logo-black.png" height="60">';
+    $nav .= '<a href="/"> <img id="navbarLogo" src="' . $relPath . 'images/new-logo-black.png" height="60"></a>';
 
     /*
      * Every entry in $links contains an element of the navbar (link & address).

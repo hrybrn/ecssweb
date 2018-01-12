@@ -27,8 +27,12 @@ setTextDomain('home');
 <div class="pageContainer">
     <div id="intro">
         <div id='logoContainer'>
-            <img id="logo" src="images/sponsors/jpmorgan.jpg" alt="ECSS logo" style='margin-top: 55px;'/>
-            <img id="logo" src="images/sponsors/talentio.png" alt="ECSS logo" style='float:right;'/>
+            <a href='/sponsors/?lang=en#J._P._Morgan'>
+                <img id="logo" src="images/sponsors/jpmorgan.jpg" alt="ECSS logo" style='margin-top: 55px;'/>
+            </a>
+            <a href='/sponsors/?lang=en#talent.io'>
+                <img id="logo" src="images/sponsors/talentio.png" alt="ECSS logo" style='float:right;'/>
+            </a>
         </div>
         <section style='text-align: center;'>
             <img id="inlinelogo" src="images/ecss-logo-square.png" alt="ECSS logo" style='width:180px;'/>
