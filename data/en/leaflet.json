@@ -14,9 +14,9 @@
         }   
     },
 
-    "Games": {
-        "title":"Games in ECSS",
-        "Overview":"At ECSS we run dedicated game socials every few weeks to help people from all years de-stress from the craziness of their degree, as well as to help them meet, make friends and play games with other students.<br>Make sure to follow the <a href='https://www.facebook.com/ecss.soton/'>ECSS facebook</a> for news about events, including locations and times.",
+    "Gaming Socials": {
+        "title":"Gaming Socials in ECSS",
+        "Overview":"At ECSS we run dedicated gaming socials every few weeks to help people from all years de-stress from the craziness of their degree, as well as to help them meet, make friends and play games with other students.<br>Make sure to follow the <a href='https://www.facebook.com/ecss.soton/'>ECSS facebook</a> for news about events, including locations and times.",
         "Subsections": {
             "Board Game Socials": {
                 "Text":"We run regular board game nights throughout the year. Bring your own games or play some of ours with games ranging from classics like Catan, to card games like Magic, to quick games like Coup and Werewolf. We have them all so pop along and join in!",

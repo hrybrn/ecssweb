@@ -72,7 +72,7 @@ foreach ($sectionData as $key => $value) {
 
                     $imageClass = "";
 
-                    if($section == "Football" || $section == "Games" || $section == "Socials"){
+                    if($section == "Football" || $section == "Gaming Socials" || $section == "Socials"){
                         $imageClass = "subsectionImage";
                     }
 
