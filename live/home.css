@@ -2,12 +2,16 @@
     min-height: 240px;
 }
 
-#logo {
+#logo, #logoright {
     display: flex;
     width: 300px;
     height: auto;
     margin: 40px 40px 40px 40px;
     float: left;
+}
+
+#logoright {
+    float:right;
 }
 
 #logoContainer {
@@ -64,9 +68,19 @@
     text-align: right;
 }
 
-@media (max-width: 890px) {
+@media (max-width: 970px) {
     #socialWidgetsDiv {
         height: 440px;
+    }
+
+    #logo, #logoright{
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+
+    #logoright{
+        float: left;
     }
 
     #socialTabs {
@@ -100,7 +114,7 @@
 }
 
 @media (max-width: 460px) {
-    #logo {
+    #logo, #logoright {
         float: none;
         margin: 10px auto;
         width: 100%;
