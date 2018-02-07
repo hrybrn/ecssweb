@@ -8,6 +8,11 @@ $db = new PDO('sqlite:' . $dbLoc);
 
 require_once($relPath . '../config/config.php');
 
+$societies = [
+    'ECSS',
+    'Psychosoc'
+];
+
 if (DEBUG) {
     //debug version
     $attributes = [
@@ -131,14 +136,6 @@ unset($slogans[""]);
 unset($sizes[""]);
 unset($colours[""]);
 
-if(empty($sizes)){
-    $sizes[0] = "One Size Fits All"; 
-}
-
-if(empty($slogans)){
-    $slogans[0] = "No Slogan"; 
-}
-
 sort($colours);
 sort($slogans);
 sort($collectionDates);
@@ -191,7 +188,8 @@ sort($collectionDates);
                 </td>
             </tr>
 
-            <?php endif; ?>
+            <?php endif; 
+            if(!empty($sizes)):?>
             <tr>
                 <td>
                     Size
@@ -208,6 +206,7 @@ sort($collectionDates);
                     </select>
                 </td>
             </tr>
+            <?php endif; if(!empty($slogans)):?>
             <tr>
                 <td>
                     Slogan
@@ -226,6 +225,8 @@ sort($collectionDates);
                     </select>
                 </td>
             </tr>
+            <?php endif; 
+            if(!empty($collectionDates)):?>
             <tr>
                 <td>
                     Collection Date
@@ -240,6 +241,23 @@ sort($collectionDates);
                     </select>
                 </td>
             </tr>
+            <?php endif;
+            if(!empty($societies)):?>
+            <tr>
+                <td>
+                    Society
+                </td>
+                <td>
+                    <select id='societySelect'>
+                    <?php
+                    foreach($societies as $society){
+                        echo "<option value=" . $society . ">" . $society . "</option>";
+                    }
+                    ?>
+                    </select>
+                </td>
+            </tr>
+            <?php endif; ?>
         </table>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
@@ -250,14 +268,17 @@ sort($collectionDates);
 
             <input type="hidden" name="quantity" value="1">
 
-            <input type="hidden" name="on2" value="Colour">        
-            <input type="hidden" name="os2" value="<?= $colours[0] ?>" id='colour'>
+            <input type="hidden" name="on5" value="Colour">        
+            <input type="hidden" name="os5" value="<?= $colours[0] ?>" id='colour'>
 
-            <input type="hidden" name="on1" value="Size">  
-            <input type="hidden" name="os1" value="<?= isset($sizes[0]) ? $sizes[0] : $sizes[1] ?>" id='size'>
+            <input type="hidden" name="on2" value="Size">  
+            <input type="hidden" name="os2" value="<?= isset($sizes[0]) ? $sizes[0] : $sizes[1] ?>" id='size'>
 
             <input type="hidden" name="on0" value="Username">  
             <input type="hidden" name="os0" value="<?= $userInfo['username'] ?>">
+
+            <input type="hidden" name="on1" value="Society">  
+            <input type="hidden" name="os1" value="ECSS" id='society'>
 
             <input type="hidden" name="on3" value="Slogan">  
             <input type="hidden" name="os3" value="<?= $slogans[0] ?>" id='slogan'>
@@ -280,7 +301,6 @@ sort($collectionDates);
 <script type="text/javascript">
     $('#sizeSelect').change(function(){
         var size = $('#sizeSelect').find(':selected').html();
-
         $('#size').val(size);
     });
 
@@ -297,6 +317,24 @@ sort($collectionDates);
     $('#collectionSelect').change(function(){
         var colour = $('#collectionSelect').find(':selected').html();
         $('#collectionDate').val(colour);
+    });
+
+    $('#societySelect').change(function(){
+        var colour = $('#societySelect').find(':selected').html();
+        $('#society').val(colour);
+    });
+
+    $(document).ready(function{
+        var size = $('#sizeSelect').find(':selected').html();
+        $('#size').val(size);
+        var colour = $('#colourSelect').find(':selected').html();
+        $('#colour').val(colour);
+        var colour = $('#sloganSelect').find(':selected').html();
+        $('#slogan').val(colour);
+        var colour = $('#collectionSelect').find(':selected').html();
+        $('#collectionDate').val(colour);
+        var colour = $('#societySelect').find(':selected').html();
+        $('#society').val(colour);
     });
 </script>
 </body>
