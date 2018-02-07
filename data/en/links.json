@@ -1,5 +1,6 @@
 {
     "Home":"index.php",
+    "Shop":"shop",
     "Committee":"committee/index.php",
     "Societies":"societies/index.php",
     "Sponsors":"sponsors/",
