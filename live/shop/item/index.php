@@ -1,5 +1,4 @@
 <?php
-exit;
 $relPath = "../../";
 include_once ($relPath . 'includes/setLang.php');
 
@@ -56,7 +55,8 @@ $paypal = [
     "8WLSYFSRZ5JSY",
     "6FLZWM6KXK7LS",
     "GC3SGSZ333KXE",
-    "27SUETDFQ8YZY"
+    "27SUETDFQ8YZY",
+    "D9ZWWB2TCQXWW"
 ];
 
 //check for open shop and retrieve collection dates
@@ -97,7 +97,7 @@ $itemID = $_GET['itemID'];
 
 $sql = "SELECT *
         FROM ((((item AS i
-        INNER JOIN itemColour AS ic ON i.itemID = ic.itemID)
+        LEFT JOIN itemColour AS ic ON i.itemID = ic.itemID)
         LEFT JOIN itemSize AS isi ON i.itemID = isi.itemID)
         LEFT JOIN itemSlogan AS isl ON i.itemID = isl.itemID)
         LEFT JOIN size AS si ON isi.sizeID = si.sizeID)
@@ -164,12 +164,18 @@ sort($collectionDates);
             <?= $items[0]->itemDesc ?>
         </p>
 
+        <?php if($items[0]->itemSizeGuide):?>
+
         <p>Size Guide:</p>
         <p>
             <?= $items[0]->itemSizeGuide ?>
         </p>
 
+        <?php endif;?>
+
         <table id='sizeAndColour'>
+            <?php if(!empty($colours)): ?>
+
             <tr>
                 <td>
                     Colour
@@ -184,6 +190,8 @@ sort($collectionDates);
                     </select>
                 </td>
             </tr>
+
+            <?php endif; ?>
             <tr>
                 <td>
                     Size
@@ -242,14 +250,14 @@ sort($collectionDates);
 
             <input type="hidden" name="quantity" value="1">
 
-            <input type="hidden" name="on0" value="Colour">        
-            <input type="hidden" name="os0" value="<?= $colours[0] ?>" id='colour'>
+            <input type="hidden" name="on2" value="Colour">        
+            <input type="hidden" name="os2" value="<?= $colours[0] ?>" id='colour'>
 
             <input type="hidden" name="on1" value="Size">  
             <input type="hidden" name="os1" value="<?= isset($sizes[0]) ? $sizes[0] : $sizes[1] ?>" id='size'>
 
-            <input type="hidden" name="on2" value="Username">  
-            <input type="hidden" name="os2" value="<?= $userInfo['username'] ?>">
+            <input type="hidden" name="on0" value="Username">  
+            <input type="hidden" name="os0" value="<?= $userInfo['username'] ?>">
 
             <input type="hidden" name="on3" value="Slogan">  
             <input type="hidden" name="os3" value="<?= $slogans[0] ?>" id='slogan'>

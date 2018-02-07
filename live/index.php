@@ -31,7 +31,7 @@ setTextDomain('home');
                 <img id="logo" src="images/sponsors/jpmorgan.jpg" alt="ECSS logo" style='margin-top: 55px;'/>
             </a>
             <a href='/sponsors/?lang=en#talent.io'>
-                <img id="logo" src="images/sponsors/talentio.png" alt="ECSS logo" style='float:right;'/>
+                <img id="logoright" src="images/sponsors/talentio.png" alt="ECSS logo" />
             </a>
         </div>
         <section style='text-align: center;'>

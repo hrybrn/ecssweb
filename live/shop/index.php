@@ -1,5 +1,4 @@
 <?php
-exit;
 $relPath = "../";
 include_once ($relPath . 'includes/setLang.php');
 
@@ -71,10 +70,7 @@ echo getNavBar();
         <input type="search" id='searchBox' placeholder="Item Name">
         <button id='searchButton'>Search</button>
         <p>
-        This is our annual web store. Here you can buy ECSS-branded merchandise, with customisation options voted for by the society.
-        </p>
-        <p>
-        This store will be open to take orders until 6:00pm Friday 24th November, and your purchases will be able to be collected at a date chosen by you within Monday 11th and Friday 15th December.
+        Welcome to the ECSS webstore!
         </p>
     </div>
     <div id='itemDiv'></div>

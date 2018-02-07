@@ -1,5 +1,4 @@
 <?php
-exit;
 $relPath = "../../";
 include_once ($relPath . 'includes/setLang.php');
 

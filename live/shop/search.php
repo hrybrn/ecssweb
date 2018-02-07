@@ -1,5 +1,4 @@
 <?php
-exit;
 $relPath = "../";
 include_once ($relPath . 'includes/setLang.php');
 
@@ -64,7 +63,11 @@ function produceResults($db, $search){
 
     $sql = "SELECT *
             FROM item AS i
-            WHERE i.itemName LIKE '%' || trim(:name) || '%';";
+			INNER JOIN shop AS s
+			ON i.shopID = s.shopID
+            WHERE i.itemName LIKE '%' || trim(:name) || '%'
+			AND datetime(s.openDate) < datetime('now')
+			AND datetime(s.shutDate) > datetime('now');";
 
     $statement = $db->prepare($sql);
     $statement->execute(array(':name' => $search));
