@@ -1,0 +1,15 @@
+#blurb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-content: center;
+}
+
+#menu {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}

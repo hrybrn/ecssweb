@@ -146,6 +146,11 @@ body { margin: 0; padding: 0; }
     opacity: 0.4;
 }
 
+.error {
+    color: darkred;
+    font-size: 1em;
+}
+
 th, td {
     vertical-align: top;
     padding: 10px;

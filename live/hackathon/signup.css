@@ -1,0 +1,15 @@
+#submit {
+    text-align: center;
+}
+
+#formDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-content: center;
+}
+
+#dietmessage {
+    width: 100%;
+}
