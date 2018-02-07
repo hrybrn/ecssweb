@@ -324,7 +324,7 @@ sort($collectionDates);
         $('#society').val(colour);
     });
 
-    $(document).ready(function{
+    $(document).ready(function(){
         var size = $('#sizeSelect').find(':selected').html();
         $('#size').val(size);
         var colour = $('#colourSelect').find(':selected').html();
