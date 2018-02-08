@@ -100,7 +100,7 @@ $person = $statement->fetchObject();
 <div id='formDiv'>
     <h3><?= $hackathonEvent->hackathonEventName ?> Team Sign Up Page</h3>
     <p>You need to leave your current team <b>before</b> you can register for another</p>
-    <button onclick='window.location.href="hackathon/team/manage"'>Manage Team</button>
+    <button onclick='window.location.href="/hackathon/team/manage"'>Manage Team</button>
 </div>
 
 <?php exit(); endif; ?>

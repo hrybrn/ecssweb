@@ -56,6 +56,10 @@ if($type == 'team'){
     $statement = $db->prepare($sql);
     $statement->execute([':email' => $userInfo['email']]);
 
+    $sql = "UPDATE hackathonPerson SET hackathonTeamID = NULL WHERE hackathonPersonEmail = :email;";
+    $statement = $db->prepare($sql);
+    $statement->execute([':email' => $userInfo['email']]);;
+
     if($team = $statement->fetchObject()){
         $sql = "DELETE FROM hackathonTeam WHERE hackathonTeamID = :teamID";
         $params = [':teamID' => $team->id];

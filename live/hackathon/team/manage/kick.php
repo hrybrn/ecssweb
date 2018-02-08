@@ -84,4 +84,4 @@ $sql = "UPDATE hackathonPerson SET hackathonTeamID = NULL
 $statement = $db->prepare($sql);
 $statement->execute([':email' => $email, ':teamID' => $team->id]);
 
-echo json_encode(['status' => false, 'message' => 'Kicked Successfully']);
+echo json_encode(['status' => true, 'message' => 'Kicked Successfully']);
