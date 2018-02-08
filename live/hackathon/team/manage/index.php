@@ -184,7 +184,7 @@ $person = $statement->fetchObject();
             }
 
             $out .= "<tr><td>" . $row->hackathonHashDate . "</td>";
-            $out .= "<td><a href='/hackathon/team/join?token=" . $row->hackathonHash . "'>Link</a></td>";
+            $out .= "<td><button onclick=\"copyLink('/hackathon/team/join?token=" . $row->hackathonHash . "')\">Copy Link</button></td>";
             $out .= "<td><textarea cols=10>" . $row->hackathonHash . "</textarea></td>";
             $out .= "<td>" . $hashExpired . "</td>";
             if(!$row->hackathonHashExpired){
@@ -210,6 +210,7 @@ $person = $statement->fetchObject();
 </div>
 
 <?php exit(); endif; if($person): ?>
+<script src='/hackathon/team/manage/manage.js'></script>
 <div id='formDiv'>
     <h3><?= $hackathonEvent->hackathonEventName ?> Team Management Page</h3>
     <p><?= $hackathonEvent->hackathonEventInfo ?></p>

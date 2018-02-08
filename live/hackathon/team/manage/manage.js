@@ -18,6 +18,13 @@ function genToken(){
     });
 }
 
+function copyLink(link){
+    document.execCommand("Copy");
+
+    /* Alert the copied text */
+    alert("Link copied to clipboard");
+}
+
 function leaveTeam(){
     if(!confirm("Are you sure you want to leave this team?")){
         return;
