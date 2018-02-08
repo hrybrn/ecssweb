@@ -19,6 +19,7 @@ function genToken(){
 }
 
 function copyLink(text) {
+    text = "https://society.ecs.soton.ac.uk" + text;
     var textArea = document.createElement("textarea");
   
     //
@@ -73,6 +74,8 @@ function copyLink(text) {
     }
   
     document.body.removeChild(textArea);
+
+    alert("Copied to clipboard");
   }
   
   
