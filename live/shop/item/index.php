@@ -289,10 +289,6 @@ sort($collectionDates);
             <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
             <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
         </form>
-
-        <p>
-            The slogan option 'No Slogan' is for an item with no text on the back.
-        </p>
         <p>
             Payments authenticated by iSolutions, and paid through Paypal.
         </p>
