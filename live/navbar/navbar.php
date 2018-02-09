@@ -12,6 +12,7 @@ function getNavBar() {
 
     $nav = "";
     $nav .= '<script src="' . $relPath . 'jquery.js"></script>'; // Javascript
+    $nav .= '<script src="/navbar/spin.js"></script>'; //spinning logo
     $nav .= '<link rel="stylesheet" href="' . $relPath . 'navbar/navbar.css">'; // css
 
     $raw = file_get_contents($relPath . "../data/en/links.json");
