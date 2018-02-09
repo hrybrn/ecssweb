@@ -8,8 +8,24 @@
     justify-content: center;
     flex-flow: column wrap;
     align-content: center;
+    width: 60%;
+    margin-left: 20%;
 }
 
 #dietmessage {
     width: 100%;
+}
+
+@media (max-width: 900px){
+    #formDiv {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 500px){
+    #formDiv {
+        width: 90%;
+        margin-left: 5%;
+    }
 }

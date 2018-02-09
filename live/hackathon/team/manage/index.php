@@ -201,6 +201,7 @@ $person = $statement->fetchObject();
         </tr>
         <tr>
             <td id='submit' colspan='2'>
+                <button onclick='window.location.href="/hackathon"'>Hackathon Home</button>
                 <button onclick='update()'>Update</button>
                 <button onclick='genToken()'>Generate Token</button>
                 <button onclick='disbandTeam()'>Disband Team</button>
@@ -253,6 +254,7 @@ $person = $statement->fetchObject();
         echo $out;?>
         <tr>
             <td>
+                <button onclick='window.location.href="/hackathon"'>Hackathon Home</button>
                 <button onclick='leaveTeam()'>Leave Team</button>
             </td>
         </tr>
@@ -264,6 +266,7 @@ $person = $statement->fetchObject();
 <div id='formDiv'>
     <h3><?= $hackathonEvent->hackathonEventName ?> Team Management Page</h3>
     <p>You need to be part of a team to see this page</p>
+    <button onclick='window.location.href="/hackathon"'>Hackathon Home</button>
     <button onclick='window.location.href="/hackathon/team/join"'>Join Existing Team</button>
     <button onclick='window.location.href="/hackathon/team/signup"'>Team Sign Up</button>
 </div>

@@ -4,6 +4,13 @@
     justify-content: center;
     flex-flow: column wrap;
     align-content: center;
+    width: 60%;
+    margin-left: 20%;
+}
+
+#logo {
+    margin-top: 10px;
+    width: 100%;
 }
 
 #menu {
@@ -12,4 +19,18 @@
     align-items: center;
     align-content: center;
     justify-content: center;
+}
+
+@media (max-width: 900px){
+    #blurb {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 500px){
+    #blurb {
+        width: 90%;
+        margin-left: 5%;
+    }
 }

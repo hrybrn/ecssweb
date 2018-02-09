@@ -172,6 +172,7 @@ if($person): ?>
         <tr>
             <td id='submit' colspan='2'>
                 <button onclick='update()'>Update</button>
+                <button onclick='window.location.href="/hackathon"'>Hackathon Home</button>
             </td>
         </tr>
     </table>

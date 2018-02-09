@@ -86,8 +86,7 @@ echo getNavBar();
 <link rel="stylesheet" type="text/css" href="/hackathon/hackathon.css" />
 
 <div id='blurb'>
-    <img src='<?= $hackathonEvent->hackathonEventImage ?>'>
-    <h3><?= $hackathonEvent->hackathonEventName ?></h3>
+    <img id='logo' src='<?= $hackathonEvent->hackathonEventLogo ?>'>
     <p><?= $hackathonEvent->hackathonEventInfo ?></p>
 </div>
 <div id='menu'>
