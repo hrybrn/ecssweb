@@ -181,7 +181,7 @@ if(!$person):?>
 <div id='formDiv'>
     <h3><?= $hackathonEvent->hackathonEventName ?> Team Sign Up Page</h3>
     <p>You have already signed up for the hackathon</p>
-    <button onclick='window.location.href="/hackathon/person/signup"'>Individual Sign Up</button>
+    <button onclick='window.location.href="/hackathon"'>Hackathon Home</button>
 </div>
 
 <?php endif;?>
