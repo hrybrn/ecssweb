@@ -84,7 +84,15 @@ $dietMessage = "If you have anything else to add about your dietary requirements
 <?php
 include_once($relPath . "navbar/navbar.php");
 echo getNavBar();
-?>
+
+$sql = "SELECT *
+        FROM hackathonPerson AS hp
+        WHERE hp.hackathonPersonEmail = '" . $userInfo['email'] . "';";
+
+$statement = $db->query($sql);
+$person = $statement->fetchObject();
+
+if(!$person):?>
 <script src="/jquery.js"></script>
 <script src="/hackathon/person/signup/signup.js"></script>
 <div id='formDiv'>
@@ -168,3 +176,12 @@ echo getNavBar();
         </tr>
     </table>
 </div>
+<?php else:?>
+
+<div id='formDiv'>
+    <h3><?= $hackathonEvent->hackathonEventName ?> Team Sign Up Page</h3>
+    <p>You have already signed up for the hackathon</p>
+    <button onclick='window.location.href="/hackathon/person/signup"'>Individual Sign Up</button>
+</div>
+
+<?php endif;?>
