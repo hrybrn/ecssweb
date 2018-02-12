@@ -90,6 +90,7 @@ echo getNavBar();
     <p><?= $hackathonEvent->hackathonEventInfo ?></p>
 </div>
 <div id='menu'>
+    <button onclick='window.location.href="/hackathon/team/join"'>Join Existing Team</button>
     <button onclick='window.location.href="/hackathon/team/signup"'>Team Sign Up</button>
     <button onclick='window.location.href="/hackathon/person/signup"'>Individual Sign Up</button>
     <button onclick='window.location.href="/hackathon/team/manage"'>Manage Team</button>
