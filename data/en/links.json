@@ -1,6 +1,7 @@
 {
     "Home":"index.php",
     "Shop":"shop",
+    "Hackathon":"hackathon",
     "Committee":"committee/index.php",
     "Societies":"societies/index.php",
     "Sponsors":"sponsors/",
