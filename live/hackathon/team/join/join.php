@@ -60,9 +60,9 @@ $statement = $db->prepare($sql);
 $statement->execute([':token' => $token]);
 
 if($team = $statement->fetchObject()){
-    $sql = "UPDATE hackathonPerson SET hackathonTeamID = :teamID";
+    $sql = "UPDATE hackathonPerson SET hackathonTeamID = :teamID WHERE hackathonPersonEmail = :email";
     $statement = $db->prepare($sql);
-    $statement->execute([':teamID' => $team->teamID]);
+    $statement->execute([':teamID' => $team->teamID, ':email' => $userInfo['email']]);
     echo json_encode(['status' => true, 'message' => 'Successfully joined ' . $team->teamName]);
 } else {
     echo json_encode(['status' => false, 'message' => 'Token was either invalid or has been expired by your team leader.']);
