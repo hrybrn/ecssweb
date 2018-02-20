@@ -1,4 +1,4 @@
-insert into election values (2,2,'2018-02-17','2018-02-24','2018-02-25','2018-02-28');
+insert into election values (3,2,'2018-02-17','2018-02-24','2018-02-25','2018-02-28');
 
 INSERT INTO position(electionTypeID, positionName, description) VALUES (2, 'President',"The president's job is to direct the Society and be the external representative. This involves maintaining relationships with the faculty, sponsors and other external sources, as well as chairing meetings within the Society. The President must keep track of every aspect of the Society to ensure the whole committee and all members are working towards the same goals.");
 INSERT INTO position(electionTypeID, positionName, description) VALUES (2, 'Vice President',"The vice president assists the president in admin tasks and representing the society at faculty and SUSU society events.");
