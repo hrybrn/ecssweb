@@ -13,12 +13,12 @@
         "Name":"Cyber Security Society",
         "Image":"images/societies/sucss.png",
         "Description":"We're a group of students interested in the various aspects of cyber security. We host sessions on various topics, some with external speakers, and provide lots of practical opportunities to put what you've learned into practice at CTF competitions and workshops.",
-        "Time":"Tuesdays at 6pm",
-        "Location":"Level 3 Zepler Labs",
+        "Time":"Wednesdays at 6pm",
+        "Location":"67/1027 (Nightingale)",
         "Facebook Group":"https://www.facebook.com/groups/sucss/",
         "Facebook Page":"https://www.facebook.com/sotoncyber/",
-        "Website":"http://cyberweb.ecs.soton.ac.uk",
-        "Email":"mailto:society@ecs.soton.ac.uk"
+        "Website":"http://sucss.org",
+        "Email":"mailto:sucss@soton.ac.uk"
     },
     "SUWS":{
         "Name":"Wireless Society",
