@@ -178,11 +178,6 @@ function update(){
         changed = true;
     }
 
-    if(!$('#matchmaking').is(":checked") && previous.hackathonMatchmaking == 'true'){
-        sending.hackathonMatchmaking = $('#matchmaking').is(":checked");
-        changed = true;
-    }
-
     if($('#name').val() != previous.hackathonName){
         sending.hackathonName = $('#name').val();
         changed = true;
