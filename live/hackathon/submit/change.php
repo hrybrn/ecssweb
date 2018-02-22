@@ -118,7 +118,6 @@ if($failed){
 
 
 $statement = $db->prepare($sql);
-echo $sql;
 $statement->execute($params);
 
 echo json_encode(['status' => true, 'message' => 'changed correctly']);
