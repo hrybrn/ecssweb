@@ -81,11 +81,12 @@ if($type == 'person'){
     }
     $sql = substr($sql, 0, strlen($sql) - 1);
 
-    $sql .= " WHERE hp.hackathonPersonEmail = :email;";
+    $sql .= " WHERE hackathonPersonEmail = :email;";
+    $params[':email'] = $userInfo['email'];
 }
 
 if($type == 'team'){
-    $identityCheck = "SELECT ht.hackathonTeamLeaderID
+    $identityCheck = "SELECT ht.hackathonTeamLeaderID AS tlid
                       FROM hackathonTeam AS ht
                       INNER JOIN hackathonPerson AS hp
                       ON ht.hackathonTeamLeaderID = hp.hackathonPersonID
@@ -94,7 +95,7 @@ if($type == 'team'){
     $statement = $db->prepare($identityCheck);
     $statement->execute([':email' => $userInfo['email']]);
 
-    if(!$statement->fetchObject()){
+    if(!$res = $statement->fetchObject()){
         $failed = true;
     }
 
@@ -106,7 +107,8 @@ if($type == 'team'){
     
     $sql = substr($sql, 0, strlen($sql) - 1);
 
-    $sql .= " WHERE hp.hackathonPersonEmail = :email;";
+    $sql .= " WHERE hackathonTeamLeaderID = :hackathonTeamLeaderID;";
+    $params[':hackathonTeamLeaderID'] = $res->tlid;
 }
 
 if($failed){
@@ -114,8 +116,9 @@ if($failed){
     exit;
 }
 
-$params[':email'] = $userInfo['email'];
+
 $statement = $db->prepare($sql);
+echo $sql;
 $statement->execute($params);
 
 echo json_encode(['status' => true, 'message' => 'changed correctly']);
