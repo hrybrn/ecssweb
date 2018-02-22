@@ -81,7 +81,7 @@ if($type == 'person'){
     }
     $sql = substr($sql, 0, strlen($sql) - 1);
 
-    $sql .= "WHERE hp.hackathonPersonEmail = :email;";
+    $sql .= " WHERE hp.hackathonPersonEmail = :email;";
 }
 
 if($type == 'team'){
@@ -106,7 +106,7 @@ if($type == 'team'){
     
     $sql = substr($sql, 0, strlen($sql) - 1);
 
-    $sql .= "WHERE hp.hackathonPersonEmail = :email;";
+    $sql .= " WHERE hp.hackathonPersonEmail = :email;";
 }
 
 if($failed){
