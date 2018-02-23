@@ -37,6 +37,10 @@ function search(search){
 
 					$('#itemDiv').append(item);
 				});
+
+				if(empty(result.data)){
+					$('#itemDiv').append("<p class='item'>No items are currently for sale, sorry!</p>");
+				}
 			}
 		}
 	});
