@@ -123,7 +123,7 @@ foreach($positionData as $position){
     $positions[$position->positionName][$position->nominationID] = $position->nominationName;
 }
 
-//find if we are currently votion for someone
+//find if we are currently supporting someone
 $sql = "SELECT n.nominationName AS nomName, p.positionName AS posName
         FROM (nomination AS n
             INNER JOIN position AS p
@@ -140,6 +140,15 @@ if($support = $statement->fetchObject()){
 } else {
     $currentPerson = "no one";
 }
+
+//generate a supportToken
+$token = new DateTime('now');
+$token = $token->format(DateTime::RFC1123) . $userInfo['email'];
+$token = hash('sha256', $token);
+
+$sql = "INSERT INTO supportToken(supportToken, supportEmail, supportTokenUsed) VALUES(:token, :email, :used);";
+$statement = $db->prepare($sql);
+$statement->execute([':email' => $userInfo['email'], ':token' => $token, ':used' => 0]);
 ?>
 <style>
 #centredDiv {
@@ -161,11 +170,12 @@ foreach($positions as $positionName => $data){
 ?></div>
 
 <script>
+var token = '<?= $token ?>';
 function select(nominationID){
     $.ajax({
 		url: "/voting/support/support.php",
 		type: 'post',
-		data: {'nominationID': nominationID},
+		data: {'nominationID': nominationID, 'token': token},
 		dataType: 'json',
 		success: function(result){
 			location.reload();			

@@ -59,6 +59,29 @@ if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo
 }
 
 $nominationID = $_POST['nominationID'];
+$token = $_POST['token'];
+
+//check for token validity
+$sql = "SELECT supportTokenID AS tokenID
+		FROM supportToken
+		WHERE supportToken = :token
+		AND supportEmail = :email
+		AND supportTokenUsed = 0";
+
+$statement = $db->prepare($sql);
+$statement->execute([':email' => $userInfo['email'], ':token' => $token]);
+
+if ($row = $statement->fetchObject()) {
+	//we good
+	$sql = "UPDATE supportToken SET supportTokenUsed = 1 WHERE supportTokenID = :tokenID";
+	$statement = $db->prepare($sql);
+	$statement->execute([':tokenID' => $row->tokenID]);
+} else {
+	//we not good
+	echo json_encode(['status' => true, 'message' => "Your token was not valid"]);
+	exit;
+}
+
 
 //clear old support
 $sql = "DELETE FROM support WHERE supportUsername = :username;";
