@@ -1,6 +1,7 @@
 {
     "Home":"index.php",
     "Voting":{
+        "default":"#",
         "Voting":"voting",
         "Support":"voting/support"
     },
@@ -9,6 +10,7 @@
     "Societies":"societies/index.php",
     "Sponsors":"sponsors/",
     "Events":{
+        "default":"#",
         "Socials":"leaflet/?section=Socials&lang=en",
         "Gaming Socials":"leaflet/?section=Gaming Socials&lang=en"
     },
