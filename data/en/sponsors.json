@@ -39,7 +39,7 @@
         "TPP" : {
             "Name" : "TPP",
             "Image" : "images/sponsors/tpp.png",
-            "Website" : "https://www.tpp-uk.com/",
+            "Website" : "http://www.tpp-uk.com/",
             "Info" : "<p>TPP is a UK based IT company, dedicated to delivering world class healthcare software through our innovative products. Our philosophy is to join up healthcare based on a shared electronic medical record, improving access to clinical data and empowering patients to take part in their care. We are known for our outstanding achievements in the UK, providing electronic patient records on a single instance database for over 40 million patients.<br /> <br />After 20 years of success in the UK, TPP is now expanding their offering to deliver connected care to new markets in China and the Middle East. We&rsquo;re currently hiring for five different graduate and postgraduate roles and for our 2018 summer intern programme. We&rsquo;re looking for the brightest minds from the UK&rsquo;s top universities who have a passion for problem solving.</p>"
         }
     },
