@@ -80,24 +80,6 @@ if($statement->fetchObject()){
 	exit;
 }
 
-//check that they haven't already submitted for 2 other roles
-
-$sql = "SELECT COUNT(*) AS count
-		FROM (nomination AS n
-		INNER JOIN nomination AS o ON n.electionID = o.electionID)
-		INNER JOIN nomination AS p ON n.nominationUsername = p.nominationUsername
-		WHERE n.nominationUsername = :username
-		AND n.electionID = :electionID;";
-
-$statement = $db->prepare($sql);
-$statement->execute([':username' => $userInfo['username'], ':electionID' => $election->electionID]);
-
-$result = $statement->fetchObject();
-if($result->count >= 2){
-	echo json_encode(['status' => false, 'message' => 'You have already submitted for two roles within this election. Please email Harry Brown at <a href=\'mailto:hb15g16@soton.ac.uk\'>hb15g16@soton.ac.uk</a> to remove your nomination for any of these roles.']);
-	exit;
-}
-
 //store this
 $sql = "INSERT INTO nomination(positionID, electionID, manifesto, nominationName, nominationUsername) VALUES(:positionID, :electionID, :manifesto, :nominationName, :nominationUsername);";
 
