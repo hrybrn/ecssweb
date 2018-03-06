@@ -27,7 +27,11 @@
         "Meeting Minutes":"/filestore/index.php/s/JeqwjpN2tkVKW5X",
         "Committee Files":"/filestore"
     },
-    "Feedback": "comment",
+    "Feedback": {
+        "default": "#",
+        "Submit" : "comment",
+        "Responses" : "comment/responses"
+    },
     "About": {
         "default":"#",
         "About":"about/index.php",
