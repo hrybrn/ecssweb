@@ -57,6 +57,20 @@ if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo
 	exit;
 }
 
+//here we check that we're actually editing our image
+$sql = "SELECT *
+		FROM nomination AS n
+		WHERE n.nominationID = :nominationID
+		AND n.nominationUsername = :username";
+
+$statement = $db->prepare($sql);
+$statement->execute([':nominationID' => $nominationID, ':username' => $userInfo['username']]);
+
+if(!$statement->fetchObject()){
+	echo json_encode(['status' => false, 'message' => 'You can only set your own image.']);			
+	exit;
+}
+
 foreach($_FILES as $task => $file){
 	$target_file = $target_dir . basename($file["name"]);
 	$uploadOk = 1;
