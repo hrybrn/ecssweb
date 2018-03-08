@@ -81,13 +81,13 @@ if($statement->fetchObject()){
 }
 
 //clean manifesto and name
-$manifesto = str_replace("<", "&lt;");
-$manifesto = str_replace(">", "&gt;");
-$manifesto = str_replace("&", "&amp;");
+$manifesto = str_replace("<", "&lt;", $manifesto);
+$manifesto = str_replace(">", "&gt;", $manifesto);
+$manifesto = str_replace("&", "&amp;", $manifesto);
 
-$name = str_replace("<", "&lt;");
-$name = str_replace(">", "&gt;");
-$name = str_replace("&", "&amp;");
+$name = str_replace("<", "&lt;", $name);
+$name = str_replace(">", "&gt;", $name);
+$name = str_replace("&", "&amp;", $name);
 
 
 //store this
