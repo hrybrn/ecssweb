@@ -13,15 +13,21 @@ $sql = "SELECT s.slideshowLocation
 $statement = $db->prepare($sql);
 $statement->execute([':slideshowID' => $slideshowID]);
 if($slideshowLocation = $statement->fetchObject()){
-  $target_dir = realpath($relPath . "images/". $slideshowLocation->slideshowLocation);
-  echo $target_dir;
-  exit;
+  $target_dir = realpath($relPath . "images/". $slideshowLocation->slideshowLocation) . "/";
 } else {
   echo json_encode(['status' => false, 'message' => 'Not a valid slideshowID']);
   exit;
 }
 
-foreach($_FILES as $task => $file){
+$files = [];
+//sort out files
+for($i=0;$i<count($_FILES['images']['name']);$i++){
+  foreach($_FILES['images'] as $name => $values){
+    $files[$i][$name] = $values[$i];
+  }
+}
+
+foreach($files as $file){
 	$target_file = $target_dir . basename($file["name"]);
 	$uploadOk = 1;
 	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -56,6 +62,8 @@ foreach($_FILES as $task => $file){
             ':slideshowID' => $slideshowID,
             ':slideshowImageName' => basename($target_file)
           ]);
+
+          echo "Successful upload of " . basename($target_file) . "<br>";
 	    }
 	}
 }

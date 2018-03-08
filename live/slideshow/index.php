@@ -5,17 +5,7 @@ include($relPath . "navbar/autonavbar.php");
 include($relPath . "auth/forcelogin.php");
 include($relPath . "auth/includedb.php");
 
-//check for committeee
-$sql = "SELECT *
-        FROM admin AS a
-        WHERE a.username = :username";
-
-$statement = $db->prepare($sql);
-$statement->execute([':username' => $userInfo['username']]);
-
-if(!$statement->fetchObject()){
-  echo "You're not a committee member sorry!";
-}
+include($relPath . "auth/committeecheck.php");
 
 setupPage("Slideshow Image Uploader");
 
@@ -30,10 +20,11 @@ while($slideshow = $statement->fetchObject()){
 }
 
 ?>
-<form action="/slideshow/upload.php">
+<form action="/slideshow/upload.php" method='post' enctype="multipart/form-data">
   <select name="slideshowID">
     <?= $registeredSlideshows ?>
   </select>
-  Select images: <input type="file" name="img" multiple>
+  Select images: <input type="file" name="images[]" multiple="true">
+  <input type='hidden' name='csrftoken' value='<?= $csrftoken ?>'></hidden>
   <input type="submit">
 </form>
