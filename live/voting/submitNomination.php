@@ -80,6 +80,16 @@ if($statement->fetchObject()){
 	exit;
 }
 
+//clean manifesto and name
+$manifesto = str_replace("<", "&lt;");
+$manifesto = str_replace(">", "&gt;");
+$manifesto = str_replace("&", "&amp;");
+
+$name = str_replace("<", "&lt;");
+$name = str_replace(">", "&gt;");
+$name = str_replace("&", "&amp;");
+
+
 //store this
 $sql = "INSERT INTO nomination(positionID, electionID, manifesto, nominationName, nominationUsername) VALUES(:positionID, :electionID, :manifesto, :nominationName, :nominationUsername);";
 
