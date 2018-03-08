@@ -81,14 +81,13 @@ if($statement->fetchObject()){
 }
 
 //clean manifesto and name
+$manifesto = str_replace("&", "&amp;", $manifesto);
 $manifesto = str_replace("<", "&lt;", $manifesto);
 $manifesto = str_replace(">", "&gt;", $manifesto);
-$manifesto = str_replace("&", "&amp;", $manifesto);
 
+$name = str_replace("&", "&amp;", $name);
 $name = str_replace("<", "&lt;", $name);
 $name = str_replace(">", "&gt;", $name);
-$name = str_replace("&", "&amp;", $name);
-
 
 //store this
 $sql = "INSERT INTO nomination(positionID, electionID, manifesto, nominationName, nominationUsername) VALUES(:positionID, :electionID, :manifesto, :nominationName, :nominationUsername);";
