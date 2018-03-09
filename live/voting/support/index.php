@@ -163,9 +163,11 @@ $statement->execute([':email' => $userInfo['email'], ':token' => $token, ':used'
 <?php
 
 foreach($positions as $positionName => $data){
+    echo "<div><h3>" . $positionName . "</h3>";
     foreach($data as $nominationID => $nominationName){
         echo "<button onclick='select(" . $nominationID . ")'>" . $positionName . "<br>" . $nominationName . "</button>";
     }
+    echo "</div>";
 }
 ?></div>
 
@@ -178,7 +180,7 @@ function select(nominationID){
 		data: {'nominationID': nominationID, 'token': token},
 		dataType: 'json',
 		success: function(result){
-			location.reload();			
+			location.reload();
 		}
 	});
 }
