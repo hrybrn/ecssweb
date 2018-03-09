@@ -128,7 +128,7 @@ $sql = "SELECT n.nominationName AS nomName, p.positionName AS posName
         FROM (nomination AS n
             INNER JOIN position AS p
             ON n.positionID = p.positionID)
-        INNER JOIN support AS s
+        RIGHT JOIN support AS s
         ON n.nominationID = s.nominationID
         WHERE s.supportUsername = :username";
 
