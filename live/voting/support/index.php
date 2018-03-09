@@ -167,7 +167,7 @@ ksort($positions);
 foreach($positions as $positionName => $data){
     echo "<div><h3>" . $positionName . "</h3>";
     foreach($data as $nominationID => $nominationName){
-        echo "<button onclick='select(" . $nominationID . ")'>" . "$nominationName . "</button>";
+        echo "<button onclick='select(" . $nominationID . ")'>" . $nominationName . "</button>";
     }
     echo "</div>";
 }
