@@ -162,10 +162,12 @@ $statement->execute([':email' => $userInfo['email'], ':token' => $token, ':used'
 <h2>You can only support <b>one person</b>, and you are currently supporting: <?= $currentPerson ?></h2>
 <?php
 
+ksort($positions);
+
 foreach($positions as $positionName => $data){
     echo "<div><h3>" . $positionName . "</h3>";
     foreach($data as $nominationID => $nominationName){
-        echo "<button onclick='select(" . $nominationID . ")'>" . $positionName . "<br>" . $nominationName . "</button>";
+        echo "<button onclick='select(" . $nominationID . ")'>" . "$nominationName . "</button>";
     }
     echo "</div>";
 }
