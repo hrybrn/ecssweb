@@ -53,7 +53,7 @@ $userInfo = array(
 );
 
 //final committee test before going live
-if($userInfo['userInfo'] != 'hb15g16'){
+if($userInfo['username'] != 'hb15g16'){
   echo "under construction";
   exit;
 }
