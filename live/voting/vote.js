@@ -25,6 +25,8 @@ function showPosition(buttonid) {
 			}
 
 			$.each(nominations.data, function () {
+				//formatting manifesto
+				this.manifesto = this.manifesto.replace("\n", "<br>");
 				var div = "<div id='" + this.nominationID + "' class='group'><h3 class='unselectable' style='text-align: center;'>" + this.nominationName + "<div class='dragme'></h3>";
 				div += "<div class='content' data-nominationid='" + this.nominationID + "'><p style='text-align: center;'>" + this.manifesto + "</p>";
 
