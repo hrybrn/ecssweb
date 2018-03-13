@@ -52,12 +52,6 @@ $userInfo = array(
 	'lastName' => $attributes["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"][0]
 );
 
-//final committee test before going live
-if($userInfo['username'] != 'hb15g16'){
-  echo "under construction";
-  exit;
-}
-
 $emailParts = explode("@", $userInfo['email']);
 
 if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo['groups']))){
