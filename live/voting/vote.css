@@ -84,3 +84,18 @@
 #nominationDescription {
     margin-left: 10%;
 }
+
+@media (max-width: 800px){
+    #submit {
+      float:none;
+  }
+    #buttonDiv {
+        text-align:center;
+    }
+}
+
+@media (max-width: 600px) {
+  iframe {
+    width: 100%;
+  }
+}
