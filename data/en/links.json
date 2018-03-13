@@ -1,10 +1,5 @@
 {
     "Home":"index.php",
-    "Voting":{
-        "default":"#",
-        "Voting":"voting",
-        "Support":"voting/support"
-    },
     "Committee":"committee/index.php",
     "Societies":"societies/index.php",
     "Sponsors":"sponsors/",
