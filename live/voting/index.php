@@ -158,7 +158,7 @@ if($voting){
 	echo "<p class='intro'>Hi there! Welcome to our annual general election. Over the past few weeks your peers have been nominating themselves for positions and here are their manifestos. Please check out their speeches below to learn more about the people you are voting onto ECSS committee. Please rank the entries with your most preferred entry at the top and your least preferred at the bottom. Click headers to view their details. Voting closes on Friday April 20th, 2018 18:00.</p>";
 
   //youtube embed
-  echo '<div style="text-align: center;"><iframe align= width="480" height="270" src="https://www.youtube.com/embed/videoseries?list=PL7QE45LzlPZ65c4kAAtPLqxWwQCIl5emz" frameborder="0" allowfullscreen></iframe></div>';
+  echo '<div style="text-align: center;"><iframe align= width="480" height="200" src="https://www.youtube.com/embed/videoseries?list=PL7QE45LzlPZ65c4kAAtPLqxWwQCIl5emz" frameborder="0" allowfullscreen></iframe></div>';
 
   echo $buttonDiv;
   echo "
