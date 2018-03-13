@@ -110,13 +110,21 @@ if($statement->fetchObject()){
 	exit;
 }
 
+//work out date
+$date = new DateTime();
+$date = $date->format(DateTime::RFC850);
 //store votes
 
-$sql = "INSERT INTO vote(nominationID, voteUsername, ranking) VALUES(:nominationID, :voteUsername, :ranking);";
+$sql = "INSERT INTO vote(nominationID, voteUsername, ranking, voteDate) VALUES(:nominationID, :voteUsername, :ranking, :voteDate);";
 
 foreach($entryData as $rank => $nominationID){
 	$statement = $db->prepare($sql);
-	$statement->execute([':voteUsername' => $userInfo['username'], ':nominationID' => $nominationID, ':ranking' => $rank]);
+	$statement->execute([
+    ':voteUsername' => $userInfo['username'],
+    ':nominationID' => $nominationID,
+    ':ranking' => $rank,
+    ':voteDate' => $date
+  ]);
 }
 
 
