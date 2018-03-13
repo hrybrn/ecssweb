@@ -27,7 +27,10 @@ function showPosition(buttonid) {
 			$.each(nominations.data, function () {
 				var div = "<div id='" + this.nominationID + "' class='group'><h3 class='unselectable' style='text-align: center;'>" + this.nominationName + "<div class='dragme'></h3>";
 				div += "<div class='content' data-nominationid='" + this.nominationID + "'><p>" + this.manifesto + "</p>";
-				div += "<image class='unselectable' src='/nominations/" + this.image + "'</div></div>";
+
+				if(this.image != null){
+					div += "<image class='unselectable' src='/nominations/" + this.image + "'</div></div>";
+				}
 
 				$('#nominationDiv').append(div);
 
@@ -57,7 +60,7 @@ function showPosition(buttonid) {
 				handle: ".dragme",
 				stop: function( event, ui ) {
 				  ui.item.children( "h3" ).triggerHandler( "focusout" );
-		 
+
 				  // Refresh accordion to handle new order
 				  $( this ).accordion( "refresh" );
 				}
