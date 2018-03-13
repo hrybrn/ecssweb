@@ -5,7 +5,6 @@
         "Voting":"voting",
         "Support":"voting/support"
     },
-    "Hackathon":"hackathon",
     "Committee":"committee/index.php",
     "Societies":"societies/index.php",
     "Sponsors":"sponsors/",
