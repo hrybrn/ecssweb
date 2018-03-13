@@ -157,13 +157,16 @@ if($voting){
 
 	echo $buttonDiv;
 
-	echo "<p class='intro'>This year ECSS will be selecting a charity to support throughout the year by doing sponsored runs, bake sales and more. We need your help to decide on which cause to support, and doing so is easy. Please rank the entries with your most preferred entry at the top and your least preferred at the bottom. Click headers to view their details. Voting closes on Friday 13th October at 16:00.</p>";
-	echo "
+	echo "<p class='intro'>Hi there! Welcome to our annual general election. Over the past few weeks your peers have been nominating themselves for positions and here are their manifestos. Please check out their speeches below to learn more about the people you are voting onto ECSS committee. Please rank the entries with your most preferred entry at the top and your least preferred at the bottom. Click headers to view their details. Voting closes on Friday April 20th, 2018 18:00.</p>";
+
+  //youtube embed
+  echo '<iframe width="720" height="405" src="https://www.youtube.com/playlist?list=PL7QE45LzlPZ65c4kAAtPLqxWwQCIl5emz" frameborder="0" allowfullscreen>';
+  echo "
 		<script>
 			var first = '" . $first . "';
 		</script>
-		<div id='nominationDiv'></div>"; 
-} 
+		<div id='nominationDiv'></div>";
+}
 //nomination page
 else {
 	echo "<script src='/voting/nominate.js'></script>";
