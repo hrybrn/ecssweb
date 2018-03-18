@@ -193,6 +193,8 @@ if($voting){
     //youtube embed
     echo '<div style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL7QE45LzlPZ65c4kAAtPLqxWwQCIl5emz" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>';
 
+    echo "<p style='text-align: center;'>Due to the anonymous nature of the voting system all votes are <b>final</b> and <b>cannot be changed</b>.</p>";
+
     echo "<div style='text-align: center;'>"
     . "<button id='submit' onclick='submit()'>Submit vote for this role</button>"
     . "</div>";
