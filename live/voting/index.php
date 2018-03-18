@@ -61,6 +61,7 @@ if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo
 
 if($userInfo['username'] != 'hb15g16' | $userInfo['username'] != 'jc14g16'){
     echo "Sorry! We are still testing this site!";
+    exit;
 }
 
 $voting = false;
