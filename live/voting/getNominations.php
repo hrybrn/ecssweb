@@ -65,6 +65,8 @@ $election = $statement->fetchObject();
 
 $sql = "SELECT *
         FROM nomination AS n
+        INNER JOIN position AS p
+        ON n.positionID = p.positionID
         WHERE n.positionID = :positionID
         AND n.electionID = :electionID";
 

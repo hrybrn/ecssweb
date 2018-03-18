@@ -1,5 +1,5 @@
 <?php
-$relPath = "../";
+$relPath = "../../";
 include_once ($relPath . 'includes/setLang.php');
 
 $dbLoc = realpath($relPath . "../db/ecss.db");
@@ -59,10 +59,6 @@ if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo
 	exit;
 }
 
-if($userInfo['username'] != 'hb15g16' | $userInfo['username'] != 'jc14g16'){
-    echo "Sorry! We are still testing this site!";
-}
-
 $voting = false;
 
 ?>
@@ -108,7 +104,7 @@ if(!$testResult){
         $electionID = $electionID->electionID;
 
         //no current nomination phase, checking for voting phase
-    	$sql = "SELECT
+        $sql = "SELECT
                     e.electionID,
                     e.electionTypeID,
                     p.positionID,
@@ -160,7 +156,7 @@ while($row = $res->fetchObject()){
 
 //voting page
 if($voting){
-	echo "<script src='/voting/vote.js'></script>";
+	echo "<script src='/voting/mobile/mobilevote.js'></script>";
 	echo "<script src='/jquery-ui.js'></script>";
 	echo '<script src="/jquery.ui.touch-punch.js"></script>';
 	echo '<link rel="stylesheet" type="text/css" href="/voting/vote.css" />';
@@ -182,20 +178,27 @@ if($voting){
 			$buttonDiv .= "<button data-positionid='" . $nomination->positionID . "' id='button" . $nomination->positionID . "' onclick='showPosition(id)'>" . $nomination->positionName . "</button>";
 		}
 	}
+    $buttonDiv .= "</div>";
 
-	$buttonDiv .= "</div>";
+	echo "<p class='intro'>Hi there! Welcome to our annual general election. Over the past few weeks your peers have been nominating themselves for positions and here are their manifestos. Please check out their speeches below to learn more about the people you are voting onto ECSS committee. Voting closes on Friday April 20th, 2018 18:00.</p>";
 
-	echo "<p class='intro'>Hi there! Welcome to our annual general election. Over the past few weeks your peers have been nominating themselves for positions and here are their manifestos. Please check out their speeches below to learn more about the people you are voting onto ECSS committee. Please rank the entries with your most preferred entry at the top and your least preferred at the bottom. Click headers to view their details. Voting closes on Friday April 20th, 2018 18:00.</p>";
+    echo $buttonDiv;
+    //youtube embed
+    echo '<div style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL7QE45LzlPZ65c4kAAtPLqxWwQCIl5emz" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>';
 
-  //youtube embed
-  echo '<div style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL7QE45LzlPZ65c4kAAtPLqxWwQCIl5emz" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>';
+    echo "<div style='text-align: center;'>"
+    . "<button id='submit' onclick='submit()'>Submit vote for this role</button>"
+    . "</div>";
 
-  echo $buttonDiv;
-  echo "<div style='text-align: center;'><button id='submit' onclick='submit()'>Submit vote for this role</button></div>";
   echo "
 		<script>
 			var first = '" . $first . "';
-		</script>";
+		</script>
+        <p class='bestworst'>Please rank the entries with your most preferred entry at the top and your least preferred at the bottom.</p>
+        <p class='bestworst'>Click headers to view their details.</p>
+        <p class='bestworst'>Most Preferred</p>
+		<div id='nominationDiv'></div>
+        <p class='bestworst'>Least Preferred</p>";
 }
 //nomination page
 else {

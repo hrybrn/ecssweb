@@ -49,7 +49,7 @@
 .group div img{
     display: block;
     object-fit: cover;
-    width: 240px;    
+    width: 240px;
     height: 240px;
     margin: auto;
     /*height: 120px;*/
@@ -79,23 +79,171 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    display: block;
+    object-fit: cover;
+    margin: auto;
+    /*height: 120px;*/
+    text-align: center;
+    border-radius: 5px;
+    transition: opacity 0.2s linear;
 }
 
 #nominationDescription {
     margin-left: 10%;
 }
 
-@media (max-width: 800px){
+#available {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.portrait {
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid;
+    background-color: white;
+    margin: 5px;
+}
+
+.portrait img {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.portrait h5 {
+    height: 2em;
+    width: 100%;
+    max-width: 130px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size-adjust: auto;
+    position: relative;
+    word-wrap: break-word;
+}
+
+@media (min-width: 801px) {
+    div.ui-tooltip {
+        max-width: 520px;
+    }
+    #buttonDiv {
+      text-align: center;
+    }
+
+    #mediumDiv {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    #nominationDiv button {
+        width: 130px;
+        border-radius: 5px;
+        user-select: none;
+    }
+
+    #best {
+        float: left;
+    }
+
+    #worst {
+        float: right;
+        flex-basis: auto;
+    }
+
+    #nominationDiv {
+        width: 100%;
+        height: 160px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .unselectable {
+        width: 120px;
+        height: 120px;
+    }
+
     #submit {
-      float:none;
-  }
+        float: none;
+        font-size: 2em;
+    }
+
+    /* Tooltip text */
+    .portrait .manifesto {
+        visibility: hidden;
+        width: 520px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+
+        bottom: 100%;
+        left: 50%;
+        margin-left: -260px;
+    }
+
+    .portrait .manifesto p {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .portrait .manifesto::after {
+        content: " ";
+        position: absolute;
+        top: 100%; /* At the bottom of the tooltip */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
+
+    .info {
+        background:url(/images/icons/info.png) left top;
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        background-size: contain;
+    }
+}
+
+@media (max-width: 800px){
+    #submitDiv {
+        text-align: center;
+    }
+    #submit {
+        float: none;
+        font-size: 2em;
+    }
     #buttonDiv {
         text-align:center;
+    }
+
+    .bestworst {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    iframe {
+      width: 50%;
+      height: auto;
     }
 }
 
 @media (max-width: 600px) {
-  iframe {
-    width: 100%;
-  }
+
 }

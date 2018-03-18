@@ -93,39 +93,64 @@ $sql = "SELECT *
 $statement = $db->query($sql);
 $election = $statement->fetchObject();
 
+$hash = hash('sha256', $userInfo['username']);
+
 //check for previous entries
 $sql = "SELECT *
-		FROM vote AS v
-		INNER JOIN nomination AS n
-		ON v.nominationID = n.nominationID
-		WHERE v.voteUsername = :username
-		AND n.electionID = :electionID
-		AND n.positionID = :positionID;";
+		FROM voted AS v
+		WHERE v.voteHash = :hash
+		AND v.electionID = :electionID
+		AND v.positionID = :positionID;";
 
 $statement = $db->prepare($sql);
-$statement->execute([':username' => $userInfo['username'], ':electionID' => $election->electionID, ':positionID' => $positionID]);
+$statement->execute([':hash' => $hash, ':electionID' => $election->electionID, ':positionID' => $positionID]);
 
 if($statement->fetchObject()){
 	echo json_encode(['status' => true, 'message' => "You have already voted for this position in this election."]);
 	exit;
 }
 
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$random = getRandom();
+
+function getRandom(){
+  global $db;
+  $random = rand();
+  $sql = "INSERT INTO voter VALUES(:random);";
+  $statement = $db->prepare($sql);
+  try{
+    $statement->execute([':random' => $random]);
+    return $random;
+  } catch (PDOException $e){
+    return getRandom();
+  }
+}
+
 //work out date
 $date = new DateTime();
 $date = $date->format(DateTime::RFC850);
-//store votes
 
-$sql = "INSERT INTO vote(nominationID, voteUsername, ranking, voteDate) VALUES(:nominationID, :voteUsername, :ranking, :voteDate);";
+$sql = "INSERT INTO vote(nominationID, voterID, ranking, voteDate) VALUES(:nominationID, :voterID, :ranking, :voteDate);";
 
 foreach($entryData as $rank => $nominationID){
 	$statement = $db->prepare($sql);
 	$statement->execute([
-    ':voteUsername' => $userInfo['username'],
-    ':nominationID' => $nominationID,
-    ':ranking' => $rank,
-    ':voteDate' => $date
+        ':voterID' => $random,
+        ':nominationID' => $nominationID,
+        ':ranking' => $rank,
+        ':voteDate' => $date
   ]);
 }
+$combinedHash = hash("sha256", $userInfo['username'] . "pos" . $positionID . "elec" . $election->electionID);
 
+//log that you voted
+$sql = "INSERT INTO voted(positionID, electionID, voteHash, combinedHash) VALUES (:positionID, :electionID, :voteHash, :combinedHash);";
+$statement = $db->prepare($sql);
+$statement->execute([
+    ':positionID' => $positionID,
+    ':electionID' => $election->electionID,
+    ':voteHash' => $hash,
+    ':combinedHash' => $combinedHash
+]);
 
 echo json_encode(['status' => true, 'message' => "Thank you for your vote"]);
