@@ -59,13 +59,16 @@
 }
 
 .dragme {
+    margin-top: -10px;
     float:right;
-    height: 20px;
-    width: 20px;
+    height: 38px;
+    width: 38px;
     background-image: url("../images/dragdrop.png");
     background-size: 20px 20px;
     display: block;
-    object-fit: contain;
+    object-fit:contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .content {
