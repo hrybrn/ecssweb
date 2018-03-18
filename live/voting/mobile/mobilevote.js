@@ -31,6 +31,9 @@ function showPosition(buttonid) {
 				return false;
 			}
 
+			//setup youtube playlist
+			$('#playlist').attr('src', 'https://www.youtube.com/embed/videoseries?list=' + youtube[nominations.data[0].positionID]);
+
 			$('#submit').text('Submit vote for ' + nominations.data[0].positionName);
 
 			$.each(nominations.data, function () {
@@ -84,7 +87,7 @@ function showPosition(buttonid) {
 
 				  // Refresh accordion to handle new order
 				  $( this ).accordion( "refresh" );
-				}
+			  	}
 			  });
 
 			$("#nominationDiv").accordion("refresh");

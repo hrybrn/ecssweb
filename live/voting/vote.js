@@ -17,6 +17,8 @@ var entryData = {};
 
 var positionID = 0;
 
+var readyToVote = true;
+
 function setBestWorstPositions(){
 	var container = document.getElementById("nominationDiv");
 
@@ -41,6 +43,12 @@ function showPosition(buttonid) {
 		dataType: 'json',
 		data: { 'positionID': positionID },
 		success: function (nominations) {
+			readyToVote = true;
+
+			//setup youtube playlist
+			$('#playlist').attr('src', 'https://www.youtube.com/embed/videoseries?list=' + youtube[nominations.data[0].positionID]);
+
+
 			$('#bigDiv').remove();
 
 			var bigDiv = "<div id='bigDiv'>";
@@ -81,7 +89,7 @@ function showPosition(buttonid) {
 				//formatting manifesto
 				this.manifesto = this.manifesto.replace(/\r?\n|\r/g, "</p><p style='text-align: center;'>");
 
-				manifestoText[this.nominationID] = this.manifesto;
+				manifestoText[this.nominationID] = "<p style='text-align: center;'>" + this.manifesto + "</p>";
 				var div = "<div class='portrait' id='" + this.nominationID + "'><h5>" + this.nominationName + "</h5><div class='info' id='name" + this.nominationID + "' title=''></div><img class='unselectable' src='" + this.image + "'></div>";
 				$('#available').append(div);
 			});
@@ -125,7 +133,17 @@ function showPosition(buttonid) {
 }
 
 function submit() {
+	if(!readyToVote){
+		window.alert("Select another position to continue voting.");
+		return;
+	}
 	var idsinOrder = $("#nominationDiv").sortable("toArray");
+
+	if(idsinOrder.length === 2){
+		window.alert("Your vote cannot be empty!");
+		return;
+	}
+
 	var intsInOrder = [];
 	idsinOrder[0] = -1;
 	idsinOrder[idsinOrder.length - 1] = -1;
@@ -149,7 +167,8 @@ function submit() {
 				$("#button" + positionID).remove();
 				$("#bigDiv").remove();
 			}
-			$("body").append("<p id='message'>" + result.message + "</p>");
+			$('#submit').text(result.message);
+			readyToVote = false;
 		}
 	});
 }

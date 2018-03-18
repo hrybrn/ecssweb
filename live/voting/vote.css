@@ -102,6 +102,7 @@
     margin: 5px;
     align-items: center;
     justify-content: center;
+    height: 200px;
 }
 
 .portrait {
@@ -129,6 +130,11 @@
     font-size-adjust: auto;
     position: relative;
     word-wrap: break-word;
+}
+
+#errorMessage {
+    width: 100%;
+    text-align: center;
 }
 
 @media (min-width: 801px) {
@@ -242,7 +248,7 @@
     }
 
     iframe {
-      width: 50%;
+      width: 75%;
       height: auto;
     }
 }

@@ -8,6 +8,8 @@ $db = new PDO('sqlite:' . $dbLoc);
 
 require_once($relPath . '../config/config.php');
 
+require_once($relPath . "voting/youtubePlaylists.php");
+
 if (DEBUG) {
     //debug version
     $attributes = [
@@ -198,6 +200,7 @@ if($voting){
   echo "
 		<script>
 			var first = '" . $first . "';
+            var youtube = " . json_encode($youtube) . ";
 		</script>
         <p class='bestworst'>Please rank the entries with your most preferred entry at the top and your least preferred at the bottom.</p>
         <p class='bestworst'>Click headers to view their details.</p>

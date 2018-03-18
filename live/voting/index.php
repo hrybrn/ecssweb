@@ -8,6 +8,8 @@ $db = new PDO('sqlite:' . $dbLoc);
 
 require_once($relPath . '../config/config.php');
 
+require_once($relPath . "voting/youtubePlaylists.php");
+
 if (DEBUG) {
     //debug version
     $attributes = [
@@ -97,6 +99,8 @@ $res = $db->query($sql);
 $testResult = $res->fetchObject();
 
 if(!$testResult){
+    echo '<link rel="stylesheet" type="text/css" href="/voting/vote.css" />';
+
     //get electionID
     $sql = "SELECT e.electionID AS electionID
     		FROM election AS e
@@ -140,6 +144,10 @@ if(!$testResult){
         $res = $db->prepare($sql);
         $res->execute([':hash' => $hash, ':electionID' => $electionID]);
         $testResult = $res->fetchObject();
+        if(!$testResult){
+            echo "<h3 id='errorMessage'>You have already voted for every position in this election, sorry!</h3>";
+            exit;
+        }
     } else {
         $testResult = false;
     }
@@ -148,7 +156,7 @@ if(!$testResult){
 	if(!$testResult){
 		//no current election is happening
 
-		echo "<p id='errorMessage'>No election is taking place currently, Sorry!</p>";
+		echo "<h3 id='errorMessage'>No election is taking place currently, Sorry!</h3>";
 		exit;
 	}
 }
@@ -164,7 +172,6 @@ if($voting){
 	echo "<script src='/voting/vote.js'></script>";
 	echo "<script src='/jquery-ui.js'></script>";
 	echo '<script src="/jquery.ui.touch-punch.js"></script>';
-	echo '<link rel="stylesheet" type="text/css" href="/voting/vote.css" />';
 	echo '<link rel="stylesheet" type="text/css" href="/jquery-ui.css" />';
 
 	// auth status
@@ -186,16 +193,17 @@ if($voting){
 
 	$buttonDiv .= "</div>";
 
-	echo "<p class='intro'>Hi there! Welcome to our annual general election. Over the past few weeks your peers have been nominating themselves for positions and here are their manifestos. Please check out their speeches below to learn more about the people you are voting onto ECSS committee. Please rank the entries with your most preferred entry at the top and your least preferred at the bottom. Click headers to view their details. Voting closes on Friday April 20th, 2018 18:00.</p>";
+	echo "<p class='intro'>Hi there! Welcome to our annual general election. Over the past few weeks your peers have been nominating themselves for positions and here are their manifestos. Please check out their speeches below to learn more about the people you are voting onto ECSS committee. Voting closes on Friday April 20th, 2018 18:00.</p>";
 
   //youtube embed
-  echo '<div style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL7QE45LzlPZ65c4kAAtPLqxWwQCIl5emz" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>';
+  echo '<div style="text-align: center;"><iframe id="playlist" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL7QE45LzlPZ65c4kAAtPLqxWwQCIl5emz" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>';
 
   echo $buttonDiv;
   echo "<div style='text-align: center;'><button id='submit' onclick='submit()'>Submit vote for this role</button></div>";
   echo "
 		<script>
 			var first = '" . $first . "';
+            var youtube = " . json_encode($youtube) . ";
 		</script>";
 }
 //nomination page
