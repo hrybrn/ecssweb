@@ -1,5 +1,6 @@
 {
     "Home":"index.php",
+    "Voting":"voting",
     "Committee":"committee/index.php",
     "Societies":"societies/index.php",
     "Sponsors":"sponsors/",

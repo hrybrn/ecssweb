@@ -18,6 +18,13 @@ function getNavBar() {
     $raw = file_get_contents($relPath . "../data/en/links.json");
     $links = json_decode($raw, true);
 
+    //dont show voting unless we should be
+    $now = new DateTime();
+    $votingStart = new DateTime("2018-03-19 12:00:00");
+    if($now < $votingStart){
+        unset($links['Voting']);
+    }
+
     $nav .= '<div class="navbar">';
     //$nav .= '<img id="navbarLogo" src="' . $relPath . 'images/new-logo-white-transparent-ver2.png" height="60">';
     $nav .= '<a href="/"> <img id="navbarLogo" src="' . $relPath . 'images/new-logo-black.png" height="60"></a>';
