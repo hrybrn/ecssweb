@@ -54,11 +54,6 @@ $userInfo = array(
 	'lastName' => $attributes["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"][0]
 );
 
-if($userInfo['username'] != 'hb15g16' & $userInfo['username'] != 'jc14g16'){
-    echo "Sorry! We are still testing this site!";
-    exit;
-}
-
 $emailParts = explode("@", $userInfo['email']);
 
 if(!(in_array("fpStudent", $userInfo['groups']) || in_array("fpStaff", $userInfo['groups']))){
