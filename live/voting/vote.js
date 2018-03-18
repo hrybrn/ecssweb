@@ -83,8 +83,6 @@ function showPosition(buttonid) {
 				if(this.image == null){
 					this.image = "https://society.ecs.soton.ac.uk/images/new-logo-black.png";
 				}
-				//image convert for testing
-				this.image = this.image.replace("..", "https://society.ecs.soton.ac.uk");
 
 				//formatting manifesto
 				this.manifesto = this.manifesto.replace(/\r?\n|\r/g, "</p><p style='text-align: center;'>");
