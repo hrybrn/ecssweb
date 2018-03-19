@@ -47,6 +47,8 @@ function showPosition(buttonid) {
 					this.image = "https://society.ecs.soton.ac.uk/images/new-logo-black.png";
 				}
 
+				this.image = this.image.replace("..", "../..");
+
 				var div = "<div id='" + this.nominationID + "' class='group'><h3 class='unselectable' style='text-align: center;'>" + this.nominationName + "<div class='dragme'></h3>";
 				div += "<div class='content' data-nominationid='" + this.nominationID + "'><p style='text-align: center;'>" + this.manifesto + "</p>";
 
