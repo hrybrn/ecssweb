@@ -130,7 +130,8 @@ if(!$testResult){
                     AND v.voteHash = :hash) AS v
                 ON p.positionID = v.positionID
                 WHERE e.electionID = :electionID
-                AND v.voteHash IS NULL;";
+                AND v.voteHash IS NULL
+                ORDER BY p.ordering;";
 
     	$voting = true;
 

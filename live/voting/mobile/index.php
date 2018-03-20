@@ -128,7 +128,8 @@ if(!$testResult){
                     AND v.voteHash = :hash) AS v
                 ON p.positionID = v.positionID
                 WHERE e.electionID = :electionID
-                AND v.voteHash IS NULL;";
+                AND v.voteHash IS NULL
+                ORDER BY p.ordering;";
 
     	$voting = true;
 
@@ -186,7 +187,7 @@ if($voting){
 
     echo $buttonDiv;
     //youtube embed
-    echo '<div style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL7QE45LzlPZ65c4kAAtPLqxWwQCIl5emz" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>';
+    echo '<div style="text-align: center;"><iframe width="560" height="315" id="playlist" src="https://www.youtube.com/embed/videoseries?list=PL7QE45LzlPZ65c4kAAtPLqxWwQCIl5emz" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>';
 
     echo "<p style='text-align: center;'>Due to the anonymous nature of the voting system all votes are <b>final</b> and <b>cannot be changed</b>.</p>";
 
