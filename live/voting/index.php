@@ -189,7 +189,7 @@ if($voting){
 
 	$buttonDiv .= "</div>";
 
-	echo "<p class='intro'>Hi there! Welcome to our annual general election. Over the past few weeks your peers have been nominating themselves for positions and here are their manifestos. Please check out their speeches below to learn more about the people you are voting onto ECSS committee. Voting closes on Friday April 20th, 2018 18:00.</p>";
+	echo "<p class='intro'>Hi there! Welcome to our annual general election. Over the past few weeks your peers have been nominating themselves for positions and here are their manifestos. Please check out their speeches below to learn more about the people you are voting onto ECSS committee. Voting closes on Friday April 20th, 2018 18:00.</p><p class='intro'>If there is no video for a candidate then they did not show up to the AGM for the recording.</p>";
 
   //youtube embed
   echo '<div style="text-align: center;"><iframe id="playlist" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL7QE45LzlPZ65c4kAAtPLqxWwQCIl5emz" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>';
