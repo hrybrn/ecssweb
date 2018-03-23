@@ -30,7 +30,7 @@
     "About": {
         "default":"#",
         "About":"about/index.php",
-        "Constitution":"files/Constitution-2015.pdf",
+        "Constitution":"filestore/index.php/s/idGPSGlxT15tbHi",
         "Voting Results":"voteresult",
         "Contact Us":"about/contact.php",
         "Credits":"about/credits.php"
