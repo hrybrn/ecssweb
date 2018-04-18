@@ -8,9 +8,13 @@ $db = new PDO('sqlite:' . $dbLoc);
 
 require_once($relPath . '../config/config.php');
 
+$raw = file_get_contents($relPath . "/shop/item/auth.json");
+$auth = json_decode($raw, true);
+
 $societies = [
     'ECSS',
-    'Psychosoc'
+    'Chemistry',
+    'SUES'
 ];
 
 if (DEBUG) {
@@ -49,7 +53,69 @@ $userInfo = array(
 	'lastName' => $attributes["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname"][0]
 );
 
-$emailParts = explode("@", $userInfo['email']);
+//society select
+if(in_array('fpStudent', $userInfo['groups'])){
+    $society = "ECSS";
+}
+
+if(in_array('ebStudent', $userInfo['groups'])){
+    $society = "Chemistry";
+}
+
+if(in_array('peStudent', $userInfo['groups'])){
+    $society = "SUES";
+}
+
+if(!isset($society)){
+    echo "You are not a member of ECSS, Chemistry or SUES. Please get a friend within these societies to buy your ticket.";
+    exit;
+}
+
+//check for previous purchases
+$limit = [
+    "ECSS" => 2,
+    "SUES" => 2,
+    "Chemistry" => 1
+];
+
+$sql = "SELECT COUNT(*) AS count
+        FROM purchase
+        WHERE username = :username
+        AND society = :society
+        AND purchased = 1";
+
+$statement = $db->prepare($sql);
+$statement->execute([
+    ':username' => $userInfo['username'],
+    ':society' => $society
+]);
+
+$count = $statement->fetchObject();
+$count = $count->count;
+
+if($count >= $limit[$society]){
+    include_once($relPath . "navbar/navbar.php");
+    echo getNavBar();
+    echo '<link rel="stylesheet" type="text/css" href="/theme.css" />';
+    echo "<h4 style='text-align:center;'>You have already bought the maximum amount of tickets for this event.</h4>";
+    exit;
+}
+
+//make purchase id
+$date = new DateTime();
+$date = $date->format(DateTime::COOKIE);
+
+$purchaseID = hash('sha256', $date . $userInfo['username'] . $society);
+
+//log purchase id with info
+$sql = "INSERT INTO purchase (purchaseID, username, society, purchased) VALUES (:purchaseID, :username, :society, :purchased);";
+$statement = $db->prepare($sql);
+$statement->execute([
+    ':purchaseID' => $purchaseID,
+    ':username' => $userInfo['username'],
+    ':society' => $society,
+    ':purchased' => 0
+]);
 
 //paypal ids for prices
 $paypal = [
@@ -97,6 +163,16 @@ while($row = $statement->fetchObject()){
 <?php
 include_once($relPath . "navbar/navbar.php");
 echo getNavBar();
+
+if($count == 0){
+    $tickets = "0 tickets";
+}
+
+if($count == 1){
+    $tickets = "1 ticket";
+}
+
+echo "<h4 style='text-align:center;'>You have bought " . $tickets . " so far. You are able to buy " . ($limit[$society] - $count) . " more.</h4>";
 
 $itemID = $_GET['itemID'];
 
@@ -242,7 +318,7 @@ sort($collectionDates);
                 </td>
             </tr>
             <?php endif;
-            if(!empty($societies)):?>
+            if(!empty($societies) & false):?>
             <tr>
                 <td>
                     Society
@@ -260,8 +336,9 @@ sort($collectionDates);
             <?php endif; ?>
         </table>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="return" value="https://society.ecs.soton.ac.uk/shop/purchase?id=<?= $purchaseID ?>">
             <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="<?= $paypal[$itemID] ?>">
+            <input type="hidden" name="hosted_button_id" value="<?= $auth[$society]['paypal'] //$paypal[$itemID] ?>">
 
             <input type="hidden" name="item_name" value="<?= $items[0]->itemName ?>">
             <input type="hidden" name="item_number" value="<?= $itemID ?>">
@@ -278,7 +355,7 @@ sort($collectionDates);
             <input type="hidden" name="os0" value="<?= $userInfo['username'] ?>">
 
             <input type="hidden" name="on1" value="Society">  
-            <input type="hidden" name="os1" value="ECSS" id='society'>
+            <input type="hidden" name="os1" value="<?= $auth[$society]['society'] ?>" id='society'>
 
             <input type="hidden" name="on3" value="Slogan">  
             <input type="hidden" name="os3" value="<?= $slogans[0] ?>" id='slogan'>
@@ -329,8 +406,8 @@ sort($collectionDates);
         $('#slogan').val(colour);
         var colour = $('#collectionSelect').find(':selected').html();
         $('#collectionDate').val(colour);
-        var colour = $('#societySelect').find(':selected').html();
-        $('#society').val(colour);
+        //var colour = $('#societySelect').find(':selected').html();
+        //$('#society').val(colour);
     });
 </script>
 </body>
