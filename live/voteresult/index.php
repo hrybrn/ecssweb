@@ -28,7 +28,7 @@ echo getNavBar();
 </style>
 
 <div style='width: 90%; margin: 5%;'>
-  <h2>ECSS Election 2017: Results</h2>
+  <h2>ECSS Election 2018: Results</h2>
   <br>
   <div class="tile">
     <pre>President: Brad Elvy is elected</pre>
