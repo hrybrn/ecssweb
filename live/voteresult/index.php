@@ -9,7 +9,7 @@ include_once ($relPath . 'includes/setLang.php');
     <?php
     setTextDomain('title');
     ?>
-    <title><?= _("About") ?> | ECSS</title>
+    <title>Voting Results | ECSS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="<?= $relPath ?>theme.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
