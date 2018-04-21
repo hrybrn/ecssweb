@@ -25,10 +25,14 @@ echo getNavBar();
 	padding-right:20px;
 	padding-bottom:50px;
 }
-</style>
 
-<div style='width: 90%; margin: 5%;'>
-  <h2>ECSS Election 2018: Results</h2>
+h2 {
+  margin: 2.5%;
+}
+</style>
+<h2>ECSS Election 2018: Results</h2>
+<div style='width: 90%; margin: 5%; display:flex; flex-wrap: wrap;'>
+  
   <br>
   <div class="tile">
     <pre>President: Brad Elvy is elected</pre>
@@ -45,6 +49,7 @@ echo getNavBar();
   <div class="tile">
     <pre>Secretary: Jacob Smith is elected</pre>
     <div id="Secretary1"style="width: 500px; height: 300px;"></div>
+    <div id="Secretary2"style="width: 500px; height: 300px;"></div>
   </div>
   <div class="tile">
     <pre>Industry Officer: Constantin Tiron is elected</pre>
@@ -57,6 +62,9 @@ echo getNavBar();
     <div class="tile">
     <pre>Web Officer: Jinxuan (Allen) Cui is elected</pre>
     <div id="WebOfficer1"style="width: 500px; height: 300px;"></div>
+    <div id="WebOfficer2"style="width: 500px; height: 300px;"></div>
+    <div id="WebOfficer3"style="width: 500px; height: 300px;"></div>
+    <div id="WebOfficer4"style="width: 500px; height: 300px;"></div>
   </div>
   <div class="tile">
     <pre>Events Officer: Rhett Mitchell is elected</pre>
@@ -137,6 +145,16 @@ var chart, data, options;
 
     chart.draw(data, options);
 
+    data = google.visualization.arrayToDataTable( [['Person', 'Votes'],['Jacob Smith', 78],['Will MacLeod', 54],['Felix De Neve', 10],['RON', 7],] );
+
+    options = {
+      title: 'Secretary - Round 2'
+    };
+
+    chart = new google.visualization.PieChart(document.getElementById('Secretary2'));
+
+    chart.draw(data, options);
+
                 
 
     data = google.visualization.arrayToDataTable( [['Person', 'Votes'],['Costin Tiron', 89],['Wing Yin Michelle Wong', 23],['Kacper Kubara', 22],['Felix De Neve', 14],['Maciej Dudziak', 4],['RON', 4],] );
@@ -170,6 +188,36 @@ var chart, data, options;
     };
 
     chart = new google.visualization.PieChart(document.getElementById('WebOfficer1'));
+
+    chart.draw(data, options);
+
+    data = google.visualization.arrayToDataTable( [['Person', 'Votes'],['Jinxuan (Allen) Cui', 72],['Harry Brown', 60],['Scott Williams', 11],['RON', 7],] );
+
+    options = {
+      title: 'Web Officer - Round 2'
+    };
+
+    chart = new google.visualization.PieChart(document.getElementById('WebOfficer2'));
+
+    chart.draw(data, options);
+
+    data = google.visualization.arrayToDataTable( [['Person', 'Votes'],['Jinxuan (Allen) Cui', 74],['Harry Brown', 62],['Scott Williams', 14],] );
+
+    options = {
+      title: 'Web Officer - Round 3'
+    };
+
+    chart = new google.visualization.PieChart(document.getElementById('WebOfficer3'));
+
+    chart.draw(data, options);
+
+    data = google.visualization.arrayToDataTable( [['Person', 'Votes'],['Jinxuan (Allen) Cui', 81],['Harry Brown', 68],] );
+
+    options = {
+      title: 'Web Officer - Round 4'
+    };
+
+    chart = new google.visualization.PieChart(document.getElementById('WebOfficer4'));
 
     chart.draw(data, options);
 
