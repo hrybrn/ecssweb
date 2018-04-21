@@ -20,7 +20,7 @@ function getNavBar() {
 
     //dont show boat ball ticket unless we should be
     $now = new DateTime();
-    $votingStart = new DateTime("2018-04-23 12:00:00");
+    $votingStart = new DateTime("2018-04-23 11:00:00");
     if($now < $votingStart){
         unset($links['Boat Ball Tickets']);
     }
