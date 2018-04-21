@@ -69,3 +69,15 @@ select {
 		width: 100%;
 	}
 }
+
+#itemInfo > ul {
+	padding-left: 0;
+	width: 100%;
+	background: white;
+}
+
+#itemInfo > ul > li {
+	color: black;
+	float: unset;
+	padding: 0px;
+}
