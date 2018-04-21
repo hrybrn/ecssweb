@@ -18,11 +18,11 @@ function getNavBar() {
     $raw = file_get_contents($relPath . "../data/en/links.json");
     $links = json_decode($raw, true);
 
-    //dont show voting unless we should be
+    //dont show boat ball ticket unless we should be
     $now = new DateTime();
-    $votingStart = new DateTime("2018-03-19 12:00:00");
+    $votingStart = new DateTime("2018-04-23 12:00:00");
     if($now < $votingStart){
-        unset($links['Voting']);
+        unset($links['Boat Ball Tickets']);
     }
 
     $nav .= '<div class="navbar">';

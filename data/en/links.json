@@ -1,6 +1,6 @@
 {
     "Home":"index.php",
-    "Voting":"voting",
+    "Boat Ball Tickets":"shop/item?itemID=9&lang=en",
     "Committee":"committee/index.php",
     "Societies":"societies/index.php",
     "Sponsors":"sponsors/",
