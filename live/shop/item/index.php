@@ -62,7 +62,7 @@ if(in_array('ebStudent', $userInfo['groups'])){
     $society = "Chemistry";
 }
 
-if(in_array('peStudent', $userInfo['groups'])){
+if(!isset($society)){
     $society = "SUES";
 }
 
