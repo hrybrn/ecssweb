@@ -335,11 +335,10 @@ sort($collectionDates);
             <?php endif; ?>
         </table>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="return" value="https://society.ecs.soton.ac.uk/shop/purchase?id=<?= $purchaseID ?>">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="<?= $auth[$society]['paypal'] //$paypal[$itemID] ?>">
 
-            <input type="hidden" name="item_name" value="<?= $items[0]->itemName ?>">
+            <input type="hidden" name="item_name" value="<?= $items[0]->itemName . " - " . $society ?>">
             <input type="hidden" name="item_number" value="<?= $itemID ?>">
 
             <input type="hidden" name="quantity" value="1">
