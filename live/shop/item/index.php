@@ -172,7 +172,6 @@ if($count == 1){
     $tickets = "1 ticket";
 }
 
-echo "<h4 style='text-align:center;'>You have bought " . $tickets . " so far. You are able to buy " . ($limit[$society] - $count) . " more.</h4>";
 
 $itemID = $_GET['itemID'];
 

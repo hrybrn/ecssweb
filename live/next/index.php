@@ -1,2 +1,2 @@
 <?php
-header( 'Location: /voting');
+header( 'Location: /shop');
