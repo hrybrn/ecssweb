@@ -41,13 +41,15 @@ if($read == "true"){
             LEFT JOIN admin AS a
             ON a.adminID = c.adminID
             WHERE c.adminResponse IS NOT NULL
-            AND c.adminResponse <> '';";
+            AND c.adminResponse <> ''
+            ORDER BY c.commentID DESC;";
 } else {
     $sql = "SELECT * FROM comment AS c
             LEFT JOIN admin AS a
             ON a.adminID = c.adminID
             WHERE c.adminResponse IS NULL
-            OR c.adminResponse = '';";
+            OR c.adminResponse = ''
+            ORDER BY c.commentID DESC;";
 }
 
 $comments = [];
