@@ -54,7 +54,7 @@ $userInfo = array(
 );
 
 //society select
-if(in_array('fpStudent', $userInfo['groups'])){
+/*if(in_array('fpStudent', $userInfo['groups'])){
     $society = "ECSS";
 }
 
@@ -62,20 +62,28 @@ if(in_array('ebStudent', $userInfo['groups'])){
     $society = "Chemistry";
 }
 
+if(in_array('pjStudent', $userInfo['groups'])){
+    $society = "SUMS";
+}*/
+
+
 if(!isset($society)){
-    $society = "SUES";
+    $society = "all";
 }
 
+/*
 if(!isset($society)){
     echo "You are not a member of ECSS, Chemistry or SUES. Please get a friend within these societies to buy your ticket.";
     exit;
-}
+}*/
 
 //check for previous purchases
 $limit = [
     "ECSS" => 2,
     "SUES" => 2,
-    "Chemistry" => 1
+    "Chemistry" => 2,
+    "SUMS" => 2,
+    "BioChem" => 2
 ];
 
 $sql = "SELECT COUNT(*) AS count
