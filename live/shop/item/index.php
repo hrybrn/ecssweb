@@ -101,18 +101,18 @@ $statement->execute([
 $count = $statement->fetchObject();
 $count = $count->count;
 
+/*
 if($count >= $limit[$society]){
     include_once($relPath . "navbar/navbar.php");
     echo getNavBar();
     echo '<link rel="stylesheet" type="text/css" href="/theme.css" />';
     echo "<h4 style='text-align:center;'>You have already bought the maximum amount of tickets for this event.</h4>";
     exit;
-}
+}*/
 
 //make purchase id
 $date = new DateTime();
 $date = $date->format(DateTime::COOKIE);
-
 $purchaseID = hash('sha256', $date . $userInfo['username'] . $society);
 
 //log purchase id with info
