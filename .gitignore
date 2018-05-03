@@ -1,6 +1,9 @@
 # JetBrains IDEs
 .idea/
 
+# do not track content images
+live/images/committee/
+
 # do not track uploads
 live/uploads/
 live/images/nominations/
