@@ -15,7 +15,7 @@
 		"Email":"be5g15@ecs.soton.ac.uk",
 		"Image":"images/committee/brad.jpg",
 		"RoleDisplayName":"President",
-		"RoleDescription":"The President's job is to direct the Society and be the external representative. This involves maintaining relationships with the faculty, sponsors and other external sources, as well as chairing meetings within the Society. The President must keep track of every aspect of the Society to ensure the whole committee and all members are working towards the same goals."
+		"RoleDescription":"The President shall be the figurehead of the Society. They shall be responsible for coordinating the Committee and performing any tasks that do not come under the jurisdiction of other Committee members."
 	},
 
 	"Vice-President Engagement":{
@@ -43,7 +43,7 @@
 		"Email":"jds1g17@soton.ac.uk",
 		"Image":"images/committee/jacob.jpg",
 		"RoleDisplayName":"Secretary",
-		"RoleDescription":"The secretary is in charge of taking minutes, organising the meetings and sorting through admin items for the society."
+		"RoleDescription":"The Secretary shall be responsible for the administration of the Society and ensuring its smooth operation. In particular they are in charge of managing Society documents. This includes taking minutes at meetings and announcing General Meetings to the members. All minutes shall be made available to members via online publication."
         },
 	"Industry":{
 		"Name":"Constantin Tiron",
@@ -61,7 +61,7 @@
 		"Email":"erew1g17@soton.ac.uk",
 		"Image":"images/committee/emily.jpg",
 		"RoleDisplayName":"Social Secretary",
-		"RoleDescription":"The Social Secretary is responsible for arranging social events for the Society, sufficiently varied to cater to as much of the membership as possible."
+		"RoleDescription":"The Social Secretary shall be responsible for arranging social events for the Society that involve alcohol. Example events include club nights, pub nights and pub crawls. They shall also coordinate with the Events Officer to organise and manage larger society events. The Social Secretary and Events Officer shall ensure the events organised by the society are sufficiently varied so as to cater to as much of the membership as possible."
 	},
 	"Web":{
 		"Name":"Jinxuan Cui",
@@ -70,7 +70,7 @@
 		"Email":"jc14g16@ecs.soton.ac.uk",
 		"Image":"images/committee/awesomewebmaster.jpg",
 		"RoleDisplayName":"Web Officer",
-		"RoleDescription":"The webmaster is in charge of maintaining the society website and services, allowing the rest of the committee to get the latest information direct to you!"
+		"RoleDescription":"The Web Officer shall be responsible for maintaining the Society’s web presence and running all digital accounts and profiles associated with the Society."
 	},
 	"Events":{
 		"Name":"Rhett Mitchell",
@@ -88,7 +88,7 @@
 		"Email":"ab27g15@ecs.soton.ac.uk",
 		"Image":"images/committee/angus.jpg",
 		"RoleDisplayName":"Treasurer",
-		"RoleDescription":"The treasurer is responsible for keeping all finances in order as they are responsible for the society's funds. They are also required to present the accounts at the AGM and any other time if required."
+		"RoleDescription":"The Treasurer shall be responsible for maintaining the financial accounts of the Society, documentation of which shall be available to the Clubs and Societies Officer and the Societies Department Committee and shall be available for examination at the AGM."
 	},
 	"Marketing":{
 		"Name":"Rayna Bozhkova",
@@ -97,16 +97,16 @@
 		"Email":"rb1g16@ecs.soton.ac.uk",
 		"Image":"images/committee/rayna.jpg",
 		"RoleDisplayName":"Marketing Officer",
-		"RoleDescription":"The marketing officers produce advertising media for the society. These includes emails, posters and any other required material."
+		"RoleDescription":"The Marketing Officer shall be responsible for how the Society is presented online and in printed media. They will be responsible for overseeing all social media activity by the Society, and ensuring a consistent brand. They shall also be responsible for organising the Society’s merchandise."
 	},
 	"Sports":{
 		"Name":"Ben Gesoff",
-		"Manifesto":"<p>Do sports. Tell people what to do. Smile 😃</p>",
+		"Manifesto":"<p>Hi I’m Ben</p><p>My aim is to continue to improve the ECSS sports offering, continuing the upwards trend of the previous years. Catering to the plethora of sporting preferences of our membership is important to make sure that as much of the society is engaged in a healthy and active lifestyle.</p><p>Under Bradley, the ECSS sports has blossomed over the last year, and I plan to continue his excellent work.</p>",
 		"Facebook":"https://www.facebook.com/bengesoff",
 		"Email":"bpg1g15@ecs.soton.ac.uk",
 		"Image":"images/committee/ben.jpg",
 		"RoleDisplayName":"Sports Officer",
-		"RoleDescription":"The sports officer is in charge of managing the ECSS football team, and organising ECSS presence at football tournaments throughout the year."
+		"RoleDescription":"The Sports Officer's shall be responsible for communicating with the captains of ECSS sports teams, helping organise their sports events, advertising for the teams, and assisting in securing team funding. They also shall manage other sporting events or competitions, such as group runs and the badminton league table."
 	},
 	"Welfare":{
 		"Name":"Alicja (Ala) Bochnacka",
@@ -115,7 +115,7 @@
 		"Email":"ab10g17@soton.ac.uk",
 		"Image":"images/committee/ala.jpg",
 		"RoleDisplayName":"Welfare Officer",
-		"RoleDescription":"The welfare officer caters for students in a personal manner by ensuring everyone is included in the society's activities. They also take care of the needs of students and their view of certain aspects like the push for releasing timetables earlier."
+		"RoleDescription":"The Welfare Officer shall be responsible for providing support to the membership and ensuring that, in all its activities, the Society does not unfairly discriminate against or exclude any members."
 	},
 	"Masters' Rep":{
 		"Name":"Evgeny Saveliev",
