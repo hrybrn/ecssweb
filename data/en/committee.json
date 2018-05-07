@@ -10,17 +10,16 @@
 	},
 	"President":{
 		"Name":"Bradley Elvy",
-		"Manifesto":"<p>Hi, I’m Brad, I am currently the ECSS sports officer and am running for ECSS President. As each member of the committee contributes to each other’s role to run the society, I have seen how nearly every aspect of the society operates. I have also worked closely with Ricki, our current president throughout.</p><p>Next year I would focus on the student feedback, and really pushing the changes that the people in our society want. I am also open hoping to redesign the sponsorship system to allow more beneficial deals which fund all of our society events. On top of this, we will use the faculty restructure to work with other stem societies for bigger and better socials! As always, we will endeavour to offer a wide variety of events, try new activities and get as many people involved as possible.</p><p>As sports officer this year I collaborated with other societies to start two sports teams, captained the football team, ran a running club and organised the badminton league table, I hope this proves I am proactive and will do my best to make sure all society proceedings are well prepared and run smoothly.</p>",
+		"Manifesto":"<p>Hi, I’m Brad, I am currently the ECSS President.</p><p>This year I would focus on the student feedback, and really pushing the changes that the people in our society want. I am also open hoping to redesign the sponsorship system to allow more beneficial deals which fund all of our society events. On top of this, we will use the faculty restructure to work with other stem societies for bigger and better socials! As always, we will endeavour to offer a wide variety of events, try new activities and get as many people involved as possible.</p>",
 		"Facebook":"https://www.facebook.com/brad.elvy.1",
 		"Email":"be5g15@ecs.soton.ac.uk",
 		"Image":"images/committee/brad.jpg",
 		"RoleDisplayName":"President",
 		"RoleDescription":"The President shall be the figurehead of the Society. They shall be responsible for coordinating the Committee and performing any tasks that do not come under the jurisdiction of other Committee members."
 	},
-
 	"Vice-President Engagement":{
 		"Name":"Christian Clarke",
-		"Manifesto":"<p>Hi my name is Chris and I am the current Games officer for ECSS. As the VP of ECSS I aim to support the president in continuing with the great engagement that has been achieved this year. Throughout my year as games officer I have gained a solid understanding of how the committee functions, allowing me to bring my experience into a more senior role.</p><p>As VP my key goals would be to:<br><br>- Support the President<br><br>- Aid new committee members<br><br>- Plan and Run large society events like the Christmas Party<br><br>- Help to ensure that the high standard of events being run keep to the same level<br><br>- Make sure that everyone continues to have fun :)</p>",
+		"Manifesto":"<p>Hi my name is Chris. As the VP of ECSS I aim to support the president in continuing with the great engagement that has been achieved this year.</p><p>As VP my key goals would be to:<br><br>- Support the President<br><br>- Aid new committee members<br><br>- Plan and Run large society events like the Christmas Party<br><br>- Help to ensure that the high standard of events being run keep to the same level<br><br>- Make sure that everyone continues to have fun :)</p>",
 		"Facebook":"https://www.facebook.com/christian.clarke.3114",
 		"Email":"cc11g16@ecs.soton.ac.uk",
 		"Image":"images/committee/chris.jpg",
@@ -47,7 +46,7 @@
         },
 	"Industry":{
 		"Name":"Constantin Tiron",
-		"Manifesto":"<p>My main goal as Academic Officer would be to convince new sponsors of the extraordinary value contained by ECSS, along with keeping strong relations with our current ones.</p><p>I am planning to seek sponsors, not only from the UK, but from US and the rest of Europe.</p><p>Since the popularity of Blockchain Technology is increasing, and as I am involved in multiple projects related to cryptocurrencies, I plan to organise talks with companies from this area (maybe together with the Blockchain society) . These companies would probably be interested in sponsoring us as well.</p><p>I have few good ideas of events that ECSS could organise, including different types of hackathons. The first ever hackathon organised by ECSS (CampusHack) was pretty good but I believe we can increase the size of it to at least 100 participants.</p><p>As an active member of ECSS, I consider that this year's committee did a great job, especially Denisa, who gave me good advice in case I become her successor.</p><p>Since I am in Southampton over summer, I would have time to meet with the sponsors and discuss the potential partnerships. As far as I know, most of the sponsorship deals are finalised before the beginning of the academic year.</p><p>If you believe that I am suitable for this role, please vote for me, and I'll make sure I won't disappoint you ;) .</p>",
+		"Manifesto":"<p>My main goal as Industry Officer would be to convince new sponsors of the extraordinary value contained by ECSS, along with keeping strong relations with our current ones.</p><p>I am planning to seek sponsors, not only from the UK, but from US and the rest of Europe.</p>",
 		"Facebook":"https://www.facebook.com/costin517",
 		"Email":"ct2u16@ecs.soton.ac.uk",
 		"Image":"images/committee/costin.jpg",
