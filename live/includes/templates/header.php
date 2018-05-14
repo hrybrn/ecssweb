@@ -53,7 +53,7 @@
                             Sports
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarSportsDropdown">
-                            <a class="dropdown-item" href="/leaflet/?section=Sports"
+                            <a class="dropdown-item" href="/leaflet/?section=Sports"></a>
                             <a class="dropdown-item" href="/leaflet/?section=Football">Football</a>
                             <a class="dropdown-item" href="/leaflet/?section=Netball">Netball</a>
                             <a class="dropdown-item" href="/leaflet/?section=Running">Running</a>
