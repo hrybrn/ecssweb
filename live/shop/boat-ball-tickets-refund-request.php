@@ -34,6 +34,31 @@ if (!DEBUG) {
 if ($state === 'authenticated' && isset($_SESSION['temp-data']['status']) && $_SESSION['temp-data']['status'] === 'success') {
     $state = 'success';
 }
+if ($state === 'authenticated' && isset($_SESSION['temp-data']['status']) && $_SESSION['temp-data']['status'] === 'error') {
+    $state = 'return-error';
+}
+
+/**
+ * Check database
+ */
+if ($state === 'authenticated') {
+    $db_path = '../../db/boat-ball/boat-ball.sqlite3';
+    $db = new PDO('sqlite:' . $db_path);
+
+    // check if requested before
+    $sql = 'SELECT * FROM refund_requests WHERE username=:username';
+    $statement = $db->prepare($sql);
+    $db_success = $statement->execute(array(
+        ':username' => $user_info['username']
+    ));
+    if ($db_success) {
+        if ($statement->fetchObject()) {
+            $state = 'requested';
+        }
+    } else { // database error
+        $state = 'error';
+    }
+}
 
 /**
  * Render page
@@ -52,20 +77,27 @@ include('../includes/templates/header.php');
         }
         ?>
 
-        <?php if (isset($_SESSION['temp-data'])) : ?>
-            <?php if ($state === 'success') : ?>
-                <div class="alert alert-success"><?= isset($_SESSION['temp-data']['message']) ? ' ' . $_SESSION['temp-data']['message'] : '' ?></div>
-            <?php endif ?>
+        <?php if ($state === 'authenticated' || $state === 'requested' || $state === 'error' || $state === 'return-error') : ?>
+            <div class="alert alert-warning"><strong>Note:</strong> the refund request closes on {}.</div>
         <?php endif ?>
 
-        <?php if ($state === 'authenticated'): ?>
+        <?php if ($state === 'success') : ?>
+            <div class="alert alert-success"><?= isset($_SESSION['temp-data']['message']) ? ' ' . $_SESSION['temp-data']['message'] : '' ?></div>
+        <?php endif ?>
+
+        <?php if ($state === 'requested') : ?>
+            <div class="alert alert-warning">You have already requested boat ball tickets refund. If you want to change your request, please <a href="/about/contact.php">contact us.</a></div>
+        <?php endif ?>
+
+        <?php if ($state === 'error') : ?>
+            <div class="alert alert-danger">Unknown error, please <a href="/about/contact.php">contact us.</a></div>
+        <?php endif ?>
+
+        <?php if ($state === 'authenticated' || $state === 'return-error'): ?>
         <form method="post" action="boat-ball-tickets-refund-request-submit.php">
             <p>If you need to request a refund for the boat ball, please fill in the form below and click the "Request refund" button.</p>
-            <div class="alert alert-warning"><strong>Note:</strong> the refund request closes on {}.</div>
-            <?php if (isset($_SESSION['temp-data'])) : ?>
-                <?php if (isset($_SESSION['temp-data']['status']) && $_SESSION['temp-data']['status'] === 'error') : ?>
+            <?php if ($state === 'return-error') : ?>
                     <div class="alert alert-danger"><strong>Failed to request.</strong><?= isset($_SESSION['temp-data']['message']) ? ' ' . $_SESSION['temp-data']['message'] : '' ?></div>
-                <?php endif ?>
             <?php endif ?>
             <input type="hidden" name="csrftoken" value="<?= $csrftoken ?>">
             <div class="form-group row">
