@@ -67,7 +67,6 @@ $title = 'Boat Ball Ticket Refund Request - ECSS';
 include('../includes/templates/header.php');
 ?>
 <div class="container">
-    <div class="alert alert-danger"><strong>Note:</strong> This page is under development.</div>
     <section>
         <h1>Boat Ball Tickets Refund Request</h1>
 
@@ -78,7 +77,7 @@ include('../includes/templates/header.php');
         ?>
 
         <?php if ($state === 'authenticated' || $state === 'requested' || $state === 'error' || $state === 'return-error') : ?>
-            <div class="alert alert-warning"><strong>Note:</strong> the refund request closes on {}.</div>
+            <div class="alert alert-warning"><strong>Note:</strong> the refund request closes on Wed 30th May.</div>
         <?php endif ?>
 
         <?php if ($state === 'success') : ?>
@@ -110,7 +109,7 @@ include('../includes/templates/header.php');
                 <label for="num-of-tickets" class="col-sm-4 col-form-label">Number of tickets to refund</label>
                 <div class="col-sm-8">
                     <input id="num-of-tickets" class="form-control" type="number" name="num-of-tickets" value="1" min="1">
-                    <small class="form-text text-muted">If you have requested refund for boat ball tickets before, the number of tickets your request to refund will be updated to this one if you request again.</small>
+                    <small class="form-text text-muted">We will refund tickets up to the amount you originally purchased.</small>
                 </div>
             </div>
             <div class="form-group row">
@@ -120,12 +119,12 @@ include('../includes/templates/header.php');
                 </div>
             </div>
             <button class="btn btn-primary">Request refund</button>
-            <small class="form-text text-muted">Once your submitted a boat ball tickets refund request, we will refund your money to your {} by {}, or we will contact you through your university email. <a href="/about/contact.php">Contact us</a> if any questions.</small>
+            <small class="form-text text-muted">Once your submitted a boat ball tickets refund request, we will refund your money to your PayPal, and we will contact you through your university email. <a href="/about/contact.php">Contact us</a> if any questions.</small>
         </form>
         <?php endif ?>
 
         <?php if ($state === 'success') : ?>
-            <div>We will refund your money to your {} by {}, or we will contact you through your university email. If you need to change your refund request, please <a href="/about/contact.php">contact us.</a></div>
+            <div>We will refund your money to your PayPal, and we will contact you through your university email. If you need to change your refund request, please <a href="/about/contact.php">contact us.</a></div>
         <?php endif ?>
     </section>
 </div>
