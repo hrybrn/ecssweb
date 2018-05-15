@@ -93,7 +93,7 @@ include('../includes/templates/header.php');
         <?php endif ?>
 
         <?php if ($state === 'authenticated' || $state === 'return-error'): ?>
-        <form method="post" action="boat-ball-tickets-refund-request-submit.php">
+        <form method="post" action="boat-ball-tickets-refund-request-submit.php" onsubmit="return confirm_request();">
             <p>If you need to request a refund for the boat ball, please fill in the form below and click the "Request refund" button.</p>
             <?php if ($state === 'return-error') : ?>
                     <div class="alert alert-danger"><strong>Failed to request.</strong><?= isset($_SESSION['temp-data']['message']) ? ' ' . $_SESSION['temp-data']['message'] : '' ?></div>
@@ -128,6 +128,14 @@ include('../includes/templates/header.php');
         <?php endif ?>
     </section>
 </div>
+
+<script>
+    function confirm_request() {
+        var num_of_tickets = $('#num-of-tickets').val();
+        var username = $('#username').val();
+        return confirm('Confirm you are requesting ' +  num_of_tickets+ ' boat ball ticket(s) for ' + username + '.');
+    }
+</script>
 
 <?php
 include('../includes/templates/footer.php');
