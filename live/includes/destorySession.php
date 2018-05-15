@@ -8,6 +8,9 @@
  */
 function destorySession($sessionName = null)
 {
+    if (isset($_SESSION)) {
+        session_write_close();
+    }
     // Initialize the session.
     if (!is_null($sessionName)) {
         session_name($sessionName);
