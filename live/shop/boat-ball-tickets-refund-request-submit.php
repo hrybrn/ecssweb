@@ -55,13 +55,51 @@ if (!DEBUG) {
  * Check input
  */
 $num_of_tickets = $_POST['num-of-tickets'];
-if (is_int($num_of_tickets) && $num_of_tickets > 0) {
-
+if (is_numeric($num_of_tickets)) {
+    $num_of_tickets = intval($num_of_tickets);
 } else {
     $_SESSION['temp-data'] = array(
         'status' => 'error',
-        'message' => 'Number of tickets to refund should be at least 1.',
+        'message' => 'Check your input for number of tickets to refund.'
     );
     redirect();
     exit();
 }
+if (!$num_of_tickets > 0) {
+    $_SESSION['temp-data'] = array(
+        'status' => 'error',
+        'message' => 'Number of tickets to refund should be at least 1.'
+    );
+    redirect();
+    exit();
+}
+
+/**
+ * Write to database
+ */
+$db_path = '../../db/boat-ball/boat-ball.sqlite3';
+$db = new PDO('sqlite:' . $db_path);
+
+$sql = 'INSERT INTO refund_requests(username, num_tickets, comments)
+        VALUES (:username, :num_tickets, :comments)';
+
+$statement = $db->prepare($sql);
+$db_success = $statement->execute(array(
+    ':username' => $user_info['username'],
+    ':num_tickets' => $num_of_tickets,
+    ':comments' => $_POST['comments']
+));
+
+if ($db_success) {
+    $_SESSION['temp-data'] = array(
+        'status' => 'success',
+        'message' => 'Successfully submitted request to refund ' . $num_of_tickets . ' boat ball ticket(s) for ' . $user_info['username'] . '.'
+    );
+} else {
+    $_SESSION['temp-data'] = array(
+        'status' => 'error',
+        'message' => 'Unknown error, please <a href="/about/contact.php">contact us.</a>',
+    );
+}
+redirect();
+exit();

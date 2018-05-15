@@ -29,6 +29,13 @@ if (!DEBUG) {
 }
 
 /**
+ * Temp data state
+ */
+if ($state === 'authenticated' && isset($_SESSION['temp-data']['status']) && $_SESSION['temp-data']['status'] === 'success') {
+    $state = 'success';
+}
+
+/**
  * Render page
  */
 $title = 'Boat Ball Ticket Refund Request - ECSS';
@@ -36,24 +43,30 @@ include('../includes/templates/header.php');
 ?>
 <div class="container">
     <div class="alert alert-danger"><strong>Note:</strong> This page is under development.</div>
-    <div>
-        <?php if (isset($_SESSION['temp-data'])) : ?>
-            <?php if ($_SESSION['temp-data']['status'] === 'error') : ?>
-                <div class="alert alert-danger"><strong>Failed to request.</strong> <?= $_SESSION['temp-data']['message'] ?></div>
-            <?php endif ?>
-        <?php endif ?>
-    </div>
     <section>
         <h1>Boat Ball Tickets Refund Request</h1>
+
         <?php
         if ($state === 'not-authenticated') {
             include('../includes/templates/require-login.php');
         }
         ?>
+
+        <?php if (isset($_SESSION['temp-data'])) : ?>
+            <?php if ($state === 'success') : ?>
+                <div class="alert alert-success"><?= isset($_SESSION['temp-data']['message']) ? ' ' . $_SESSION['temp-data']['message'] : '' ?></div>
+            <?php endif ?>
+        <?php endif ?>
+
         <?php if ($state === 'authenticated'): ?>
         <form method="post" action="boat-ball-tickets-refund-request-submit.php">
             <p>If you need to request a refund for the boat ball, please fill in the form below and click the "Request refund" button.</p>
             <div class="alert alert-warning"><strong>Note:</strong> the refund request closes on {}.</div>
+            <?php if (isset($_SESSION['temp-data'])) : ?>
+                <?php if (isset($_SESSION['temp-data']['status']) && $_SESSION['temp-data']['status'] === 'error') : ?>
+                    <div class="alert alert-danger"><strong>Failed to request.</strong><?= isset($_SESSION['temp-data']['message']) ? ' ' . $_SESSION['temp-data']['message'] : '' ?></div>
+                <?php endif ?>
+            <?php endif ?>
             <input type="hidden" name="csrftoken" value="<?= $csrftoken ?>">
             <div class="form-group row">
                 <label for="username" class="col-sm-4 col-form-label">Username</label>
@@ -77,6 +90,10 @@ include('../includes/templates/header.php');
             <button class="btn btn-primary">Request refund</button>
             <small class="form-text text-muted">Once your submitted a boat ball tickets refund request, we will refund your money to your {} by {}, or we will contact you through your university email. <a href="/about/contact.php">Contact us</a> if any questions.</small>
         </form>
+        <?php endif ?>
+
+        <?php if ($state === 'success') : ?>
+            <div>We will refund your money to your {} by {}, or we will contact you through your university email. If you need to change your refund request, please <a href="/about/contact.php">contact us.</a></div>
         <?php endif ?>
     </section>
 </div>

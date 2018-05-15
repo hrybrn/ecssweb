@@ -4,6 +4,9 @@
 # do not track content images
 live/images/committee/
 
+# sqlite database
+*.sqlite3
+
 # do not track uploads
 live/uploads/
 live/images/nominations/
