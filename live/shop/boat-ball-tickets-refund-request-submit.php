@@ -5,6 +5,26 @@ function redirect() {
     header('Location: ' . (isset($_SERVER['HTTPS']) ? "https" : "http") . '://' . $_SERVER[HTTP_HOST] . '/shop/boat-ball-tickets-refund-request.php');
 }
 
+function send_email_notification($username, $num, $comment) {
+    $to = 'ECSS Committee <hb15g16@soton.ac.uk>';
+    $subject = 'Boat Ball Tickets Refund Request from ' . $username;
+    $message = "$username has requested refund for $num boat ball ticket(s).";
+    if ($comment !== '') {
+        $comment = htmlspecialchars($comment);
+        $message .= "\n\n$username also left a comment:\n$comment";
+    }
+    $headers = "From: ecssweb <no-reply@ecssweb.ecs.soton.ac.uk>\r\nReply-To: ECSS Webmaster <jc14g16@soton.ac.uk>";
+    mail($to, $subject, $message, $headers);
+}
+
+function send_email_receipt($username, $num) {
+    $to = "$username <$username@soton.ac.uk>";
+    $subject = 'Boat Ball Tickets Refund Request Received';
+    $message = "Hello,\nWe have received your request to refund $num boat ball ticket(s), we will be processing your request as soon as we can. At the meanwhile, if you have any questions please contact us at society@ecs.soton.ac.uk\n\nECSS\nsociety@ecs.soton.ac.uk\nhttps://society.ecs.soton.ac.uk\n\n\nThis is an automated email sent to $username@soton.ac.uk";
+    $headers = "From: ecssweb <no-reply@ecssweb.ecs.soton.ac.uk>\r\nReply-To: ECSS Society <society@ecs.soton.ac.uk>";
+    mail($to, $subject, $message, $headers);
+}
+
 /**
  * Accept POST request only
  */
@@ -117,11 +137,15 @@ $db_success = $statement->execute(array(
     ':comments' => $_POST['comments']
 ));
 
-if ($db_success) {
+if ($db_success) { // success
     $_SESSION['temp-data'] = array(
         'status' => 'success',
         'message' => 'Successfully submitted request to refund ' . $num_of_tickets . ' boat ball ticket(s) for ' . $user_info['username'] . '.'
     );
+    // send email notification
+    send_email_notification($user_info['username'], $num_of_tickets, $_POST['comments']);
+    // send email receipt
+    send_email_receipt($user_info['username'], $num_of_tickets);
 } else { // database error
     $_SESSION['temp-data'] = array(
         'status' => 'error',
