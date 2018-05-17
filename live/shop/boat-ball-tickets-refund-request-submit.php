@@ -20,8 +20,9 @@ function send_email_notification($username, $num, $comment) {
 function send_email_receipt($username, $num) {
     $to = "$username <$username@soton.ac.uk>";
     $subject = 'Boat Ball Tickets Refund Request Received';
-    $message = "Hello,\nWe have received your request to refund $num boat ball ticket(s), we will be processing your request as soon as we can. At the meanwhile, if you have any questions please contact us at society@ecs.soton.ac.uk\n\nECSS\nsociety@ecs.soton.ac.uk\nhttps://society.ecs.soton.ac.uk\n\n\nThis is an automated email sent to $username@soton.ac.uk";
-    $headers = "From: ecssweb <no-reply@ecssweb.ecs.soton.ac.uk>\r\nReply-To: ECSS Society <society@ecs.soton.ac.uk>";
+    $message = "Hello,\nWe have received your request to refund $num boat ball ticket(s), we will be processing your request as soon as we can. At the meanwhile, if you have any questions please contact us at society@ecs.soton.ac.uk\n\nElectronics and Computer Science Society (ECSS)
+\nsociety@ecs.soton.ac.uk\nhttps://society.ecs.soton.ac.uk\n\n\nThis is an automated email sent to $username@soton.ac.uk";
+    $headers = "From: ECS Society <no-reply@ecssweb.ecs.soton.ac.uk>\r\nReply-To: ECS Society <society@ecs.soton.ac.uk>";
     mail($to, $subject, $message, $headers);
 }
 
